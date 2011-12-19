@@ -1,0 +1,24 @@
+@mixin block{
+  clear:both;margin:$baseline 0;overflow:hidden;
+}
+
+@mixin font-face($name, $filename, $src: fonts, $font-weight: normal, $font-style: normal) {
+  @font-face {
+    font-family: $name;
+    src: url('#{$src/$filename}.eot');
+    src: url('#{$src/$filename}.eot?iefix') format("eot"), url('#{$src/$filename}.woff') format("woff"), url('#{$src/$filename}.ttf') format("truetype"), url('#{$src/$filename}.svg#webfontZam02nTh') format("svg");
+    font-weight: $font-weight;
+    font-style: $font-style; 
+    } 
+}
+
+// Converts pixels to em
+@mixin px-to-em($px, $base: 16){
+  font-size: #{$px/$base}em;/*16 x !ems = !pixels*/
+}
+// Converts pixels to rem
+@mixin px-to-rem($px, $base: 16){
+  font-size: #{$px/$base}rem;
+}
+
+

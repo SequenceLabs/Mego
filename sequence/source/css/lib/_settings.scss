@@ -1,0 +1,36 @@
+$images_dir: "/muppets/cms_res/images";
+
+@include font-face(FuturaStd, futurastd-bold-webfont, fonts, 700, normal);
+@include font-face(FuturaStd, futurastd-extrabold-webfont, fonts, 900, normal);
+
+$width: 940px;
+$gutters: 20px;
+$columns: 12;
+$baseline: 10px;
+
+$sans: Helvetica, Arial, sans-serif;
+$serif: "Georgia", Times New Roman, Times, sans-serif;
+$mono: "Monaco", Courier New, monospace;
+$body-size: 14px;
+
+// Grays
+$black: black;
+$grayDark: lighten($black, 20%);
+$gray: lighten($black, 50%);
+$grayLight: lighten($black, 75%);
+$grayLighter: lighten($black, 90%);
+$white: white;
+
+// Accent Colors
+$blue: #049cdb;
+$blueDark: #0064cd;
+$green: #cce338;
+$red: #9d261d;
+$yellow: #ffc40d;
+$orange: #f89406;
+$pink: #f398b3;
+$purple: #7a43b6;
+$borders: #cccccc;
+
+$links: darken($green, 10);
+$linksHover: $black;

@@ -1,0 +1,19 @@
+!!! 5
+/[if lt IE 7] %html{:class => "ie6 no-js"}
+/[if IE 7] %html{:class => "ie7 no-js"}
+/[if IE 8] %html{:class => "ie8 no-js"}
+/ [if gt IE 8]><!
+%html{:class => "no-js"}
+  / <![endif]
+
+    = partial('includes/structure/html_header')
+
+    %body{:id=>data.page.body_id, :class=>data.page.body_class}
+
+        %section#main
+            = partial('includes/structure/header')
+            = yield  
+            = partial('includes/structure/footer')
+            = partial('includes/structure/javascripts')
+       
+    

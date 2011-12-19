@@ -1,0 +1,45 @@
+@mixin button-style($color) {
+  @include gradient($color, darken($color, 10%));
+  @include box-shadow(0 1px 1px rgba(0,0,0,.2));
+  @include text-shadow(0 1px 0 rgba(255,255,255,.4));
+  &:hover {
+    @include gradient(darken($color, 9%), darken($color, 18%));
+    @include transition(background-color, .2s);
+  }
+  &:active {
+    @include gradient(darken($color, 16%), darken($color, 9%));
+    @include box-shadow(none);
+    @include transition(background-color, .2s);  
+  }
+}
+
+@mixin button($color: $green, $text_color: #111111, $width: 80px) {
+  @include border-radius(4px);
+  background: $color;
+  cursor: pointer;
+  font: 700 14px/1em $futura;
+  color: $text_color;
+  display: inline-block;
+  text-align: center;
+  padding: 14px;
+  margin: 0 10px 20px 0;
+  text-transform: uppercase;
+  overflow: hidden;
+
+  @if $width {
+    min-width: $width;
+  }
+  @include button-style($color);
+}
+.button, input.button {
+  @include button();
+}
+.black .button {
+   @include button($white);
+}
+.button.main {
+  @include button();
+}
+.button.delete {
+  @include button();
+}
