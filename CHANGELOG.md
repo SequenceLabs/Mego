@@ -3,5 +3,3 @@
 - fixed SCSS path errors
 - added namespace function to Utils
 - minor tweaks/improvements
-
-# test
