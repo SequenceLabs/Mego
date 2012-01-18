@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 ### 
 # Compass
 ###
 
+=======
+>>>>>>> 44357cc6e80f204fead63857e39b1fd786e79cce
 # Susy grids in Compass
 # First: gem install compass-susy-plugin
 # require 'susy'
 
+<<<<<<< HEAD
 # Change Compass configuration
 # compass_config do |config|
 #   config.output_style = :compact
@@ -15,6 +19,8 @@
 # Haml
 ###
 
+=======
+>>>>>>> 44357cc6e80f204fead63857e39b1fd786e79cce
 # CodeRay syntax highlighting in Haml
 # First: gem install haml-coderay
 # require 'haml-coderay'
@@ -23,6 +29,7 @@
 # First: gem install coffee-filter
 # require 'coffee-filter'
 
+<<<<<<< HEAD
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
@@ -55,10 +62,30 @@
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
+=======
+# Automatic sitemaps
+# First: gem install middleman-slickmap
+# require "middleman-slickmap"
+# activate :slickmap
+
+# Automatic image dimension calculations
+# activate :automatic_image_sizes
+
+# Per-page layout changes
+# With no layout
+# page "/path/to/file.html", :layout => false
+# With alternative layout
+# page "/path/to/file.html", :layout => :otherlayout
+
+# Helpers
+# helpers do
+#   def some_helper(*args)
+>>>>>>> 44357cc6e80f204fead63857e39b1fd786e79cce
 #     "Helping"
 #   end
 # end
 
+<<<<<<< HEAD
 <% if options[:css_dir] != "stylesheets" -%>
 set :css_dir, "<%= options[:css_dir] -%>"
 <% else -%>
@@ -72,6 +99,14 @@ set :js_dir, "<%= options[:js_dir] -%>"
 # Change the JS directory
 # set :js_dir, "alternative_js_directory"
 <% end -%>
+=======
+# Change the CSS directory
+ set :css_dir, "css"
+
+
+# Change the JS directory
+ set :js_dir, "js"
+>>>>>>> 44357cc6e80f204fead63857e39b1fd786e79cce
 
 <% if options[:images_dir] != "images" -%>
 set :images_dir, "<%= options[:images_dir] -%>"
