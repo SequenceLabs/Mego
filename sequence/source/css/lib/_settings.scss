@@ -1,15 +1,34 @@
-$images_dir: "/muppets/cms_res/images";
+//
+//	Configurable settings
+//	Use this file to override or customise site
+//
+//
+//	Comments
+//	@Project			Acme Ltd
+//	@Type				Sitecore/Umbraco, etc.
+//	@Version			0.2
+//	@Date				19/01/2012
+//	@Author				[Name]
+//	@BrowserSupport		IE8, IE9, Safari, Firefox, Chrome
+//
 
 @include font-face(FuturaStd, futurastd-bold-webfont, fonts, 700, normal);
 @include font-face(FuturaStd, futurastd-extrabold-webfont, fonts, 900, normal);
 
-$width: 940px;
-$gutters: 20px;
+
+// Base settings
+$css3-enable: true; // if false, do not render CSS3
+$width: 978px;
+$gutters: 30px;
 $columns: 12;
 $baseline: 10px;
 $font-size: 14px;
 
+// Debug helpers
+$debug: true;
+$debug-grid: griddle; // none, structure, griddle, baseline
 
+// Typography settings
 $sans: Helvetica, Arial, sans-serif;
 $serif: "Georgia", Times New Roman, Times, sans-serif;
 $mono: "Monaco", Courier New, monospace;
@@ -34,5 +53,9 @@ $pink: #f398b3;
 $purple: #7a43b6;
 $borders: #cccccc;
 
-$links: darken($green, 10);
-$linksHover: $black;
+// Links settings
+$linksNormal: darken($green, 10);
+$linksHover: $red;
+$linksActive: $blue;
+$linksVisited: $purple;
+$linksFocus: $pink;

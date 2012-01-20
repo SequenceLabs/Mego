@@ -42,3 +42,12 @@
     right:0;
   }
 }
+
+#cta-list {
+  .cta {
+    width: 306px;
+    float: left;
+    margin-right: 30px;
+    &:last-child{ margin-right: 0; }
+  }
+}

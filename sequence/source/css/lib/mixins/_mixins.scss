@@ -1,5 +1,7 @@
 @mixin block{
-  clear:both;margin:$baseline 0;overflow:hidden;
+  clear:both;
+  margin:$baseline 0;
+  overflow:hidden;
 }
 
 @mixin font-face($name, $filename, $src: fonts, $font-weight: normal, $font-style: normal) {
@@ -21,4 +23,28 @@
   font-size: #{$px/$base}rem;
 }
 
-
+// Sets link colours
+// Inspired by Compass
+@mixin link-colours($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+  color: $normal;
+  @if $visited {
+    &:visited {
+      color: $visited;
+    }
+  }
+  @if $focus {
+    &:focus {
+      color: $focus;
+    }
+  }
+  @if $hover {
+    &:hover {
+      color: $hover;
+    }
+  }
+  @if $active {
+    &:active {
+      color: $active;
+    }
+  }
+}

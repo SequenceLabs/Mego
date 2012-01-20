@@ -1,0 +1,26 @@
+//
+// DEBUG HELPERS
+//
+//
+
+@if $debug == true {
+	@if $debug-grid == griddle {
+		/*
+		*	Generate a griddle
+		*/
+		html {
+			height: 100%;
+		}
+		body {
+		  background: url("http://griddle.it/"+$width+"-"+$columns+"-"+$gutters) repeat-y center top;
+		  height: 100%;
+		}
+	} @elseif $debug-grid == baseline {
+		/*
+		*	Baseline
+		*/
+		#main {
+		  background: transparent url(../images/_baseline-grid.png) repeat 0 0;
+		}
+	}
+}

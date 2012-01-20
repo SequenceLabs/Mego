@@ -8,28 +8,32 @@
 */
 
 // CSS3 mixins
-@import "mixins/css3";
+@import "lib/mixins/css3";
 // General mixins
-@import "mixins/mixins";
+@import "lib/mixins/mixins";
 
 // Base Modules
-@import "reset";
-@import "settings";
+@import "lib/reset";
+@import "lib/settings";
 
 // Typography
-@import "typography/elements";
-@import "typography/headings";
+@import "lib/typography/elements";
+@import "lib/typography/headings";
 
 // Layout
-@import "layout/grid_static"; 
-// @import "layout/grid_fluid"; 
+//@import "lib/layout/grid_static"; 
+ @import "lib/layout/grid_fluid"; 
 
 // The files below are helpers that can be removed if not required
-// @import "helpers/forms";
-// @import "helpers/tables";
-// @import "helpers/buttons";
+// @import "lib/helpers/forms";
+// @import "lib/helpers/tables";
+// @import "lib/helpers/buttons";
+@import "lib/helpers/classes";
 
 @import "structure";
 @import "modules";
 @import "pages";
 @import "media_queries";
+
+
+@import "lib/helpers/debug";

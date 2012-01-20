@@ -31,7 +31,7 @@ del {
 }
 
 a {
-	color: $links;
+	color: $linksNormal;
 	text-decoration: none;
 	outline: 0;
 	cursor: pointer;
@@ -46,6 +46,10 @@ a:hover {
 a, a:active, a:focus {
 	outline: 0;
 }
+
+a {
+	@include link-colours($linksNormal, $linksHover, $linksActive, $linksVisited, $linksFocus)
+	}
 
 blockquote {
 	display: block;

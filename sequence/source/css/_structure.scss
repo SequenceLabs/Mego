@@ -23,3 +23,31 @@ body {
 
   }
 }
+
+#page_header .wrapper {
+	height: 200px;
+	@if $debug == true and $debug-grid == structure {
+		background-color: #f2f2f2;
+		&:after {
+			content: "HEADER";
+			color: $black;
+		}
+	}
+}
+
+#page_header .wrapper {
+}
+
+#site_nav {
+	float: right;
+	padding: 0 10px;
+	background: $orange;
+	ul {
+		li {
+			display: inline;
+			a {
+				padding: 10px;
+			}
+		}
+	}
+}
