@@ -10,5 +10,4 @@ class Middleman::Templates::Sequence < Middleman::Templates::Base
   end
 end
 
-set :css_dir, "css"
 Middleman::Templates.register(:sequence, Middleman::Templates::Sequence)
