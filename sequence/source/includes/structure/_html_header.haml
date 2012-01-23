@@ -1,18 +1,19 @@
 %head
-%meta{:charset => "utf-8"}/
-/ Always force latest IE rendering engine (even in intranet) & Chrome Frame
-%meta{ :content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible" }
+	%meta{:charset => "utf-8"}/
+	/ Always force latest IE rendering engine (even in intranet) & Chrome Frame
+	%meta{ :content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible" }
 
-%title=data.page.page_title
-%meta{:content => "", :name => "description"}/
-%meta{:content => "", :name => "author"}/
-%script{:src => "/js/lib/thirdparty/modernizr.js"}
+	%title=data.page.page_title
+	%meta{:content => "", :name => "description"}/
+	%meta{:content => "", :name => "author"}/
+	%script{:src => "/js/lib/thirdparty/modernizr.js"}
 
-<!-- Mobile Specific Meta Tags -->
-%meta{:name => "viewport", :content => "width=1200, initial-scale=1"}
-%meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
+	<!-- Mobile Specific Meta Tags -->
+	%meta{:name => "viewport", :content => "width=1200, initial-scale=1"}
+	%meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
 
-%link{:rel => "shortcut icon", :href=>"images/icons/favicon.ico", :type=>"image/x-icon"}
-  
-<!-- CSS -->
-= stylesheet_link_tag "style.css"
+	%link{:rel => "shortcut icon", :href=>"images/icons/favicon.ico", :type=>"image/x-icon"}
+	  
+	<!-- CSS -->
+	= stylesheet_link_tag "style.css"
+	= stylesheet_link_tag "print.css", :media => "print"
