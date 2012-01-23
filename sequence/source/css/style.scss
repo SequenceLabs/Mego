@@ -13,8 +13,8 @@
 @import "lib/mixins/mixins";
 
 // Base Modules
-@import "lib/reset";
 @import "lib/settings";
+@import "lib/reset";
 
 // Typography
 @import "lib/typography/elements";
@@ -35,5 +35,10 @@
 @import "pages";
 @import "media_queries";
 
+// IE conditional stylesheet
+@import "ie6";
+@import "ie7";
+@import "ie8";
+@import "ie9";
 
 @import "lib/helpers/debug";
