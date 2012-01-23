@@ -1,0 +1,46 @@
+/********************************************
+*
+* @author Nadhim Orfali
+* @version 0.1
+* CSS for Pagination
+*
+********************************************/
+
+
+.pagination{
+  position:relative;
+  .center{
+    text-align:center;
+  }
+  ul {
+    width:auto;
+    display:table;
+    margin:0 auto;
+    li {
+      display:inline;
+      color:#fff;
+      margin-right:1px;
+    }
+    .active a {
+      color:$default-colour;
+      background:#ffffff;
+    }
+    a {
+      color:#ffffff;
+      &:hover {
+        color:$default-colour;
+      }
+    }
+  }
+  .prev,
+  .next {
+    bottom:0;
+    position: absolute;
+  }
+  .prev {
+    left:0;
+  }
+  .next {
+    right:0;
+  }
+}
