@@ -12,7 +12,7 @@
 			height: 100%;
 		}
 		body {
-		  background: url("http://griddle.it/"+$width+"-"+$columns+"-"+$gutters) repeat-y center top;
+		  background: url("http://griddle.it/"+$width+"-"+$columns+"-"+$gutters+"?background=fafafa&color=fff4f4") repeat-y center top;
 		  height: 100%;
 		}
 	} @elseif $debug-grid == baseline {

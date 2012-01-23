@@ -5,49 +5,6 @@
 *
 ********************************************/
 
-.pagination{
-  position:relative;
-  .center{
-    text-align:center;
-  }
-  ul {
-    width:auto;
-    display:table;
-    margin:0 auto;
-    li {
-      display:inline;
-      color:#fff;
-      margin-right:1px;
-    }
-    .active a {
-      color:$black;
-      background:$white;
-    }
-    a {
-      color:$white;
-      &:hover {
-        color:$black;
-      }
-    }
-  }
-  .prev,
-  .next {
-    bottom:0;
-    position: absolute;
-  }
-  .prev {
-    left:0;
-  }
-  .next {
-    right:0;
-  }
-}
-
-#cta-list {
-  .cta {
-    width: 306px;
-    float: left;
-    margin-right: 30px;
-    &:last-child{ margin-right: 0; }
-  }
-}
+@import "../includes/modules/mini_search/mini_search";
+@import "../includes/modules/pagination/pagination";
+@import "../includes/modules/generic_cta/generic_cta";

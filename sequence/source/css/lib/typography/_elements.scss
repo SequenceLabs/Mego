@@ -1,6 +1,6 @@
 body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,input,textarea {
 	line-height: $baseline * 2;
-	color: $black;
+	color: $default-colour;
 }
 
 p {
@@ -31,7 +31,7 @@ del {
 }
 
 a {
-	color: $linksNormal;
+	color: $links-normal;
 	text-decoration: none;
 	outline: 0;
 	cursor: pointer;
@@ -39,7 +39,7 @@ a {
 }
 
 a:hover {
-	color: $linksHover;
+	color: $links-hover;
 	text-decoration: none;
 	@include transition(color, 0.2s);
 }
@@ -48,7 +48,7 @@ a, a:active, a:focus {
 }
 
 a {
-	@include link-colours($linksNormal, $linksHover, $linksActive, $linksVisited, $linksFocus)
+	@include link-colours($links-normal, $links-hover, $links-active, $links-visited, $links-focus)
 	}
 
 blockquote {
@@ -60,7 +60,7 @@ blockquote {
 	font-size: 30px;
 	font-family: serif;
 	font-style: italic;
-	color: $grayDark;
+	color: $default-colour;
 	line-height: 30px;
 	margin: $baseline 0;
 }

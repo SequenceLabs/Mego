@@ -13,11 +13,11 @@
   }
 }
 
-@mixin button($color: $green, $text_color: #111111, $width: 80px) {
+@mixin button($color: #333, $text_color: #ffffff, $width: 80px) {
   @include border-radius(4px);
   background: $color;
   cursor: pointer;
-  font: 700 14px/1em $futura;
+  font: 700 14px/1em $sans;
   color: $text_color;
   display: inline-block;
   text-align: center;
@@ -35,7 +35,7 @@
   @include button();
 }
 .black .button {
-   @include button($white);
+   @include button(#ffffff);
 }
 .button.main {
   @include button();
