@@ -14,15 +14,19 @@ Authors
 
 **Nadhim Orfali**
 
+**Benn Pearson**
+
 **Ollie Wells**
 
 
 Thanks
 -------
 
+**Sam "Dex" Hoult**
+
 **Owain Lewis**
 
-**Dex Dillinger**
+
 
 
 
