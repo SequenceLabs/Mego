@@ -1,9 +1,6 @@
-window.App ?= {}
+SEQ.utils.namespace('SEQ.modules')
 
-# Use local alias
-$ = jQuery
-
-class App.Modal
+class SEQ.modules.CoffeeModal
 	
 	constructor: (@container) ->
 		@el = {}
@@ -66,7 +63,7 @@ class App.Modal
 
 		@render $iframe
 
-class App.FlashModalController
+class SEQ.FlashModalController
 	constructor: () ->
 		$("a[rel='flash_modal']").bind "click", (e) =>
 			e.preventDefault()			
@@ -79,7 +76,7 @@ class App.FlashModalController
 			
 			return false
 
-class App.LeavingModalController
+class SEQ.LeavingModalController
 
 	constructor: () ->
 		modal = {}

@@ -1,14 +1,11 @@
 (function() {
-  var $, _ref;
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
-  if ((_ref = window.App) == null) window.App = {};
+  SEQ.utils.namespace('SEQ.modules');
 
-  $ = jQuery;
+  SEQ.modules.CoffeeModal = (function() {
 
-  App.Modal = (function() {
-
-    function Modal(container) {
+    function CoffeeModal(container) {
       this.container = container;
       this.el = {};
       this.overlay = {};
@@ -17,13 +14,13 @@
       this.closeBtn = {};
     }
 
-    Modal.prototype.render = function(html) {
+    CoffeeModal.prototype.render = function(html) {
       this.container.append(this.el = $("<div />").addClass("modal_window").append(this.overlay = $("<div />").addClass("overlay").append(this.outer = $("<div />").addClass("outer").append(this.closeBtn = $("<div />").addClass("close_btn"), this.inner = $("<div />").addClass("inner").html(html)))));
       this.outer.fadeOut(0);
       return this.overlay.fadeOut(0);
     };
 
-    Modal.prototype.add = function() {
+    CoffeeModal.prototype.add = function() {
       var _this = this;
       this.overlay.fadeIn(300, function() {
         return _this.outer.fadeIn(500);
@@ -33,7 +30,7 @@
       });
     };
 
-    Modal.prototype.remove = function() {
+    CoffeeModal.prototype.remove = function() {
       var _this = this;
       this.outer.fadeOut(200);
       return this.overlay.fadeOut(300, function() {
@@ -41,14 +38,14 @@
       });
     };
 
-    Modal.prototype.setDimensions = function(dimensions) {
+    CoffeeModal.prototype.setDimensions = function(dimensions) {
       this.outer.css(dimensions);
       return this.inner.css(dimensions);
     };
 
-    Modal.prototype.renderIframe = function(url, width, height, callback) {
-      var $iframe;
-      var _this = this;
+    CoffeeModal.prototype.renderIframe = function(url, width, height, callback) {
+      var $iframe,
+        _this = this;
       $iframe = $("<iframe />").attr({
         "id": "frame",
         "src": url,
@@ -74,11 +71,11 @@
       return this.render($iframe);
     };
 
-    return Modal;
+    return CoffeeModal;
 
   })();
 
-  App.FlashModalController = (function() {
+  SEQ.FlashModalController = (function() {
 
     function FlashModalController() {
       var _this = this;
@@ -99,7 +96,7 @@
 
   })();
 
-  App.LeavingModalController = (function() {
+  SEQ.LeavingModalController = (function() {
 
     function LeavingModalController() {
       this.onContinueBtnClick = __bind(this.onContinueBtnClick, this);
