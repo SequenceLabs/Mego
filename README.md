@@ -30,7 +30,9 @@ Thanks
 
 Bug reporting, requests etc
 ---------------------
-Please add any requests or bug reports to the issue tracker. Thanks.
+Please add any requests or bug reports to the issue tracker here > http://github.com/hamishtaplin/Sequence-Middleman-Template/issues
+
+Thanks.
 
 
 Copyright and license
