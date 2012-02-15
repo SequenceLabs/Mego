@@ -1,4 +1,4 @@
-Sequence Middlman Template
+Sequence Middleman Template
 =================
 
 This is a work in progress for a rapid HTML prototyping framework, using MiddleMan, HAML and SASS.
