@@ -11,26 +11,21 @@ Feel free to use any of the work, but this is not external production-ready code
 Authors
 -------
 
-**Hamish Taplin**
-+ http://twitter.com/hamishtaplin
+**Hamish Taplin** - http://twitter.com/hamishtaplin
 
-**Nadhim Orfali**
-+ http://twitter.com/_fenka
+**Nadhim Orfali** - http://twitter.com/_fenka
 
 **Benn Pearson**
 
-**Ollie Wells**
-+ http://twitter.com/olliewells
+**Ollie Wells** - http://twitter.com/olliewells
 
 
 Thanks
 -------
 
-**Sam "Dex" Hoult**
-+ http://twitter.com/DexterDillinger
+**Sam "Dex" Hoult** - http://twitter.com/DexterDillinger
 
-**Owain Lewis**
-+ http://twitter.com/owainlewis
+**Owain Lewis** - http://twitter.com/owainlewis
 
 
 Bug reporting, requests etc
