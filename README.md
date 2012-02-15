@@ -36,7 +36,7 @@ Please add any requests or bug reports to the issue tracker. Thanks.
 Copyright and license
 ---------------------
 
-Copyright 2012 Sequence LLP
+Copyright 2012 Sequence Limited
 
 http://www.sequence.co.uk
 
