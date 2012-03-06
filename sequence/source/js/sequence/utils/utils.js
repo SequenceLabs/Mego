@@ -1,5 +1,5 @@
 (function() {
-
+  "use strict";
   if (typeof SEQ === "undefined" || SEQ === null) SEQ = {};
 
   if (SEQ.utils == null) SEQ.utils = {};

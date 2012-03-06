@@ -1,64 +1,79 @@
 (function() {
-  var animate, modules,
+  "use strict";
+  var modules, transition,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   modules = SEQ.utils.namespace('SEQ.modules');
 
-  animate = SEQ.effects.Animate;
+  transition = SEQ.effects.Transition;
+
+  /**    
+  CoffeeSlider is a touch-enabled Coffeescript-based slider module. 
+  @class CoffeeSlider 
+  @author Hamish Taplin, Sequence
+  */
 
   modules.CoffeeSlider = (function() {
-
-    function CoffeeSlider(container, options) {
+    /**  
+    Constructor. Creates a CoffeeSlider instance.
+    */
+    function CoffeeSlider(options) {
       this.find = __bind(this.find, this);
-      this.onAnimationComplete = __bind(this.onAnimationComplete, this);
+      this.onTransitionComplete = __bind(this.onTransitionComplete, this);
       this.slideFadeTo = __bind(this.slideFadeTo, this);
       this.slideTo = __bind(this.slideTo, this);
       this.goTo = __bind(this.goTo, this);
-      this.drag = __bind(this.drag, this);
       this.onTouchMove = __bind(this.onTouchMove, this);
-      this.onTouchEnd = __bind(this.onTouchEnd, this);
+      this.onTouchEndOrCancel = __bind(this.onTouchEndOrCancel, this);
       this.onTouchStart = __bind(this.onTouchStart, this);
-      this.bindUIEvents = __bind(this.bindUIEvents, this);      this.settings = {};
-      this.container = container;
-      this.outer = {};
-      this.inner = {};
-      this.uiParent = {};
-      this.prevBtn = {};
-      this.nextBtn = {};
-      this.slides = {};
-      this.slideWidth = 0;
-      this.totalWidth = 0;
-      this.currentIndex = 1000;
-      this.numSlides = 0;
-      this.currentSlide = {};
-      this.isMoving = false;
-      this.pagination = {};
-      this.dotNav = {};
+      this.bindUIEvents = __bind(this.bindUIEvents, this);      ({
+        this.settings: {},
+        this.container: {},
+        this.outer: {},
+        this.inner: {},
+        this.uiParent: {},
+        this.prevBtn: {},
+        this.nextBtn: {},
+        this.slides: {},
+        this.slideWidth: 0,
+        this.totalWidth: 0,
+        this.currentIndex: 1000,
+        this.numSlides: 0,
+        this.currentSlide: {},
+        this.isMoving: false,
+        this.pagination: {},
+        this.dotNav: {}
+      });
+      this.container = this.options.container;
       this.container.addClass("coffee-slider");
       this.applySettings(options);
       this.bindToDOM();
       this.initUI();
       this.initSlides();
       this.bindUIEvents();
+      this.settings.callbacks.onStart();
       this.goTo(0, true);
     }
 
-    /**
+    /** 
+    Merges user-defined options with defaults.
     @param {Object}  options    User-defined options
+    @private
     */
 
     CoffeeSlider.prototype.applySettings = function(options) {
       this.settings = {
-        animationType: "slide",
+        transitionType: "slide",
         slideshow: true,
         transitionDelay: 2000,
         transitionSpeed: 1000,
         transitionStep: 1,
         hasDotNav: true,
         hasPrevNext: true,
-        hasPagination: true,
+        hasPagination: false,
         touchEnabled: true,
         infinite: true,
+        preloadImages: true,
         selectors: {
           slide: ".slide",
           outer: ".outer",
@@ -73,12 +88,18 @@
           paginationTotal: ".total"
         },
         callBacks: {
-          onChange: function() {},
-          onChangeComplete: function() {}
+          onStart: function() {},
+          onTransition: function() {},
+          onTransitionComplete: function() {}
         }
       };
       return $.extend(true, this.settings, options);
     };
+
+    /**
+    Binds internal properties to DOM elements.
+    @private
+    */
 
     CoffeeSlider.prototype.bindToDOM = function() {
       this.slides = this.find("slide");
@@ -93,15 +114,26 @@
       }
     };
 
+    /**
+    Binds internal properties to DOM elements.
+    @private
+    */
+
     CoffeeSlider.prototype.initSlides = function() {
       if (this.settings.infinite) {
         this.appendClonedSlides();
         this.slides = this.find("slide");
         this.numSlides = this.slides.length;
       }
+      if (this.settings.preloadImages) this.preload();
       this.applyStyles();
       if (this.numSlides < this.settings.transitionStep) return this.removeUI();
     };
+
+    /**
+    Appends cloned slides to either side for purposes of creating illusion of infinite scrolling.
+    @private
+    */
 
     CoffeeSlider.prototype.appendClonedSlides = function() {
       this.inner.append(this.slides.eq(0).clone().addClass('clone').css({
@@ -111,6 +143,11 @@
         float: "left"
       }));
     };
+
+    /**
+    Applies some basic CSS.
+    @private
+    */
 
     CoffeeSlider.prototype.applyStyles = function() {
       var allSlides,
@@ -137,6 +174,23 @@
       return this.outer.css('overflow', 'hidden');
     };
 
+    /**
+    Preloads images.
+    @private
+    */
+
+    CoffeeSlider.prototype.preload = function() {
+      this.container.css({
+        visibility: "visible"
+      });
+      return this.inner.fadeOut(0).fadeIn("500");
+    };
+
+    /**
+    Initialises UI components.
+    @private
+    */
+
     CoffeeSlider.prototype.initUI = function() {
       var i, slide, _len, _ref;
       this.uiParent = this.getContainer("uiParent", this.container);
@@ -161,10 +215,20 @@
       }
     };
 
+    /**
+    Removes UI components.
+    @private
+    */
+
     CoffeeSlider.prototype.removeUI = function() {
       this.nextBtn.remove();
       return this.prevBtn.remove();
     };
+
+    /**
+    Binds event-handling to user controls.
+    @private
+    */
 
     CoffeeSlider.prototype.bindUIEvents = function() {
       var _this = this;
@@ -189,46 +253,80 @@
       }
     };
 
+    /**
+    Called when a touch start event fires.
+    @private  
+    @param {Object} e the event object.
+    */
+
     CoffeeSlider.prototype.onTouchStart = function(e) {
+      var endX, endY;
       this.innerLeft = parseInt(this.inner.css("left"));
-      this.startX = e.originalEvent.touches[0].pageX;
-      this.inner.bind("touchend", this.onTouchEnd);
-      this.inner.bind("touchmove", this.onTouchMove);
-      return this.drag(e.originalEvent);
+      this.startX = endX = e.originalEvent.touches[0].pageX;
+      this.startY = endY = e.originalEvent.touches[0].pageY;
+      this.distanceMovedX = 0;
+      this.distanceMovedY = 0;
+      this.inner.bind("touchend", this.onTouchEndOrCancel);
+      this.inner.bind("touchcancel", this.onTouchEndOrCancel);
+      return this.inner.bind("touchmove", this.onTouchMove);
     };
 
-    CoffeeSlider.prototype.onTouchEnd = function(e) {
-      var distance;
-      this.inner.unbind("touchend", this.onTouchEnd);
-      distance = this.startX - this.endX;
-      if (distance > 50) {
+    /**
+    Called when a touch event finishes.
+    @private
+    @param {Object} e the event object.
+    */
+
+    CoffeeSlider.prototype.onTouchEndOrCancel = function(e) {
+      this.inner.unbind("touchend", this.onTouchEndOrCancel);
+      this.inner.unbind("touchcancel", this.onTouchEndOrCancel);
+      this.inner.unbind("touchmove", this.onTouchMove);
+      if (this.distanceMovedX > 50) {
         return this.next();
-      } else if (distance < -50) {
+      } else if (this.distanceMovedX < -50) {
         return this.prev();
       } else {
         return this.goTo(this.currentIndex);
       }
     };
 
-    CoffeeSlider.prototype.onTouchMove = function(e) {
-      return this.drag(e.originalEvent);
-    };
+    /**
+    Called when a touch move event fires.
+    @private 
+    @param {Object} e the event object.
+    */
 
-    CoffeeSlider.prototype.drag = function(e) {
-      this.endX = e.touches[0].pageX;
+    CoffeeSlider.prototype.onTouchMove = function(e) {
+      this.endX = e.originalEvent.touches[0].pageX;
+      this.endY = e.originalEvent.touches[0].pageY;
+      this.distanceMovedX = this.startX - this.endX;
+      this.distanceMovedY = this.startY - this.endY;
+      if (this.distanceMovedX > 15) {
+        e.preventDefault();
+      } else if (this.distanceMovedY > 15) {
+        this.inner.unbind("touchmove", this.onTouchMove);
+      }
       return this.inner.css({
         left: this.innerLeft - (this.startX - this.endX)
       });
     };
 
-    CoffeeSlider.prototype.goTo = function(index, skipAnimation) {
+    /**
+    Goes to a specific slide (as indicate d).
+    @public
+    @param {Object} index The index (in the Array this.slides) of the slide to go to.
+    @param {Boolean} [skipTransition] If 'true', goes directly to slide without animation.
+    */
+
+    CoffeeSlider.prototype.goTo = function(index, skipTransition) {
       var ACTIVE;
       if (this.isMoving || this.currentIndex === index) return false;
-      if (!skipAnimation) this.isMoving = true;
-      if (this.settings.animationType === "slide") {
-        this.slideTo(index, skipAnimation);
-      } else if (this.settings.animationType === "slideFade") {
-        this.slideFadeTo(index, skipAnimation);
+      this.settings.callbacks.onTransition();
+      if (!skipTransition) this.isMoving = true;
+      if (this.settings.transitionType === "slide") {
+        this.slideTo(index, skipTransition);
+      } else if (this.settings.transitionType === "slideFade") {
+        this.slideFadeTo(index, skipTransition);
       }
       if (this.settings.hasDotNav) {
         ACTIVE = "active";
@@ -246,23 +344,37 @@
       }
     };
 
-    CoffeeSlider.prototype.slideTo = function(index, skipAnimation) {
+    /**
+    Uses the 'slide' animation to move to a slide.
+    @private
+    @param {Object} index The index (in the Array this.slides) of the slide to go to.
+    @param {Boolean} [skipTransition] If 'true', goes directly to slide without animation.
+    */
+
+    CoffeeSlider.prototype.slideTo = function(index, skipTransition) {
       var offset;
       this.currentIndex = index;
       offset = (this.settings.infinite ? 1 : 0);
-      return animate.To({
+      return transition.To({
         target: this.inner,
         props: {
           left: 0 - (index + offset) * this.slideWidth
         },
-        duration: skipAnimation ? 0 : this.settings.transitionSpeed,
-        complete: this.onAnimationComplete
+        duration: skipTransition ? 0 : this.settings.transitionSpeed,
+        complete: this.onTransitionComplete
       });
     };
 
-    CoffeeSlider.prototype.slideFadeTo = function(index, skipAnimation) {
+    /**
+    Uses the 'slideFade' animation to move to a slide.
+    @private
+    @param {Object} index The index (in the Array this.slides) of the slide to go to.
+    @param {Boolean} [skipTransition] If 'true', goes directly to slide without animation.
+    */
+
+    CoffeeSlider.prototype.slideFadeTo = function(index, skipTransition) {
       if (this.slides[this.currentIndex] != null) {
-        animate.To({
+        transition.To({
           target: this.slides[this.currentIndex],
           props: {
             opacity: 0
@@ -270,38 +382,70 @@
           duration: this.settings.transitionSpeed
         });
       }
-      animate.To({
+      transition.To({
         target: this.slides[index],
         props: {
           opacity: 1
         },
         duration: this.settings.transitionSpeed
       });
-      return this.slideTo(index, skipAnimation);
+      return this.slideTo(index, skipTransition);
     };
+
+    /**
+    Goes to the previous page.
+    @public
+    */
 
     CoffeeSlider.prototype.prev = function() {
       return this.goTo(this.currentIndex - 1, false);
     };
 
+    /**
+    Goes to the next page.
+    @public
+    */
+
     CoffeeSlider.prototype.next = function() {
       return this.goTo(this.currentIndex + 1, false);
     };
 
-    CoffeeSlider.prototype.onAnimationComplete = function() {
+    /**
+    Called whenever a slide transition completes.
+    @public
+    */
+
+    CoffeeSlider.prototype.onTransitionComplete = function() {
       this.isMoving = false;
       if (this.settings.infinite) {
         if (this.currentIndex === -1) {
           return this.goTo(this.numSlides - 3, true);
         } else if (this.currentIndex === this.numSlides - 2) {
           return this.goTo(0, true);
+        } else {
+          return this.settings.callbacks.onTransitionComplete();
         }
+      } else {
+        return this.settings.callbacks.onTransitionComplete();
       }
     };
 
-    CoffeeSlider.prototype.find = function(f) {
-      return this.container.find(this.settings.selectors[f]);
+    /**
+    Utility function. Finds an element in the container for a given selector in the selectors object.
+    @private
+    @param {String} selectorName The selectors name.
+    */
+
+    CoffeeSlider.prototype.find = function(selectorName) {
+      return this.container.find(this.settings.selectors[selectorName]);
     };
+
+    /**
+    Utility function. Gets a container.
+    @private
+    @param {String} name The selectors name.
+    @param {String} _default The default container to revert to.
+    */
 
     CoffeeSlider.prototype.getContainer = function(name, _default) {
       if (this.settings.selectors[name] === "") {
@@ -310,6 +454,12 @@
         return this.find(name);
       }
     };
+
+    /**
+    Utility function. Gets a container.
+    @private
+    @param {String} name The selectors name.
+    */
 
     CoffeeSlider.prototype.getSelector = function(name) {
       var selector;

@@ -1,4 +1,5 @@
 (function() {
+  "use strict";
   var animate, modules,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
