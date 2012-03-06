@@ -1,3 +1,5 @@
+"use strict"  
+
 SEQ ?= {}
 SEQ.utils ?= {}
 
@@ -38,8 +40,3 @@ window.log = ->
   catch err
     return window.console = {}
 )()
-
-
-
-
-

@@ -1,3 +1,5 @@
+"use strict" 
+
 SEQ.utils.namespace('SEQ.modules')
 
 class SEQ.modules.CoffeeModal

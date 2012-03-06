@@ -1,5 +1,5 @@
-Sequence Middleman Template
-=================
+MEGO
+====
 
 This is a work in progress for a rapid HTML prototyping framework, using MiddleMan, HAML and SASS.
 
