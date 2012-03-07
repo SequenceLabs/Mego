@@ -30,7 +30,7 @@ Thanks
 
 Bug reporting, requests etc
 ---------------------
-Please add any requests or bug reports to the issue tracker here > http://github.com/hamishtaplin/Sequence-Middleman-Template/issues
+Please add any requests or bug reports to the issue tracker here > https://github.com/SequenceLabs/Mego/issues
 
 Thanks.
 
