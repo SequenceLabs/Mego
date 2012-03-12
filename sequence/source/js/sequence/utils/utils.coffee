@@ -1,7 +1,7 @@
 "use strict"  
 
-SEQ ?= {}
-SEQ.utils ?= {}
+window.SEQ ?= {}
+window.SEQ.utils ?= {}
 
 #namespace util
 SEQ.utils.namespace = (ns_string) ->

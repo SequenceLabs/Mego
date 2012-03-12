@@ -16,3 +16,15 @@ do init = () ->
 		onDocReady()
 # executes when document is ready
 onDocReady = () ->
+  # init CoffeeSlider
+  new SEQ.modules.CoffeeSlider
+    container: $("#carousel")
+    transitionType: "slide"
+    loop: "return"
+    transitionSpeed: 400
+    transitionDirection: "horizontal"
+    touchStyle: "drag"
+    
+    preload: true
+    selectors:
+      slide: "figure"     

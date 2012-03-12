@@ -26,24 +26,22 @@
       this.onTouchMove = __bind(this.onTouchMove, this);
       this.onTouchEndOrCancel = __bind(this.onTouchEndOrCancel, this);
       this.onTouchStart = __bind(this.onTouchStart, this);
-      this.bindUIEvents = __bind(this.bindUIEvents, this);      ({
-        this.settings: {},
-        this.container: {},
-        this.outer: {},
-        this.inner: {},
-        this.uiParent: {},
-        this.prevBtn: {},
-        this.nextBtn: {},
-        this.slides: {},
-        this.slideWidth: 0,
-        this.totalWidth: 0,
-        this.currentIndex: 1000,
-        this.numSlides: 0,
-        this.currentSlide: {},
-        this.isMoving: false,
-        this.pagination: {},
-        this.dotNav: {}
-      });
+      this.bindUIEvents = __bind(this.bindUIEvents, this);      this.settings = {};
+      this.container = {};
+      this.outer = {};
+      this.inner = {};
+      this.uiParent = {};
+      this.prevBtn = {};
+      this.nextBtn = {};
+      this.slides = {};
+      this.slideWidth = 0;
+      this.totalWidth = 0;
+      this.currentIndex = 1000;
+      this.numSlides = 0;
+      this.currentSlide = {};
+      this.isMoving = false;
+      this.pagination = {};
+      this.dotNav = {};
       this.container = this.options.container;
       this.container.addClass("coffee-slider");
       this.applySettings(options);

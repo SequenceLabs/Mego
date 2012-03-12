@@ -3,6 +3,11 @@ Transition
 
 This module provides an API for creating and controlling CSS3 transitions programmatically, with a jQuery fallback in non-supported browsers. 
 
+Dependencies
+------------
+
+- jQuery
+
 Usage
 -----
 
@@ -32,4 +37,11 @@ Options
 
 Changelog
 ---------
+       
+08.03.12
 
+- fixed bug with jQuery complete callback.
+    
+09.03.12
+
+- restructured how individual property transitions occur so they now instantiate their own class and have internal states, event-handling, etc.

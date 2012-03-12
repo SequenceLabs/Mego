@@ -1,19 +1,5 @@
 SEQ.utils.namespace('SEQ.utils.browser')
 
-class SEQ.utils.browser.CSS3Detection
-  
-  prefixes = ["", "Webkit", "Moz", "O", "ms", "Khtml"]
-    
-  @GetProp = (prop) ->  
-    for prefix in prefixes
-      p = "#{prefix}#{prop}"
-      return p if document.body.style[p]?
-
-  @GetVendorPrefix = (prop) ->
-    for prefix in prefixes
-      return "-#{prefix}-" if document.body.style["#{prefix}#{prop}"]?
-
-
 SEQ.utils.browser.platform =
   isAndroid: ->
     return navigator.userAgent.toLowerCase().indexOf("android") > -1  
