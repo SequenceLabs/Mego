@@ -1,25 +1,41 @@
-class Middleman::Templates::Sequence < Middleman::Templates::Base
+# ----------------------------
+# Set directories (optional)
+set :css_dir, "css"
+set :images_dir, "images"
+set :js_dir, "js"
 
-	
-	class_option :css_dir, :default => "css"
-	class_option :js_dir, :default => "js"
-	class_option :images_dir, :default => "img"
+# ----------------------------
+# Build-specific configuration
+configure :build do
 
-	def self.source_root
-		File.join(File.dirname(__FILE__), 'sequence')
-	end
+	# Set directories to relative
+	activate :relative_assets
 
-	def build_scaffold
-		template "config.tt", File.join(location, "config.rb")
-		template "config.ru", File.join(location, "config.ru")
-		directory "source", File.join(location, "source")
-	end
+	# Change the output style for deployment
+	# activate :minify_css
+
+	# Minify Javascript on build
+	# activate :minify_javascript
+
+	# Enable cache buster
+	# activate :cache_buster
+
+	# Use relative URLs
+	# activate :relative_assets
+
+	# Compress PNGs after build
+	# First: gem install middleman-smusher
+	# require "middleman-smusher"
+	# activate :smusher
+
+	# Or use a different image path
+	# set :http_path, "/Content/images/"
 
 end
 
-
+# ----------------------------
+# Helpers
 helpers do
-
 
   def custom_html_tag(lang="en", &block)
 	haml_concat <<-"HTML".gsub( /^\s+/, '' )
@@ -32,8 +48,8 @@ helpers do
 	haml_concat capture(&block) << ("\n</html>") if block_given?
   end
 
-
 end
 
-set :css_dir, "css"
-Middleman::Templates.register(:sequence, Middleman::Templates::Sequence)
+
+
+
