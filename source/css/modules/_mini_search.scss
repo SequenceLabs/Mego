@@ -10,11 +10,12 @@
 
 #mini-search {
 	position: absolute;
-	right: 0;
-	top: 30px;
+	right: 0px;
+	top: -38px;
 	.field-search {
 		float: left;
 		width: 200px;
+		margin-top:2px;
 	}
 	.btn-search {
 		float: left;

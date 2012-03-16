@@ -18,10 +18,31 @@ body {
   margin: 0 auto;
   height: 100%;
 }
-#footer {
-  #footer_nav {
 
-  }
+#footer {
+	padding: 12px 0;
+	background: #999;
+	width:100%;
+	#footer-nav {
+		padding: 12px 0;
+		background: #999;
+		width:100%;
+		ul {
+			margin:0 auto;
+			width:$width;
+			li {
+				display: inline;
+				a {
+					color:#333;
+					padding: 10px;
+					font-weight:normal;
+					&:hover{
+						color:#fff
+					}
+				}
+			}
+		}
+	}
 }
 
 #page_header .wrapper {
@@ -49,17 +70,28 @@ body {
 
 
 #site_nav {
-	float: right;
-	padding: 0 10px;
-	background: #dce8be;
+	padding: 12px 0;
+	background: #999;
+	width:100%;
 	ul {
+		margin:0 auto;
+		width:$width;
 		li {
 			display: inline;
 			a {
+				color:#333;
 				padding: 10px;
+				font-weight:normal;
+				&:hover{color:#fff}
 			}
 		}
 	}
+}
+
+#branding {
+	padding-top:$baseline;
+	clear:both;
+	overflow:hidden;
 }
 
 #test {
