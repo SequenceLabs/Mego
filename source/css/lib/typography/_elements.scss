@@ -1,103 +1,103 @@
 body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,input,textarea {
-	line-height: $baseline * 2;
-	color: $default-colour;
+  line-height: $baseline * 2;
+  color: $default-colour;
 }
 
 p {
-	margin-bottom: $baseline * 2;
+  margin-bottom: $baseline * 2;
 }
 
 ul {
-	list-style:disc;
+  list-style:disc;
 }
 
 ul.unstyled {
-	list-style: none;
-	li {
-		margin-left: 0;
-	}
+  list-style: none;
+  li {
+    margin-left: 0;
+  }
 }
 
 abbr, acronym {
-	border-bottom: 1px dotted black;
+  border-bottom: 1px dotted black;
 }
 
 address {
-	font-style: italic;
+  font-style: italic;
 }
 
 del {
-	color: black;
+  color: black;
 }
 
 a {
-	color: $links-normal;
-	text-decoration: none;
-	outline: 0;
-	cursor: pointer;
-	@include transition(color, 0.2s);
+  color: $links-normal;
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+  @include transition(color, 0.2s);
 }
 
 a:hover {
-	color: $links-hover;
-	text-decoration: none;
-	@include transition(color, 0.2s);
+  color: $links-hover;
+  text-decoration: none;
+  @include transition(color, 0.2s);
 }
 a, a:active, a:focus {
-	outline: 0;
+  outline: 0;
 }
 
 a {
-	@include link-colours($links-normal, $links-hover, $links-active, $links-visited, $links-focus)
-	}
+  @include link-colours($links-normal, $links-hover, $links-active, $links-visited, $links-focus)
+  }
 
 blockquote {
-	display: block;
-	font-weight: bold;
-	border-left: 4px solid #eeeeee;
-	padding: ($baseline*2) $baseline;
-	font-weight: bold;
-	font-size: 30px;
-	font-family: serif;
-	font-style: italic;
-	color: $default-colour;
-	line-height: 30px;
-	margin: $baseline 0;
+  display: block;
+  font-weight: bold;
+  border-left: 4px solid #eeeeee;
+  padding: ($baseline*2) $baseline;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: serif;
+  font-style: italic;
+  color: $default-colour;
+  line-height: 30px;
+  margin: $baseline 0;
 }
 
 pre, code {
-	margin: 10px 0;
-	white-space: pre;
+  margin: 10px 0;
+  white-space: pre;
 }
 
 pre, code, tt {
-	font: $mono;
-	line-height: 1.5;
-	padding: 0 3px 2px;
-	background: #FFFFEE;
+  font: $mono;
+  line-height: 1.5;
+  padding: 0 3px 2px;
+  background: #FFFFEE;
 }
 
 q {
-	font-style: italic;
-	font-weight: bold;
-	font-family: $serif;
+  font-style: italic;
+  font-weight: bold;
+  font-family: $serif;
 }
 
 cite {
-	display: block;
-	font-weight: bold;
+  display: block;
+  font-weight: bold;
 }
 
 figcaption {
-	display: block;
-	font-weight: bold;
-	font-style: italic;
+  display: block;
+  font-weight: bold;
+  font-style: italic;
 }
 
 small {
-	font-size: $font-size - 3;
+  font-size: $font-size - 3;
 }
 
 strong {
-	font-weight: bold;
+  font-weight: bold;
 }

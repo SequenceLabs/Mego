@@ -1,24 +1,24 @@
 /********************************************
 *
-*	@author Nadhim Orfali
-*	@version 0.1
+* @author Nadhim Orfali
+* @version 0.1
 *
-*	CSS for Mini search form input
+* CSS for Mini search form input
 *
 ********************************************/
 
 
 #mini-search {
-	position: absolute;
-	right: 0px;
-	top: -38px;
-	.field-search {
-		float: left;
-		width: 200px;
-		margin-top:2px;
-	}
-	.btn-search {
-		float: left;
-		margin-left: 10px;
-	}
+  position: absolute;
+  right: 0px;
+  top: -38px;
+  .field-search {
+    float: left;
+    width: 200px;
+    margin-top:2px;
+  }
+  .btn-search {
+    float: left;
+    margin-left: 10px;
+  }
 }

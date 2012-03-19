@@ -5,9 +5,9 @@
 = partial('includes/structure/html_header')
 
 %body{:id=>data.page.body_id, :class=>data.page.body_class}
-	%form{:id => "mainform", :action => "/", :method => "post"}
-		%section#main
-			= partial('includes/structure/header')
-			= yield
-			= partial('includes/structure/footer')
-			= partial('includes/structure/javascripts')
+  %form{:id => "mainform", :action => "/", :method => "post"}
+    %section#main
+      = partial('includes/structure/header')
+      = yield
+      = partial('includes/structure/footer')
+      = partial('includes/structure/javascripts')

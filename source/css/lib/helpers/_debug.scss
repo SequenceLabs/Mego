@@ -4,23 +4,23 @@
 //
 
 @if $debug == true {
-	@if $debug-grid == griddle {
-		/*
-		*	Generate a griddle
-		*/
-		html {
-			height: 100%;
-		}
-		body {
-		  background: url("http://griddle.it/"+$width+"-"+$columns+"-"+$gutters+"?background=fafafa&color=fff4f4") repeat-y center top;
-		  height: 100%;
-		}
-	} @elseif $debug-grid == baseline {
-		/*
-		*	Baseline
-		*/
-		#main {
-		  background: transparent url(../images/_baseline-grid.png) repeat 0 0;
-		}
-	}
+  @if $debug-grid == griddle {
+    /*
+    * Generate a griddle
+    */
+    html {
+      height: 100%;
+    }
+    body {
+      background: url("http://griddle.it/"+$width+"-"+$columns+"-"+$gutters+"?background=fafafa&color=fff4f4") repeat-y center top;
+      height: 100%;
+    }
+  } @elseif $debug-grid == baseline {
+    /*
+    * Baseline
+    */
+    #main {
+      background: transparent url(../images/_baseline-grid.png) repeat 0 0;
+    }
+  }
 }
