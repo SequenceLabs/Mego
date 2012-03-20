@@ -13,9 +13,12 @@ Project_Namespace = SEQ.utils.namespace "SEQ.project_namespace"
 do init = () ->
 	# console.log "init"
 	$(document).ready ->
-		onDocReady()
+    onDocReady()
 # executes when document is ready
 onDocReady = () ->
+  new SEQ.modules.Twitter
+    container: $("#twitter h5")
+
   # init CoffeeSlider
   new SEQ.modules.CoffeeSlider
     container: $("#carousel")
@@ -24,7 +27,6 @@ onDocReady = () ->
     transitionSpeed: 400
     transitionDirection: "horizontal"
     touchStyle: "drag"
-    
     preload: true
     selectors:
-      slide: "figure"     
+      slide: "figure"
