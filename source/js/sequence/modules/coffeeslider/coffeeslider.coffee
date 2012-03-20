@@ -4,7 +4,8 @@ modules = SEQ.utils.namespace('SEQ.modules')
 transition = SEQ.effects.Transition
 
 ###*    
-CoffeeSlider is a touch-enabled Coffeescript-based slider module. 
+CoffeeSlider is a touch-enabled Coffeescript-based slider module.  
+
 @class CoffeeSlider 
 @author Hamish Taplin, Sequence        
 ###  
@@ -62,7 +63,8 @@ class modules.CoffeeSlider
       @applyStyles()            
       @bindUIEvents()
       @settings.callbacks.onStart()
-      @goTo(0, true)   
+      @goTo(0, true)
+   
   
   ###* 
   Merges user-defined options with defaults.
@@ -86,7 +88,6 @@ class modules.CoffeeSlider
                                             # "return" - loops around to start/end
                                             # "none" - does nothing when it reaches the start/end
       preload: true
-     
       selectors:
         slide:    ".slide"
         outer:    ".outer"
@@ -211,8 +212,8 @@ class modules.CoffeeSlider
     @outer.css
       overflow: "hidden"
     # get width of single slide      
-    @slideWidth = @slides.eq(0).outerWidth()
-    @slideHeight = @slides.eq(0).outerHeight()
+    @slideWidth = @slides.eq(0).outerWidth(true)
+    @slideHeight = @slides.eq(0).outerHeight(true)
     @totalWidth = @slideWidth * @numSlides
     @totalHeight = @slideHeight * @numSlides
        
@@ -223,7 +224,7 @@ class modules.CoffeeSlider
           float: "left"
           overflow: "hidden"
         # recalculate width
-        @slideWidth = @slides.eq(0).outerWidth()
+        @slideWidth = @slides.eq(0).outerWidth(true)
         @totalWidth = @slideWidth * @numSlides  
         # set width of inner to accomodate slides
         @inner.css
@@ -322,7 +323,18 @@ class modules.CoffeeSlider
 
     #touch events
     @inner.bind "touchstart", @onTouchStart if @settings.touchStyle isnt "none"
+
+  ###*
+  Initialises the slideshow, if needed.
+  @private
+  ###
+  initSlideshow: =>    
+    clearTimeout(@timer)
+    @timer = setTimeout(@onSlideshowTick, @settings.transitionDelay)
     
+  onSlideshowTick: () =>
+    @next()
+        
   ###*
   Called when a touch start event fires.
   @private  
@@ -339,6 +351,9 @@ class modules.CoffeeSlider
     @inner.bind("touchend", @onTouchEndOrCancel)
     @inner.bind("touchcancel", @onTouchEndOrCancel)
     @inner.bind("touchmove", @onTouchMove)
+    
+    if @settings.slideshow
+      clearTimeout(@timer)
   
   ###*
   Called when a touch event finishes.
@@ -454,6 +469,10 @@ class modules.CoffeeSlider
         @pagination.setPage 1
       else
         @pagination.setPage @currentIndex + 1
+        
+    if @settings.slideshow
+      @initSlideshow()
+    
   
   ###*
   Uses the 'slide' animation to move to a slide.
@@ -530,7 +549,7 @@ class modules.CoffeeSlider
         return
         
     @goTo nextIndex, false
-    
+        
   ###*
   Called whenever a slide transition completes.
   @public

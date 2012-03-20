@@ -11,9 +11,9 @@ Project_Namespace = SEQ.utils.namespace "SEQ.project_namespace"
 
 #init function happens as soon as javascript is loaded
 do init = () ->
-	# console.log "init"
-	$(document).ready ->
-		onDocReady()
+  # console.log "init"
+  $(document).ready ->
+    onDocReady()
 # executes when document is ready
 onDocReady = () ->
   # init CoffeeSlider
@@ -24,7 +24,6 @@ onDocReady = () ->
     transitionSpeed: 400
     transitionDirection: "horizontal"
     touchStyle: "drag"
-    
     preload: true
     selectors:
       slide: "figure"     

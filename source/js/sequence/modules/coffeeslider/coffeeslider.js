@@ -18,15 +18,25 @@
     Constructor. Creates a CoffeeSlider instance.
     */
     function CoffeeSlider(options) {
+      this.options = options;
       this.find = __bind(this.find, this);
       this.onTransitionComplete = __bind(this.onTransitionComplete, this);
       this.slideFadeTo = __bind(this.slideFadeTo, this);
+      this.fadeTo = __bind(this.fadeTo, this);
       this.slideTo = __bind(this.slideTo, this);
       this.goTo = __bind(this.goTo, this);
       this.onTouchMove = __bind(this.onTouchMove, this);
       this.onTouchEndOrCancel = __bind(this.onTouchEndOrCancel, this);
       this.onTouchStart = __bind(this.onTouchStart, this);
-      this.bindUIEvents = __bind(this.bindUIEvents, this);      this.settings = {};
+      this.onSlideshowTick = __bind(this.onSlideshowTick, this);
+      this.initSlideshow = __bind(this.initSlideshow, this);
+      this.bindUIEvents = __bind(this.bindUIEvents, this);
+      this.applyStyles = __bind(this.applyStyles, this);
+      this.checkImagesLoaded = __bind(this.checkImagesLoaded, this);
+      this.preload = __bind(this.preload, this);
+      this.initSlides = __bind(this.initSlides, this);
+      this.init = __bind(this.init, this);
+      this.settings = {};
       this.container = {};
       this.outer = {};
       this.inner = {};
@@ -35,23 +45,31 @@
       this.nextBtn = {};
       this.slides = {};
       this.slideWidth = 0;
-      this.totalWidth = 0;
       this.currentIndex = 1000;
       this.numSlides = 0;
       this.currentSlide = {};
       this.isMoving = false;
       this.pagination = {};
       this.dotNav = {};
+      this.init();
+    }
+
+    CoffeeSlider.prototype.init = function() {
+      var _this = this;
       this.container = this.options.container;
-      this.container.addClass("coffee-slider");
-      this.applySettings(options);
+      this.container.addClass("coffee-slider").css({
+        opacity: 1
+      });
+      this.applySettings();
       this.bindToDOM();
       this.initUI();
-      this.initSlides();
-      this.bindUIEvents();
-      this.settings.callbacks.onStart();
-      this.goTo(0, true);
-    }
+      return this.initSlides(function() {
+        _this.applyStyles();
+        _this.bindUIEvents();
+        _this.settings.callbacks.onStart();
+        return _this.goTo(0, true);
+      });
+    };
 
     /** 
     Merges user-defined options with defaults.
@@ -59,25 +77,26 @@
     @private
     */
 
-    CoffeeSlider.prototype.applySettings = function(options) {
+    CoffeeSlider.prototype.applySettings = function() {
       this.settings = {
         transitionType: "slide",
         slideshow: true,
+        transitionDirection: "horizontal",
         transitionDelay: 2000,
         transitionSpeed: 1000,
-        transitionStep: 1,
         hasDotNav: true,
         hasPrevNext: true,
         hasPagination: false,
-        touchEnabled: true,
-        infinite: true,
-        preloadImages: true,
+        touchStyle: "drag",
+        loop: "infinite",
+        preload: true,
         selectors: {
           slide: ".slide",
           outer: ".outer",
           inner: ".inner",
           prev: ".prev",
           next: ".next",
+          btn: ".btn",
           uiParent: "",
           paginationContainer: "",
           dotNav: ".dot-nav",
@@ -85,13 +104,13 @@
           paginationCurrent: ".currentPage",
           paginationTotal: ".total"
         },
-        callBacks: {
+        callbacks: {
           onStart: function() {},
           onTransition: function() {},
           onTransitionComplete: function() {}
         }
       };
-      return $.extend(true, this.settings, options);
+      return $.extend(true, this.settings, this.options);
     };
 
     /**
@@ -102,6 +121,7 @@
     CoffeeSlider.prototype.bindToDOM = function() {
       this.slides = this.find("slide");
       this.numSlides = this.slides.length;
+      this.slides.addClass("slide");
       if ((this.inner = this.find("inner")).length === 0) {
         this.slides.wrapAll($("<div />").addClass(this.getSelector("inner")));
         this.inner = this.find("inner");
@@ -117,15 +137,59 @@
     @private
     */
 
-    CoffeeSlider.prototype.initSlides = function() {
-      if (this.settings.infinite) {
+    CoffeeSlider.prototype.initSlides = function(callback) {
+      if (this.settings.loop === "infinite" && this.settings.transitionType !== "fade") {
         this.appendClonedSlides();
-        this.slides = this.find("slide");
-        this.numSlides = this.slides.length;
       }
-      if (this.settings.preloadImages) this.preload();
-      this.applyStyles();
-      if (this.numSlides < this.settings.transitionStep) return this.removeUI();
+      if (this.settings.preload) {
+        return this.preload(callback);
+      } else {
+        return callback();
+      }
+    };
+
+    /**
+    Preloads the images.
+    @private
+    */
+
+    CoffeeSlider.prototype.preload = function(callback) {
+      this.outer.css({
+        opacity: 0
+      });
+      this.images = this.container.find("img");
+      this.numImages = this.images.length;
+      return this.checkImagesLoaded(callback);
+    };
+
+    /**
+    Loops through each image and checks if loaded. If ready, calls the callback to continue.
+    @private
+    */
+
+    CoffeeSlider.prototype.checkImagesLoaded = function(callback) {
+      var img, imgsLoaded, _i, _len, _ref,
+        _this = this;
+      imgsLoaded = 0;
+      _ref = this.images;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        img = _ref[_i];
+        if (img.complete) imgsLoaded++;
+      }
+      if (imgsLoaded === this.numImages) {
+        callback();
+        return transition.To({
+          target: this.outer,
+          duration: 300,
+          props: {
+            opacity: 1
+          }
+        });
+      } else {
+        return setTimeout(function() {
+          return _this.checkImagesLoaded(callback);
+        }, 100);
+      }
     };
 
     /**
@@ -134,12 +198,16 @@
     */
 
     CoffeeSlider.prototype.appendClonedSlides = function() {
+      var float;
+      float = (this.settings.transitionDirection === "horizontal" ? "left" : "none");
       this.inner.append(this.slides.eq(0).clone().addClass('clone').css({
-        float: "left"
+        float: float
       }));
-      return this.inner.prepend(this.slides.eq(this.numSlides - 1).clone().addClass('clone').css({
-        float: "left"
+      this.inner.prepend(this.slides.eq(this.numSlides - 1).clone().addClass('clone').css({
+        float: float
       }));
+      this.slides = this.find("slide");
+      return this.numSlides = this.slides.length;
     };
 
     /**
@@ -147,41 +215,59 @@
     @private
     */
 
-    CoffeeSlider.prototype.applyStyles = function() {
-      var allSlides,
-        _this = this;
-      allSlides = this.find("slide");
-      allSlides.each(function(i, slide) {
-        return _this.totalWidth += $(slide).outerWidth(true);
-      });
-      this.inner.css({
-        width: this.totalWidth
-      });
-      this.slideWidth = allSlides.eq(0).outerWidth(true);
-      this.outer.css({
-        width: this.slideWidth,
-        overflow: "hidden"
-      });
-      this.slides.css({
-        float: "left"
-      });
+    CoffeeSlider.prototype.applyStyles = function(callback) {
       this.inner.css({
         position: "relative",
         overflow: "hidden"
       });
-      return this.outer.css('overflow', 'hidden');
-    };
-
-    /**
-    Preloads images.
-    @private
-    */
-
-    CoffeeSlider.prototype.preload = function() {
-      this.container.css({
-        visibility: "visible"
+      this.outer.css({
+        overflow: "hidden"
       });
-      return this.inner.fadeOut(0).fadeIn("500");
+      this.slideWidth = this.slides.eq(0).outerWidth(true);
+      this.slideHeight = this.slides.eq(0).outerHeight(true);
+      this.totalWidth = this.slideWidth * this.numSlides;
+      this.totalHeight = this.slideHeight * this.numSlides;
+      if (this.settings.transitionType === "slide" || this.settings.transitionType === "slideFade") {
+        if (this.settings.transitionDirection === "horizontal") {
+          this.slides.css({
+            float: "left",
+            overflow: "hidden"
+          });
+          this.slideWidth = this.slides.eq(0).outerWidth(true);
+          this.totalWidth = this.slideWidth * this.numSlides;
+          this.inner.css({
+            width: this.totalWidth,
+            height: this.totalHeight
+          });
+          return this.outer.css({
+            width: this.slideWidth,
+            height: this.slideHeight
+          });
+        } else if (this.settings.transitionDirection === "vertical") {
+          this.inner.css({
+            height: this.totalHeight,
+            width: this.slideWidth
+          });
+          return this.outer.css({
+            height: this.slideHeight,
+            width: this.slideWidth
+          });
+        }
+      } else if (this.settings.transitionType === "fade") {
+        this.slides.css({
+          position: "absolute",
+          left: "0",
+          opacity: "0"
+        });
+        this.inner.css({
+          width: this.slideWidth,
+          height: this.slideHeight
+        });
+        return this.outer.css({
+          height: this.slideHeight,
+          width: this.slideWidth
+        });
+      }
     };
 
     /**
@@ -193,10 +279,10 @@
       var i, slide, _len, _ref;
       this.uiParent = this.getContainer("uiParent", this.container);
       if (this.settings.hasPrevNext) {
-        this.uiParent.append("<div class='" + (this.getSelector("prev")) + "'>previous</div>");
-        this.uiParent.append("<div class='" + (this.getSelector("next")) + "'>next</div>");
-        this.nextBtn = this.find("next");
-        this.prevBtn = this.find("prev");
+        this.prevBtn = $("<div />").addClass("" + (this.getSelector("prev"))).addClass("" + (this.getSelector("btn"))).html("next");
+        this.nextBtn = $("<div />").addClass("" + (this.getSelector("next"))).addClass("" + (this.getSelector("btn"))).html("prev");
+        this.uiParent.append(this.prevBtn);
+        this.uiParent.append(this.nextBtn);
       }
       if (this.settings.hasDotNav) {
         this.dotNav = $("<nav />").addClass(this.getSelector("dotNav"));
@@ -246,9 +332,23 @@
           return _this.goTo($(e.target).index(), false);
         });
       }
-      if (this.settings.touchEnabled) {
+      if (this.settings.touchStyle !== "none") {
         return this.inner.bind("touchstart", this.onTouchStart);
       }
+    };
+
+    /**
+    Initialises the slideshow, if needed.
+    @private
+    */
+
+    CoffeeSlider.prototype.initSlideshow = function() {
+      clearTimeout(this.timer);
+      return this.timer = setTimeout(this.onSlideshowTick, this.settings.transitionDelay);
+    };
+
+    CoffeeSlider.prototype.onSlideshowTick = function() {
+      return this.next();
     };
 
     /**
@@ -260,13 +360,15 @@
     CoffeeSlider.prototype.onTouchStart = function(e) {
       var endX, endY;
       this.innerLeft = parseInt(this.inner.css("left"));
+      this.innerTop = parseInt(this.inner.css("top"));
       this.startX = endX = e.originalEvent.touches[0].pageX;
       this.startY = endY = e.originalEvent.touches[0].pageY;
       this.distanceMovedX = 0;
       this.distanceMovedY = 0;
       this.inner.bind("touchend", this.onTouchEndOrCancel);
       this.inner.bind("touchcancel", this.onTouchEndOrCancel);
-      return this.inner.bind("touchmove", this.onTouchMove);
+      this.inner.bind("touchmove", this.onTouchMove);
+      if (this.settings.slideshow) return clearTimeout(this.timer);
     };
 
     /**
@@ -275,16 +377,42 @@
     @param {Object} e the event object.
     */
 
-    CoffeeSlider.prototype.onTouchEndOrCancel = function(e) {
+    CoffeeSlider.prototype.onTouchEndOrCancel = function() {
       this.inner.unbind("touchend", this.onTouchEndOrCancel);
       this.inner.unbind("touchcancel", this.onTouchEndOrCancel);
       this.inner.unbind("touchmove", this.onTouchMove);
-      if (this.distanceMovedX > 50) {
-        return this.next();
-      } else if (this.distanceMovedX < -50) {
-        return this.prev();
-      } else {
-        return this.goTo(this.currentIndex);
+      if (this.settings.transitionDirection === "horizontal") {
+        if (this.distanceMovedX > 50) {
+          if (this.settings.transitionType === "fade" || this.settings.touchStyle === "inverseGesture") {
+            return this.prev();
+          } else {
+            return this.next();
+          }
+        } else if (this.distanceMovedX < -50) {
+          if (this.settings.transitionType === "fade" || this.settings.touchStyle === "inverseGesture") {
+            return this.next();
+          } else {
+            return this.prev();
+          }
+        } else {
+          return this.goTo(this.currentIndex);
+        }
+      } else if (this.settings.transitionDirection === "vertical") {
+        if (this.distanceMovedY > 50) {
+          if (this.settings.transitionType === "fade" || this.settings.touchStyle === "inverseGesture") {
+            return this.prev();
+          } else {
+            return this.next();
+          }
+        } else if (this.distanceMovedY < -50) {
+          if (this.settings.transitionType === "fade" || this.settings.touchStyle === "inverseGesture") {
+            return this.next();
+          } else {
+            return this.prev();
+          }
+        } else {
+          return this.goTo(this.currentIndex);
+        }
       }
     };
 
@@ -295,22 +423,51 @@
     */
 
     CoffeeSlider.prototype.onTouchMove = function(e) {
+      var dragPosX, dragPosY;
       this.endX = e.originalEvent.touches[0].pageX;
       this.endY = e.originalEvent.touches[0].pageY;
       this.distanceMovedX = this.startX - this.endX;
       this.distanceMovedY = this.startY - this.endY;
-      if (this.distanceMovedX > 15) {
-        e.preventDefault();
-      } else if (this.distanceMovedY > 15) {
-        this.inner.unbind("touchmove", this.onTouchMove);
+      if (this.settings.transitionDirection === "horizontal") {
+        if (Math.abs(this.distanceMovedX) > 15) {
+          e.preventDefault();
+        } else if (Math.abs(this.distanceMovedY) > 15) {
+          this.inner.unbind("touchmove", this.onTouchMove);
+        }
+      } else if (this.settings.transitionDirection === "vertical") {
+        if (Math.abs(this.distanceMovedY) > 10) {
+          e.preventDefault();
+        } else if (Math.abs(this.distanceMovedX) > 10) {
+          this.inner.unbind("touchmove", this.onTouchMove);
+        }
       }
-      return this.inner.css({
-        left: this.innerLeft - (this.startX - this.endX)
-      });
+      if (this.settings.touchStyle === "drag") {
+        if (this.settings.transitionDirection === "horizontal") {
+          dragPosX = this.innerLeft - (this.startX - this.endX);
+          if (this.settings.loop !== "infinite" && (dragPosX >= 10 || dragPosX <= 0 - (this.totalWidth - this.slideWidth - 10))) {
+            this.inner.unbind("touchmove", this.onTouchMove);
+            return this.distanceMovedX = 0;
+          } else {
+            return this.inner.css({
+              left: dragPosX
+            });
+          }
+        } else if (this.settings.transitionDirection === "vertical") {
+          dragPosY = this.innerTop - (this.startY - this.endY);
+          if (this.settings.loop !== "infinite" && dragPosY >= 10) {
+            this.inner.unbind("touchmove", this.onTouchMove);
+            return this.distanceMovedY = 0;
+          } else {
+            return this.inner.css({
+              top: dragPosY
+            });
+          }
+        }
+      }
     };
 
     /**
-    Goes to a specific slide (as indicate d).
+    Goes to a specific slide (as indicated).
     @public
     @param {Object} index The index (in the Array this.slides) of the slide to go to.
     @param {Boolean} [skipTransition] If 'true', goes directly to slide without animation.
@@ -318,11 +475,12 @@
 
     CoffeeSlider.prototype.goTo = function(index, skipTransition) {
       var ACTIVE;
-      if (this.isMoving || this.currentIndex === index) return false;
       this.settings.callbacks.onTransition();
       if (!skipTransition) this.isMoving = true;
       if (this.settings.transitionType === "slide") {
         this.slideTo(index, skipTransition);
+      } else if (this.settings.transitionType === "fade") {
+        this.fadeTo(index, skipTransition);
       } else if (this.settings.transitionType === "slideFade") {
         this.slideFadeTo(index, skipTransition);
       }
@@ -333,13 +491,14 @@
       }
       if (this.settings.hasPagination) {
         if (this.currentIndex < 0) {
-          return this.pagination.setPage(this.numSlides - 2);
+          this.pagination.setPage(this.numSlides - 2);
         } else if (this.currentIndex > (this.numSlides - 3)) {
-          return this.pagination.setPage(1);
+          this.pagination.setPage(1);
         } else {
-          return this.pagination.setPage(this.currentIndex + 1);
+          this.pagination.setPage(this.currentIndex + 1);
         }
       }
+      if (this.settings.slideshow) return this.initSlideshow();
     };
 
     /**
@@ -350,15 +509,43 @@
     */
 
     CoffeeSlider.prototype.slideTo = function(index, skipTransition) {
-      var offset;
+      var offset, position;
       this.currentIndex = index;
-      offset = (this.settings.infinite ? 1 : 0);
+      offset = (this.settings.loop === "infinite" ? 1 : 0);
+      if (this.settings.transitionDirection === "horizontal") {
+        position = {
+          left: 0 - (index + offset) * this.slideWidth
+        };
+      } else if (this.settings.transitionDirection === "vertical") {
+        position = {
+          top: 0 - (index + offset) * this.slideHeight
+        };
+      }
       return transition.To({
         target: this.inner,
+        props: position,
+        duration: skipTransition ? 0 : this.settings.transitionSpeed / 2,
+        complete: this.onTransitionComplete
+      });
+    };
+
+    CoffeeSlider.prototype.fadeTo = function(index, skipTransition) {
+      if (this.slides[this.currentIndex] != null) {
+        transition.To({
+          target: this.slides[this.currentIndex],
+          props: {
+            opacity: 0
+          },
+          duration: skipTransition ? 0 : this.settings.transitionSpeed / 2
+        });
+      }
+      this.currentIndex = index;
+      return transition.To({
+        target: this.slides[index],
         props: {
-          left: 0 - (index + offset) * this.slideWidth
+          opacity: 1
         },
-        duration: skipTransition ? 0 : this.settings.transitionSpeed,
+        duration: this.settings.transitionSpeed,
         complete: this.onTransitionComplete
       });
     };
@@ -371,22 +558,7 @@
     */
 
     CoffeeSlider.prototype.slideFadeTo = function(index, skipTransition) {
-      if (this.slides[this.currentIndex] != null) {
-        transition.To({
-          target: this.slides[this.currentIndex],
-          props: {
-            opacity: 0
-          },
-          duration: this.settings.transitionSpeed
-        });
-      }
-      transition.To({
-        target: this.slides[index],
-        props: {
-          opacity: 1
-        },
-        duration: this.settings.transitionSpeed
-      });
+      this.fadeTo(index, skipTransition);
       return this.slideTo(index, skipTransition);
     };
 
@@ -396,7 +568,12 @@
     */
 
     CoffeeSlider.prototype.prev = function() {
-      return this.goTo(this.currentIndex - 1, false);
+      var prevIndex;
+      prevIndex = this.currentIndex - 1;
+      if ((this.settings.transitionType === "fade" || this.settings.loop === "return") && prevIndex < 0) {
+        prevIndex = this.numSlides - 1;
+      }
+      return this.goTo(prevIndex, false);
     };
 
     /**
@@ -405,7 +582,16 @@
     */
 
     CoffeeSlider.prototype.next = function() {
-      return this.goTo(this.currentIndex + 1, false);
+      var nextIndex;
+      nextIndex = this.currentIndex + 1;
+      if (nextIndex > (this.numSlides - 1)) {
+        if (this.settings.transitionType === "fade" || this.settings.loop === "return") {
+          nextIndex = 0;
+        } else if (!this.settings.loop) {
+          return;
+        }
+      }
+      return this.goTo(nextIndex, false);
     };
 
     /**
@@ -415,7 +601,7 @@
 
     CoffeeSlider.prototype.onTransitionComplete = function() {
       this.isMoving = false;
-      if (this.settings.infinite) {
+      if (this.settings.loop === "infinite" && this.settings.transitionType !== "fade") {
         if (this.currentIndex === -1) {
           return this.goTo(this.numSlides - 3, true);
         } else if (this.currentIndex === this.numSlides - 2) {
