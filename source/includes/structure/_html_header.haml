@@ -6,7 +6,6 @@
   %title=data.page.page_title
   %meta{:content => "", :name => "description"}/
   %meta{:content => "", :name => "author"}/
-  %script{:src => "/js/lib/thirdparty/modernizr.js"}
 
   <!-- Mobile Specific Meta Tags -->
   %meta{:name => "viewport", :content => "width=1200, initial-scale=1"}
@@ -17,3 +16,5 @@
   <!-- CSS -->
   = stylesheet_link_tag "style.css"
   = stylesheet_link_tag "print.css", :media => "print"
+
+  %script{:src => "/js/thirdparty/modernizr.js"}
