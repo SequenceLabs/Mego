@@ -1,23 +1,82 @@
+#    
+# Coffeeslider
+# ============
+
 "use strict" 
 
+# namespace
 modules = SEQ.utils.namespace('SEQ.modules')
 transition = SEQ.effects.Transition
 
-###*    
-CoffeeSlider is a touch-enabled Coffeescript-based slider module.  
 
-@class CoffeeSlider 
-@author Hamish Taplin, Sequence        
-###  
+# the main Class
+SEQ modules.CoffeeSlider = class CoffeeSlider      
+  # Constructor. Creates a CoffeeSlider instance.
 
-class modules.CoffeeSlider      
-  ###*  
-  Constructor. Creates a CoffeeSlider instance.
-  ###
   constructor: (@options) ->
-    #Intial settings.
-    @settings = {}
-    #Main container element.
+    # Intial settings
+    # --------------
+    @settings =
+      # type of animation - "slide", "fade" or "slideFade"
+      transitionType: "slide" 
+      # slideshow?
+      slideshow: true 
+      # the direction of transitions
+      transitionDirection: "horizontal" 
+      # duration between transitions in slideshow mode
+      transitionDelay: 2000 
+      # duration of transition
+      transitionSpeed: 1000 
+      # whether to use dot navigation
+      hasDotNav: true
+      # has prev/next navigation
+      hasPrevNext: true 
+      # has pagination (eg. 01/05)
+      hasPagination: false
+      # which style of touch interaction to use, "gesture", "inverseGesture", "drag" or "none"
+      touchStyle: "drag"                    
+      # "infinite" - slides loop infinitely
+      # "return" - loops around to start/end
+      # "none" - does nothing when it reaches the start/end
+      loop: "infinite"                      
+      # preloads the images
+      preload: true                   
+      # these are the selectors used
+      selectors:
+        # Coffeeslider uses this selector to define a slide. For example, if your 'slides' are a list, you would enter 'li' here.   
+        slide:    ".slide"
+        # The outer wrapper.
+        outer:    ".outer"
+        # The inner wrapper.
+        inner:    ".inner"      
+        # The 'previous slide' button.
+        prev:     ".prev"
+        # The 'next slide' button.
+        next:     ".next"
+        # Generic button class.
+        btn:      ".btn"
+        # defaults to $carousel.
+        uiParent: ""             
+        # Same as the uiParent but for the pagination indicators. Defaults to uiParent.
+        paginationContainer: ""
+        # The class to be used for 'dot' style navigation.
+        dotNav: ".dot-nav"
+        # The class for pagination indicators. (eg. 01/05)  
+        pagination: ".pagination"
+        # The class added to the current page indicator (eg. 01/05)    
+        paginationCurrent: ".currentPage"
+        # The class added to the page total.
+        paginationTotal: ".total"
+        
+      callbacks:
+        # Called after the slider is initialised. 
+        onStart: ->
+        # Called each time the slide transition starts.    
+        onTransition: ->
+        # Called each time the slide transition completed.
+        onTransitionComplete: ->
+    
+    # Main container element - A jQuery object containing the slides.
     @container = {}
     # outer container
     @outer = {}
@@ -45,9 +104,10 @@ class modules.CoffeeSlider
     @pagination = {}
     # dot nav
     @dotNav = {}
-    
+  
     @init()
   
+  # initialises the class
   init: () =>
     @container = @options.container
     @container
@@ -65,54 +125,14 @@ class modules.CoffeeSlider
       @settings.callbacks.onStart()
       @goTo(0, true)
    
-  
-  ###* 
-  Merges user-defined options with defaults.
-  @param {Object}  options    User-defined options
-  @private
-  ### 
-  
+
+  # Merges user-defined options with defaults.
   applySettings:() ->
-    # defaults
-    @settings =
-      transitionType: "slide"               # type of animation - "slide", "fade" or "slideFade"
-      slideshow: true                       # slideshow?
-      transitionDirection: "horizontal"     # the direction of transitions
-      transitionDelay: 2000                 # duration between transitions
-      transitionSpeed: 1000                 # duration of transition
-      hasDotNav: true                       # whether to use dot navigation
-      hasPrevNext: true
-      hasPagination: false
-      touchStyle: "drag"                    # which style of touch interaction to use, "gesture", "inverseGesture", "drag" or "none"
-      loop: "infinite"                      # "infinite" - slides loop infinitely
-                                            # "return" - loops around to start/end
-                                            # "none" - does nothing when it reaches the start/end
-      preload: true
-      selectors:
-        slide:    ".slide"
-        outer:    ".outer"
-        inner:    ".inner"      
-        prev:     ".prev"
-        next:     ".next"
-        btn:      ".btn"
-        uiParent: ""              # defaults to $carousel
-        paginationContainer: ""   # defaults to uiParent
-        dotNav: ".dot-nav"
-        pagination: ".pagination"
-        paginationCurrent: ".currentPage"
-        paginationTotal: ".total"
-        
-      callbacks:
-        onStart: ->
-        onTransition: ->
-        onTransitionComplete: ->
+    
     # merge settings defaults
     $.extend true, @settings, @options
   
-  ###*
-  Binds internal properties to DOM elements.
-  @private
-  ###  
+  # Binds internal properties to DOM elements.
   bindToDOM: ->   
     # bind DOM references
     @slides = @find("slide")
@@ -128,10 +148,7 @@ class modules.CoffeeSlider
       @inner.wrap $("<div />").addClass(@getSelector("outer"))
       @outer = @find("outer")
   
-  ###*
-  Binds internal properties to DOM elements.
-  @private
-  ###
+  # Binds internal properties to DOM elements.
   initSlides: (callback) =>
     # add cloned slides for infine scrolling unless fade  
     if @settings.loop is "infinite" and @settings.transitionType isnt "fade"
@@ -142,10 +159,7 @@ class modules.CoffeeSlider
     else
       callback()
 
-  ###*
-  Preloads the images.
-  @private
-  ###    
+  # Preloads the images. 
   preload: (callback) =>
     @outer.css
       opacity: 0
@@ -153,10 +167,8 @@ class modules.CoffeeSlider
     @numImages = @images.length
     @checkImagesLoaded(callback)
   
-  ###*
-  Loops through each image and checks if loaded. If ready, calls the callback to continue.
-  @private
-  ### 
+
+  # Loops through each image and checks if loaded. If ready, calls the callback to continue.
   checkImagesLoaded: (callback) =>
     imgsLoaded = 0
 
@@ -176,10 +188,7 @@ class modules.CoffeeSlider
         @checkImagesLoaded(callback)
       , 100
       
-  ###*
-  Appends cloned slides to either side for purposes of creating illusion of infinite scrolling.
-  @private
-  ###   
+  # Appends cloned slides to either side for purposes of creating illusion of infinite scrolling.
   appendClonedSlides: ->     
     float = (if @settings.transitionDirection is "horizontal" then "left" else "none")
     
@@ -201,10 +210,7 @@ class modules.CoffeeSlider
     @slides = @find("slide")
     @numSlides = @slides.length
   
-  ###*
-  Applies some basic CSS.
-  @private
-  ###
+  # Applies some basic CSS.
   applyStyles: (callback) =>
     @inner.css 
       position: "relative"
@@ -254,10 +260,7 @@ class modules.CoffeeSlider
         height: @slideHeight
         width: @slideWidth
 
-  ###*
-  Initialises UI components.
-  @private
-  ###
+  # Initialises UI components.
   initUI: ->
     @uiParent = @getContainer "uiParent", @container
     
@@ -293,18 +296,13 @@ class modules.CoffeeSlider
         @numSlides
       ) 
       
-  ###*
-  Removes UI components.
+  # Removes UI components.
   @private
-  ###  
   removeUI: ->
     @nextBtn.remove()
     @prevBtn.remove()
   
-  ###*
-  Binds event-handling to user controls.
-  @private
-  ###          
+  # Binds event-handling to user controls.       
   bindUIEvents: =>
     if @settings.hasPrevNext
     # next / back click events
@@ -324,10 +322,7 @@ class modules.CoffeeSlider
     #touch events
     @inner.bind "touchstart", @onTouchStart if @settings.touchStyle isnt "none"
 
-  ###*
-  Initialises the slideshow, if needed.
-  @private
-  ###
+  # Initialises the slideshow, if needed.
   initSlideshow: =>    
     clearTimeout(@timer)
     @timer = setTimeout(@onSlideshowTick, @settings.transitionDelay)
@@ -335,11 +330,7 @@ class modules.CoffeeSlider
   onSlideshowTick: () =>
     @next()
         
-  ###*
-  Called when a touch start event fires.
-  @private  
-  @param {Object} e the event object.
-  ###
+  # Called when a touch start event fires.
   onTouchStart: (e) =>
     @innerLeft = parseInt(@inner.css("left"))
     @innerTop = parseInt(@inner.css("top"))
@@ -355,11 +346,8 @@ class modules.CoffeeSlider
     if @settings.slideshow
       clearTimeout(@timer)
   
-  ###*
-  Called when a touch event finishes.
-  @private
-  @param {Object} e the event object.
-  ###  
+
+  # Called when a touch event finishes.
   onTouchEndOrCancel: ( ) =>
     @inner.unbind("touchend", @onTouchEndOrCancel)
     @inner.unbind("touchcancel", @onTouchEndOrCancel)
@@ -392,11 +380,7 @@ class modules.CoffeeSlider
       else
         @goTo @currentIndex
                            
-  ###*
-  Called when a touch move event fires.
-  @private 
-  @param {Object} e the event object.
-  ###      
+  # Called when a touch move event fires.     
   onTouchMove: (e) =>
     @endX = e.originalEvent.touches[0].pageX  
     @endY = e.originalEvent.touches[0].pageY
@@ -434,12 +418,7 @@ class modules.CoffeeSlider
           @inner.css
             top: dragPosY
 
-  ###*
-  Goes to a specific slide (as indicated).
-  @public
-  @param {Object} index The index (in the Array this.slides) of the slide to go to.
-  @param {Boolean} [skipTransition] If 'true', goes directly to slide without animation.
-  ###
+  # Goes to a specific slide (as indicated).
   goTo: (index, skipTransition) =>
     # dont proceed if still moving or attempt to goto the current frame
     # return false if @isMoving or @currentIndex is index  
@@ -473,13 +452,7 @@ class modules.CoffeeSlider
     if @settings.slideshow
       @initSlideshow()
     
-  
-  ###*
-  Uses the 'slide' animation to move to a slide.
-  @private
-  @param {Object} index The index (in the Array this.slides) of the slide to go to.
-  @param {Boolean} [skipTransition] If 'true', goes directly to slide without animation.
-  ### 
+  # Uses the 'slide' animation to move to a slide.
   slideTo: (index, skipTransition) =>
     # record the current index
     @currentIndex = index
@@ -496,7 +469,8 @@ class modules.CoffeeSlider
       props: position    
       duration: if skipTransition then 0 else @settings.transitionSpeed / 2
       complete: @onTransitionComplete
-  
+
+  # fades to the index
   fadeTo: (index, skipTransition) =>
     # fade out the current slide, if it exists
     if @slides[@currentIndex]?
@@ -516,30 +490,19 @@ class modules.CoffeeSlider
       duration: @settings.transitionSpeed
       complete: @onTransitionComplete
        
-  ###*
-  Uses the 'slideFade' animation to move to a slide.
-  @private
-  @param {Object} index The index (in the Array this.slides) of the slide to go to.
-  @param {Boolean} [skipTransition] If 'true', goes directly to slide without animation.
-  ###
+  # Uses the 'slideFade' animation to move to a slide.
   slideFadeTo: (index, skipTransition) =>
     @fadeTo index, skipTransition      
     @slideTo index, skipTransition
 
-  ###*
-  Goes to the previous page.
-  @public
-  ###   
+  # Goes to the previous page.  
   prev: ->
     prevIndex =  @currentIndex - 1
     if (@settings.transitionType is "fade" or @settings.loop is "return") and prevIndex < 0
       prevIndex = (@numSlides - 1)
     @goTo prevIndex, false
     
-  ###*
-  Goes to the next page.
-  @public
-  ###    
+  # Goes to the next page. 
   next: ->  
     nextIndex = @currentIndex + 1
     if nextIndex > (@numSlides - 1)
@@ -550,10 +513,7 @@ class modules.CoffeeSlider
         
     @goTo nextIndex, false
         
-  ###*
-  Called whenever a slide transition completes.
-  @public
-  ###  
+  # Called whenever a slide transition completes.
   onTransitionComplete: () =>
     @isMoving = false
     if @settings.loop is "infinite" and @settings.transitionType isnt "fade"
@@ -566,34 +526,19 @@ class modules.CoffeeSlider
     else
       @settings.callbacks.onTransitionComplete()
     
-  # ------------------------------ #
-  #   UTILITY FUNCTIONS            #
-  # ------------------------------ #
-  
-  ###*
-  Utility function. Finds an element in the container for a given selector in the selectors object.
-  @private
-  @param {String} selectorName The selectors name. 
-  ###
+  # Utility function. Finds an element in the container for a given selector in the selectors object.
   find: (selectorName) => 
     @container.find @settings.selectors[selectorName]
   
-  ###*
-  Utility function. Gets a container.
-  @private
-  @param {String} name The selectors name.
-  @param {String} _default The default container to revert to.
-  ###        
+  # Utility function. Gets a container.      
   getContainer: (name, _default) -> 
     if @settings.selectors[name] is "" then _default else @find name
-  ###*
-  Utility function. Gets a container.
-  @private
-  @param {String} name The selectors name.
-  ###    
+
+  # Utility function. Gets a container. 
   getSelector: (name) ->
     selector = @settings.selectors[name]
     selector.slice(1, selector.length)
+
     
 class modules.Pagination
   

@@ -1,3 +1,8 @@
+# TRANSITION
+# ==========
+
+# Transition is CSS3 Transition engine with jQuery fallback. 
+
 "use strict"  
 
 effects = SEQ.utils.namespace "effects"
@@ -15,13 +20,6 @@ getProp = (prop) ->
   for prefix in ["", "Webkit", "Moz", "O", "ms", "Khtml"] 
     p = "#{prefix}#{prop}"
     return p if document.body.style[p]?
-
-###*    
-Transition is CSS3 Transition engine with jQuery fallback. 
-@class Transition 
-@author Hamish Taplin, Sequence
-@version 1.1        
-###
 
 class effects.Transition 
   @To: (options) =>
@@ -57,7 +55,6 @@ class effects.Transition
     
 class effects.CSSTransition
   constructor:(@options) ->
-   
     @transitionEndStr = transitionEndNames[getProp('Transition')]
     @numTransitions = 0
     @numTransitionsComplete = 0
@@ -77,7 +74,6 @@ class effects.CSSTransition
     @transition(elements)
   
   transition: (elements) =>
-    
     for element in elements
       # iterate over each CSS property and apply to HTMLElement
       for prop, value of @options.props
