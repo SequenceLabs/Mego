@@ -93,18 +93,3 @@ body {
   clear:both;
   overflow:hidden;
 }
-
-#test {
-  background-color: #dce8be;
-  @include clearfix;
-}
-.test2 {
-  background: none repeat scroll 0 0 #A0C431;
-    display: inline;
-    float: left;
-    height: 200px;
-    margin: 20px 10px;
-    padding: 30px 0 0;
-    text-align: center;
-    width: 220px;
-}
