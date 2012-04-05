@@ -1,6 +1,6 @@
-SEQ.utils.namespace('SEQ.utils.browser')
+browser = SEQ.utils.namespace('SEQ.utils.browser')
 
-SEQ.utils.browser.platform =
+browser.platform =
   isAndroid: ->
     return navigator.userAgent.toLowerCase().indexOf("android") > -1  
   isiOS: ->

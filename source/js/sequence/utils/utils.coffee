@@ -1,5 +1,3 @@
-"use strict"  
-
 window.SEQ ?= {}
 window.SEQ.utils ?= {}
 
