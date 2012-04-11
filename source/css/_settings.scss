@@ -4,14 +4,13 @@
 //
 //
 //  Comments
-//  @Project      Acme Ltd
+//  @Project    Acme Ltd
 //  @Type       Sitecore/Umbraco, etc.
-//  @Version      0.2
+//  @Version    0.2
 //  @Date       19/01/2012
-//  @Author       [Name]
+//  @Author     [Name]
 //  @BrowserSupport   IE8, IE9, Safari, Firefox, Chrome
 //
-
 
 // Base settings
 $width: 978px;
@@ -21,7 +20,7 @@ $baseline: 10px;
 $font-size: 14px;
 
 // Debug helpers
-$debug: true;
+$debug: false;
 $debug-grid: griddle; // none, structure, griddle, baseline
 
 // Typography settings
