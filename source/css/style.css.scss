@@ -1,11 +1,9 @@
 /*
-
  _____             
 |     |___ ___ ___ 
 | | | | -_| . | . |
 |_|_|_|___|_  |___|
-          |___| 
-            
+          |___|            
 */
 
 // CSS3 mixins
@@ -14,7 +12,7 @@
 @import "lib/mixins/mixins";
 
 // Base Modules
-@import "lib/settings";
+@import "settings";
 @import "lib/reset";
 
 // Typography
