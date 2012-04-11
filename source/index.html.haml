@@ -1,8 +1,12 @@
+---
+  page_title: Mego
+  body_id: home
+---
+
 #container
   %section#cta-list
-    = partial('includes/modules/generic_cta')
-    = partial('includes/modules/generic_cta')
-    = partial('includes/modules/generic_cta')
+    - 3.times do |i|
+      = partial('includes/modules/generic_cta', :locals=>{:i=>i})
   
   %section#welcome
     %p

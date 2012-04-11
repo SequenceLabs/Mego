@@ -1,45 +1,30 @@
-@mixin button-style($color) {
-  @include gradient($color, darken($color, 10%));
-  @include box-shadow(0 1px 1px rgba(0,0,0,.2));
-  @include text-shadow(0 1px 0 rgba(255,255,255,.4));
+@mixin button($background-color){
+  @include border-radius(4px);
+  @include vertical-gradient($background-color, darken($background-color, 10%));
+  @include text-shadow(0 -1px 1px rgba(0, 0, 0, 0.5));
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.5));
+  border: 1px solid darken($background-color, 15%);
+  padding: 10px 20px;
+  color: $white;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: $baseline * 2;
+  &:visited {
+    color: $white;
+  }
   &:hover {
-    @include gradient(darken($color, 9%), darken($color, 18%));
-    @include transition(background-color, .2s);
+    @include vertical-gradient(darken($background-color, 10%), darken($background-color, 15%));
   }
   &:active {
-    @include gradient(darken($color, 16%), darken($color, 9%));
-    @include box-shadow(none);
-    @include transition(background-color, .2s);  
+    @include vertical-gradient(darken($background-color, 15%), darken($background-color, 10%));
   }
 }
 
-@mixin button($color: #333, $text_color: #ffffff, $width: 80px) {
-  @include border-radius(4px);
-  background: $color;
-  cursor: pointer;
-  font: 700 14px/1em $sans;
-  color: $text_color;
-  display: inline-block;
-  text-align: center;
-  padding: 14px;
-  margin: 0 10px 20px 0;
-  text-transform: uppercase;
-  overflow: hidden;
-
-  @if $width {
-    min-width: $width;
-  }
-  @include button-style($color);
-}
-.button, input.button {
-  @include button();
-}
-.black .button {
-  @include button(#ffffff);
-}
-.button.main {
-  @include button();
-}
-.button.delete {
-  @include button();
+.button {
+  @include button($highlight-colour);
 }

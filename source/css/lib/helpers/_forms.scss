@@ -45,7 +45,5 @@ optgroup {
 
 button[type=submit],
 input[type='submit'] {
-
+  @include button($light-grey);
 }
-
-

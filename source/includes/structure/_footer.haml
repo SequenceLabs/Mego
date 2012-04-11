@@ -1,11 +1,7 @@
 %footer#site-footer
   %nav
     %ul
-      %li
-        %a{:href => ""} Footer Nav Item 1
-      %li
-        %a{:href => ""} Footer Nav Item 2
-      %li
-        %a{:href => ""} Footer Nav Item 3
-      %li
-        %a{:href => ""} Footer Nav Item 4
+      - 3.times do |i|
+        %li
+          %a{:href => ""} Footer Nav Item #{i}
+    
