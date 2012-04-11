@@ -1,3 +1,4 @@
+# pretty URLS
 activate :directory_indexes
 
 # ----------------------------

@@ -1,10 +1,13 @@
-%nav#site_nav
+- structure = [{:href=>"index", :title=>"Home"},
+   {:href=>"about-us", :title=>"About Us"}, 
+   {:href=>"projects", :title=>"Projects"}, 
+   {:href=>"news", :title=>"News"},
+   {:href=>"events", :title=>"Events"},
+   {:href=>"contact-us", :title=>"Contact us"}]
+
+%nav#site-nav
   %ul
-    %li
-      %a{:href => ""} Site Nav Item 1
-    %li
-      %a{:href => ""} Site Nav Item 2
-    %li
-      %a{:href => ""} Site Nav Item 3
-    %li
-      %a{:href => ""} Site Nav Item 4
+    - structure.each do |page|
+      %li
+        %a{:href=>"#{page[:href]}.html"}
+          #{page[:title]}

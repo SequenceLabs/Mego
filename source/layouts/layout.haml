@@ -6,9 +6,8 @@
 
 %body{:id=>data.page.body_id}
   %form{:id => "mainform", :action => "/", :method => "post"}
-    %section#main
-      .wrapper
-        = partial('includes/structure/header')
-        = yield
-        = partial('includes/structure/footer')
-        = partial('includes/structure/javascripts')
+    .wrapper
+      = partial('includes/structure/header')
+      = yield
+      = partial('includes/structure/footer')
+      = partial('includes/structure/javascripts')
