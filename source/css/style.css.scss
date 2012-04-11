@@ -20,7 +20,7 @@
 @import "lib/typography/headings";
 
 // Layout
-@import "lib/grids/grid_static"; 
+@import "lib/grids/grid-static"; 
 //@import "lib/grids/grid_fluid"; 
 
 // The files below are helpers that can be removed if not required
@@ -32,7 +32,7 @@
 @import "structure";
 @import "modules";
 @import "pages";
-@import "media_queries";
+@import "media-queries";
 
 // IE conditional stylesheet
 @import "ie6";
