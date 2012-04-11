@@ -20,31 +20,16 @@ body {
 }
 
 #footer {
-  padding: 12px 0;
-  background: #999;
-  width:100%;
   #footer-nav {
-    padding: 12px 0;
-    background: #999;
-    width:100%;
     ul {
       margin:0 auto;
       width:$width;
       li {
         display: inline;
-        a {
-          color:#333;
-          padding: 10px;
-          font-weight:normal;
-          &:hover{
-            color:#fff
-          }
-        }
       }
     }
   }
 }
-
 
 #page-header .wrapper {
   height: 200px;
@@ -71,22 +56,12 @@ body {
 
 
 #site_nav {
-  padding: 12px 0;
-  background: #999;
   width:100%;
   ul {
     margin:0 auto;
     width:$width;
     li {
       display: inline;
-      a {
-        color:#333;
-        padding: 10px;
-        font-weight:normal;
-        &:hover {
-          color:#fff
-        }
-      }
     }
   }
 }
