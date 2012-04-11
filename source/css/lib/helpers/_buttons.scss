@@ -35,7 +35,7 @@
   @include button();
 }
 .black .button {
-   @include button(#ffffff);
+  @include button(#ffffff);
 }
 .button.main {
   @include button();

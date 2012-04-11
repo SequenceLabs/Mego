@@ -45,7 +45,8 @@ body {
   }
 }
 
-#page_header .wrapper {
+
+#page-header .wrapper {
   height: 200px;
   position: relative;
   @if $debug == true and $debug-grid == structure {
@@ -82,7 +83,9 @@ body {
         color:#333;
         padding: 10px;
         font-weight:normal;
-        &:hover{color:#fff}
+        &:hover {
+          color:#fff
+        }
       }
     }
   }
