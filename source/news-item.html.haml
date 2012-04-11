@@ -1,0 +1,16 @@
+---
+  body_id: news-item
+---
+
+%article.news-item
+  %header
+    %h3
+      March 16 — 08:50 AM
+    %h1
+      = lorem.words (3 + rand(5))
+
+  = partial("includes/modules/random-content")
+  
+  %a.button{:href=>"/news"}
+    &larr; Back
+

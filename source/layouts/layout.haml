@@ -8,6 +8,7 @@
   %form{:id => "mainform", :action => "/", :method => "post"}
     .wrapper
       = partial('includes/structure/header')
-      = yield
+      .container
+        = yield
       = partial('includes/structure/footer')
       = partial('includes/structure/javascripts')

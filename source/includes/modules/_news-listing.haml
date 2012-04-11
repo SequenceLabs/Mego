@@ -1,5 +1,16 @@
 %section.news-listing
-  - 6.times do |i|
-    %article.news-item
+  %header
+    %h1
+      News
+
+  - (6 + rand(6)).times do
+    %a.news-item{:href=>"news-item.html"}
       %header
-        
+        %h3
+          = lorem.date("%B %e, %Y")
+        %h2
+          = lorem.words (3 + rand(5))
+      %p
+        = lorem.sentences (3 + rand(5))
+      %span.button
+        Read more &rarr;

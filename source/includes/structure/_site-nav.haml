@@ -9,5 +9,5 @@
   %ul
     - structure.each do |page|
       %li
-        %a{:href=>"#{page[:href]}.html"}
+        %a{:href=>"/#{page[:href]}"}
           #{page[:title]}
