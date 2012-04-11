@@ -1,0 +1,21 @@
+%form
+  %span.required
+    *indicates required field
+  .field
+    %label{:for=>"first-name"}
+      First Name*
+    %input{:type=>"text", :name=>"first-name", :value=>"e.g. Rhodri"}
+  .field
+    %label{:for=>"first-name"}
+      Surname*
+    %input{:type=>"text", :name=>"surname", :value=>"e.g. Jones"}
+  .field
+    %label{:for=>"email"}
+      Surname*
+    %input{:type=>"text", :name=>"email", :value=>"you@yourdomain.com"}
+  .field
+    %label{:for=>"message"}
+      Message
+    %textarea{:type=>"text", :name=>"message", :rows=>"10", :value=>"your message"}
+  %input{:type=>"submit", :value=>"Send message"}
+    
