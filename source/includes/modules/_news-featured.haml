@@ -1,0 +1,13 @@
+%section.news-featured
+  %a.news-item{:href=>"news-item.html", :title=>"Summary of CTA"}
+    = image_tag("http://osdtcss05vm/placehold/?w=306&h=150")
+    %article
+      %header
+        %h1
+          = lorem.words (3 + rand(5))
+        %time{:datetime=>"2009-11-13T20:00Z"}
+          3 hours ago
+      %p
+        = lorem.sentences (3 + rand(5))
+      %span.read-more
+        Read more &rar  
