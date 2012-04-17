@@ -4,13 +4,15 @@
       News
 
   - (6 + rand(6)).times do
-    %a.news-item{:href=>"news-item.html"}
-      %header
-        %h3
-          = lorem.date("%B %e, %Y")
-        %h2
-          = lorem.words (3 + rand(5))
-      %p
-        = lorem.sentences (3 + rand(5))
-      %span.button
-        Read more &rarr;
+    %a.news-item{:href=>"news-item.html",:title=>"Summary of CTA"}
+      = image_tag("http://osdtcss05vm/placehold/?w=230&h=150")
+      %article
+        %header
+          %h2
+            = lorem.words (3 + rand(5))
+        %p
+          = lorem.sentences (3 + rand(5))
+        %time{:datetime=>"2009-11-13T20:00Z"}
+          3 hours ago
+        %span.read-more
+          Read more &rarr;

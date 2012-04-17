@@ -9,22 +9,23 @@
     margin:0 auto;
     li {
       display:inline;
-      color:#fff;
+      color:$default-colour;
       margin-right:1px;
     }
     .active a {
       color:$default-colour;
-      background:#ffffff;
+      font-weight: bold;
     }
     a {
-      color:#ffffff;
+      color:$default-colour;
       &:hover {
-        color:$default-colour;
+        color:$highlight-colour;
       }
     }
   }
   .prev,
   .next {
+    cursor: pointer;
     bottom:0;
     position: absolute;
   }
