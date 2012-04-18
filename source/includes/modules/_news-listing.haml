@@ -2,17 +2,11 @@
   %header
     %h1
       News
-  %ul
-    - (4 + rand(4)).times do
-      %li
-        %a.news-item{:href=>"news-item.html",:title=>"Summary of CTA"}
-          = image_tag("http://placehold.it/230x150")
-          %article
-            %h2
-              = lorem.words (3 + rand(5))
-            %p
-              = lorem.sentences (3 + rand(5))
-            %time{:datetime=>"2009-11-13T20:00Z"}
-              3 hours ago
-            %span.read-more
-              Read more &rarr;
+      
+  - if include_featured
+    = partial('includes/modules/news-item', :locals=>{:featured=>true}) 
+  end
+  
+  - (6 + rand(6)).times do
+    = partial('includes/modules/news-item', :locals=>{:featured=>false})
+

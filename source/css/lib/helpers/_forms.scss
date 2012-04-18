@@ -13,7 +13,7 @@ input[type="password"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
 textarea:focus {
-
+  
 }
 
 input[type="radio"],
@@ -36,7 +36,9 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"] {
-
+  padding: 7px;
+  border: 1px solid $borders;
+  @include border-radius($border-radius);
 }
 
 optgroup {
