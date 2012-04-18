@@ -2,16 +2,25 @@
   body_id: Search Results
 ---
 
-
-
 #content.col-8
   %h1
     Search Results
-    
-  = partial('includes/modules/mini-search')
-
+  
+  .search  
+    = partial('includes/modules/mini-search')
+    .results
+      1-10 of #{rand(6000)} results
+    .sort
+      Sort by:    
+      %a.relevance{:href=>"", :title=>"Sort by relevance"} Relevance
+      |
+      %a.date{:href=>"", :title=>"Sort by date"} Date
+  
   - (3 + rand(6)).times do
     = partial('includes/modules/search-item')
+    
+  = partial('includes/modules/pagination')  
+    
 #sidebar.col-4.last
   = partial('includes/modules/events-widget')
   = partial('includes/modules/news-widget')
