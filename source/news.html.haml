@@ -3,8 +3,7 @@
 ---
 
 #content.col-8
-  = partial('includes/modules/news-featured')
-  = partial('includes/modules/news-listing')
+  = partial('includes/modules/news-listing', :locals=>{:include_featured=>true})
   = partial('includes/modules/pagination')
 #sidebar.col-4.last
   = partial('includes/modules/events-widget')

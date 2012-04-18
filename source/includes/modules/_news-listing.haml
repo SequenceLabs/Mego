@@ -2,6 +2,11 @@
   %header
     %h1
       News
+      
+  - if include_featured
+    = partial('includes/modules/news-item', :locals=>{:featured=>true}) 
+  end
+  
   - (6 + rand(6)).times do
-    = partial('includes/modules/news-item')
+    = partial('includes/modules/news-item', :locals=>{:featured=>false})
 
