@@ -1,4 +1,6 @@
-%form
+/ START #contact-form
+
+%form#contact-form
   %span.required
     *indicates required field
   .field
@@ -18,4 +20,6 @@
       Message
     %textarea{:type=>"text", :name=>"message", :rows=>"10", :value=>"your message"}
   %input{:type=>"submit", :value=>"Send message"}
+  
+/ END #contact-form
     
