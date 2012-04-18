@@ -1,11 +1,11 @@
 ---
-  body_id: news-item
+  body_id: news-list
 ---
 
 #content.col-8
   = partial('includes/modules/news-featured')
   = partial('includes/modules/news-listing')
   = partial('includes/modules/pagination')
-  
 #sidebar.col-4.last
-  
+  = partial('includes/modules/events-widget')
+  = partial('includes/modules/news-widget')

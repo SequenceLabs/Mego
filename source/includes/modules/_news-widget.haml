@@ -1,0 +1,13 @@
+%section#news-widget
+  %h2
+    Latest news
+  %ul
+    - (2 + rand(2)).times do
+      %li
+        %a.news-item{:href=>"#",:title=>"Brief summary of article"}
+          %h3
+            News title
+          %time{:datetime=>"2012-04-13"}
+            13th April 2012
+  %a.read-more{:href=>"#",:title=>"View all events"}
+    All news &rarr;
