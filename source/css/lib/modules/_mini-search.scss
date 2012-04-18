@@ -1,14 +1,13 @@
-#mini-search {
-  position: absolute;
-  right: 0px;
-  top: -38px;
+.mini-search {
+  overflow: hidden;
+  label {
+    float:left
+  }
   .field-search {
     float: left;
     width: 200px;
-    margin-top:2px;
   }
   .btn-search {
     float: left;
-    margin-left: 10px;
   }
 }
