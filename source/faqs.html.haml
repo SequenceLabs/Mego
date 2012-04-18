@@ -1,0 +1,41 @@
+---
+  page_title: Frequently Asked Questions
+  body_id: faqs
+---
+
+#content.col-8
+  %h1
+    Frequently Asked Questions
+  
+  .search
+    %h3
+      Search by keyword
+    = partial('includes/modules/mini-search')
+  
+  %nav.category-quicklinks
+    %h3 Category quick links
+    %ul
+    - 4.times do |i|
+      %li
+        %a{:href=>"#category-#{i}", :title=>"Category #{i} Title"} Category #{i} Title
+      
+  - 4.times do |i|
+    %section.category{:id=>"category-#{i}"}
+      %h2 Category #{i} Title
+      %ul
+        - 5.times do
+          %li
+            %h3
+              %span
+                Q:
+              = lorem.words (3+rand(6))
+            %span
+              A:
+            %p
+              = lorem.sentences 4
+      .to-top
+        %a{:href=>"#", :title=>"back to top"}
+          Back to top &uarr;
+            
+              
+  
