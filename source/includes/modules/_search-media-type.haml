@@ -1,0 +1,10 @@
+/START Search-media-type
+%section#search-media-type
+  %h2
+    Media Type
+  - (5).times do
+    %input{:type=>"checkbox", :name=>"Pages", :id=>"Pages"}
+    %label{:for=>"Pages"}
+      Pages
+  %input{:type=>"submit", :value=>"Apply"}
+/END Search-media-type
