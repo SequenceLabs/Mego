@@ -1,0 +1,21 @@
+/START Login Form
+%form 
+  %section#login-form
+    %fieldset#login
+      %legend
+        Log in
+      %label{:for=>"email-field"}
+        Email
+      %input{:type=>"email", :id=>"email-field", :placeholder=>"Type your email here"}
+      %label{:for=>"password-field"}
+        Password
+      %input{:type=>"password", :id=>"password-field"}
+      %input{:type=>"submit",:value=>"Log in"}
+      %a{:href=>"#"}
+        Reset password
+    %fieldset#social-login
+      %legend
+        Or
+      %input{:type=>"submit",:value=>"Sign in with Facebook"}
+      %input{:type=>"submit",:value=>"Sign in with Twitter"}
+/END Login Form

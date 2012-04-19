@@ -8,7 +8,7 @@
     Search Results
   
   .search  
-    = partial('includes/modules/mini-search')
+    = partial('includes/modules/mini-search', :locals=>{:name=>"keywords"})
     .results
       1-10 of #{rand(6000)} results
     .sort
