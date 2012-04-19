@@ -1,3 +1,6 @@
 [submodule "source/js/sequence/effects/transition"]
 	path = source/js/sequence/effects/transition
 	url = git://github.com/hamishtaplin/Transition.git
+[submodule "source/js/sequence/modules/coffeeslider"]
+	path = source/js/sequence/modules/coffeeslider
+	url = git://github.com/hamishtaplin/CoffeeSlider.git
