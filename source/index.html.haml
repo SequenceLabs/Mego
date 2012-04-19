@@ -4,6 +4,9 @@
 ---
 
 #container
+  %header
+    = partial('includes/modules/carousel')
+  
   %section#cta-list
     - 3.times do |i|
       = partial('includes/modules/generic-cta', :locals=>{:i=>i})

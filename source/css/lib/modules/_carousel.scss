@@ -1,0 +1,62 @@
+.carousel {
+  position:relative;
+  width: 978px;
+  margin: 20px 0;
+  figure {
+    position: relative;
+    figcaption {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      h2 {
+        color: $white;
+      }
+    }
+  }
+  .btn {
+    background: transparent url(../images/nav.png) no-repeat 0 0;
+    display: block;
+    width: 38px;
+    height: 65px;
+    text-indent: -9999px;
+    overflow: hidden;
+    position: absolute;
+    cursor: pointer;
+    top: 40%;
+    @include opacity(0.2);
+    &:hover {
+      @include opacity(0.9);
+    }
+  }
+  .prev {
+    left:20px;
+  }
+  .next {
+    right:20px;
+    @include rotate(180deg);
+  }
+  .dot-nav {
+    text-align: center;
+    margin-top: 20px;
+    ol {
+      list-style:none;
+      li {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-right: 12px;
+        text-indent: -9999px;
+        
+        cursor: pointer;
+        background: transparent url(../images/dot.png) no-repeat 0 0;
+        @include opacity(0.2);
+        &.active { 
+          @include opacity(0.5);
+        }
+        &:hover, :focus {
+          @include opacity(0.6);
+        }
+      }
+    }
+  }
+}

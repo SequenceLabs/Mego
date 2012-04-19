@@ -16,15 +16,12 @@ do init = () ->
     onDocReady()
 # executes when document is ready
 onDocReady = () ->
-  new SEQ.modules.Twitter
-    container: $("#twitter h5")
-
   # init CoffeeSlider
   new SEQ.modules.CoffeeSlider
-    container: $("#carousel")
+    container: $(".carousel")
     transitionType: "slide"
-    loop: "return"
-    transitionSpeed: 400
+    loop: "infinite"
+    transitionSpeed: 1400
     transitionDirection: "horizontal"
     touchStyle: "drag"
     preload: true

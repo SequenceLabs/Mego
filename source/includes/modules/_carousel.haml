@@ -1,8 +1,11 @@
-/ START #carousel
-
-%section#carousel
-  - ['333', '111', '000'].each do |colour|
+/ START .carousel
+%section.carousel
+  - i = 0
+  - ['EC008C', '00AEEF', 'FFC60B'].each do |colour|
+    - i = i++
     %figure
-      = image_tag("http://placehold.it/640x480/#{colour}")
-      
-/ END #carousel
+      = image_tag("http://placehold.it/978x480/#{colour}/fff&text=&nbsp;")
+      %figcaption
+        %h2
+          Slide #{i}
+/ END .carousel
