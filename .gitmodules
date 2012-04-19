@@ -1,0 +1,3 @@
+[submodule "source/js/sequence/effects/transition"]
+	path = source/js/sequence/effects/transition
+	url = git://github.com/hamishtaplin/Transition.git
