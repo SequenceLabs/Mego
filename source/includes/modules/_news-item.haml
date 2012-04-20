@@ -6,8 +6,10 @@
         = lorem.words (3 + rand(5))
       %time{:datetime=>"2009-11-13T20:00Z"}
         3 hours ago
-    = image_tag("http://placehold.it/#{featured ? '640x320' : '230x150'}")
-    
+    %figure
+      = image_tag("http://placehold.it/#{featured ? '640x320' : '230x150'}")
+      %figcaption
+        Image caption
     %p
       = lorem.sentences (3 + rand(5))
     
