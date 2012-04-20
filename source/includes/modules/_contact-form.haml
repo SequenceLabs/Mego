@@ -17,6 +17,20 @@
       Surname
       %span *
     %input{:type=>"text", :name=>"email", :id=>"email", :placeholder=>"you@yourdomain.com"}
+    %span.error
+      This field must be filled in
+  .field
+    %input{:type=>"checkbox", :name=>"Videos", :id=>"videos"}
+    %label{:for=>"videos"}
+      Videos
+  .field
+    %select
+      %option{:value=>"1",:selected=>"selected"}
+        All
+      %option{:value=>"2"}
+        News
+      %option{:value=>"3"}
+        Events
   .field
     %label{:for=>"message"}
       Message
