@@ -1,4 +1,14 @@
 / START .gallery
 %section.gallery
   = partial('includes/modules/carousel')
+  
+  %section.thumbnails
+    - j = 0
+    - ['F15A22', '00AAAD', 'B2D235', 'AB4A9C', 'ED1164'].each do |colour|
+      - j = j+1
+      %figure
+        = image_tag("http://placehold.it/240x180/#{colour}/fff&text=&nbsp;")
+        %figcaption
+          %h2
+            Thumbnail #{j}
 /END .gallery

@@ -3,6 +3,7 @@
    {:href=>"projects", :title=>"Projects"}, 
    {:href=>"news", :title=>"News"},
    {:href=>"events", :title=>"Events"},
+   {:href=>"gallery", :title=>"Gallery"},
    {:href=>"search-results", :title=>"Search Results"},
    {:href=>"login", :title=>"Login"},
    {:href=>"contact-us", :title=>"Contact us"}]
@@ -11,5 +12,5 @@
   %ul
     - structure.each do |page|
       %li
-        %a{:href=>"/#{page[:href]}"}
+        %a{:href=>"#{page[:href]}"}
           #{page[:title]}

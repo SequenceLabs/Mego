@@ -112,7 +112,23 @@
   -o-transform: rotate($angle);
   -ms-transform: rotate($angle);
   transform: rotate($angle);
- }
+}
+
+@mixin scale($factor: 0.5){
+  -moz-transform: scale($factor);
+  -webkit-transform: scale($factor);
+  -o-transform: scale($factor);
+  -ms-transform: scale($factor);
+  transform: scale($factor);
+}
+
+@mixin transform($transformations){
+  -moz-transform: $transformations;
+  -webkit-transform: $transformations;
+  -o-transform: $transformations;
+  -ms-transform: $transformations;
+  transform: $transformations;
+}
 
 @mixin text-shadow($shadow: 0 1px 3px rgba(0, 0, 0, 0.25)) {
   -webkit-text-shadow: $shadow;
@@ -132,3 +148,4 @@
   -ms-transition: $property $duration $function;
   transition: $property $duration $function; 
 }
+
