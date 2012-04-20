@@ -5,11 +5,16 @@
 
 %article.news-item
   %header
-    %h2
+    %h1
       = lorem.words (3 + rand(5))
     %time{:datetime=>"2012-04-13"}
       13th April 2012
-  = image_tag("http://placehold.it/306x200")
+  
+    %figure
+      = image_tag("http://placehold.it/306x200")
+      %figcaption
+        Image caption
+        
   = partial("includes/modules/random-content")
   
   %a.button{:href=>"/news"}

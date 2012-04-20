@@ -1,3 +1,4 @@
+/ START .news-listing
 %section.news-listing
   %header
     %h1
@@ -9,4 +10,4 @@
   
   - (6 + rand(6)).times do
     = partial('includes/modules/news-item', :locals=>{:featured=>false})
-
+/ END .news-listing

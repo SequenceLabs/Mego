@@ -1,25 +1,26 @@
 / START #contact-form
-
 %form#contact-form
   %span.required
     *indicates required field
   .field
-    %label{:for=>"first-name"}
-      First Name*
-    %input{:type=>"text", :name=>"first-name", :value=>"e.g. Rhodri"}
+    %label{:for=>"first-name", :accesskey=>"9"}
+      First Name
+      %span *
+    %input{:type=>"text", :name=>"first-name", :placeholder=>"e.g. Rhodri"}
   .field
     %label{:for=>"first-name"}
-      Surname*
-    %input{:type=>"text", :name=>"surname", :value=>"e.g. Jones"}
+      Surname
+      %span *
+    %input{:type=>"text", :name=>"surname", :placeholder=>"e.g. Jones"}
   .field
     %label{:for=>"email"}
-      Surname*
-    %input{:type=>"text", :name=>"email", :value=>"you@yourdomain.com"}
+      Surname
+      %span *
+    %input{:type=>"text", :name=>"email", :placeholder=>"you@yourdomain.com"}
   .field
     %label{:for=>"message"}
       Message
-    %textarea{:type=>"text", :name=>"message", :rows=>"10", :value=>"your message"}
+      %span *
+    %textarea{:type=>"text", :name=>"message", :rows=>"10", :placeholder=>"your message"}
   %input{:type=>"submit", :value=>"Send message"}
-  
 / END #contact-form
-    
