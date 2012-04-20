@@ -6,21 +6,21 @@
     %label{:for=>"first-name", :accesskey=>"9"}
       First Name
       %span *
-    %input{:type=>"text", :name=>"first-name", :placeholder=>"e.g. Rhodri"}
+    %input{:type=>"text", :name=>"first-name", :id=>"first-name", :placeholder=>"e.g. Rhodri"}
   .field
-    %label{:for=>"first-name"}
+    %label{:for=>"surname"}
       Surname
       %span *
-    %input{:type=>"text", :name=>"surname", :placeholder=>"e.g. Jones"}
+    %input{:type=>"text", :name=>"surname", :id=>"surname", :placeholder=>"e.g. Jones"}
   .field
     %label{:for=>"email"}
       Surname
       %span *
-    %input{:type=>"text", :name=>"email", :placeholder=>"you@yourdomain.com"}
+    %input{:type=>"text", :name=>"email", :id=>"email", :placeholder=>"you@yourdomain.com"}
   .field
     %label{:for=>"message"}
       Message
       %span *
-    %textarea{:type=>"text", :name=>"message", :rows=>"10", :placeholder=>"your message"}
+    %textarea{:type=>"text", :name=>"message", :id=>"message", :rows=>"10", :placeholder=>"your message"}
   %input{:type=>"submit", :value=>"Send message"}
 / END #contact-form
