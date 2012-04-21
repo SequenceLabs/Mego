@@ -55,12 +55,24 @@ helpers do
 
   # ----------------------------
   # Render textbox
-  def form_textbox(id="", label="Label", placeholder="Enter text", required=false, textboxtype="text", errormsg="This field must be filled in")
+  def form_textbox(id="", label="Label", placeholder="Enter text", required=false, textboxtype="text", errormsg="This field must be filled in", accesskey="")
     haml_concat <<-"HTML".gsub( /^\s+/, '' )
       <div class="field">
-        <label for="#{id}">
-          #{label}
     HTML
+
+    if accesskey != "" # add accesskey to label if necessary
+      haml_concat <<-"HTML".gsub( /^\s+/, '' )
+          <label for="#{id}" accesskey="#{accesskey}">
+      HTML
+    else
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+        <label for="#{id}">
+    HTML
+    end
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+        #{label}
+    HTML
+
     if required == true # add a required * if necessary
     haml_concat <<-"HTML".gsub( /^\s+/, '' )
       <span title="Required">*</span>
