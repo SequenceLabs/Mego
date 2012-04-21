@@ -40,6 +40,8 @@ end
 # Helpers
 helpers do
 
+  # ----------------------------
+  # Default HTML tag - do not remove!
   def custom_html_tag(lang="en", &block)
   haml_concat <<-"HTML".gsub( /^\s+/, '' )
     <!--[if lt IE 7 ]>              <html lang="#{lang}" class="no-js ie6"> <![endif]-->
@@ -51,8 +53,127 @@ helpers do
   haml_concat capture(&block) << ("\n</html>") if block_given?
   end
 
-end
+  # ----------------------------
+  # Render textbox
+  def form_textbox(id="", label="Label", placeholder="Enter text", required=false, textboxtype="text", errormsg="This field must be filled in")
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+      <div class="field">
+        <label for="#{id}">
+          #{label}
+    HTML
+    if required == true # add a required * if necessary
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+      <span title="Required">*</span>
+    HTML
+    end
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+        </label>
+    HTML
+
+    # render input textbox or textarea
+    if textboxtype == "textarea"
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+      <textarea id="#{id}" name="#{id}" placeholder="#{placeholder}" class="field-textbox"></textarea>
+    HTML
+    else
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+        <input id="#{id}" name="#{id}" type="#{textboxtype}" placeholder="#{placeholder}" class="field-textbox" />
+    HTML
+    end
+
+    # error message if required=true
+    if required == true
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+      <span class="field-error">#{errormsg}</span>
+    HTML
+    end
+
+    # finish - wrapping up now
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+      </div>
+    HTML
+  end
+
+  # ----------------------------
+  # Render checkbox
+  def form_checkbox(id="", label="Label")
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+      <div class="field field-checkbox">
+        <input id="#{id}" name="#{id}" type="checkbox" class="field-checkbox" />
+        <label for="#{id}">
+          #{label}
+        </label>
+    HTML
+
+    # finish - wrapping up now
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+      </div>
+    HTML
+
+  end
+
+  # ----------------------------
+  # Render selectbox
+  def form_selectbox(id="", label="Label", required=false, selectboxtype="select", errormsg="Something must be selected")
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+      <div class="field">
+        <label for="#{id}">
+          #{label}
+    HTML
+    if required == true # add a required * if necessary
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+      <span title="Required">*</span>
+    HTML
+    end
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+        </label>
+    HTML
+
+    # render input selectbox or multibox
+    if selectboxtype == "multi"
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+      <select id="#{id}" name="#{id}" multiple="multiple" class="field-selectbox" size="3" />
+    HTML
+    else
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+        <select id="#{id}" name="#{id}" class="field-selectbox" />
+    HTML
+    end
+
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+      <option value="1" selected="selected">All</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    HTML
+
+    # error message if required=true
+    if required == true
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+      <span class="field-error">#{errormsg}</span>
+    HTML
+    end
+
+    # finish - wrapping up now
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+      </div>
+    HTML
+
+  end
+
+  # ----------------------------
+  # Render placeholder image
+  def img_placehold(width="200", height="200", background="Grey", forecolour="Black", font="Helvetica", fontsize="12")
+    placehold_params = "?form=png&w=#{width}&h=#{height}&f=#{font}&fs=#{fontsize}&icol=#{background}&col=#{forecolour}"
+    placehold_url = "http://placehold.development2.sequence.co.uk/" + placehold_params
+
+    haml_concat <<-"HTML".gsub( /^\s+/, '' )
+      <img src="#{placehold_url}" width="#{width}" height="#{height}" />
+    HTML
+
+  end
 
 
-
+end # end of helpers
 
