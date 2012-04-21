@@ -2,39 +2,22 @@
 %form#contact-form
   %span.required
     *indicates required field
-  .field
-    %label{:for=>"first-name", :accesskey=>"9"}
-      First Name
-      %span *
-    %input{:type=>"text", :name=>"first-name", :id=>"first-name", :placeholder=>"e.g. Rhodri"}
-  .field
-    %label{:for=>"surname"}
-      Surname
-      %span *
-    %input{:type=>"text", :name=>"surname", :id=>"surname", :placeholder=>"e.g. Jones"}
-  .field
-    %label{:for=>"email"}
-      Surname
-      %span *
-    %input{:type=>"text", :name=>"email", :id=>"email", :placeholder=>"you@yourdomain.com"}
-    %span.error
-      This field must be filled in
-  .field
-    %input{:type=>"checkbox", :name=>"Videos", :id=>"videos"}
-    %label{:for=>"videos"}
-      Videos
-  .field
-    %select
-      %option{:value=>"1",:selected=>"selected"}
-        All
-      %option{:value=>"2"}
-        News
-      %option{:value=>"3"}
-        Events
-  .field
-    %label{:for=>"message"}
-      Message
-      %span *
-    %textarea{:type=>"text", :name=>"message", :id=>"message", :rows=>"10", :placeholder=>"your message"}
+
+  - form_textbox "forename", "First Name", "e.g. Rhodri", true, "text", "Enter name", 9
+  - form_textbox "surname", "Surname", "e.g. Jones", true
+  - form_textbox "email", "Email", "you@yourdomain.com", true, "email"
+  - form_textbox "phone", "Telephone", "0123 4567890"
+
+  %fieldset
+    %legend Favourite colours
+    - form_checkbox "checkbox_1", "Blue"
+    - form_checkbox "checkbox_2", "Red"
+    - form_checkbox "checkbox_3", "Pink"
+
+  - form_selectbox "selectbox_1", "Category"
+  - form_selectbox "selectbox_2", "Categories", false, "multi"
+
+  - form_textbox "text_1", "Message", "Enter Comments", true, "textarea"
+
   %input{:type=>"submit", :value=>"Send message"}
 / END #contact-form
