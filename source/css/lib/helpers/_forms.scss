@@ -8,6 +8,17 @@ fieldset {
 
 }
 
+label {
+  padding: 8px 0 0 0;
+  margin: 0 10px 8px 0;
+  font-size: $font-size;
+  line-height: $baseline * 2;
+}
+
+.field {
+  margin: $baseline * 2 0;
+}
+
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
@@ -36,7 +47,7 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"] {
-  padding: 7px;
+  padding: 8px;
   border: 1px solid $borders;
   @include border-radius($border-radius);
 }

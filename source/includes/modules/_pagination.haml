@@ -1,16 +1,17 @@
 /START Pagination
 .pagination
+  
+  
   %ul
-    - @arr = [1,2,3,4]
-    - @arr.each_with_index do |i, idx|
-      - if (idx == 0)
-        %li.active
-          %a= "#{i}"  
-      - else
-        %li
-          %a= "#{i}"
-  %a.prev{:href=>"#"}
-    Prev
-  %a.next{:href=>"#"}
-    Next
+    %li
+      %a.prev{:href=>"#"}
+        &larr;
+    - 4.times do |i|
+      %li
+        %a{:class=>"#{i==0 ? 'selected' : ''}"}
+          = "#{i}"  
+    %li
+      %a.next{:href=>"#"}
+        &rarr;
+  
 /END Pagination

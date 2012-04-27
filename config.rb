@@ -176,7 +176,7 @@ helpers do
 
   # ----------------------------
   # Render placeholder image
-  def img_placehold(width="200", height="200", background="Grey", forecolour="Black", font="Helvetica", fontsize="12")
+  def img_placehold(width="200", height="200", background="hexf6f6f6", forecolour="hexdddddd", font="Helvetica", fontsize="36")
     placehold_params = "?form=png&w=#{width}&h=#{height}&f=#{font}&fs=#{fontsize}&icol=#{background}&col=#{forecolour}"
     placehold_url = "http://placehold.development2.sequence.co.uk/" + placehold_params
 

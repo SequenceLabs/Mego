@@ -1,9 +1,24 @@
 .news-listing {
-
+  .news-item {
+    overflow: hidden;
+    display: block;
+    margin-bottom: $baseline * 2;
+    padding-bottom: $baseline * 2;
+    border-bottom: 1px solid $borders;
+    header,
+    figure {
+      margin-bottom: $baseline * 2;
+    }
+  
+    &:hover {
+      color: $black;
+    }
+  }
 }
 
-.news-item {
-  display: block;
-  border-bottom: 1px solid $light-grey;
-  margin-bottom: $baseline * 2;
+#news-widget {
+  ul {
+    list-style: none;
+  }
 }
+

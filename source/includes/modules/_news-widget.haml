@@ -1,5 +1,5 @@
 /START news-widget
-%section#news-widget
+%section#news-widget.widget
   %h2
     Latest news
   %ul
@@ -7,9 +7,9 @@
       %li
         %a.news-item{:href=>"#",:title=>"Brief summary of article"}
           %h3
-            News title
+            = lorem.words 1+rand(5)
           %time{:datetime=>"2012-04-13"}
-            13th April 2012
+            = lorem.date
   %a.read-more{:href=>"#",:title=>"View all events"}
     All news &rarr;
 /END news-widget
