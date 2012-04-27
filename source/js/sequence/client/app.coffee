@@ -46,4 +46,7 @@ onDocReady = () ->
     hasDotNav: false
     selectors:
      slide: "figure"
-    link: coffeeslider
+  
+  coffeeslider.registerNavModule(thumbnails)
+    
+  
