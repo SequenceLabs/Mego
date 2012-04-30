@@ -15,6 +15,8 @@ label {
   line-height: $baseline * 2;
 }
 
+
+
 .field {
   margin: $baseline * 2 0;
 }
@@ -58,5 +60,5 @@ optgroup {
 
 button[type=submit],
 input[type='submit'] {
-  @include button($light-grey);
+  @include button($mid-grey);
 }
