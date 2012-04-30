@@ -18,32 +18,35 @@ do init = () ->
 onDocReady = () ->
   
   # init CoffeeSlider
-  coffeeslider = new SEQ.modules.CoffeeSlider
-    container: $(".carousel")
-    transitionType: "slide"
-    loop: "infinite"
-    transitionSpeed: 1400
-    transitionDelay: 5000
-    transitionDirection: "horizontal"
-    touchStyle: "drag"
-    preload: true
-    responsive: false
-    selectors:
-      slide: "figure"
+  # coffeeslider = new SEQ.modules.CoffeeSlider
+  #   container: $(".carousel")
+  #   transitionType: "slide"
+  #   loop: "infinite"
+  #   transitionSpeed: 1400
+  #   transitionDelay: 5000
+  #   transitionDirection: "horizontal"
+  #   touchStyle: "drag"
+  #   preload: true
+  #   responsive: false
+  #   selectors:
+  #     slide: "figure"
         
-  # init CoffeeSlider
-  thumbnails = new SEQ.modules.ThumbSlider
-    container: $(".thumbnails")
-    transitionType: "slide"
-    loop: "infinite"
-    transitionSpeed: 1400
-    transitionDelay: 5000
-    transitionDirection: "horizontal"
-    touchStyle: "drag"
-    preload: true
-    step: 3
-    responsive: false
-    hasDotNav: false
-    selectors:
-     slide: "figure"
-    link: coffeeslider
+  # # init CoffeeSlider
+  # thumbnails = new SEQ.modules.ThumbSlider
+  #   container: $(".thumbnails")
+  #   transitionType: "slide"
+  #   loop: "infinite"
+  #   transitionSpeed: 1400
+  #   transitionDelay: 5000
+  #   transitionDirection: "horizontal"
+  #   touchStyle: "drag"
+  #   preload: true
+  #   step: 3
+  #   responsive: false
+  #   hasDotNav: false
+  #   selectors:
+  #    slide: "figure"
+  #   link: coffeeslider
+    
+  # init video player
+  player = new MediaElementPlayer("#player1")
