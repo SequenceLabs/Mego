@@ -1,19 +1,26 @@
 ---
-  page_title: Mego
+  page_title: Garndiffaith Community Energy
   body_id: home
 ---
 
-#container
-  %header
-    = partial('includes/modules/carousel')
+
+%header
+  = partial('includes/modules/carousel')
+
+.col-8
+  %section#our-projects
+    %h2
+      Our Projects
+    #map
+      - img_placehold 642, 480
+    %a{:href=>"projects"}
+      Full project list &rarr;
+      
+  %section#ctas      
+    = partial('includes/modules/cta/cta-list', :locals=>{:count=>2})
+    
+.col-4#sidebar.last
+  = partial('includes/modules/news/news-widget')
+  = partial('includes/modules/events-widget')
+  = partial('includes/modules/social/flickr-photostream')
   
-  %section#cta-list
-    - 3.times do |i|
-      = partial('includes/modules/generic-cta', :locals=>{:i=>i})
-  
-  %section#welcome
-    %p
-      = lorem.paragraph
-      this is a
-      %a{:href => '#'}
-        link

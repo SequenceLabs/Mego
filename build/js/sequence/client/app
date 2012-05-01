@@ -1,0 +1,48 @@
+(function() {
+  "use strict";
+  var Project_Namespace, init, onDocReady;
+
+  Project_Namespace = SEQ.utils.namespace("SEQ.project_namespace");
+
+  (init = function() {
+    return $(document).ready(function() {
+      return onDocReady();
+    });
+  })();
+
+  onDocReady = function() {
+    var coffeeslider, thumbnails;
+    coffeeslider = new SEQ.modules.CoffeeSlider({
+      container: $(".carousel"),
+      transitionType: "slide",
+      loop: "infinite",
+      transitionSpeed: 1400,
+      transitionDelay: 5000,
+      transitionDirection: "horizontal",
+      touchStyle: "drag",
+      preload: true,
+      responsive: false,
+      selectors: {
+        slide: "figure"
+      }
+    });
+    thumbnails = new SEQ.modules.ThumbSlider({
+      container: $(".thumbnails"),
+      transitionType: "slide",
+      loop: "infinite",
+      transitionSpeed: 1400,
+      transitionDelay: 5000,
+      transitionDirection: "horizontal",
+      touchStyle: "drag",
+      preload: true,
+      step: 3,
+      responsive: false,
+      hasDotNav: false,
+      selectors: {
+        slide: "figure"
+      }
+    });
+    return coffeeslider.registerNavModule(thumbnails);
+  };
+
+}).call(this);

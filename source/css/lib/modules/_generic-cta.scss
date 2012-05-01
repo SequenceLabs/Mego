@@ -1,6 +1,11 @@
 #cta-list {
   @include clearfix;
+  border-bottom: 1px solid $borders;
+  margin-bottom: $baseline * 3;
   .cta {
-    
+    margin-bottom: $baseline * 2;
+    figure {
+      margin-bottom: $baseline * 2;
+    }
   }
 }

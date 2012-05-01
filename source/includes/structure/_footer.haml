@@ -1,7 +1,11 @@
 %footer#site-footer
+  = partial('includes/modules/social/twitter')
+  = partial('includes/modules/social/facebook')
+
   %nav
-    %ul
-      - 3.times do |i|
-        %li
-          %a{:href => ""} Footer Nav Item #{i}
-    
+    %li
+      %a Sitemap
+    %li
+      %a Terms &amp; Conditions
+    %li
+      %a Privacy Statement

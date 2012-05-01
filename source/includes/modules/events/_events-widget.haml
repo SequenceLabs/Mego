@@ -1,0 +1,19 @@
+/ START #events-widget
+
+%section#events-widget.widget
+  %h2
+    Upcoming events
+  %ul
+    - (2 + rand(2)).times do
+      %li
+        %a.event-item{:href=>"#",:title=>"Brief summary of article"}
+          %h3
+            = lorem.words 1+rand(5)
+          %time{:datetime=>"2012-04-13"}
+            = lorem.date
+          %p
+            = lorem.words (6 + rand(20))
+  %a.read-more{:href=>"#",:title=>"View all events"}
+    All Events &rarr;
+    
+/ END #events-widget

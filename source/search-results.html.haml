@@ -1,13 +1,13 @@
 ---
   page_title: Search Results
-  body_id: search-results
+  body_id: search
 ---
 
 #content.col-8
   %h1
     Search Results
   
-  .search  
+  %header.search-results-header  
     = partial('includes/modules/mini-search', :locals=>{:name=>"keywords"})
     .results
       1-10 of #{rand(6000)} results
@@ -16,7 +16,7 @@
       %a.relevance{:href=>"", :title=>"Sort by relevance"} Relevance
       |
       %a.date{:href=>"", :title=>"Sort by date"} Date
-  %ul
+  %ul.result-list
     - (3 + rand(6)).times do
       %li
         = partial('includes/modules/search-item')

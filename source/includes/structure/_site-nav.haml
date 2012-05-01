@@ -1,17 +1,13 @@
 - structure = [{:href=>"index", :title=>"Home"},
-   {:href=>"about-us", :title=>"About Us"}, 
-   {:href=>"projects", :title=>"Projects"}, 
-   {:href=>"news", :title=>"News"},
-   {:href=>"events", :title=>"Events"},
-   {:href=>"gallery", :title=>"Gallery"},
-   {:href=>"search-results", :title=>"Search Results"},
-   {:href=>"blog", :title=>"Blog"},
-   {:href=>"login", :title=>"Login"},
-   {:href=>"contact-us", :title=>"Contact us"}]
+  {:href=>"about-us", :title=>"About Us"},
+  {:href=>"projects", :title=>"Projects"},
+  {:href=>"news", :title=>"News"},
+  {:href=>"events", :title=>"Events"},
+  {:href=>"contact-us", :title=>"Contact us"}]
 
-%nav#site-nav
+%nav#site-nav.nav-bar
   %ul
     - structure.each do |page|
       %li
-        %a{:href=>"#{page[:href]}"}
+        %a{:href=>"#{page[:href]}.html"}
           #{page[:title]}

@@ -8,7 +8,7 @@ html  {
   background: #ffffff;
 }
 body {
-  color: $default-colour;  
+  color: $text-color;  
 }
 .container {
   overflow: hidden;
@@ -19,32 +19,64 @@ body {
 }
 
 #site-header {
-
-}
-
-#site-footer {
-  nav {
-    ul {
-      margin:0 auto;
-      li {
-        display: inline;
+  margin: $baseline * 3 0;
+  position: relative;
+  #branding {
+    float: left;
+    clear:both;
+    overflow:hidden;
+    a {
+      font-size: 45px;
+      line-height: 60px;
+      font-weight: bold;
+      color: $black!important;
+      &:hover {
+        color: $black;
       }
     }
   }
+  .mini-search {
+    float: right;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
 }
-
 #site-nav {
+  clear: both;
+  padding: $baseline * 1 0;
   ul {
-    margin:0 auto;
-    width:$width;
+    overflow: hidden;
     li {
-      display: inline;
+      display: block;
+      float: left;
+      margin-right: 20px;
     }
   }
 }
 
-#branding {
-  padding-top:$baseline;
-  clear:both;
-  overflow:hidden;
+#site-footer {
+  padding: $baseline * 3 0;
+  margin: $baseline * 3 0;
+  border-top: 1px solid $borders;
 }
+
+#footer-nav {
+  ul {
+    li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+}
+
+
+
+#sidebar {
+  section.widget {
+    margin-bottom: $baseline * 2;
+    padding-bottom: $baseline * 2;
+    border-bottom: 1px solid $borders;
+  }
+}
+
+
