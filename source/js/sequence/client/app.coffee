@@ -30,7 +30,7 @@ onDocReady = () ->
     responsive: false
     selectors:
       slide: "figure"
-        
+
   # init CoffeeSlider
   thumbnails = new SEQ.modules.ThumbSlider
     container: $(".thumbnails")
@@ -49,4 +49,6 @@ onDocReady = () ->
   
   coffeeslider.registerNavModule(thumbnails)
     
-  
+  # init video player
+  player = new MediaElementPlayer("#player1")
+

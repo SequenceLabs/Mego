@@ -1,0 +1,27 @@
+- splashScreen = 'http://placehold.development2.sequence.co.uk/?form=png&w=320&h=240&t=splash%20screen'
+- playerPath = '../js/sequence/modules/video/player.swf'
+- youTube = 'http://www.youtube.com/watch?v=UAqdKKusisw'
+/ START .video
+%section.video
+  %video{:id=>"player1",:width=>"640",:height=>"360",:poster=>"#{splashScreen}",:controls=>'controls',:preload=>'none'}
+    %source{:type=>'video/x-youtube', :src=>"#{youTube}"}
+/ END .video
+
+
+/
+  INTERNAL VIDEO
+  %video{:width=>"320",:height=>"240",:poster=>'',:controls=>'controls',:preload=>'none'}
+    %source{:type=>'video/mp4', :src=>'media/video.mp4'}
+    %source{:type=>'video/webm', :src=>'media/video.webm'}
+    %source{:type=>'video/ogg', :src=>'media/video.ogv'}
+    %object{:width=>'320', :height=>'240', :type=>'application/x-shockwave-flash',:data=>'player.swf'}
+      %param{:name=>'movie', :value=>'player.swf'}
+      %param{:name=>"flashvars", :value=>"controls=true&amp;poster=media/video.jpg&amp;file=media/video.mp4"}
+        - img_placehold(320,240)
+
+/
+  USAGE:
+  interal - video/mp4, video/webm, video/ogg
+  youtube - video/youtube
+  poster  - splash screen
+  object  - flash fallback
