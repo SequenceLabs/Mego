@@ -15,14 +15,12 @@
     - img_placehold 640, 320
     %figcaption
       = lorem.sentence
-        
     = partial("includes/modules/random-content")
-  
     %a.button{:href=>"/news"}
       &larr; Back
     %footer#news-footer
-      = partial("includes/modules/facebook-like")
+      = partial("includes/modules/social/facebook-like")
 
 #sidebar.col-4.last
-  = partial('includes/modules/events-widget')
-  = partial('includes/modules/news-widget')
+  = partial('includes/modules/events/events-widget')
+  = partial('includes/modules/news/news-widget')
