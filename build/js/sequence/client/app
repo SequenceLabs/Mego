@@ -11,7 +11,7 @@
   })();
 
   onDocReady = function() {
-    var coffeeslider, thumbnails;
+    var coffeeslider, player, thumbnails;
     coffeeslider = new SEQ.modules.CoffeeSlider({
       container: $(".carousel"),
       transitionType: "slide",
@@ -42,7 +42,8 @@
         slide: "figure"
       }
     });
-    return coffeeslider.registerNavModule(thumbnails);
+    coffeeslider.registerNavModule(thumbnails);
+    return player = new MediaElementPlayer("#player1");
   };
 
 }).call(this);

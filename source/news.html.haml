@@ -3,16 +3,15 @@
   tag_id: news-list
 ---
 
-%article
-  %header#page-header
-    %h1
-      Latest News
-    %p
-      Some sort of by-line here. 
-      = lorem.words 24
-  #content.col-8
-    = partial('includes/modules/news/news-listing', :locals=>{:include_featured=>true})
-    = partial('includes/modules/pagination')
-  #sidebar.col-4.last
-    = partial('includes/modules/events/events-widget')
-    = partial('includes/modules/news/news-widget')
+%header#page-header
+  %h1
+    Latest News
+  %p
+    Some sort of by-line here. 
+    = lorem.words 24
+#content.col-8
+  = partial('includes/modules/news/news-listing', :locals=>{:include_featured=>true})
+  = partial('includes/modules/pagination')
+#sidebar.col-4.last
+  = partial('includes/modules/events/events-widget')
+  = partial('includes/modules/news/news-widget')

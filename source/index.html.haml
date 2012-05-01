@@ -1,13 +1,13 @@
 ---
   page_title: Garndiffaith Community Energy
-  body_id: home
+  tag_id: home
 ---
 
 
-%header
+%header#page-header
   = partial('includes/modules/carousel')
 
-.col-8
+#content.col-8
   %section#our-projects
     %h2
       Our Projects
@@ -19,7 +19,7 @@
   %section#ctas      
     = partial('includes/modules/cta/cta-list', :locals=>{:count=>2})
     
-.col-4#sidebar.last
+#sidebar.col-4.last
   = partial('includes/modules/news/news-widget')
   = partial('includes/modules/events/events-widget')
   = partial('includes/modules/social/flickr-photostream')
