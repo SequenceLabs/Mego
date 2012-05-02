@@ -7,36 +7,49 @@
 */
 
 // CSS3 mixins
-@import "lib/mixins/css3";
+@import "core/mixins/css3";
 // General mixins
-@import "lib/mixins/mixins";
+@import "core/mixins/mixins";
 
 // Base Modules
 @import "settings";
-@import "lib/reset";
+@import "core/reset";
 
 // Typography
-@import "lib/typography/elements";
-@import "lib/typography/headings";
+@import "core/typography/elements";
+@import "core/typography/headings";
 
 // Layout
-@import "lib/grids/grid-static"; 
-//@import "lib/grids/grid_fluid"; 
+@import "core/grids/grid-static"; 
 
-// The files below are helpers that can be removed if not required
-@import "lib/helpers/buttons";
-@import "lib/helpers/forms";
-@import "lib/helpers/tables";
-@import "lib/helpers/classes";
+// helpers
+@import "core/helpers/buttons";
+@import "project/forms";
+@import "core/helpers/tables";
+@import "core/helpers/classes";
 
-@import "lib/structure";
-@import "lib/modules";
+// main structural stuff
+@import "core/structure";
+
+// modules
+@import "core/modules/carousel";
+@import "core/modules/gallery";
+@import "core/modules/facebook-like";
+@import "core/modules/generic-cta";
+@import "core/modules/mini-search";
+@import "core/modules/pagination";
+@import "core/modules/twitter";
+@import "core/modules/news-listing";
+@import "core/modules/video";
+@import "core/modules/events-widget";
+@import "core/modules/nav-bar";
+@import "core/modules/flickr-photostream";
 
 // pages
-@import "pages/home.scss";
+@import "project/home.scss";
 
 // media queries
-@import "lib/media-queries";
+@import "core/media-queries";
 
 // IE conditional stylesheet
 @import "ie6";
@@ -44,4 +57,4 @@
 @import "ie8";
 @import "ie9";
 
-@import "lib/helpers/debug";
+@import "core/helpers/debug";
