@@ -4,11 +4,11 @@
 
 = partial('includes/structure/html-header')
 
-%body{:id=>data.page.body_id}
+%body
   %form{:id => "mainform", :action => "/", :method => "post"}
     .wrapper
       = partial('includes/structure/header')
-      .container
+      .container{:id=>data.page.tag_id}
         = yield
       = partial('includes/structure/footer')
       = partial('includes/structure/javascripts')

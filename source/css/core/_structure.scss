@@ -1,0 +1,86 @@
+/********************************************
+*
+* Main Structure
+*
+********************************************/
+
+html  {
+  background: #ffffff;
+  margin: $gutters;
+}
+body {
+  color: $text-color;  
+}
+.container {
+  overflow: hidden;
+}
+.wrapper {
+  width: $width;
+  margin: 0 auto;
+}
+
+#site-header {
+  margin: $baseline * 3 0;
+  position: relative;
+  #branding {
+    float: left;
+    clear:both;
+    overflow:hidden;
+    a {
+      font-size: 45px;
+      line-height: 60px;
+      font-weight: bold;
+      color: $black!important;
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+  .mini-search {
+    float: right;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+}
+#site-nav {
+  clear: both;
+  padding: $baseline * 1 0;
+  ul {
+    overflow: hidden;
+    li {
+      display: block;
+      float: left;
+      margin-right: 20px;
+    }
+  }
+}
+
+#site-footer {
+  padding: $baseline * 3 0;
+  margin: $baseline * 3 0;
+  border-top: 1px solid $borders;
+}
+
+#footer-nav {
+  ul {
+    li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+}
+
+#sidebar {
+  section.widget {
+    margin-bottom: $baseline * 2;
+    padding-bottom: $baseline * 2;
+    border-bottom: 1px solid $borders;
+  }
+}
+
+#page-header {
+  padding-bottom: $baseline * 1;
+  margin-bottom: $baseline * 1;
+}
+
+

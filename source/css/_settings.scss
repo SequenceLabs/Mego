@@ -13,22 +13,23 @@
 //
 
 // colors
-
 $white: #fff;
-$black: #000;
-$dark-grey: #333;
-$mid-grey: #999;
-$light-grey: #ccc;
+$black: #242424;
+$really-dark-grey: #333;
+$dark-grey: #5e5e5e;
+$mid-grey: #858585;
+$light-grey: #ddd;
+$really-light-grey: #f6f6f6;
 
-$default-colour: $black;
+$text-color: $black;
 $highlight-colour: #ff0064;
 
 // Base settings
 $width: 978px;
 $gutters: 30px;
 $columns: 12;
-$baseline: 10px;
 $font-size: 14px;
+$baseline: 10px;
 
 // Debug helpers
 $debug: false;

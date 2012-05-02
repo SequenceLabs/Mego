@@ -1,0 +1,12 @@
+/START CTA list
+%section.cta-list
+  
+  - if defined? count
+    - num = count
+  - else
+    - num = 3
+  
+  - num.times do |i|
+    
+    = partial('includes/modules/cta/generic-cta')
+/END CTA list

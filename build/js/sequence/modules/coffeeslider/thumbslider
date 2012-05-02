@@ -1,0 +1,61 @@
+(function() {
+  "use strict";
+  var modules,
+    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = Object.prototype.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
+
+  modules = SEQ.utils.namespace('SEQ.modules');
+
+  modules.ThumbSlider = (function(_super) {
+
+    __extends(ThumbSlider, _super);
+
+    function ThumbSlider(options) {
+      this.options = options;
+      this.setActive = __bind(this.setActive, this);
+      this.onClick = __bind(this.onClick, this);
+      this.bindUIEvents = __bind(this.bindUIEvents, this);
+      this.goTo = __bind(this.goTo, this);
+      ThumbSlider.__super__.constructor.call(this, this.options);
+    }
+
+    ThumbSlider.prototype.goTo = function(index, skipTransition) {
+      ThumbSlider.__super__.goTo.call(this, index, skipTransition);
+      return this.setActive($(this.slides[index]));
+    };
+
+    ThumbSlider.prototype.bindUIEvents = function() {
+      var slide, _i, _len, _ref, _results;
+      ThumbSlider.__super__.bindUIEvents.call(this);
+      _ref = this.slides;
+      _results = [];
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        slide = _ref[_i];
+        _results.push($(slide).on("click", this.onClick));
+      }
+      return _results;
+    };
+
+    ThumbSlider.prototype.onClick = function(e) {
+      var limit, slideIndex;
+      this.clicked = $(e.currentTarget);
+      slideIndex = this.clicked.index() - this.settings.step;
+      limit = this.numUniqueSlides - 1;
+      if (slideIndex > limit) slideIndex = Math.abs(limit - slideIndex) - 1;
+      this.currentIndex = slideIndex;
+      this.setActive(this.clicked);
+      return this.element.trigger("change");
+    };
+
+    ThumbSlider.prototype.setActive = function(slide) {
+      if (this.active.length > 0) this.active.removeClass('active');
+      this.active = slide;
+      return this.active.addClass('active');
+    };
+
+    return ThumbSlider;
+
+  })(modules.CoffeeSlider);
+
+}).call(this);

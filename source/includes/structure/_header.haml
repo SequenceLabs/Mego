@@ -1,4 +1,4 @@
 %header#site-header
-  = partial('includes/structure/site-nav')
-  = partial('includes/modules/site-search')
   = partial('includes/structure/branding')
+  = partial('includes/modules/search/mini-search', :locals=>{:name=>"search"})
+  = partial('includes/structure/site-nav')

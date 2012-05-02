@@ -1,0 +1,46 @@
+---
+  page_title: About Us
+  tag_id: about-us
+---
+  
+%header#page-header
+  %h1
+    About Us 
+    
+#content.col-8  
+  - 3.times do
+    %p
+      = lorem.paragraph
+  
+  = partial('includes/modules/social/flickr-photostream')
+      
+#sidebar.col-4.last
+  %section#contact-widget.widget
+    .map
+      - img_placehold 306, 200
+      %a
+        View larger map &rarr;
+    .address    
+      %h3
+        Address
+      Building name 
+      %br
+      Street Name
+      %br
+      Area
+      %br
+      City
+      %br
+      PO57 C07
+    .tel
+      %h3
+        Phone
+      0800 888000
+    .email
+      %h3
+        Email
+      %a
+        help@company.co.uk
+  
+  = partial('includes/modules/cta/generic-cta')
+    

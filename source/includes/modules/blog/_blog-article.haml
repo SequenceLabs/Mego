@@ -1,0 +1,38 @@
+%article#blog
+  %header
+    %h1
+      = lorem.words (3 + rand(5))
+    .vcard
+      by
+      %address.author
+        %a{:title=>"Posts by John Doe", :href=>"#"}
+          John Doe
+        on
+      %time{:datetime=>"2009-11-04", :class=>"published updated"}
+        November 4th, 2009
+  %figure
+    - img_placehold 642, 300
+    %figcaption
+      fig.1
+  %h2
+    = lorem.words (3 + rand(5))
+  - (2 + rand(2)).times do
+    %p
+      = lorem.sentences (2 + rand(8))
+
+  %footer
+    .categories
+      Featured in:
+      %ul
+        - (2 + rand(2)).times do
+          %li
+            %a{:title=>"Category",:href=>"#"}
+              Category
+    .tags
+      Tagged:
+      %ul
+        - (2 + rand(2)).times do
+          %li
+            %a{:title=>"Tag",:href=>"#"}
+              = lorem.words (1)
+    .social

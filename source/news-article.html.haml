@@ -1,0 +1,26 @@
+---
+  page_title: News Item
+  body_id: news-item
+---
+
+
+%header#page-header
+  %h1
+    = lorem.words (3 + rand(5))
+  %time{:datetime=>"2012-04-13"}
+    13th April 2012
+    
+#content.col-8
+  %figure
+    - img_placehold 640, 320
+    %figcaption
+      = lorem.sentence
+    = partial("includes/modules/random-content")
+    %a.button{:href=>"/news"}
+      &larr; Back
+    %footer#news-footer
+      = partial("includes/modules/social/facebook-like")
+
+#sidebar.col-4.last
+  = partial('includes/modules/events/events-widget')
+  = partial('includes/modules/news/news-widget')
