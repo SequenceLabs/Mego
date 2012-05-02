@@ -14,9 +14,25 @@
     - img_placehold 642, 300
     %figcaption
       fig.1
-  - (3 + rand(3)).times do
+  %h2
+    = lorem.words (3 + rand(5))
+  - (2 + rand(2)).times do
     %p
       = lorem.sentences (2 + rand(8))
-      
+
   %footer
-   
+    .categories
+      Featured in:
+      %ul
+        - (2 + rand(2)).times do
+          %li
+            %a{:title=>"Category",:href=>"#"}
+              Category
+    .tags
+      Tagged:
+      %ul
+        - (2 + rand(2)).times do
+          %li
+            %a{:title=>"Tag",:href=>"#"}
+              = lorem.words (1)
+    .social
