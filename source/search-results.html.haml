@@ -4,10 +4,11 @@
 ---
 
 #content.col-8
-  %h1
-    Search Results
+  %header
+    %h1
+      Search Results
   
-  %header.search-results-header  
+  .search-results-header  
     = partial('includes/modules/mini-search', :locals=>{:name=>"keywords"})
     .results
       1-10 of #{rand(6000)} results

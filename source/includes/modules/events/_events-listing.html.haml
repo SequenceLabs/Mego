@@ -1,11 +1,12 @@
 / START #events-listing
 
 %section.events-listing
-  %h2
-    - if defined? title
-      = title
-    - else  
-      Upcoming Events
+  %header
+    %h2
+      - if defined? title
+        = title
+      - else  
+        Upcoming Events
   %ul
     - (2 + rand(2)).times do
       %li

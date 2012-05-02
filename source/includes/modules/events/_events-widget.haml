@@ -1,8 +1,9 @@
 / START #events-widget
 
 %section#events-widget.widget
-  %h2
-    Upcoming events
+  %header
+    %h2
+      Upcoming events
   %ul
     - (2 + rand(2)).times do
       %li
@@ -13,7 +14,9 @@
             = lorem.date
           %p
             = lorem.words (6 + rand(20))
-  %a.read-more{:href=>"#",:title=>"View all events"}
-    All Events &rarr;
+  
+  %footer
+    %a.read-more{:href=>"#",:title=>"View all events"}
+      All Events &rarr;
     
 / END #events-widget

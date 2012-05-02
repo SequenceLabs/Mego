@@ -29,10 +29,10 @@
 @import "lib/helpers/tables";
 @import "lib/helpers/classes";
 
-@import "structure";
-@import "modules";
-@import "pages";
-@import "media-queries";
+@import "lib/structure";
+@import "lib/modules";
+@import "pages/pages";
+@import "lib/media-queries";
 
 // IE conditional stylesheet
 @import "ie6";
