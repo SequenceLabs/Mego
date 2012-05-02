@@ -31,7 +31,11 @@
 
 @import "lib/structure";
 @import "lib/modules";
-@import "pages/pages";
+
+// pages
+@import "pages/home.scss";
+
+// media queries
 @import "lib/media-queries";
 
 // IE conditional stylesheet
