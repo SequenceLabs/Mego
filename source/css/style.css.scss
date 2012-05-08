@@ -41,10 +41,12 @@
 @import "core/modules/twitter";
 @import "core/modules/news-listing";
 @import "core/modules/video";
-@import "core/modules/events-widget";
+
 @import "core/modules/flickr-photostream";
 @import "core/modules/contact-widget";
 @import "core/modules/blog";
+@import "core/modules/events-widget";
+@import "core/modules/events-listing";
 
 // pages
 @import "project/home.scss";
