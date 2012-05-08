@@ -1,0 +1,15 @@
+#projects {
+  #map {
+    margin-bottom: $baseline * 2;
+  }
+  #project-listing {
+    ul {
+      list-style: none;
+    }
+    li {
+      img {
+        margin-bottom: $baseline;
+      }
+    }
+  }
+}

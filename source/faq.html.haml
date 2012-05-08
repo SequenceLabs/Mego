@@ -1,6 +1,6 @@
 ---
   page_title: Frequently Asked Questions
-  tag_id: faqs
+  tag_id: faq
 ---
 
 %header#page-header
@@ -11,7 +11,7 @@
   .search
     %h3
       Search by keyword
-    = partial('includes/modules/mini-search')
+    = partial('includes/modules/search/mini-search', :locals=>{:name=>"search"})
   
   %nav.category-quicklinks
     %h3 Category quick links
