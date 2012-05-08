@@ -28,8 +28,10 @@
         }
     }
   }
-  .blog-post-CTA {
-    width: 33%;
-    float: left;
+}
+
+.blog-post-CTA {
+  img {
+    margin-bottom: $baseline;
   }
 }
