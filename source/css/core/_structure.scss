@@ -75,6 +75,9 @@ body {
     margin-bottom: $baseline * 2;
     padding-bottom: $baseline * 2;
     border-bottom: 1px solid $borders;
+    ul {
+      list-style: none;
+    }
   }
 }
 

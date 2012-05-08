@@ -7,7 +7,7 @@
       %address.author
         %a{:title=>"Posts by John Doe", :href=>"#"}
           John Doe
-        on
+      on
       %time{:datetime=>"2009-11-04", :class=>"published updated"}
         November 4th, 2009
   %figure
@@ -21,15 +21,17 @@
       = lorem.sentences (2 + rand(8))
 
   %footer
-    .categories
-      Featured in:
+    %section.categories
+      %h5
+        Featured in:
       %ul
         - (2 + rand(2)).times do
           %li
             %a{:title=>"Category",:href=>"#"}
-              Category
-    .tags
-      Tagged:
+              = lorem.words 1+(rand(1))
+    %section.tags
+      %h5
+        Tagged:
       %ul
         - (2 + rand(2)).times do
           %li

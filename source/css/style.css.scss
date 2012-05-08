@@ -24,9 +24,9 @@
 
 // helpers
 @import "core/helpers/buttons";
-@import "project/forms";
+@import "core/helpers/forms";
 @import "core/helpers/tables";
-@import "core/helpers/classes";
+@import "core/helpers/components";
 
 // main structural stuff
 @import "core/structure";
@@ -42,8 +42,9 @@
 @import "core/modules/news-listing";
 @import "core/modules/video";
 @import "core/modules/events-widget";
-@import "core/modules/nav-bar";
 @import "core/modules/flickr-photostream";
+@import "core/modules/contact-widget";
+@import "core/modules/blog";
 
 // pages
 @import "project/home.scss";
