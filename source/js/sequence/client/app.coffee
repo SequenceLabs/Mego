@@ -19,7 +19,7 @@ do init = ->
     onDocReady()
 # executes when document is ready
 onDocReady = ->
-    initCoffeeSlider()  
+    initCoffeeSlider()
     initGallery()
     initVideoPlayer()   
     initMaps()
@@ -71,16 +71,29 @@ initMaps = ->
     callback: onMapsApiLoaded
     
 onMapsApiLoaded = ->
-  
+  initContactWidgetMap()
+
+initContactWidgetMap = -> 
   contactWidgetMap = document.querySelector('#contact-widget .map')
   
   if contactWidgetMap?
+    adr = $("#contact-widget .adr")
+    street = adr.find(".street-address").html()
+    locality = adr.find(".locality").html()
+    postcode = adr.find(".postal-code").html()
     gmap = new maps.GoogleMap
       mapEl: contactWidgetMap
-      zoom: 10
+      zoom: 12
       mapTypeId: google.maps.MapTypeId.ROADMAP      
-      
-    gmap.centerOnCurrentPosition()
+      mapTypeIds: []
+      panControl: false
+      zoomControl: false
+      mapTypeControl: false
+      scaleControl: false
+      streetViewControl: false
+      overviewMapControl: false
+    gmap.centerOnAddress("#{street}, #{locality}, #{postcode}")
+    
         
    
    

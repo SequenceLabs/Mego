@@ -2,16 +2,23 @@
 # namespace
 gmaps = SEQ.utils.namespace('SEQ.gmaps')
 
-# Abstracts Google Maps
+# Abstracts Google Maps. Will fail if maps API is not already loaded.
 class gmaps.GoogleMap
   
   constructor: (@options) -> 
-    # initialise map element
-    @mapEl = @options.mapEl
+    # map element
+    @mapEl = {}
+    # google.maps.Map 
+    @map = {}
+    # google.maps.Geocoder
+    @geocoder = {}
+    
     @init()
     @createMap()
     
   init: =>
+    @mapEl = @options.mapEl
+    
     # if specific size in options, use that
     if @options.size?
       @mapEl.style.width = @options.size.width
@@ -24,7 +31,6 @@ class gmaps.GoogleMap
   
   createMap: =>
     # create map object
-    # TODO: optimise the options earlier on with defaults/merging and just pass @options in
     if @options.center?
       @options.center = new google.maps.LatLng(@options.center[0], @options.center[1])
     
@@ -38,9 +44,30 @@ class gmaps.GoogleMap
     else
       @noGeoLocation()
   
+  centerOnAddress: (address) =>
+    console.log address
+    @geocoder = new google.maps.Geocoder()
+    @geocoder.geocode
+      'address': address
+    , @onGeocodeComplete
+  
+  onGeocodeComplete: (results, status) =>
+    if status is google.maps.GeocoderStatus.OK
+      @map.setCenter(results[0].geometry.location)
+      @addMarker(results[0].geometry.location)
+    else
+      console.log("gecode failed: #{status}")
+       
   hasGeoLocation: (position)=>
     pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
     @map.setCenter(pos)
   
   noGeoLocation: (error) =>
     alert("no geolocation")
+    
+  addMarker: (pos) =>
+    marker = new google.maps.Marker
+      map: @map
+      position: pos
+      
+    @markers.push(marker)
