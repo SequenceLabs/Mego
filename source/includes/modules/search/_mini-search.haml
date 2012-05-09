@@ -1,5 +1,10 @@
 /START mini-search
-%section.mini-search
+%section{:class=>"mini-search #{'widget' unless !defined? widget && !widget}"}
+
+  - if defined? title
+    %h3
+      = title
+
   %label{:for=>"#{name}"} Search
   %input.field-search{:type=>"text",
     :placeholder=>"Enter keyword",

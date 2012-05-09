@@ -9,8 +9,8 @@
         Upcoming Events
   %ul
     - (2 + rand(2)).times do
-      %li
-        %a.event-item{:href=>"#",:title=>"Brief summary of article"}
+      %li.event-item
+        %a{:href=>"#",:title=>"Brief summary of article"}
           %h3
             = lorem.words 1+rand(5)
           %time{:datetime=>"2012-04-13"}

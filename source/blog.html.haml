@@ -3,15 +3,15 @@
   tag_id: blog
 ---
 
-#content.col-8
+#content.col-9
   = partial('includes/modules/blog/blog-article')
   %section#relevant-posts
     %h2
       You might also be interested in:
     - (3).times do
       = partial('includes/modules/blog/blog-post-CTA')
-#sidebar.col-4
+#sidebar.col-3
   = partial('includes/modules/widgets/subscribe-widget')
-  = partial('includes/modules/search/mini-search', :locals=>{:name=>"search_posts"})
+  = partial('includes/modules/search/mini-search', :locals=>{:name=>"search_posts", :title=>"Search Posts", :widget=>true})
   = partial('includes/modules/blog/blog-categories-widget')
   = partial('includes/modules/blog/blog-archives-widget')

@@ -1,0 +1,37 @@
+#blog {
+  .vcard {
+    font-size: 13px;
+    address,
+    time {
+      display: inline-block;
+      font-family: $serif;
+      a {
+        font-size: 13px;
+        font-family: $serif;
+      }
+    }
+  }
+  footer {
+    border-top: 1px solid $borders;
+    border-bottom: 1px solid $borders;
+    padding: $baseline 0;
+    margin-bottom: $baseline;
+    overflow: hidden;
+    .categories,
+    .tags {
+        margin-bottom: $baseline;
+        float: left;
+        margin-right: $gutters;
+        width: $col_width * 2;
+        ul {
+          list-style: none;
+        }
+    }
+  }
+}
+
+.blog-post-CTA {
+  img {
+    margin-bottom: $baseline;
+  }
+}

@@ -1,0 +1,10 @@
+#contact-widget {
+  .map {
+    margin-bottom: $baseline;
+  }
+  .vcard {
+    .adr,.tel, .email {
+      margin-bottom: $baseline;
+    }
+  }
+}

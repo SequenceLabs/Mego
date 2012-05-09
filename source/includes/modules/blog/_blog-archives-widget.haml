@@ -3,7 +3,7 @@
     %h3
       Archives
   %ul
-    - (6).times do
+    - ['January', 'February', 'March', 'April', 'May', 'June'].each do |month|
       %li
-        %a{:href=>"#",:title=>"Archive description"}
-          January 2012 (#{1+rand(4)})
+        %a{:href=>"#",:title=>"Archive description"}      
+          #{month} 2012 (#{1+rand(4)})
