@@ -4,10 +4,13 @@
 #  ___) |  __/ (_| | |_| |  __/ | | | (__|  __/
 # |____/ \___|\__, |\__,_|\___|_| |_|\___|\___|
 #                |_|   
-                                                               
+         
 "use strict"  
 
-Project_Namespace = SEQ.utils.namespace "SEQ.project_namespace"
+utils = SEQ.utils.namespace('SEQ.utils')
+maps = utils.namespace('SEQ.gmaps')
+modules = utils.namespace('SEQ.modules')
+Project_Namespace = utils.namespace "SEQ.project_namespace"
 
 #init function happens as soon as javascript is loaded
 do init = ->
@@ -16,7 +19,6 @@ do init = ->
     onDocReady()
 # executes when document is ready
 onDocReady = ->
-
     initCoffeeSlider()  
     initGallery()
     initVideoPlayer()   
@@ -25,7 +27,7 @@ onDocReady = ->
 initCoffeeSlider = ->  
   # init CoffeeSlider
   if $(".carousel").length > 0
-    coffeeslider = new SEQ.modules.CoffeeSlider
+    coffeeslider = new modules.CoffeeSlider
       container: $(".carousel")
       transitionType: "slide"
       loop: "infinite"
@@ -41,7 +43,7 @@ initCoffeeSlider = ->
 initGallery = ->
   # init CoffeeSlider
   if $(".gallery").length > 0
-    thumbnails = new SEQ.modules.ThumbSlider
+    thumbnails = new modules.ThumbSlider
       container: $(".thumbnails")
       transitionType: "slide"
       loop: "infinite"
@@ -64,13 +66,23 @@ initVideoPlayer = ->
      player = new MediaElementPlayer("#player1")  
 
 initMaps = ->
-  if $('#contact-widget .map').length > 0
-    gmap = new SEQ.gmaps.GoogleMap
-      mapEl: document.querySelector('.map')
+  mapsController = new maps.GoogleMapsApiController
+    sensor: true
+    callback: onMapsApiLoaded
+    
+onMapsApiLoaded = ->
+  
+  contactWidgetMap = document.querySelector('#contact-widget .map')
+  
+  if contactWidgetMap?
+    gmap = new maps.GoogleMap
+      mapEl: contactWidgetMap
       zoom: 10
-      mapTypeId: "ROADMAP"
-      sensor: true
-      onApiLoaded: =>
-        gmap.centerOnCurrentPosition()
+      mapTypeId: google.maps.MapTypeId.ROADMAP      
+      
+    gmap.centerOnCurrentPosition()
+        
+   
+   
 
 
