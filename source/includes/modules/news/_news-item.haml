@@ -7,14 +7,14 @@
       %time{:datetime=>"2009-11-13T20:00Z"}
         3 hours ago
     %figure{:class=>"#{featured ? '' : 'col-3'}"}
-      
       - if featured
         - img_placehold 726, (726/16)*9
       - else
         - img_placehold 230, 150
       %figcaption
         = lorem.sentence
-    %section{:class=>"#{featured ? 'copy' : 'copy col-5'}"}
+        
+    %section{:class=>"#{featured ? 'copy' : 'copy col-6'}"}
       %p
         = lorem.sentences (8 + rand(5))
       %footer

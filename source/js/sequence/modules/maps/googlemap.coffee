@@ -7,6 +7,8 @@ class gmaps.GoogleMap
   constructor: (@options) -> 
     # initialise map element
     @mapEl = @options.mapEl
+    console.log @mapEl
+    
     @init()
     
   init: =>

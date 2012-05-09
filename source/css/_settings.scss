@@ -30,7 +30,7 @@ $highlight-colour: #ff0064;
 $width: 978px;
 $gutters: 30px;
 $columns: 12;
-$font-size: 14px;
+$font-size: 16px;
 $baseline: 10px;
 
 // Debug helpers
@@ -39,7 +39,7 @@ $debug-grid: griddle; // none, structure, griddle, baseline
 
 // Typography settings
 $sans: "Helvetica Neue", Arial, sans-serif;
-$serif: "Georgia", Times New Roman, Times, sans-serif;
+$serif: "Georgia", "Times New Roman", Times, sans-serif;
 $mono: "Monaco", Courier New, monospace;
 
 // Links settings

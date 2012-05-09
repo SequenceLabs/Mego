@@ -52,19 +52,44 @@ a, a:active, a:focus {
 
 a {
   @include link-colours($links-normal, $links-hover, $links-active, $links-visited, $links-focus)
-  }
+}
 
 blockquote {
+  margin: ($baseline * 4) 0 ($baseline * 4) ($baseline * 10);
   display: block;
   font-weight: bold;
-  padding: ($baseline*2) $baseline;
-  font-weight: bold;
   font-size: 30px;
-  line-height: ($baseline*2);
+  line-height: ($baseline*3);
   font-family: serif;
-  font-style: italic;
   color: $text-color;
-  margin: $baseline 0;
+  position: relative;
+  &:before,
+  &:after {
+    
+    position: relative;
+    width: 60px;
+    height: 60px;
+    line-height: 0;
+    vertical-align: middle;
+  }
+  
+  &:before,
+  &:after {
+    content: "“"; 
+  } 
+  &:before {
+    font-size: 140px;
+    content: "“";
+    position: absolute;
+    left: -90px;
+    top:40px;
+  }
+  &:after {
+    font-size: 80px;
+    content: "”"; 
+    top:20px;
+    margin-left: 10px;
+  }
 }
 
 pre, code {
