@@ -45,12 +45,27 @@ body {
 #site-nav {
   clear: both;
   padding: $baseline * 1 0;
+  height: 30px;
   ul {
+    border-bottom: 1px solid $black;
     overflow: hidden;
     li {
       display: block;
       float: left;
-      margin-right: 20px;
+      margin-right: $gutters;
+      a {
+        font-weight: bold;
+        display: block;
+        color: $black;
+        padding-bottom: 10px;
+        &:hover {
+          color: $highlight-colour;
+          border-bottom: 5px solid $black;
+        }
+        &.active {
+          border-bottom: 5px solid $black;
+        }
+      }
     }
   }
 }

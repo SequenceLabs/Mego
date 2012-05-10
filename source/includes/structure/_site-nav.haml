@@ -7,9 +7,10 @@
   {:href=>"gallery", :title=>"Gallery"},
   {:href=>"contact-us", :title=>"Contact us"}]
 
-%nav#site-nav.nav-bar
+%nav#site-nav
   %ul
     - structure.each do |page|
       %li
-        %a{:href=>"#{page[:href]}.html"}
+        %a{:href=>"#{page[:href]}.html", :class=>"#{page[:href]+'.html' == request.path ? 'active' : ''}"}
           #{page[:title]}
+          

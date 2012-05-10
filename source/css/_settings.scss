@@ -43,11 +43,11 @@ $serif: "Georgia", "Times New Roman", Times, sans-serif;
 $mono: "Monaco", Courier New, monospace;
 
 // Links settings
-$links-normal: $dark-grey;
+$links-normal: $highlight-colour;
 $links-hover: $highlight-colour;
-$links-active: $dark-grey;
-$links-visited: $dark-grey;
-$links-focus: $dark-grey;
+$links-active: $highlight-colour;
+$links-visited: $highlight-colour;
+$links-focus: $highlight-colour;
 
 // Border settings
 $borders: $light-grey;
