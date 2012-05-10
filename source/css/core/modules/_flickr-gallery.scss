@@ -1,16 +1,9 @@
-.flickr-photostream-widget {
-  img {
-    margin-bottom: $baseline * 2;
-  }
-}
-
-#flickr-gallery {
+#flickrGallery {
   width: 100%;
   height: 500px;
   overflow: hidden;
   position: relative;
-  background-color: rgb(0, 0, 0);
-  margin-bottom: $baseline * 2; }
+  background-color: rgb(0, 0, 0); }
 
 .flickrGallery-thumbsContainer {
   padding: 17px;

@@ -23,6 +23,7 @@ onDocReady = ->
     initGallery()
     initVideoPlayer()   
     initMaps()
+    initFlickrGallery()
     
 initCoffeeSlider = ->  
   # init CoffeeSlider
@@ -94,7 +95,14 @@ initContactWidgetMap = ->
       overviewMapControl: false
     gmap.centerOnAddress("#{street}, #{locality}, #{postcode}")
     
-        
+initFlickrGallery = ->
+  flickr = new modules.FlickrGallery
+    apiKey:"a57204d74e7d388185a326741d19941f"
+    userId:"62998169@N04"
+    photoSetId:"72157627657152087"
+    containerId:"flickr-gallery"
+    thumbsPerPage:57
+    loaderGifSrc:"images/icons/ajax-loader.gif"
    
    
 

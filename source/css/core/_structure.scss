@@ -58,11 +58,9 @@ body {
         display: block;
         color: $black;
         padding-bottom: 10px;
-        &:hover {
-          color: $highlight-colour;
-          border-bottom: 5px solid $black;
-        }
+        &:hover,
         &.active {
+          color: $highlight-colour;
           border-bottom: 5px solid $black;
         }
       }
