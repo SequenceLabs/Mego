@@ -10,7 +10,7 @@
 utils = SEQ.utils.namespace('SEQ.utils')
 maps = utils.namespace('SEQ.gmaps')
 modules = utils.namespace('SEQ.modules')
-Project_Namespace = utils.namespace "SEQ.project_namespace"
+mego = utils.namespace "SEQ.mego"
 
 #init function happens as soon as javascript is loaded
 do init = ->
@@ -28,7 +28,7 @@ onDocReady = ->
 initCoffeeSlider = ->  
   # init CoffeeSlider
   if $(".carousel").length > 0
-    coffeeslider = new modules.CoffeeSlider
+    mego.coffeeslider = new modules.CoffeeSlider
       container: $(".carousel")
       transitionType: "slide"
       loop: "infinite"
@@ -59,7 +59,7 @@ initGallery = ->
       selectors:
        slide: "figure"
   
-    coffeeslider.registerNavModule(thumbnails)
+    mego.coffeeslider.registerNavModule(thumbnails)
 
 initVideoPlayer = ->
   if $("#player1").length > 0  

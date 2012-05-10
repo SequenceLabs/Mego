@@ -34,24 +34,21 @@ del {
 }
 
 a {
+  
   color: $links-normal;
+  @include link-colours($links-normal, $links-hover, $links-active, $links-visited, $links-focus);
   text-decoration: none;
   outline: 0;
   cursor: pointer;
   @include transition(color, 0.2s);
+  &:hover {
+    @include transition(color, 0.2s);
+    text-decoration: underline;
+  }
 }
 
-a:hover {
-  color: $links-hover;
-  text-decoration: none;
-  @include transition(color, 0.2s);
-}
 a, a:active, a:focus {
   outline: 0;
-}
-
-a {
-  @include link-colours($links-normal, $links-hover, $links-active, $links-visited, $links-focus)
 }
 
 blockquote {

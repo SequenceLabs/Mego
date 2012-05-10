@@ -1,3 +1,9 @@
+.gallery {
+  .carousel {
+    margin-bottom: $baseline * 2;
+  }
+}
+
 .thumbnails {
   width: 240px;
   margin: 0 auto;
@@ -16,11 +22,13 @@
     &.active {
       position: relative;
       &:after {
-        content: url(../images/arrow.png);
-        position: absolute;
-        top: -4px;
-        left: 44%;
-        z-index: 2;
+       position: absolute;
+       top: 0;
+       left: 0;
+       content: " ";
+       width: 240px;
+       height: 180px;
+       border-bottom: 1px solid $highlight-colour;
       }
     }
     &:hover {
@@ -29,9 +37,9 @@
        top: 0;
        left: 0;
        content: " ";
-       width: 234px;
+       width: 240px;
        height: 174px;
-       border: 3px solid rgba(0,0,0,.2);
+       border-bottom: 3px solid $highlight-colour;
       }
     }
   }

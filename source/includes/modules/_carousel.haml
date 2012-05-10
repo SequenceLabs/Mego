@@ -3,7 +3,7 @@
   - i = 0
   - 5.times do |i|
     %figure{:class=>"figure-#{i}"}
-      - img_placehold 978, 480
+      - img_placehold 978, 480, "Slide #{i}"
       %figcaption
         = lorem.sentences 1+rand(1)
 / END .carousel

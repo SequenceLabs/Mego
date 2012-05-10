@@ -54,3 +54,10 @@ $borders: $light-grey;
 $hr-border: $light-grey;
 
 $border-radius: 4px;
+
+::selection {
+	background: $highlight-colour; /* Safari */
+	}
+::-moz-selection {
+	background: $highlight-colour; /* Firefox */
+}

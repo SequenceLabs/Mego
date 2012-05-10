@@ -44,10 +44,9 @@ body {
 }
 #site-nav {
   clear: both;
-  padding: $baseline * 1 0;
-  height: 30px;
   ul {
     overflow: hidden;
+    border-bottom: 1px solid $black;
     li {
       display: block;
       float: left;
@@ -58,11 +57,14 @@ body {
         color: $black;
         padding-bottom: 10px;
         &:hover {
+          text-decoration: none;
           color: $highlight-colour;
+          border-bottom: 2px solid $black;
+          padding-bottom: 13px;
         }
         &.active {
-          
           border-bottom: 5px solid $black;
+          padding-bottom: 10px!important;
         }
       }
     }
