@@ -38,7 +38,7 @@ body {
   }
   .mini-search {
     float: right;
-    margin-top: 40px;
+    margin-top: 47px;
     margin-bottom: 20px;
   }
 }
@@ -47,7 +47,6 @@ body {
   padding: $baseline * 1 0;
   height: 30px;
   ul {
-    border-bottom: 1px solid $black;
     overflow: hidden;
     li {
       display: block;
@@ -58,9 +57,11 @@ body {
         display: block;
         color: $black;
         padding-bottom: 10px;
-        &:hover,
-        &.active {
+        &:hover {
           color: $highlight-colour;
+        }
+        &.active {
+          
           border-bottom: 5px solid $black;
         }
       }

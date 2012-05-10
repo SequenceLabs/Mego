@@ -17,8 +17,8 @@ class gmaps.GoogleMapsApiController
       console.log "maps API already loaded"
       return @onApiLoaded()
       
-    #global reference to this instance
-    window.SEQ.gmaps.MapInstance = this
+    #global static reference to this instance
+    gmaps.MapInstance = this
     #create script tag
     script = document.createElement("script")
     script.type = "text/javascript"

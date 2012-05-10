@@ -7,36 +7,36 @@ class gmaps.GoogleMap
   
   constructor: (@options) -> 
     # map element
-    @mapEl = {}
+    @gmapEl = {}
     # google.maps.Map 
-    @map = {}
+    @gmap = {}
     # google.maps.Geocoder
     @geocoder = {}
+    # array of markers
+    @markers = []
     
     @init()
     @createMap()
     
   init: =>
-    @mapEl = @options.mapEl
+    @gmapEl = @options.mapEl
     
     # if specific size in options, use that
     if @options.size?
-      @mapEl.style.width = @options.size.width
-      @mapEl.style.height = @options.size.height
+      @gmapEl.style.width = @options.size.width
+      @gmapEl.style.height = @options.size.height
     # otherwise, use client sizes  
     else
       @options.size =
-        width: @mapEl.clientWidth
-        height: @mapEl.clientHeight
+        width: @gmapEl.clientWidth
+        height: @gmapEl.clientHeight
   
   createMap: =>
     # create map object
-    if @options.center?
-      @options.center = new google.maps.LatLng(@options.center[0], @options.center[1])
-    
-    @map = new google.maps.Map(@mapEl, @options)
-    @mapEl.style.width = @options.size.width + "px"
-    @mapEl.style.height = @options.size.height + "px"
+
+    @gmap = new google.maps.Map(@gmapEl, @options)
+    @gmapEl.style.width = @options.size.width + "px"
+    @gmapEl.style.height = @options.size.height + "px"
     
   centerOnCurrentPosition: =>
     if (navigator.geolocation)
@@ -45,29 +45,42 @@ class gmaps.GoogleMap
       @noGeoLocation()
   
   centerOnAddress: (address) =>
-    console.log address
+    street = address.find(".street-address").html()
+    locality = address.find(".locality").html()
+    postcode = address.find(".postal-code").html()
     @geocoder = new google.maps.Geocoder()
     @geocoder.geocode
-      'address': address
+      'address': "#{street}, #{locality}, #{postcode}"
     , @onGeocodeComplete
+  
+  fitMarkerBounds: =>
+  
+    latLngBounds = new google.maps.LatLngBounds()
+    
+    for marker, i in @markers
+      latLngBounds.extend(marker.getPosition())
+      @gmap.setCenter(marker.getPosition()) if i is 0
+    
+    @gmap.fitBounds(latLngBounds)
   
   onGeocodeComplete: (results, status) =>
     if status is google.maps.GeocoderStatus.OK
-      @map.setCenter(results[0].geometry.location)
+      @gmap.setCenter(results[0].geometry.location)
       @addMarker(results[0].geometry.location)
     else
       console.log("gecode failed: #{status}")
        
-  hasGeoLocation: (position)=>
+  hasGeoLocation: (position) =>
     pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
-    @map.setCenter(pos)
+    @gmap.setCenter(pos)
   
   noGeoLocation: (error) =>
     alert("no geolocation")
     
-  addMarker: (pos) =>
+  addMarker: (pos, i) =>
     marker = new google.maps.Marker
-      map: @map
+      map: @gmap
       position: pos
-      
+      animation: google.maps.Animation.DROP
     @markers.push(marker)
+    return marker

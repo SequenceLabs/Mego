@@ -67,43 +67,47 @@ initVideoPlayer = ->
      player = new MediaElementPlayer("#player1")  
 
 initMaps = ->
-  mapsController = new maps.GoogleMapsApiController
-    sensor: true
-    callback: onMapsApiLoaded
-    
-onMapsApiLoaded = ->
-  initContactWidgetMap()
-
-initContactWidgetMap = -> 
-  contactWidgetMap = document.querySelector('#contact-widget .map')
+  if document.querySelector('#contact-widget .map')?
+    loadMapsApi initContactWidgetMap
   
-  if contactWidgetMap?
-    adr = $("#contact-widget .adr")
-    street = adr.find(".street-address").html()
-    locality = adr.find(".locality").html()
-    postcode = adr.find(".postal-code").html()
-    gmap = new maps.GoogleMap
-      mapEl: contactWidgetMap
-      zoom: 12
-      mapTypeId: google.maps.MapTypeId.ROADMAP      
-      mapTypeIds: []
-      panControl: false
-      zoomControl: false
-      mapTypeControl: false
-      scaleControl: false
-      streetViewControl: false
-      overviewMapControl: false
-    gmap.centerOnAddress("#{street}, #{locality}, #{postcode}")
+  if document.querySelector('#projects')?
+    loadMapsApi initMapLocations  
     
+loadMapsApi = (callback)->
+  if google? and google.maps? 
+    callback.call() 
+  else
+    mapsController = new maps.GoogleMapsApiController
+      sensor: true
+      callback: callback
+
+initMapLocations = ->
+  new maps.MapLocationsController
+    zoom: 12
+    mapEl: document.querySelector('#projects #map')
+    locations: document.querySelectorAll('#project-listing li')
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+    
+initContactWidgetMap = -> 
+  gmap = new maps.GoogleMap
+    mapEl: document.querySelector('#contact-widget .map')
+    zoom: 12
+    mapTypeId: google.maps.MapTypeId.ROADMAP      
+    mapTypeIds: []
+    panControl: false
+    zoomControl: false
+    mapTypeControl: false
+    scaleControl: false
+    streetViewControl: false
+    overviewMapControl: false
+  gmap.centerOnAddress($("#contact-widget .adr"))
+
 initFlickrGallery = ->
-  flickr = new modules.FlickrGallery
-    apiKey:"a57204d74e7d388185a326741d19941f"
-    userId:"62998169@N04"
-    photoSetId:"72157627657152087"
-    containerId:"flickr-gallery"
-    thumbsPerPage:57
-    loaderGifSrc:"images/icons/ajax-loader.gif"
-   
-   
-
-
+  if document.querySelector('#flickr-gallery')?
+    flickr = new modules.FlickrGallery
+      apiKey:"a57204d74e7d388185a326741d19941f"
+      userId:"62998169@N04"
+      photoSetId:"72157627657152087"
+      containerId:"flickr-gallery"
+      thumbsPerPage:57
+      loaderGifSrc:"images/icons/ajax-loader.gif"
