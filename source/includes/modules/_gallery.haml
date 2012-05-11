@@ -1,12 +1,17 @@
 / START .gallery
 %section.gallery
-  = partial('includes/modules/carousel')
+  / START .carousel
+  %section.gallery-carousel
+    - i = 0
+    - 5.times do |i|
+      %figure{:class=>"figure-#{i}"}
+        /- img_placehold 978, 480, "Slide #{i}"
+        %img{:src=>"http://lorempixel.com/978/480/abstract/#{i}"}
+
+        %figcaption
+          = lorem.sentences 1+rand(1)
+  / END .carousel
   
   %section.thumbnails
-    - j = 0
-    - ['F15A22', '00AAAD', 'B2D235', 'AB4A9C', 'ED1164'].each do |colour|
-      - j = j+1
-      %figure{:class=>"figure-#{j}"}
-        - img_placehold 240, 180, "Slide #{j}"
-        
+   
 /END .gallery

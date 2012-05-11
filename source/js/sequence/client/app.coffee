@@ -10,7 +10,7 @@
 utils = SEQ.utils.namespace('SEQ.utils')
 maps = utils.namespace('SEQ.gmaps')
 modules = utils.namespace('SEQ.modules')
-mego = utils.namespace "SEQ.mego"
+mego = utils.namespace("SEQ.mego")
 
 #init function happens as soon as javascript is loaded
 do init = ->
@@ -26,16 +26,19 @@ onDocReady = ->
     initFlickrGallery()
     
 initCoffeeSlider = ->  
+  # cache this reference
+  CoffeeSlider = modules.CoffeeSlider
+
   # init CoffeeSlider
   if $(".carousel").length > 0
-    mego.coffeeslider = new modules.CoffeeSlider
+    coffeeSlider = new CoffeeSlider
       container: $(".carousel")
-      transitionType: "slide"
-      loop: "infinite"
+      transitionType: CoffeeSlider.TRANSITION_SLIDE
+      loop: CoffeeSlider.LOOP_INFINITE
       transitionSpeed: 1400
       transitionDelay: 5000
-      transitionDirection: "horizontal"
-      touchStyle: "drag"
+      transitionDirection: CoffeeSlider.DIRECTION_HORIZONTAL
+      touchStyle: CoffeeSlider.TOUCH_DRAG
       preload: true
       responsive: false
       selectors:
@@ -44,27 +47,17 @@ initCoffeeSlider = ->
 initGallery = ->
   # init CoffeeSlider
   if $(".gallery").length > 0
-    thumbnails = new modules.ThumbSlider
-      container: $(".thumbnails")
-      transitionType: "slide"
-      loop: "infinite"
-      transitionSpeed: 1400
-      transitionDelay: 5000
-      transitionDirection: "horizontal"
-      touchStyle: "drag"
-      preload: true
-      step: 3
-      responsive: false
-      hasDotNav: false
-      selectors:
-       slide: "figure"
-  
-    mego.coffeeslider.registerNavModule(thumbnails)
+    gallery = new modules.CoffeeGallery
+      gallery: ".gallery"
+      slider: ".gallery-carousel"
+      thumbslider: ".thumbnails"
+      autoThumbs: true
+      stripElements: ["figcaption"]
 
 initVideoPlayer = ->
   if $("#player1").length > 0  
-     # init video player
-     player = new MediaElementPlayer("#player1")  
+   # init video player
+   player = new MediaElementPlayer("#player1")  
 
 initMaps = ->
   if document.querySelector('#contact-widget .map')?

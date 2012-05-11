@@ -1,19 +1,27 @@
 .gallery {
-  .carousel {
+  .gallery-carousel {
     margin-bottom: $baseline * 2;
   }
 }
 
 .thumbnails {
-  width: 240px;
+
+  $slideWidth: 240px;
+  $slideHeight: 118px;
+
+  width: $slideWidth;
   margin: 0 auto;
   figure {
-    width: 240px;
-    height: 180px;
+    width: $slideWidth;
+    height: $slideHeight;
     margin: 0;
     padding: 0;
     cursor: pointer;
     clip:rect(0px, 0px, 10px, 10px);
+    img {
+      width: $slideWidth;
+      height: $slideHeight;
+    }
     figcaption {
       h2 {
         font-size: 16px;
@@ -21,14 +29,15 @@
     }
     &.active {
       position: relative;
+      opacity: 0.2;
       &:after {
        position: absolute;
        top: 0;
        left: 0;
        content: " ";
-       width: 240px;
-       height: 180px;
-       border-bottom: 1px solid $highlight-colour;
+       width: $slideWidth;
+       height: $slideHeight - 3px;
+       border-bottom: 3px solid $highlight-colour;
       }
     }
     &:hover {
@@ -37,8 +46,8 @@
        top: 0;
        left: 0;
        content: " ";
-       width: 240px;
-       height: 174px;
+       width: $slideWidth;
+       height: $slideHeight;
        border-bottom: 3px solid $highlight-colour;
       }
     }
