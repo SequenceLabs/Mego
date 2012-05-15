@@ -32,8 +32,6 @@ class mego.App
       initFlickrGallery()
     
   initCoffeeSlider = ->  
-   
-
     # init CoffeeSlider
     if $(".carousel").length > 0
       coffeeSlider = new CoffeeSlider
