@@ -1,6 +1,6 @@
 (function() {
 
-  modules = SEQ.utils.namespace('SEQ.modules');
+  modules = Namespace('SEQ.modules');
 
   modules.FlickrGallery = function(options){
 

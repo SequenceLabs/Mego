@@ -31,24 +31,26 @@
       position: relative;
       opacity: 0.2;
       &:after {
+       $border-width: 3px;
        position: absolute;
        top: 0;
        left: 0;
        content: " ";
-       width: $slideWidth;
-       height: $slideHeight - 3px;
-       border-bottom: 3px solid $highlight-colour;
+       width: $slideWidth - $border-width * 2;
+       height: $slideHeight - $border-width * 2;
+       border: $border-width solid $black;
       }
     }
     &:hover {
       &:after {
-       position: absolute;
-       top: 0;
-       left: 0;
-       content: " ";
-       width: $slideWidth;
-       height: $slideHeight;
-       border-bottom: 3px solid $highlight-colour;
+       $border-width: 3px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: " ";
+        width: $slideWidth - $border-width * 2;
+        height: $slideHeight - $border-width * 2;
+        border: $border-width solid $highlight-colour;
       }
     }
   }

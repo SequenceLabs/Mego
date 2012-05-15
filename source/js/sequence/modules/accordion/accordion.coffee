@@ -1,7 +1,7 @@
 "use strict"
 
-modules = SEQ.utils.namespace('SEQ.modules')
-animate = SEQ.effects.Animate
+modules = Namespace('SEQ.modules')
+animate = Namespace('SEQ.effects.Animate')
 
 class modules.AccordionGroup
   

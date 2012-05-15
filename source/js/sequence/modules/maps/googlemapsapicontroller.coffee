@@ -1,6 +1,6 @@
 "use strict"
 # namespace
-gmaps = SEQ.utils.namespace('SEQ.gmaps')
+gmaps = Namespace('SEQ.gmaps')
 
 class gmaps.GoogleMapsApiController
   

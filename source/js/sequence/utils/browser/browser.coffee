@@ -1,4 +1,4 @@
-browser = SEQ.utils.namespace('SEQ.utils.browser')
+browser = Namespace('SEQ.utils.browser')
 
 browser.platform =
   isAndroid: ->

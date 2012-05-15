@@ -2,7 +2,7 @@ window.SEQ ?= {}
 window.SEQ.utils ?= {}
 
 #namespace util
-SEQ.utils.namespace = (ns_string) ->
+window.Namespace = (ns_string) ->
   parts = ns_string.split(".")
   parent = SEQ
   i = undefined

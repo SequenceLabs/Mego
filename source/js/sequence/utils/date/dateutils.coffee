@@ -1,4 +1,4 @@
-utils = SEQ.utils.namespace "SEQ.utils"
+utils = Namespace "SEQ.utils"
   
 utils.dateutils =
   ParseDate: (@string) ->

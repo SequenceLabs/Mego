@@ -8,7 +8,6 @@
     width: 978px;
     height: 480px;
     opacity: 0;
-
     figcaption {
       background: rgba(0,0,0,.7);
       position: absolute;
@@ -40,6 +39,9 @@
     @include opacity(0.2);
     &:hover {
       @include opacity(0.6);
+    }
+    &.disabled {
+      @include opacity(0.1);
     }
   }
   .prev {

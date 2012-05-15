@@ -1,6 +1,6 @@
 "use strict"
 # namespace
-gmaps = SEQ.utils.namespace('SEQ.gmaps')
+gmaps = Namespace('SEQ.gmaps')
 
 # Abstracts Google Maps. Will fail if maps API is not already loaded.
 class gmaps.GoogleMap
