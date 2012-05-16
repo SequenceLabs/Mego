@@ -8,12 +8,14 @@ Currently its being trialed on various internal projects.
 Feel free to use any of the work, but this is not external production-ready code, so use at your own risk. :)
 
 
-Authors
+Made by
 -------
 
 **Hamish Taplin** - http://twitter.com/hamishtaplin
 
 **Nadhim Orfali** - http://twitter.com/_fenka
+
+**Sam "Dex" Hoult** - http://twitter.com/DexterDillinger
 
 **Benn Pearson**
 
@@ -22,8 +24,6 @@ Authors
 
 Thanks
 -------
-
-**Sam "Dex" Hoult** - http://twitter.com/DexterDillinger
 
 **Owain Lewis** - http://twitter.com/owainlewis
 
