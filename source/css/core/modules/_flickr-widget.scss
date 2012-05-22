@@ -1,0 +1,10 @@
+#flickr-widget {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: $baseline * 2;
+  .flickrGallery-controlsContainer{
+    display:none;
+  } 
+}
