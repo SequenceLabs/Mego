@@ -106,7 +106,9 @@ class mego.App
         userId:"62998169@N04"
         photoSetId:"72157627657152087"
         containerId:"flickr-gallery"
-        thumbsPerPage:57
+        thumbsPerPage:8
+        showThumbs:true
+        scaleMode:"scaleToFill"
         loaderGifSrc:"images/icons/ajax-loader.gif"
 
 
@@ -118,6 +120,8 @@ class mego.App
         photoSetId:"72157627657152087"
         containerId:"flickr-widget"
         thumbsPerPage:6
+        showThumbs:false
+        scaleMode:"scaleToFill"
         loaderGifSrc:"images/icons/ajax-loader.gif"
         
 new mego.App()

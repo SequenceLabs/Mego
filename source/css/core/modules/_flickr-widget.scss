@@ -6,5 +6,8 @@
   margin-bottom: $baseline * 2;
   .flickrGallery-controlsContainer{
     display:none;
-  } 
+  }
+  #flickr-widget-previewView {
+      height:200px;
+  }
 }

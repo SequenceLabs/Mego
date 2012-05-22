@@ -481,6 +481,7 @@
   	this._waitingImageObject;
   	this._isPlaying = true;
   	this._savedPlayMode;
+  	this._element = undefined;
   	this.init();
   };
   //Inheritance
@@ -493,17 +494,21 @@
   	this._dataManager.addEventListener('updateSelected',this.onUpdateSelected.context(this));
   	this._dataManager.addEventListener('loadData',this.onLoadData.context(this));
   	this._dataManager.addEventListener('loadDataComplete',this.onLoadDataComplete.context(this));
+  	if(this._flickGallery.getClickPreviewToLinkMode()){
+  	    $(this._element).bind("click",this.onPreviewClick.context(this));
+  	}
   };
+
+
 
   FlickrGalleryPreviewViewController.prototype.onLoadData = function(dataManagerEvent){
   	this._savedPlayMode = this._isPlaying;
   	this.play(false);
-  }
+  };
 
   FlickrGalleryPreviewViewController.prototype.onLoadDataComplete = function(dataManagerEvent){
   	this.play(this._savedPlayMode);
-  }
-
+  };
 
 
 
@@ -556,6 +561,16 @@
   		this.initFadeToCurrentImage();
   	}
   };
+  
+  FlickrGalleryPreviewViewController.prototype.onPreviewClick = function(e){
+   	var index = this._flickGallery.getDataManager().getSelectedIndex();
+   	var imageObject = this._flickGallery.getDataManager().getImageObjectByIndex(index);
+   	var userID = this._flickGallery.getUserID();
+   	var url = "http://www.flickr.com/photos/" + userID + "/" + imageObject.id + "/";
+   	document.location.href = url;
+   	
+   
+  }
 
   /*
   * @description create the div container that will hold the images
@@ -563,6 +578,7 @@
   FlickrGalleryPreviewViewController.prototype.build = function(){
   	var flickrGalleryContainer = this._flickGallery.getFlickrGalleryContainer();
   	var previewViewControllerElement = create('div');
+  	this._element = previewViewControllerElement;
   	append(flickrGalleryContainer,previewViewControllerElement);
   	previewViewControllerElement.setAttribute('id',flickrGalleryContainer.id + "-previewView");
   	this._previewView = previewViewControllerElement;
@@ -595,8 +611,11 @@
   	imageWidth = image.width;
   	imageHeight = image.height;
   	imageRatio = imageWidth / imageHeight;
-
-  	flickrGalleryContainer = this._flickGallery.getFlickrGalleryContainer();
+  	
+  	//Use the preview-view div to calculate image size not the main gallery div
+  	//flickrGalleryContainer = this._flickGallery.getFlickrGalleryContainer();
+  	flickrGalleryContainer = $(this._element).get(0);
+  	
   	frameWidth = flickrGalleryContainer.clientWidth;
   	frameHeight = flickrGalleryContainer.clientHeight;
   	frameRatio = frameWidth / frameHeight;
@@ -802,7 +821,7 @@
   };
 
   FlickrGalleryLoadingViewController.prototype.build = function(){
-    console.log(options);
+    //console.log(options);
   	this._loadingContainer = create('div');
   	this._loadingContainer.innerHTML = '<img class="flickrGallery-loadingIcon" src="'+options.loaderGifSrc+'"/>'
   	attr(this._loadingContainer, "class", "flickrGallery-loadingContainer flickrGallery-loaded");
@@ -951,7 +970,9 @@
   	attr(this._thumbsContainer, "class", "flickrGallery-thumbsContainer");
   	append(this._flickrGallery.getFlickrGalleryContainer(), this._thumbsContainer);
   	//Hack for IE to force width of thumbContainer so padding will take affect.
-  	$(this._thumbsContainer).css("width", ($(this._flickrGallery.getFlickrGalleryContainer()).width() - 34) + "px");
+  	//NOTE JH: This needs to be refactored and less hacky
+  	//var thumbContainerGutter = 0;//34;
+  	//$(this._thumbsContainer).css("width", ($(this._flickrGallery.getFlickrGalleryContainer()).width() - thumbContainerGutter) + "px");
   };
 
   /*
@@ -1738,7 +1759,9 @@
   	this._userId = options.userId;
   	this._photoSetId = options.photoSetId;
   	this._options = options;
-  	this._scaleMode = (options.scaleMode)? options.scaleMode: this.SCALE_TO_FIT;
+  	this._scaleMode = (options.scaleMode)? options.scaleMode: this.SCALE_TO_FILL;
+	this._showThumbs = options.showThumbs ? options.showThumbs : false;
+	this._clickPreviewToLinkMode = true;
 
   	this._dataManager;
   	this._previewViewController;
@@ -1746,6 +1769,7 @@
   	this._controlViewController;
   	this._thumbsViewController;
   	this._uiAnimationController;
+  	
 
   	this.init();
   }
@@ -1755,7 +1779,9 @@
   	this._previewViewController = new FlickrGalleryPreviewViewController(this);
   	this._loadingViewController = new FlickrGalleryLoadingViewController(this);
   	this._controlViewController = new FlickrGalleryControlViewController(this);
-  	this._thumbsViewController = new FlickrGalleryThumbsViewController(this);
+  	if(this._showThumbs === true){
+  	    this._thumbsViewController = new FlickrGalleryThumbsViewController(this);
+    }
   	//this._uiAnimationController = new FlickrGalleryUIAnimationController(this);
 
   	this._dataManager.load();
@@ -1790,7 +1816,14 @@
   FlickrGalleryMain.prototype.getScaleMode = function(){
   	return this._scaleMode;	
   }
+  
+  FlickrGalleryMain.prototype.getClickPreviewToLinkMode = function(){
+    	return this._clickPreviewToLinkMode;	
+  }
 
+  FlickrGalleryMain.prototype.getUserID = function(){
+      return this._userId;
+  }
 
   //end of FlickrGallery.js
   //____________________________________________________________________________________________________________________________________

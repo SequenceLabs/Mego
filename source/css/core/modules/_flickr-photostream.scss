@@ -13,25 +13,26 @@
   margin-bottom: $baseline * 2; }
 
 .flickrGallery-thumbsContainer {
-  padding: 17px;
+  padding: 0px;
+  margin:18px 0px 0px 139px;
+  width: 512px;
   height: auto;
-  bottom: 0px;
+  top: 400px;
   overflow: hidden;
   display: block;
   position: absolute;
-  z-index: 3;
-  background-color: rgb(0, 0, 0);
+  z-index: 4;
   img {
     border-width: 0px;
     margin: 0px;
     padding: 0px;
-    width: 31px;
-    height: 31px; }
+    width: 60px;
+    height: 60px; }
   a {
     padding: 0px;
     border: solid rgb(255, 255, 255);
-    width: 31px;
-    height: 31px;
+    width: 60px;
+    height: 60px;
     float: left;
     cursor: pointer;
     &.flickrGallery-thumb-selected {
@@ -44,11 +45,13 @@
         border-width: 2px;
         margin: 0px; } } } }
 
-#flickrGallery-previewView {
+#flickr-gallery-previewView {
   width: inherit;
-  height: inherit;
+  height: 400px;
   position: absolute;
-  z-index: 1; }
+  overflow:hidden;
+  z-index: 1; 
+  cursor: pointer; }
 
 .flickrGallery-loadingContainer {
   width: 100%;
@@ -67,13 +70,12 @@
   position: absolute; }
 
 .flickrGallery-controlsContainer {
-  top: 0px;
+  top: 400px;
   height: auto;
   overflow: hidden;
   display: block;
   position: relative;
-  z-index: 4;
-  background-color: rgb(0, 0, 0); }
+  z-index: 3; }
 
 .flickrGallery-playPauseButton {
   margin: 17px 0px 17px 1px;
@@ -82,18 +84,20 @@
   float: left;
   cursor: pointer; }
 
-#flickrGallery {
+#flickr-gallery {
   .paused {
+    margin: 34px 0px 0px 0px;
     background-image: url("../images/pause_up.gif");
     &:hover {
       background-image: url("../images/pause_down.gif"); } }
   .playing {
+    margin: 34px 0px 0px 0px;
     background-image: url("../images/play_up.gif");
     &:hover {
       background-image: url("../images/play_down.gif"); } } }
 
 .flickrGallery-leftButton {
-  margin: 17px 0px 17px 17px;
+  margin: 34px 0px 0px 24px;
   width: 31px;
   height: 31px;
   float: left;
@@ -103,7 +107,7 @@
     background-image: url("../images/left_down.gif"); } }
 
 .flickrGallery-rightButton {
-  margin: 17px 17px 17px 0px;
+  margin: 34px 24px 0px 0px;
   width: 31px;
   height: 31px;
   float: right;
