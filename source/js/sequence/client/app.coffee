@@ -30,6 +30,7 @@ class mego.App
       initVideoPlayer()   
       initMaps()
       initFlickrGallery()
+      initFlickrWidget()
     
   initCoffeeSlider = ->  
     # init CoffeeSlider
@@ -106,6 +107,17 @@ class mego.App
         photoSetId:"72157627657152087"
         containerId:"flickr-gallery"
         thumbsPerPage:57
+        loaderGifSrc:"images/icons/ajax-loader.gif"
+
+
+  initFlickrWidget = ->
+    if document.querySelector('#flickr-widget')?
+      flickr = new modules.FlickrGallery
+        apiKey:"a57204d74e7d388185a326741d19941f"
+        userId:"62998169@N04"
+        photoSetId:"72157627657152087"
+        containerId:"flickr-widget"
+        thumbsPerPage:6
         loaderGifSrc:"images/icons/ajax-loader.gif"
         
 new mego.App()
