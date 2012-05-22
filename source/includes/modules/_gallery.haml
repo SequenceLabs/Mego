@@ -5,8 +5,8 @@
     - i = 0
     - 12.times do |i|
       %figure{:class=>"figure-#{i}"}
-        - img_placehold 978, 480, "Slide #{i}"
-        / %img{:src=>"http://lorempixel.com/978/480/abstract/#{i}"}
+        / - img_placehold 978, 480, "Slide #{i}"
+        %img{:src=>"http://lorempixel.com/978/480/abstract/#{i}"}
 
         %figcaption
           = lorem.sentences 1+rand(1)
