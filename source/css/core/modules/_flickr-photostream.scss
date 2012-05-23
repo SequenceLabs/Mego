@@ -14,8 +14,8 @@
 
 .flickrGallery-thumbsContainer {
   padding: 0px;
-  margin:18px 0px 0px 139px;
-  width: 512px;
+  margin:17px 0px 0px 132px;
+  width: 528px;
   height: auto;
   top: 400px;
   overflow: hidden;
@@ -26,24 +26,24 @@
     border-width: 0px;
     margin: 0px;
     padding: 0px;
-    width: 60px;
-    height: 60px; }
+    width: 62px;
+    height: 62px; }
   a {
     padding: 0px;
     border: solid rgb(255, 255, 255);
-    width: 60px;
-    height: 60px;
+    width: 62px;
+    height: 62px;
     float: left;
     cursor: pointer;
     &.flickrGallery-thumb-selected {
-      border-width: 1px;
-      margin: 1px; }
+      border-width: 2px;
+      margin: 0px; }
     &.flickrGallery-thumb {
       border-width: 0px;
       margin: 2px;
       &:hover {
-        border-width: 2px;
-        margin: 0px; } } } }
+        border-width: 1px;
+        margin: 1px; } } } }
 
 #flickr-gallery-previewView {
   width: inherit;
@@ -78,40 +78,54 @@
   z-index: 3; }
 
 .flickrGallery-playPauseButton {
-  margin: 17px 0px 17px 1px;
+  margin: 19px 2px 0px 2px;
+  padding: 0px;
   width: 62px;
-  height: 31px;
+  height: 62px;
   float: left;
-  cursor: pointer; }
+  cursor: pointer; 
+  background-repeat: no-repeat;
+  background-position: 15px 15px;
+  background-color: black; }
 
 #flickr-gallery {
   .paused {
-    margin: 34px 0px 0px 0px;
     background-image: url("../images/pause_up.gif");
     &:hover {
-      background-image: url("../images/pause_down.gif"); } }
+      background-image: url("../images/pause_down.gif");
+      background-color: white; } }
   .playing {
-    margin: 34px 0px 0px 0px;
     background-image: url("../images/play_up.gif");
     &:hover {
-      background-image: url("../images/play_down.gif"); } } }
+      background-image: url("../images/play_down.gif");
+      background-color: white; } } }
 
 .flickrGallery-leftButton {
-  margin: 34px 0px 0px 24px;
-  width: 31px;
-  height: 31px;
+  margin: 19px 2px 0px 2px;
+  padding: 0px;
+  width: 62px;
+  height: 62px;
   float: left;
   cursor: pointer;
   background-image: url("../images/left_up.gif");
+  background-repeat: no-repeat;
+  background-position: 15px 15px;
+  background-color: black;
   &:hover {
-    background-image: url("../images/left_down.gif"); } }
+    background-image: url("../images/left_down.gif");
+    background-color: white; } }
 
 .flickrGallery-rightButton {
-  margin: 34px 24px 0px 0px;
-  width: 31px;
-  height: 31px;
+  margin: 19px 2px 0px 2px;
+  padding: 0px;
+  width: 62px;
+  height: 62px;
   float: right;
   cursor: pointer;
   background-image: url("../images/right_up.gif");
+  background-repeat: no-repeat;
+  background-position: 15px 15px;
+  background-color: black;
   &:hover {
-    background-image: url("../images/right_down.gif"); } }
+    background-image: url("../images/right_down.gif");
+    background-color: white; } }
