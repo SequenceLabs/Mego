@@ -11,14 +11,14 @@
     background: url("/images/close-btn.png") no-repeat 0 0;
   }
   h3 {
-    font-size: 1em;
+    @include font-size();
     line-height: 1em;
     font-weight: bold;
     margin-bottom: 10px;
     color: $white;
   }
   p {
-    font-size: 0.9em;
+    @include font-size(1);
     line-height: 1em;
     margin-bottom: 10px;
     color: $white;
@@ -39,7 +39,7 @@
   	margin-left: -10px;
   }
   .more {
-    font-size: 0.8em;
+    @include font-size(1);
     color: $highlight-colour;
     cursor: pointer;
     margin:0;
@@ -51,7 +51,7 @@
       margin: 0 0 5px 0;
       padding: 0 0 5px 24px;
       border-bottom: 1px dotted #333;
-      font-size: 1em;
+      @include font-size();
       line-height: 1em;
       text-transform: capitalize;
       &.film {
@@ -64,7 +64,7 @@
         margin-bottom: none;
       }
       h3 {
-        font-size: 0.85em;
+        @include font-size(1.1);
         margin-bottom: 0;
       }
     }      

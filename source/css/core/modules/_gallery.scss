@@ -25,7 +25,7 @@
     }
     figcaption {
       h2 {
-        font-size: 16px;
+        @include font-size();
       }
     }
     &.active {

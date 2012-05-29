@@ -20,7 +20,7 @@
       margin-bottom: 0;
       font-style: normal;
       font-family: $sans;
-      font-size: $font-size;
+      @include font-size();
       h2 {
         color: $white;
       }

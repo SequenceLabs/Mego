@@ -1,12 +1,12 @@
 #blog {
   .vcard {
-    font-size: 13px;
+    @include font-size(1.3);
     address,
     time {
       display: inline-block;
       font-family: $serif;
       a {
-        font-size: 13px;
+        @include font-size(1.3);
         font-family: $serif;
       }
     }

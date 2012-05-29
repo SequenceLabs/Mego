@@ -133,7 +133,7 @@
   padding: 0;
   width: 26px;
   height: 26px;
-  font-size: 11px;
+  @include font-size(1.1);
   line-height: 11px;
   background: 0;
   font-family: Helvetica, Arial;
@@ -174,7 +174,7 @@
   padding: auto 4px;
 }
 .mejs-container .mejs-controls .mejs-time span {
-  font-size: 11px;
+  @include font-size(1.1);
   color: #fff;
   line-height: 12px;
   display: block;
