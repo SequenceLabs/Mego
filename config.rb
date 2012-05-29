@@ -35,7 +35,9 @@ configure :build do
   # set :http_path, "/Content/images/"
 
 end
-
+compass_config do |compass|
+  compass.sass_options = {:debug_info => true}
+end
 # ----------------------------
 # Helpers
 helpers do

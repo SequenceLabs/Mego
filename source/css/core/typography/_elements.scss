@@ -2,7 +2,7 @@ body,a,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,input,textarea {
   line-height: $baseline * 2;
   color: $text-color;
   font-family: $sans;
-  font-size: $font-size;
+  @include font-size();
   line-height: 18px;
 }
 
