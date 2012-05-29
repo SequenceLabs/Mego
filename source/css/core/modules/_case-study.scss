@@ -1,0 +1,22 @@
+article.case-study{
+  header{
+    h2 a{
+      font-size:1.5em;
+      line-height:1em;
+    }
+    img{
+      float:left;
+      margin-right: 10px;
+    }
+  }
+  ul{
+    border-top:1px dotted $light-grey;
+    border-bottom:1px dotted $light-grey;
+    padding:10px 0;
+    margin-bottom: 10px;
+    list-style:none;
+    li{
+      display: inline-block;
+    }
+  }
+}

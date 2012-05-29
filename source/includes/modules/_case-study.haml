@@ -1,0 +1,20 @@
+%article.case-study
+  %figure.col-4
+    - img_placehold 280, 150
+  %section.copy.col-4
+    %header
+      %h2
+        %a{:href=>'#', :title=>'Project Name'}
+          = lorem.words (2 + rand(2))
+      - img_placehold 18, 18
+      %h3
+        = lorem.words (2 + rand(2))
+    %ul
+      - 5.times do
+        %li
+          %a{:href=>'#', :title=>'Service'}
+            = lorem.word
+    %p
+      = lorem.sentences (2+rand(3))
+    %a{:href=>'#', :title=>'View full case study', :class=>'button'}
+      View full case study
