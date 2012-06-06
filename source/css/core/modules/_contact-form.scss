@@ -3,14 +3,14 @@
     color: $red;
   }
   label {
-    width:$col_total_width * 2;
+    width:$gridRowWidth * 2;
     display: inline-block;
     vertical-align: top;
   }
   input[type="text"],
   input[type="email"],
   textarea {
-    width:$col_total_width * 4;
+    width:$gridRowWidth * 4;
   }
   textarea {
     height: 100px;

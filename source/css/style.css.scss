@@ -6,21 +6,21 @@
           |___|            
 */
 
+@import "core/reset";
+
 // CSS3 mixins
 @import "core/mixins/css3";
 // General mixins
 @import "core/mixins/mixins";
 
-// Base Modules
 @import "settings";
-@import "core/reset";
 
 // Typography
 @import "core/typography/elements";
 @import "core/typography/headings";
 
 // Layout
-@import "core/grids/grid-static"; 
+@import "core/grids/bootstrap/responsive"; 
 
 // helpers
 @import "core/helpers/buttons";
