@@ -104,3 +104,7 @@
   background-image: url("../images/right_up.gif");
   &:hover {
     background-image: url("../images/right_down.gif"); } }
+
+#flickr-gallery-module {
+  margin-bottom: $baseline * 2;
+}

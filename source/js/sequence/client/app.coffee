@@ -18,8 +18,7 @@ CoffeeSlider = modules.CoffeeSlider
 class mego.App
 
   #init function happens as soon as javascript is loaded
-  constructor: ->
-    
+  constructor: ->   
   	# console.log "init"
   	$(document).ready ->
       onDocReady()
@@ -44,7 +43,7 @@ class mego.App
         transitionDirection: CoffeeSlider.DIRECTION_HORIZONTAL
         touchStyle: CoffeeSlider.TOUCH_DRAG
         preload: true
-        responsive: false
+        responsive: true
         selectors:
           slide: "figure"
 
@@ -110,7 +109,6 @@ class mego.App
         showThumbs:true
         scaleMode:"scaleToFill"
         loaderGifSrc:"images/icons/ajax-loader.gif"
-
 
   initFlickrWidget = ->
     if document.querySelector('#flickr-widget')?

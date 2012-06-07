@@ -8,12 +8,6 @@ html  {
   background: #ffffff;
   margin: $gutters;
 }
-body {
-  color: $text-color;  
-}
-.container {
-  overflow: hidden;
-}
 .wrapper {
   width: $width;
   margin: 0 auto;
@@ -27,8 +21,7 @@ body {
     clear:both;
     overflow:hidden;
     a {
-      @include font-size(4.5);
-      line-height: 60px;
+      @include font-size(4.5, 6);
       font-weight: bold;
       color: $black!important;
       &:hover {
@@ -47,6 +40,7 @@ body {
   ul {
     overflow: hidden;
     border-bottom: 1px solid $black;
+    min-height: 33px;
     li {
       display: block;
       float: left;

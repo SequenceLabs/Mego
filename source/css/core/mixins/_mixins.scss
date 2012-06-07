@@ -23,15 +23,6 @@
     } 
 }
 
-// Converts pixels to em
-@mixin px-to-em($px, $base: 16){
-  font-size: #{$px/$base}em;/*16 x !ems = !pixels*/
-}
-// Converts pixels to rem
-@mixin px-to-rem($px, $base: 16){
-  font-size: #{$px/$base}rem;
-}
-
 // Sets link colours
 // Inspired by Compass
 @mixin link-colours($normal, $hover: false, $active: false, $visited: false, $focus: false) {
@@ -70,13 +61,29 @@
   }
   zoom:1; /* IE6/IE7 */
 }
-@mixin font-size($sizeValue: 1.6){
-  font-size: ($sizeValue * 10) + px;
-  font-size: $sizeValue + rem;
+
+// Converts pixels to em
+@mixin px-to-em($px, $base: 16){
+  font-size: #{$px/$base}em;/*16 x !ems = !pixels*/
+}
+// Converts pixels to rem
+@mixin px-to-rem($px, $base: 16){
+  font-size: #{$px/$base}rem;
 }
 
+@mixin font-size($sizeValue: 1.6, $lineHeight: "auto"){
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
 
-
+  @if $lineHeight is "auto" {
+    line-height: (ceil($sizeValue) * 10) + px;
+    line-height: ceil($sizeValue) + rem;
+  } 
+  @else {
+    line-height: ($lineHeight * 10) + px;
+    line-height: $lineHeight + rem;
+  }
+}
 
 // Mixins
 // Snippets of reusable CSS to develop faster and keep code readable
@@ -89,17 +96,6 @@
 // Clearfix
 // --------
 // For clearing floats like a boss h5bp.com/q
-@mixin clearfix {
-  *zoom: 1;
-  &:before,
-  &:after {
-    display: table;
-    content: "";
-  }
-  &:after {
-    clear: both;
-  }
-}
 
 .clearfix {
   @include clearfix();

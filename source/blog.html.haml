@@ -2,16 +2,17 @@
   page_title: Blog
   tag_id: blog
 ---
-
-#content.col-9
-  = partial('includes/modules/blog/blog-article')
-  %section#relevant-posts
-    %h2
-      You might also be interested in:
-    - (3).times do
-      = partial('includes/modules/blog/blog-post-CTA')
-#sidebar.col-3
-  = partial('includes/modules/blog/blog-subscribe-widget')
-  = partial('includes/modules/search/mini-search', :locals=>{:name=>"search_posts", :title=>"Search Posts", :widget=>true})
-  = partial('includes/modules/blog/blog-categories-widget')
-  = partial('includes/modules/blog/blog-archives-widget')
+.row
+  #content.span9
+    = partial('includes/modules/blog/blog-article')
+    %section#relevant-posts
+      %h2
+        You might also be interested in:
+      .row
+        - (3).times do
+          = partial('includes/modules/blog/blog-post-CTA')
+  #sidebar.span3
+    = partial('includes/modules/blog/blog-subscribe-widget')
+    = partial('includes/modules/search/mini-search', :locals=>{:name=>"search_posts", :title=>"Search Posts", :widget=>true})
+    = partial('includes/modules/blog/blog-categories-widget')
+    = partial('includes/modules/blog/blog-archives-widget')

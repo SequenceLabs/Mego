@@ -19,8 +19,6 @@
 @import "core/typography/elements";
 @import "core/typography/headings";
 
-// Layout
-@import "core/grids/bootstrap/responsive"; 
 
 // helpers
 @import "core/helpers/buttons";
@@ -55,6 +53,10 @@
 // pages
 @import "project/home";
 @import "project/projects";
+
+
+// Layout
+@import "core/grids/bootstrap/responsive"; 
 
 // media queries
 @import "core/media-queries";

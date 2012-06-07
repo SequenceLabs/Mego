@@ -14,4 +14,15 @@
 
   // No need to reset .thumbnails here since it's the same @gridGutterWidth
 
+  #site-header {
+    #site-nav {
+      ul {
+        li {
+          a {
+            @include font-size(1.4);
+          }
+        }
+      }
+    }
+  }
 }

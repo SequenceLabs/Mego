@@ -2,10 +2,10 @@
   page_title: Contact Us
   tag_id: contact-us
 ---
-
-#content.col-9
-  = partial('includes/modules/contact-form')
-  
-#sidebar.col-3.last
-  = partial('includes/modules/widgets/contact-widget')
-  = partial('includes/modules/cta/generic-cta')
+.row
+  #content.span9
+    = partial('includes/modules/contact-form')
+    
+  #sidebar.span3.last
+    = partial('includes/modules/widgets/contact-widget')
+    = partial('includes/modules/cta/generic-cta')

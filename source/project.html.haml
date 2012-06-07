@@ -2,24 +2,25 @@
   page_title: Project
   tag_id: projects
 ---
-      
-#content.col-9
-  %header
-    %h1
-      Project Title
-  - 3.times do
-    %p
-      = lorem.paragraph
-  %a.button{:href=>"projects.html"}
-    &larr; Back to Projects
-#sidebar.col-3.last
-  %section#projects-widget.widget
-    %h2
-      Projects
-    %ul
-      - 4.times do |i|
-        %li
-          %a{:href=>"project.html"}
-            = lorem.words 2+rand(3)
 
-  = partial('includes/modules/cta/generic-cta')
+.row      
+  #content.span9
+    %header
+      %h1
+        Project Title
+    - 3.times do
+      %p
+        = lorem.paragraph
+    %a.button{:href=>"projects.html"}
+      &larr; Back to Projects
+  #sidebar.span3.last
+    %section#projects-widget.widget
+      %h2
+        Projects
+      %ul
+        - 4.times do |i|
+          %li
+            %a{:href=>"project.html"}
+              = lorem.words 2+rand(3)
+
+    = partial('includes/modules/cta/generic-cta')

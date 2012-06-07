@@ -9,9 +9,9 @@
     figure {
       margin-bottom: $baseline * 2;
     }
-  
     &:hover {
       color: $black;
+      text-decoration:none;
     }
   }
 }

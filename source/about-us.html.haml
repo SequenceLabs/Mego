@@ -6,16 +6,16 @@
 %header#page-header
   %h1
     About Us 
+.row    
+  #content.span9  
+    - 3.times do
+      %p
+        = lorem.paragraph
     
-#content.col-9  
-  - 3.times do
-    %p
-      = lorem.paragraph
-  
-  = partial('includes/modules/social/flickr-photostream')
+    = partial('includes/modules/social/flickr-photostream')
+        
+  #sidebar.span3.last
+    = partial('includes/modules/widgets/contact-widget')
+    = partial('includes/modules/cta/generic-cta')
+    = partial('includes/modules/social/flickr-photostream-widget')
       
-#sidebar.col-3.last
-  = partial('includes/modules/widgets/contact-widget')
-  = partial('includes/modules/cta/generic-cta')
-  = partial('includes/modules/social/flickr-photostream-widget')
-    

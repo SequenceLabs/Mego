@@ -1,12 +1,12 @@
 .coffee-slider {
   position:relative;
   margin: 0;
-  height: 518px;
+  height: auto;
   background: url(../images/icons/loading.gif) no-repeat center center;
   figure {
     position: relative;
-    width: 978px;
-    height: 480px;
+    width: 100%;
+    height: auto;
     opacity: 0;
     figcaption {
       background: rgba(0,0,0,.7);
