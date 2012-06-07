@@ -2,7 +2,6 @@
   page_title: News Item
   body_id: news-item
 ---
-
 %article.news-item
   %header
     %h1
@@ -20,4 +19,6 @@
   %a.button{:href=>"/news"}
     &larr; Back
   %footer#news-footer
-    = partial("includes/modules/facebook-like")
+    = partial("includes/modules/social-share")
+    %hr
+    = partial("includes/modules/social-media")

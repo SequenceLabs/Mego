@@ -49,4 +49,11 @@ onDocReady = () ->
   #   link: coffeeslider
     
   # init video player
-  player = new MediaElementPlayer("#player1")
+  if($("#player1").length)
+    player = new MediaElementPlayer("#player1")
+
+  # NOTE: if debug is true, http://www.sequence.co.uk is used
+  facebook = new SEQ.modules.FacebookStats
+    container: $(".facebook-stats")
+    page: 'site'
+    debug: true
