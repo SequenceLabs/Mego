@@ -61,8 +61,15 @@ class mego.App
 
   initVideoPlayer = ->
     if $("#player1").length > 0  
-     # init video player
-     player = new MediaElementPlayer("#player1")  
+      # init video player
+      # to see player mode rendered just do:
+      # player = new MediaElementPlayer("#player1",
+      #  success: (media, node, player) ->
+      #    console.log "Player mode: " + media.pluginType
+      # )
+      # See http://mediaelementjs.com/#api for callback options
+      #
+      player = new MediaElementPlayer("#player1")
 
   initMaps = ->
     if document.querySelector('#contact-widget .map')?

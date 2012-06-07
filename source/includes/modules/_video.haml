@@ -3,8 +3,9 @@
 - youTube = 'http://www.youtube.com/watch?v=UAqdKKusisw'
 / START .video
 %section.video
-  %video{:id=>"player1",:width=>"640",:height=>"360",:poster=>"#{splashScreen}",:controls=>'controls',:preload=>'none'}
+  %video{:id=>"player1",:width=>"222",:height=>"125",:poster=>"#{splashScreen}",:controls=>'controls',:preload=>'none'}
     %source{:type=>'video/x-youtube', :src=>"#{youTube}"}
+  %span#player1-mode
 / END .video
 
 
