@@ -31,6 +31,7 @@ class mego.App
       initMaps()
       initFlickrGallery()
       initFlickrWidget()
+      initFacebookStats()
     
   initCoffeeSlider = ->  
     # init CoffeeSlider
@@ -84,8 +85,7 @@ class mego.App
       mapEl: document.querySelector('#projects #map')
       locations: document.querySelectorAll('#project-listing li')
       mapTypeId: google.maps.MapTypeId.ROADMAP
-    
-<<<<<<< HEAD
+  
   initContactWidgetMap = -> 
     gmap = new maps.GoogleMap
       mapEl: document.querySelector('#contact-widget .map')
@@ -124,16 +124,12 @@ class mego.App
         showThumbs:false
         scaleMode:"scaleToFill"
         loaderGifSrc:"images/icons/ajax-loader.gif"
-        
-new mego.App()
-=======
-  # init video player
-  if($("#player1").length)
-    player = new MediaElementPlayer("#player1")
 
   # NOTE: if debug is true, http://www.sequence.co.uk is used
-  facebook = new SEQ.modules.FacebookStats
-    container: $(".facebook-stats")
-    page: 'site'
-    debug: true
->>>>>>> remotes/origin/MegoNO_Branch
+  initFacebookStats = ->
+    facebook = new modules.FacebookStats
+      container: $(".facebook-stats")
+      page: 'site'
+      debug: true
+
+new mego.App()

@@ -20,7 +20,9 @@
   %a.button{:href=>"/news.html"}
     &larr; Back
   %footer#news-footer
-    = partial("includes/modules/social/facebook-like")
+    = partial("includes/modules/social/social-share")
+    %hr
+    = partial("includes/modules/social/facebook-stats")
 
 #sidebar.col-3.last
   = partial('includes/modules/events/events-widget')
