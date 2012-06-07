@@ -85,6 +85,7 @@ class mego.App
       locations: document.querySelectorAll('#project-listing li')
       mapTypeId: google.maps.MapTypeId.ROADMAP
     
+<<<<<<< HEAD
   initContactWidgetMap = -> 
     gmap = new maps.GoogleMap
       mapEl: document.querySelector('#contact-widget .map')
@@ -125,3 +126,14 @@ class mego.App
         loaderGifSrc:"images/icons/ajax-loader.gif"
         
 new mego.App()
+=======
+  # init video player
+  if($("#player1").length)
+    player = new MediaElementPlayer("#player1")
+
+  # NOTE: if debug is true, http://www.sequence.co.uk is used
+  facebook = new SEQ.modules.FacebookStats
+    container: $(".facebook-stats")
+    page: 'site'
+    debug: true
+>>>>>>> remotes/origin/MegoNO_Branch
