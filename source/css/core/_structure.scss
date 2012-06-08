@@ -37,6 +37,9 @@ html  {
 }
 #site-nav {
   clear: both;
+  #mobile-menu {
+    display: none;
+  }
   ul {
     overflow: hidden;
     border-bottom: 1px solid $black;
@@ -52,7 +55,7 @@ html  {
         padding-bottom: 10px;
         &:hover {
           text-decoration: none;
-          color: $highlight-colour;
+          color: $highlight-color;
           border-bottom: 2px solid $black;
           padding-bottom: 13px;
         }

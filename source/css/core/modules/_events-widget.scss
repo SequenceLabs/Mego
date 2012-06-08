@@ -3,4 +3,7 @@
   ul {
     list-style: none;
   }
+  .event-item {
+    @include unlinkify();
+  }
 }

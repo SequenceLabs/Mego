@@ -9,7 +9,7 @@
   figure {
     margin-bottom: $baseline * 2;
   }
-  a:hover {
-    text-decoration: none;
+  a {
+    @include unlinkify();
   }
 }

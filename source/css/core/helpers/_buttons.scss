@@ -25,5 +25,5 @@
 }
 
 .button {
-  @include button($highlight-colour);
+  @include button($highlight-color);
 }

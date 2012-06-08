@@ -39,7 +39,7 @@
   }
   .more {
     @include font-size(1);
-    color: $highlight-colour;
+    color: $highlight-color;
     cursor: pointer;
     margin:0;
   }

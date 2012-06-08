@@ -10,14 +10,15 @@
     > a {
       overflow: hidden;
       display: block;
+      @include unlinkify();
     }
     header,
     figure {
       margin-bottom: $baseline * 2;
-    }
-  
+    } 
     &:hover {
       color: $black;
     }
   }
 }
+

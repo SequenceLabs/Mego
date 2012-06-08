@@ -6,7 +6,7 @@
 #  Facebook Stats Widget
 #
 ############################################
-modules = SEQ.utils.namespace('SEQ.modules')
+modules = Namespace('SEQ.modules')
 
 # Add dependences
 ParseDate = SEQ.utils.dateutils.ParseDate

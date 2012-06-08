@@ -14,5 +14,8 @@
         margin-right: 0;
       }
     }
+    .project-item {
+      @include unlinkify();
+    }
   }
 }
