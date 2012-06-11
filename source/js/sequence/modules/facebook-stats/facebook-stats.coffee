@@ -6,14 +6,15 @@
 #  Facebook Stats Widget
 #
 ############################################
+
+"use strict" 
+
+# namespace
 modules = Namespace('SEQ.modules')
 
-# Add dependences
-ParseDate = SEQ.utils.dateutils.ParseDate
 htmlString = ""
 
-class modules.FacebookStats
-  
+SEQ.modules.FacebookStats = class FacebookStats      
   constructor: (@options) ->
     # initial settings
     @settings = {} 
@@ -55,10 +56,9 @@ class modules.FacebookStats
       $.ajax @settings.url + "'" + likePage + "'",
         dataType: 'xml'
         error: (jqXHR, textStatus, errorThrown) =>
-          console.log "Error #{textStatus}"
+          #console.log "Error #{textStatus}"
         success: (data, textStatus, jqXHR) =>
           link_stat = $(data).find('link_stat').length
-          console.log "stats: " + link_stat
           if link_stat > 0
             share_count = $(data).find('share_count').text()
             like_count = $(data).find('like_count').text()
