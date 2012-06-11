@@ -1,20 +1,3 @@
-
-// Mixins
-// Snippets of reusable CSS to develop faster and keep code readable
-// -----------------------------------------------------------------
-
-
-// UTILITY MIXINS
-// --------------------------------------------------
-
-// Clearfix
-// --------
-// For clearing floats like a boss h5bp.com/q
-
-.clearfix {
-  @include clearfix();
-}
-
 // Grid System
 // -----------
 
@@ -35,18 +18,22 @@
 // Make a Grid
 // Use .makeRow and .makeColumn to assign semantic layouts grid system behavior
 @mixin makeRow() {
-  margin-left: $gridGutterWidth * -1;
   @include clearfix();
 }
 @mixin makeColumn($columns: 1, $offset: 0) {
+  $columnWidth: ($gridColumnWidth * $offset) + ($gridGutterWidth * ($offset - 1)) + ($gridGutterWidth * 2);
   float: left;
-  margin-left: ($gridColumnWidth * $offset) + ($gridGutterWidth * ($offset - 1)) + ($gridGutterWidth * 2);
+  margin-left: $columnWidth / 2;
+  margin-right: $columnWidth / 2;
+
   width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
 }
 
 // The Grid
 @mixin core-offset($columns, $gridColumnWidth, $gridGutterWidth) {
-  margin-left: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns + 1));
+  $columnWidth: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns + 1));
+  margin-left: $columnWidth / 2;
+  margin-right: $columnWidth / 2;
 }
 
 @mixin core-span($columns, $gridColumnWidth, $gridGutterWidth) {
@@ -55,13 +42,19 @@
 
 @mixin grid-core($gridColumnWidth, $gridGutterWidth) {
   .row {
-    margin-left: $gridGutterWidth * -1;
     @include clearfix();
   }
 
   [class*="span"] {
     float: left;
-    margin-left: $gridGutterWidth;
+    margin-left: $gridGutterWidth / 2;
+    margin-right: $gridGutterWidth / 2;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   // Set the container width, and override it for fixed navbars in media queries
@@ -97,8 +90,10 @@
     [class*="span"] {
       // @include input-block-level();
       float: left;
-      margin-left: $fluidGridGutterWidth;
-      *margin-left: $fluidGridGutterWidth - (.5 / $gridRowWidth * 100px * 1%);
+      margin-left: $fluidGridGutterWidth / 2;
+      margin-right: $fluidGridGutterWidth / 2;
+      *margin-left: $fluidGridGutterWidth - (.5 / $gridRowWidth * 100px * 1%) / 2;
+      *margin-right: $fluidGridGutterWidth - (.5 / $gridRowWidth * 100px * 1%) / 2;
     }
     [class*="span"]:first-child {
       margin-left: 0;
@@ -123,7 +118,7 @@
   input,
   textarea,
   .uneditable-input {
-    margin-left: 0; // override margin-left from core grid system
+    
   }
 
   // generate .spanX

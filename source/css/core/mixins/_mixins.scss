@@ -62,6 +62,10 @@
   zoom:1; /* IE6/IE7 */
 }
 
+.clearfix {
+  @include clearfix();
+}
+
 // Converts pixels to em
 @mixin px-to-em($px, $base: 16){
   font-size: #{$px/$base}em;/*16 x !ems = !pixels*/
