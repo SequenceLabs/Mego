@@ -9,9 +9,10 @@
     figure {
       margin-bottom: $baseline * 2;
     }
-    
+    .copy {
+      margin-left: 0;
+    }
     @include unlinkify();
-    
   }
 }
 

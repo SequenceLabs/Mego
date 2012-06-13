@@ -1,11 +1,20 @@
-#cta-list {
+.cta-list {
   @include clearfix;
   border-bottom: 1px solid $borders;
   margin-bottom: $baseline * 3;
+  [class*="span"] {
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &:nth-child(4n) {
+      margin-left: 0;
+    }
+  }
 }
 
 .cta {
   margin-bottom: $baseline * 2;
+
   figure {
     margin-bottom: $baseline * 2;
   }

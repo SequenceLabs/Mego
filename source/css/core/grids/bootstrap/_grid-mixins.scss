@@ -25,7 +25,6 @@
   float: left;
   margin-left: $columnWidth / 2;
   margin-right: $columnWidth / 2;
-
   width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
 }
 

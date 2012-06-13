@@ -3,6 +3,7 @@
     margin-bottom: $baseline;
   }
   .vcard {
+    @include font-size(1.6);
     .adr,.tel, .email {
       margin-bottom: $baseline;
     }

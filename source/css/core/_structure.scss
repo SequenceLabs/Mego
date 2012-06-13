@@ -12,7 +12,6 @@ html  {
   width: $width;
   margin: 0 auto;
 }
-
 #site-header {
   margin: $baseline * 3 0;
   position: relative;
@@ -67,13 +66,11 @@ html  {
     }
   }
 }
-
 #site-footer {
   padding: $baseline * 3 0;
   margin: $baseline * 3 0;
   border-top: 1px solid $borders;
 }
-
 #footer-nav {
   ul {
     li {
@@ -82,7 +79,6 @@ html  {
     }
   }
 }
-
 #sidebar {
   section.widget {
     margin-bottom: $baseline * 2;
@@ -93,7 +89,6 @@ html  {
     }
   }
 }
-
 #page-header {
   padding-bottom: $baseline * 1;
   margin-bottom: $baseline * 1;
