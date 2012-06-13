@@ -78,10 +78,10 @@ class App
 
   initMaps: ->
     if document.querySelector('#contact-widget .map')?
-      loadMapsApi initContactWidgetMap
+      @loadMapsApi @initContactWidgetMap
   
     if document.querySelector('#projects')?
-      loadMapsApi initMapLocations  
+      @loadMapsApi @initMapLocations  
     
   loadMapsApi: (callback)->
     if google? and google.maps? 
