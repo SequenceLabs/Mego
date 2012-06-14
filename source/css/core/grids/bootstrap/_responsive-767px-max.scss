@@ -49,7 +49,8 @@
   .row-fluid [class*="span"] {
     float: none;
     display: block;
-    width: auto;
+    // width: auto; changed this, not sure if will break elsewhere
+    width: 100%;
     margin-left: 0;
   }
 
@@ -57,15 +58,13 @@
   // -----------------
 
   @include site-header-small-screen();
-
   @include carousel-small-screen();
 
-  
   .button {
     display: block;
     @include font-size(1.5);
   }
   .cta, .project-item {
-    @include mobile-cta();
+    @include cta-small-screen();
   }
 }

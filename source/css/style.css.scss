@@ -12,13 +12,14 @@
 @import "core/mixins/css3";
 // General mixins
 @import "core/mixins/mixins";
+// grid mixins
+@import "core/grids/bootstrap/grid-mixins";
 
 @import "settings";
 
 // Typography
 @import "core/typography/elements";
 @import "core/typography/headings";
-
 
 // helpers
 @import "core/helpers/buttons";
@@ -40,7 +41,6 @@
 @import "core/modules/twitter";
 @import "core/modules/news-listing";
 @import "core/modules/video";
-
 @import "core/modules/maps";
 @import "core/modules/flickr-photostream";
 @import "core/modules/flickr-widget";
@@ -55,9 +55,8 @@
 @import "project/home";
 @import "project/projects";
 
-
-// Layout
-@import "core/grids/bootstrap/responsive"; 
+// Grid
+@import "core/grids/bootstrap/responsive";
 
 // media queries
 @import "core/media-queries";

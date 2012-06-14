@@ -7,6 +7,7 @@
 html  {
   background: #ffffff;
   margin: $gutters;
+  text-rendering: optimizelegibility;
 }
 .wrapper {
   width: $width;
@@ -61,7 +62,7 @@ html  {
         }
         &.active {
           border-bottom: 5px solid $black;
-          padding-bottom: 10px!important;
+          padding-bottom: 10px;
         }
       }
     }
@@ -113,8 +114,13 @@ html  {
           border-bottom: none;
           padding: 7px 0;
           border-top: 1px solid $light-grey;
+          &:hover {
+            border-bottom: none;
+            padding-bottom: 7px;
+          }
           &.active {
-            
+            border-bottom: none;
+            padding-bottom: 7px;
           }
         }
       }
@@ -122,10 +128,27 @@ html  {
   }
 }
 
+@mixin site-header-medium-screen { 
+  #site-header {
+    #site-nav {
+     ul {
+        li {
+          a {
+            @include font-size(1.4);
+          }
+        }
+      }
+    }
+  }
+}
 
-
+#content {
+  @include column(9);
+  margin-left: 0;
+}
 
 #site-footer {
+  clear: both;
   padding: $baseline * 3 0;
   margin: $baseline * 3 0;
   border-top: 1px solid $borders;
@@ -139,6 +162,7 @@ html  {
   }
 }
 #sidebar {
+  @include column(3);
   section.widget {
     margin-bottom: $baseline * 2;
     padding-bottom: $baseline * 2;

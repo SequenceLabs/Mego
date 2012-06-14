@@ -1,6 +1,7 @@
 .pagination {
   position:relative;
   text-align:center;
+  margin-bottom:2*$baseline;
   ul {
     display: inline-block;
     border: 1px solid $borders;

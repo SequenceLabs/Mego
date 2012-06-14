@@ -16,16 +16,22 @@
 }
 
 // Make a Grid
-// Use .makeRow and .makeColumn to assign semantic layouts grid system behavior
-@mixin makeRow() {
+// Use .row and .column to assign semantic layouts grid system behavior
+@mixin row() {
   @include clearfix();
 }
-@mixin makeColumn($columns: 1, $offset: 0) {
+@mixin column($columns: 1, $offset: 0) {
   $columnWidth: ($gridColumnWidth * $offset) + ($gridGutterWidth * ($offset - 1)) + ($gridGutterWidth * 2);
   float: left;
   margin-left: $columnWidth / 2;
   margin-right: $columnWidth / 2;
   width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 // The Grid

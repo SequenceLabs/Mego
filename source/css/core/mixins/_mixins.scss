@@ -96,27 +96,4 @@
   }
 }
 
-@mixin mobile-cta() {
-  width: 100%;
-  display: block;
-  float: none;
-  clear: both;
-  border-bottom: 1px solid $borders;
-  margin-bottom: 10px;
-  @include clearfix();
-  figure {
-    width: 100px;
-    float: left;
-    margin: 0 20px 10px 0;
-  }
-  h3 {
-    margin-left: 10px;
-    display: block;
-  }
-  p {
-    margin-bottom: 0;
-  }
-  .button {
-    display: none;
-  }
-}
+
