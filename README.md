@@ -17,7 +17,7 @@ Made by
 
 **Sam "Dex" Hoult** - http://twitter.com/DexterDillinger
 
-**Benn Pearson**
+**Benn Pearson** - http://twitter.com/bennpearson
 
 **Ollie Wells** - http://twitter.com/olliewells
 
