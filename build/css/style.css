@@ -5,7 +5,18 @@
 |_|_|_|___|_  |___|
           |___|            
 */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_reset\.scss}line{font-family:\000031}}
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 62.5%;
+  vertical-align: baseline;
+  background: transparent; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_reset\.scss}line{font-family:\0000315}}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small,
 strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label,
 legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
@@ -19,55 +30,66 @@ summary, time, mark, audio, video {
   vertical-align: baseline;
   background: transparent; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_reset\.scss}line{font-family:\0000325}}
 body {
   line-height: 1; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_reset\.scss}line{font-family:\0000330}}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
 section {
   display: block; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_reset\.scss}line{font-family:\0000334}}
 nav ul {
   list-style: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_reset\.scss}line{font-family:\0000338}}
 blockquote, q {
   quotes: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_reset\.scss}line{font-family:\0000342}}
 blockquote:before, blockquote:after, q:before, q:after {
   content: '';
   content: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_reset\.scss}line{font-family:\0000347}}
 a {
   margin: 0;
   padding: 0;
-  font-size: 100%;
   vertical-align: baseline;
   background: transparent; }
 
 /* change colours to suit your needs */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_reset\.scss}line{font-family:\0000355}}
 ins {
   background-color: #ff9;
   color: #000;
   text-decoration: none; }
 
 /* change colours to suit your needs */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_reset\.scss}line{font-family:\0000362}}
 mark {
   background-color: #ff9;
   color: #000;
   font-style: italic;
   font-weight: bold; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_reset\.scss}line{font-family:\0000369}}
 del {
   text-decoration: line-through; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_reset\.scss}line{font-family:\0000373}}
 abbr[title], dfn[title] {
   border-bottom: 1px dotted;
   cursor: help; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_reset\.scss}line{font-family:\0000378}}
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
 /* change border colour to suit your needs */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_reset\.scss}line{font-family:\0000384}}
 hr {
   display: block;
   height: 1px;
@@ -76,38 +98,79 @@ hr {
   margin: 1em 0;
   padding: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_reset\.scss}line{font-family:\0000393}}
 input, select {
   vertical-align: middle; }
 
-body, a, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, input, textarea {
-  line-height: 20px;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000365}}
+.clearfix {
+  /* For modern browsers */
+  zoom: 1;
+  /* IE6/IE7 */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000355}}
+  .clearfix:before, .clearfix:after {
+    content: "";
+    display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000359}}
+  .clearfix:after {
+    clear: both; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_settings\.scss}line{font-family:\0000332}}
+::selection {
+  background: #ff0064;
+  /* Safari */ }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_settings\.scss}line{font-family:\0000335}}
+::-moz-selection {
+  background: #ff0064;
+  /* Firefox */ }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\000031}}
+html {
   color: #242424;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 18px; }
+  font-size: 62.5%;
+  line-height: 2; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\000038}}
+a, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, input, textarea {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 20px;
+  line-height: 2rem; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\0000313}}
 p {
   margin-bottom: 20px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\0000317}}
 ul {
   list-style: disc; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\0000321}}
 ul.unstyled {
   list-style: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\0000323}}
   ul.unstyled li {
     margin-left: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\0000328}}
 abbr, acronym {
   border-bottom: 1px dotted black; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\0000332}}
 address {
   font-style: italic; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\0000336}}
 del {
   color: black; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\0000340}}
 a {
-  color: #5e5e5e;
+  color: #ff0064;
+  color: #ff0064;
   text-decoration: none;
   outline: 0;
   cursor: pointer;
@@ -119,193 +182,163 @@ a {
   /* Saf3.2+, Chrome */
   -ms-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000331}}
+  a:visited {
+    color: #ff0064; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000336}}
+  a:focus {
+    color: #ff0064; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000341}}
+  a:hover {
+    color: #ff0064; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000346}}
+  a:active {
+    color: #ff0064; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\0000347}}
+  a:hover {
+    -moz-transition: color 0.2s ease-in-out;
+    /* FF3.7+ */
+    -o-transition: color 0.2s ease-in-out;
+    /* Opera 10.5 */
+    -webkit-transition: color 0.2s ease-in-out;
+    /* Saf3.2+, Chrome */
+    -ms-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    text-decoration: underline; }
 
-a:hover {
-  color: #ff0064;
-  text-decoration: none;
-  -moz-transition: color 0.2s ease-in-out;
-  /* FF3.7+ */
-  -o-transition: color 0.2s ease-in-out;
-  /* Opera 10.5 */
-  -webkit-transition: color 0.2s ease-in-out;
-  /* Saf3.2+, Chrome */
-  -ms-transition: color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out; }
-
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\0000353}}
 a, a:active, a:focus {
   outline: 0; }
 
-a {
-  color: #5e5e5e; }
-  a:visited {
-    color: #5e5e5e; }
-  a:focus {
-    color: #5e5e5e; }
-  a:hover {
-    color: #ff0064; }
-  a:active {
-    color: #5e5e5e; }
-
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\0000357}}
 blockquote {
+  margin: 40px 0 40px 100px;
   display: block;
   font-weight: bold;
-  padding: 20px 10px;
-  font-weight: bold;
   font-size: 30px;
-  line-height: 20px;
+  font-size: 3rem;
+  line-height: 40px;
+  line-height: 4rem;
   font-family: serif;
-  font-style: italic;
   color: #242424;
-  margin: 10px 0; }
+  position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\0000366}}
+  blockquote:before, blockquote:after {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    line-height: 0;
+    vertical-align: middle; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\0000375}}
+  blockquote:before, blockquote:after {
+    content: "\201C"; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\0000378}}
+  blockquote:before {
+    font-size: 140px;
+    content: "\201C";
+    position: absolute;
+    left: -90px;
+    top: 40px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\0000385}}
+  blockquote:after {
+    font-size: 80px;
+    content: "\201D";
+    top: 20px;
+    margin-left: 10px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\0000393}}
 pre, code {
   margin: 10px 0;
   white-space: pre; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\0000398}}
 pre, code, tt {
   font: "Monaco", Courier New, monospace;
   line-height: 1.5;
   padding: 0 3px 2px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\00003104}}
 q {
   font-style: italic;
   font-weight: bold;
-  font-family: "Georgia", Times New Roman, Times, sans-serif; }
+  font-family: "Georgia", "Times New Roman", Times, sans-serif; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\00003110}}
 cite {
   display: block; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\00003114}}
 figcaption, time {
   display: block;
-  font-family: "Georgia", Times New Roman, Times, sans-serif;
+  font-family: "Georgia", "Times New Roman", Times, sans-serif;
   color: #242424;
   font-style: italic;
   font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 20px;
+  line-height: 2rem;
   margin: 10px 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\00003123}}
 small {
-  font-size: 11px; }
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 20px;
+  line-height: 2rem; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_elements\.scss}line{font-family:\00003127}}
 strong {
   font-weight: bold; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_headings\.scss}line{font-family:\000031}}
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   margin-bottom: 10px;
   text-transform: Capitalize; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_headings\.scss}line{font-family:\000036}}
 h1 {
   font-size: 30px;
-  line-height: 40px; }
+  font-size: 3rem;
+  line-height: 40px;
+  line-height: 4rem; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_headings\.scss}line{font-family:\000039}}
 h2 {
   font-size: 24px;
-  line-height: 30px; }
+  font-size: 2.4rem;
+  line-height: 30px;
+  line-height: 3rem; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_headings\.scss}line{font-family:\0000312}}
 h3 {
   font-size: 18px;
-  line-height: 20px; }
+  font-size: 1.8rem;
+  line-height: 20px;
+  line-height: 2rem; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_headings\.scss}line{font-family:\0000315}}
 h4 {
-  font-size: 14px;
-  line-height: 20px; }
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 20px;
+  line-height: 2rem; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_headings\.scss}line{font-family:\0000318}}
 h5 {
   font-size: 12px;
-  line-height: 20px; }
+  font-size: 1.2rem;
+  line-height: 20px;
+  line-height: 2rem; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/typography\/_headings\.scss}line{font-family:\0000321}}
 h6 {
   font-size: 10px;
-  line-height: 20px; }
+  font-size: 1rem;
+  line-height: 20px;
+  line-height: 2rem; }
 
-.col-1 {
-  float: left;
-  width: 54px;
-  margin-right: 0;
-  margin-right: 30px; }
-  .col-1:last-child {
-    margin-right: 0; }
-
-.col-2 {
-  float: left;
-  width: 138px;
-  margin-right: 30px; }
-  .col-2:last-child {
-    margin-right: 0; }
-
-.col-3 {
-  float: left;
-  width: 222px;
-  margin-right: 30px; }
-  .col-3:last-child {
-    margin-right: 0; }
-
-.col-4 {
-  float: left;
-  width: 306px;
-  margin-right: 30px; }
-  .col-4:last-child {
-    margin-right: 0; }
-
-.col-5 {
-  float: left;
-  width: 390px;
-  margin-right: 30px; }
-  .col-5:last-child {
-    margin-right: 0; }
-
-.col-6 {
-  float: left;
-  width: 474px;
-  margin-right: 30px; }
-  .col-6:last-child {
-    margin-right: 0; }
-
-.col-7 {
-  float: left;
-  width: 558px;
-  margin-right: 30px; }
-  .col-7:last-child {
-    margin-right: 0; }
-
-.col-8 {
-  float: left;
-  width: 642px;
-  margin-right: 30px; }
-  .col-8:last-child {
-    margin-right: 0; }
-
-.col-9 {
-  float: left;
-  width: 726px;
-  margin-right: 30px; }
-  .col-9:last-child {
-    margin-right: 0; }
-
-.col-10 {
-  float: left;
-  width: 810px;
-  margin-right: 30px; }
-  .col-10:last-child {
-    margin-right: 0; }
-
-.col-11 {
-  float: left;
-  width: 894px;
-  margin-right: 30px; }
-  .col-11:last-child {
-    margin-right: 0; }
-
-.col-12 {
-  float: left;
-  width: 978px;
-  margin-right: 30px; }
-  .col-12:last-child {
-    margin-right: 0; }
-
-.last {
-  margin-right: 0 !important; }
-
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_buttons\.scss}line{font-family:\0000327}}
 .button {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -338,12 +371,16 @@ h6 {
   cursor: pointer;
   text-decoration: none;
   font-weight: bold;
-  line-height: 20px;
   font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 20px;
+  line-height: 2rem;
   text-align: center;
   margin: 0 0 20px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_buttons\.scss}line{font-family:\0000316}}
   .button:visited {
     color: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_buttons\.scss}line{font-family:\0000319}}
   .button:hover {
     background-color: #b30046;
     background-repeat: repeat-x;
@@ -354,6 +391,7 @@ h6 {
     background-image: -webkit-linear-gradient(#ff0064, #b30046);
     background-image: -o-linear-gradient(#ff0064, #b30046);
     background-image: linear-gradient(#ff0064, #b30046); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_buttons\.scss}line{font-family:\0000322}}
   .button:active {
     background-color: #cc0050;
     background-repeat: repeat-x;
@@ -365,15 +403,24 @@ h6 {
     background-image: -o-linear-gradient(#b30046, #cc0050);
     background-image: linear-gradient(#b30046, #cc0050); }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_forms\.scss}line{font-family:\0000311}}
 label {
   padding: 8px 0 0 0;
   margin: 0 10px 8px 0;
-  font-size: 14px;
-  line-height: 20px; }
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 200pxpx;
+  line-height: 20pxrem; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_forms\.scss}line{font-family:\0000317}}
 .field {
   margin: 20px 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_forms\.scss}line{font-family:\0000329}}
+select {
+  height: 40px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_forms\.scss}line{font-family:\0000352}}
 textarea,
 select,
 input[type="date"],
@@ -397,6 +444,7 @@ input[type="week"] {
   -o-border-radius: 4px;
   border-radius: 4px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_forms\.scss}line{font-family:\0000363}}
 button[type=submit],
 input[type='submit'] {
   -webkit-border-radius: 4px;
@@ -430,13 +478,17 @@ input[type='submit'] {
   cursor: pointer;
   text-decoration: none;
   font-weight: bold;
-  line-height: 20px;
   font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 20px;
+  line-height: 2rem;
   text-align: center;
   margin: 0 0 20px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_buttons\.scss}line{font-family:\0000316}}
   button[type=submit]:visited,
   input[type='submit']:visited {
     color: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_buttons\.scss}line{font-family:\0000319}}
   button[type=submit]:hover,
   input[type='submit']:hover {
     background-color: #5f5f5f;
@@ -448,6 +500,7 @@ input[type='submit'] {
     background-image: -webkit-linear-gradient(#858585, #5f5f5f);
     background-image: -o-linear-gradient(#858585, #5f5f5f);
     background-image: linear-gradient(#858585, #5f5f5f); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_buttons\.scss}line{font-family:\0000322}}
   button[type=submit]:active,
   input[type='submit']:active {
     background-color: #6c6c6c;
@@ -460,131 +513,249 @@ input[type='submit'] {
     background-image: -o-linear-gradient(#5f5f5f, #6c6c6c);
     background-image: linear-gradient(#5f5f5f, #6c6c6c); }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_tables\.scss}line{font-family:\000031}}
 table {
   margin-bottom: 10px;
   width: 100%;
   border: 1px solid #ddd; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_tables\.scss}line{font-family:\000037}}
 th {
   font-weight: bold;
   text-align: left;
   border-bottom: 2px solid #2f2f2f;
   border-right: 1px solid #ddd; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_tables\.scss}line{font-family:\0000314}}
 td {
   padding: 10px;
   border-bottom: 1px solid #ddd;
   border-right: 1px solid #ddd; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_tables\.scss}line{font-family:\0000320}}
 th {
   padding: 10px 10px 6px 10px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_tables\.scss}line{font-family:\0000327}}
 tfoot {
   font-style: italic; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_tables\.scss}line{font-family:\0000331}}
 caption {
   background: #ffffcc; }
 
-.wrap {
-  width: 978px;
-  margin: 0 auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_components\.scss}line{font-family:\000031}}
+nav.nav-bar {
+  background: #f6f6f6;
+  background-color: #e9e9e9;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e9e9e9));
+  background-image: -moz-linear-gradient(#f6f6f6, #e9e9e9);
+  background-image: -ms-linear-gradient(#f6f6f6, #e9e9e9);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #e9e9e9));
+  background-image: -webkit-linear-gradient(#f6f6f6, #e9e9e9);
+  background-image: -o-linear-gradient(#f6f6f6, #e9e9e9);
+  background-image: linear-gradient(#f6f6f6, #e9e9e9);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #dddddd;
+  padding: 0!important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_components\.scss}line{font-family:\000038}}
+  nav.nav-bar ul li {
+    margin-right: 0!important;
+    border-right: 1px solid #dddddd; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_components\.scss}line{font-family:\0000311}}
+    nav.nav-bar ul li a {
+      display: block;
+      padding: 10px 15px;
+      text-align: center;
+      font-size: 13px;
+      font-size: 1.3rem;
+      line-height: 20px;
+      line-height: 2rem;
+      color: #5e5e5e;
+      -webkit-text-shadow: 0 1px 1px white;
+      -moz-text-shadow: 0 1px 1px white;
+      -ms-text-shadow: 0 1px 1px white;
+      -o-text-shadow: 0 1px 1px white;
+      text-shadow: 0 1px 1px white;
+      -webkit-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
+      -moz-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
+      -ms-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
+      -o-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
+      box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_components\.scss}line{font-family:\0000319}}
+      nav.nav-bar ul li a:hover {
+        background-color: #e4e4e4;
+        background-repeat: repeat-x;
+        background-image: -khtml-gradient(linear, left top, left bottom, from(#f1f1f1), to(#e4e4e4));
+        background-image: -moz-linear-gradient(#f1f1f1, #e4e4e4);
+        background-image: -ms-linear-gradient(#f1f1f1, #e4e4e4);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f1f1f1), color-stop(100%, #e4e4e4));
+        background-image: -webkit-linear-gradient(#f1f1f1, #e4e4e4);
+        background-image: -o-linear-gradient(#f1f1f1, #e4e4e4);
+        background-image: linear-gradient(#f1f1f1, #e4e4e4);
+        color: #171717; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_components\.scss}line{font-family:\0000323}}
+      nav.nav-bar ul li a:active {
+        background-color: #f3f3f3;
+        background-repeat: repeat-x;
+        background-image: -khtml-gradient(linear, left top, left bottom, from(#e9e9e9), to(#f3f3f3));
+        background-image: -moz-linear-gradient(#e9e9e9, #f3f3f3);
+        background-image: -ms-linear-gradient(#e9e9e9, #f3f3f3);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e9e9e9), color-stop(100%, #f3f3f3));
+        background-image: -webkit-linear-gradient(#e9e9e9, #f3f3f3);
+        background-image: -o-linear-gradient(#e9e9e9, #f3f3f3);
+        background-image: linear-gradient(#e9e9e9, #f3f3f3); }
 
-.clear {
-  clear: both; }
-
-.center {
-  text-align: center; }
-
-.uppercase {
-  text-transform: uppercase; }
-
-.titlecase {
-  text-transform: capitalize; }
-
-.invisible {
-  visibility: hidden; }
-
-.off-page {
-  position: absolute;
-  left: -9999em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/helpers\/_components\.scss}line{font-family:\0000331}}
+.read-more {
+  display: inline-block;
+  font-weight: bold; }
 
 /********************************************
 *
 * Main Structure
 *
 ********************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\000037}}
 html {
-  background: #ffffff; }
+  background: #ffffff;
+  margin: 20px;
+  text-rendering: optimizelegibility; }
 
-body {
-  color: #242424; }
-
-.container {
-  overflow: hidden; }
-
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000312}}
 .wrapper {
-  width: 978px;
+  width: 960px;
   margin: 0 auto; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000316}}
 #site-header {
   margin: 30px 0;
   position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000319}}
   #site-header #branding {
     float: left;
     clear: both;
     overflow: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000323}}
     #site-header #branding a {
       font-size: 45px;
+      font-size: 4.5rem;
       line-height: 60px;
+      line-height: 6rem;
       font-weight: bold;
       color: #242424 !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000327}}
       #site-header #branding a:hover {
         color: #242424; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000332}}
   #site-header .mini-search {
     float: right;
-    margin-top: 40px;
+    margin-top: 47px;
     margin-bottom: 20px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000339}}
 #site-nav {
-  clear: both;
-  padding: 10px 0; }
+  clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000341}}
+  #site-nav #mobile-menu {
+    display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000344}}
   #site-nav ul {
-    overflow: hidden; }
+    overflow: hidden;
+    border-bottom: 1px solid #242424;
+    min-height: 33px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000348}}
     #site-nav ul li {
       display: block;
       float: left;
       margin-right: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000352}}
+      #site-nav ul li a {
+        font-weight: bold;
+        display: block;
+        color: #242424;
+        padding-bottom: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000357}}
+        #site-nav ul li a:hover {
+          text-decoration: none;
+          color: #ff0064;
+          border-bottom: 2px solid #242424;
+          padding-bottom: 13px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000363}}
+        #site-nav ul li a.active {
+          border-bottom: 5px solid #242424;
+          padding-bottom: 10px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\00003145}}
+#content {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 700px;
+  margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000329}}
+  #content:first-child {
+    margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000332}}
+  #content:last-child {
+    margin-right: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\00003150}}
 #site-footer {
+  clear: both;
   padding: 30px 0;
   margin: 30px 0;
   border-top: 1px solid #dddddd; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\00003158}}
 #footer-nav ul li {
   display: inline-block;
   margin-right: 20px; }
 
-#sidebar section.widget {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #dddddd; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\00003164}}
+#sidebar {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000329}}
+  #sidebar:first-child {
+    margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000332}}
+  #sidebar:last-child {
+    margin-right: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\00003166}}
+  #sidebar section.widget {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dddddd; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\00003170}}
+    #sidebar section.widget ul {
+      list-style: none; }
 
-/********************************************
-*
-* Modules
-*
-********************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\00003175}}
+#page-header {
+  padding-bottom: 10px;
+  margin-bottom: 10px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_carousel\.scss}line{font-family:\000031}}
 .coffee-slider {
   position: relative;
-  margin: 20px 0;
-  height: 518px;
+  margin: 0;
+  height: auto;
   background: url(../images/icons/loading.gif) no-repeat center center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_carousel\.scss}line{font-family:\000036}}
   .coffee-slider figure {
     position: relative;
-    width: 978px;
-    height: 480px;
-    opacity: 0;
-    border-right: 1px dotted #858585; }
+    width: 100%;
+    height: auto;
+    opacity: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_carousel\.scss}line{font-family:\0000311}}
     .coffee-slider figure figcaption {
       background: rgba(0, 0, 0, 0.7);
       position: absolute;
@@ -597,9 +768,14 @@ body {
       margin-bottom: 0;
       font-style: normal;
       font-family: "Helvetica Neue", Arial, sans-serif;
-      font-size: 14px; }
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 20px;
+      line-height: 2rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_carousel\.scss}line{font-family:\0000324}}
       .coffee-slider figure figcaption h2 {
         color: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_carousel\.scss}line{font-family:\0000329}}
   .coffee-slider .btn {
     background: transparent url(../images/nav.png) no-repeat 0 0;
     display: block;
@@ -618,6 +794,7 @@ body {
     opacity: 0.2;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
     filter: alpha(opacity=20); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_carousel\.scss}line{font-family:\0000340}}
     .coffee-slider .btn:hover {
       -khtml-opacity: 0.6;
       -moz-opacity: 0.6;
@@ -627,8 +804,20 @@ body {
       opacity: 0.6;
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
       filter: alpha(opacity=60); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_carousel\.scss}line{font-family:\0000343}}
+    .coffee-slider .btn.disabled {
+      -khtml-opacity: 0.1;
+      -moz-opacity: 0.1;
+      -webkit-opacity: 0.1;
+      -o-opacity: 0.1;
+      -ms-opacity: 0.1;
+      opacity: 0.1;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+      filter: alpha(opacity=10); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_carousel\.scss}line{font-family:\0000347}}
   .coffee-slider .prev {
     left: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_carousel\.scss}line{font-family:\0000350}}
   .coffee-slider .next {
     right: 20px;
     -moz-transform: rotate(180deg);
@@ -636,11 +825,14 @@ body {
     -o-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_carousel\.scss}line{font-family:\0000354}}
   .coffee-slider .dot-nav {
     text-align: center;
     margin-top: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_carousel\.scss}line{font-family:\0000357}}
     .coffee-slider .dot-nav ol {
       list-style: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_carousel\.scss}line{font-family:\0000359}}
       .coffee-slider .dot-nav ol li {
         display: inline-block;
         width: 12px;
@@ -657,6 +849,7 @@ body {
         opacity: 0.2;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
         filter: alpha(opacity=20); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_carousel\.scss}line{font-family:\0000369}}
         .coffee-slider .dot-nav ol li.active {
           -khtml-opacity: 0.5;
           -moz-opacity: 0.5;
@@ -666,6 +859,7 @@ body {
           opacity: 0.5;
           -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
           filter: alpha(opacity=50); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_carousel\.scss}line{font-family:\0000372}}
         .coffee-slider .dot-nav ol li:hover, .coffee-slider .dot-nav ol li :focus {
           -khtml-opacity: 0.6;
           -moz-opacity: 0.6;
@@ -676,41 +870,64 @@ body {
           -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
           filter: alpha(opacity=60); }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_gallery\.scss}line{font-family:\000032}}
+.gallery .gallery-carousel {
+  margin-bottom: 20px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_gallery\.scss}line{font-family:\000037}}
 .thumbnails {
-  width: 240px;
+  width: 200px;
+  height: 90px;
   margin: 0 auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_gallery\.scss}line{font-family:\0000315}}
   .thumbnails figure {
-    width: 240px;
-    height: 180px;
+    width: 200px;
+    height: 90px;
     margin: 0;
     padding: 0;
     cursor: pointer;
     clip: rect(0px, 0px, 10px, 10px); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_gallery\.scss}line{font-family:\0000322}}
+    .thumbnails figure img {
+      width: 200px;
+      height: 90px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_gallery\.scss}line{font-family:\0000327}}
     .thumbnails figure figcaption h2 {
-      font-size: 16px; }
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 20px;
+      line-height: 2rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_gallery\.scss}line{font-family:\0000331}}
     .thumbnails figure.active {
-      position: relative; }
+      position: relative;
+      opacity: 0.2; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_gallery\.scss}line{font-family:\0000334}}
       .thumbnails figure.active:after {
-        content: url(../images/arrow.png);
         position: absolute;
-        top: -4px;
-        left: 44%;
-        z-index: 2; }
+        top: 0;
+        left: 0;
+        content: " ";
+        width: 194px;
+        height: 84px;
+        border: 3px solid #242424; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_gallery\.scss}line{font-family:\0000346}}
     .thumbnails figure:hover:after {
       position: absolute;
       top: 0;
       left: 0;
       content: " ";
-      width: 234px;
-      height: 174px;
-      border: 3px solid rgba(0, 0, 0, 0.2); }
+      width: 194px;
+      height: 84px;
+      border: 3px solid #ff0064; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_gallery\.scss}line{font-family:\0000358}}
   .thumbnails .btn {
-    top: 30%;
+    top: 13%;
     -moz-transform: scale(0.5);
     -webkit-transform: scale(0.5);
     -o-transform: scale(0.5);
     -ms-transform: scale(0.5);
     transform: scale(0.5); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_gallery\.scss}line{font-family:\0000361}}
     .thumbnails .btn.next {
       -moz-transform: scale(0.5) rotate(180deg);
       -webkit-transform: scale(0.5) rotate(180deg);
@@ -718,41 +935,103 @@ body {
       -ms-transform: scale(0.5) rotate(180deg);
       transform: scale(0.5) rotate(180deg);
       right: -80px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_gallery\.scss}line{font-family:\0000365}}
     .thumbnails .btn.prev {
       left: -80px; }
 
-#cta-list {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_social-share\.scss}line{font-family:\000032}}
+#social ul {
+  clear: both;
+  overflow: hidden;
+  list-style: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_social-share\.scss}line{font-family:\000036}}
+  #social ul .social-share {
+    float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_social-share\.scss}line{font-family:\000038}}
+    #social ul .social-share .fb-like iframe {
+      width: 100px !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_social-share\.scss}line{font-family:\0000311}}
+    #social ul .social-share .fb_edge_widget_with_comment span.fb_edge_comment_widget iframe.fb_ltr {
+      display: none !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_social-share\.scss}line{font-family:\0000314}}
+    #social ul .social-share .twitter-share-button {
+      width: 100px !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_facebook-stats\.scss}line{font-family:\000032}}
+.facebook-stats p {
+  margin-bottom: 5px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_generic-cta\.scss}line{font-family:\000031}}
+.cta-list {
   /* For modern browsers */
   zoom: 1;
-  /* IE6/IE7 */
-  border-bottom: 1px solid #dddddd;
-  margin-bottom: 30px; }
-  #cta-list:before, #cta-list:after {
+  /* IE6/IE7 */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000355}}
+  .cta-list:before, .cta-list:after {
     content: "";
     display: table; }
-  #cta-list:after {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000359}}
+  .cta-list:after {
     clear: both; }
-  #cta-list .cta {
-    margin-bottom: 20px; }
-    #cta-list .cta figure {
-      margin-bottom: 20px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_generic-cta\.scss}line{font-family:\000035}}
+.cta {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+  margin-bottom: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000329}}
+  .cta:first-child {
+    margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000332}}
+  .cta:last-child {
+    margin-right: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_generic-cta\.scss}line{font-family:\000037}}
+  .cta:nth-child(3n) {
+    margin-right: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_generic-cta\.scss}line{font-family:\0000310}}
+  .cta:nth-child(4n) {
+    margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_generic-cta\.scss}line{font-family:\0000314}}
+  .cta figure {
+    margin-bottom: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_generic-cta\.scss}line{font-family:\0000317}}
+  .cta a {
+    color: #242424;
+    display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000394}}
+    .cta a:hover {
+      text-decoration: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_mini-search\.scss}line{font-family:\000031}}
 .mini-search {
   overflow: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_mini-search\.scss}line{font-family:\000033}}
   .mini-search label {
     float: left;
-    margin: 5px 10px 0 0; }
+    margin: 8px 10px 0 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_mini-search\.scss}line{font-family:\000037}}
   .mini-search .field-search {
     float: left;
-    width: 200px;
+    width: 160px;
     margin: 5px 10px 5px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_mini-search\.scss}line{font-family:\0000312}}
   .mini-search .btn-search {
     float: left;
     margin: 5px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_mini-search\.scss}line{font-family:\0000318}}
+  .mini-search.widget .field-search,
+  .mini-search.widget .btn-search {
+    width: auto;
+    display: block; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_pagination\.scss}line{font-family:\000031}}
 .pagination {
   position: relative;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_pagination\.scss}line{font-family:\000035}}
   .pagination ul {
     display: inline-block;
     border: 1px solid #dddddd;
@@ -761,16 +1040,23 @@ body {
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
     border-radius: 4px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_pagination\.scss}line{font-family:\000039}}
     .pagination ul li {
       display: inline; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_pagination\.scss}line{font-family:\0000311}}
       .pagination ul li a {
+        color: #242424;
         display: inline-block;
         padding: 0 20px;
         border-right: 1px solid #dddddd;
         float: left;
         font-size: 13px;
+        font-size: 1.3rem;
+        line-height: 20px;
+        line-height: 2rem;
         line-height: 40px;
         cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_pagination\.scss}line{font-family:\0000321}}
         .pagination ul li a:hover, .pagination ul li a.selected {
           background: #f6f6f6;
           background-color: #e9e9e9;
@@ -787,24 +1073,40 @@ body {
           -ms-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
           -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_pagination\.scss}line{font-family:\0000326}}
         .pagination ul li a.next {
           border: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_news-listing\.scss}line{font-family:\000032}}
 .news-listing .news-item {
   overflow: hidden;
   display: block;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #dddddd; }
+  border-bottom: 1px solid #dddddd;
+  color: #242424; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_news-listing\.scss}line{font-family:\000039}}
   .news-listing .news-item header,
   .news-listing .news-item figure {
     margin-bottom: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_news-listing\.scss}line{font-family:\0000312}}
+  .news-listing .news-item .copy {
+    margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000394}}
   .news-listing .news-item:hover {
-    color: #242424; }
+    text-decoration: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_news-listing\.scss}line{font-family:\0000320}}
 #news-widget ul {
   list-style: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_news-listing\.scss}line{font-family:\0000323}}
+#news-widget a {
+  color: #242424; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000394}}
+  #news-widget a:hover {
+    text-decoration: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\000031}}
 .mejs-container {
   position: relative;
   background: #000;
@@ -812,9 +1114,11 @@ body {
   text-align: left;
   vertical-align: top; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\000039}}
 .me-plugin {
   position: absolute; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\0000313}}
 .mejs-embed, .mejs-embed body {
   width: 100%;
   height: 100%;
@@ -823,6 +1127,7 @@ body {
   background: #000;
   overflow: hidden; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\0000322}}
 .mejs-container-fullscreen {
   position: fixed;
   left: 0;
@@ -832,17 +1137,20 @@ body {
   overflow: hidden;
   z-index: 1000; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\0000332}}
 .mejs-container-fullscreen .mejs-mediaelement,
 .mejs-container-fullscreen video {
   width: 100%;
   height: 100%; }
 
 /* Start: LAYERS */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\0000338}}
 .mejs-background {
   position: absolute;
   top: 0;
   left: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\0000343}}
 .mejs-mediaelement {
   position: absolute;
   top: 0;
@@ -850,25 +1158,30 @@ body {
   width: 100%;
   height: 100%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\0000350}}
 .mejs-poster {
   position: absolute;
   top: 0;
   left: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\0000355}}
 .mejs-poster img {
   border: 0;
   padding: 0;
   border: 0;
   display: block; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\0000361}}
 .mejs-overlay {
   position: absolute;
   top: 0;
   left: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\0000366}}
 .mejs-overlay-play {
   cursor: pointer; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\0000369}}
 .mejs-overlay-button {
   position: absolute;
   top: 50%;
@@ -878,9 +1191,11 @@ body {
   margin: -50px 0 0 -50px;
   background: url(../images/video/bigplay.png) no-repeat; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\0000378}}
 .mejs-overlay:hover .mejs-overlay-button {
   background-position: 0 -100px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\0000381}}
 .mejs-overlay-loading {
   position: absolute;
   top: 50%;
@@ -898,6 +1213,7 @@ body {
   background: -ms-linear-gradient(top, rgba(50, 50, 50, 0.9), rgba(0, 0, 0, 0.9));
   background: linear-gradient(rgba(50, 50, 50, 0.9), rgba(0, 0, 0, 0.9)); }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\0000398}}
 .mejs-overlay-loading span {
   display: block;
   width: 80px;
@@ -906,6 +1222,7 @@ body {
 
 /* End: LAYERS */
 /* Start: CONTROL BAR */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003108}}
 .mejs-container .mejs-controls {
   position: absolute;
   background: none;
@@ -925,6 +1242,7 @@ body {
   height: 30px;
   width: 100%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003127}}
 .mejs-container .mejs-controls div {
   list-style-type: none;
   background-image: none;
@@ -940,6 +1258,7 @@ body {
   font-family: Helvetica, Arial;
   border: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003143}}
 .mejs-controls .mejs-button button {
   cursor: pointer;
   display: block;
@@ -955,11 +1274,13 @@ body {
   background: transparent url(../images/video/controls.png) no-repeat; }
 
 /* :focus for accessibility */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003159}}
 .mejs-controls .mejs-button button:focus {
   outline: solid 1px yellow; }
 
 /* End: CONTROL BAR */
 /* Start: Time (current / duration) */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003166}}
 .mejs-container .mejs-controls .mejs-time {
   color: #fff;
   display: block;
@@ -968,8 +1289,12 @@ body {
   padding: 8px 3px 0 3px;
   overflow: hidden;
   text-align: center;
-  padding: auto 4px; }
+  padding: auto 4px;
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003179}}
 .mejs-container .mejs-controls .mejs-time span {
   font-size: 11px;
   color: #fff;
@@ -981,23 +1306,28 @@ body {
 
 /* End: Time (current / duration) */
 /* Start: Play/pause */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003192}}
 .mejs-controls .mejs-play button {
   background-position: 0 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003195}}
 .mejs-controls .mejs-pause button {
   background-position: 0 -16px; }
 
 /* End: Play/pause */
 /* Stop */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003202}}
 .mejs-controls .mejs-stop button {
   background-position: -112px 0; }
 
 /* End: Play/pause */
 /* Start: Progress bar */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003208}}
 .mejs-controls div.mejs-time-rail {
   width: 200px;
   padding-top: 5px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003212}}
 .mejs-controls .mejs-time-rail span {
   display: block;
   position: absolute;
@@ -1008,6 +1338,7 @@ body {
   border-radius: 2px;
   cursor: pointer; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003222}}
 .mejs-controls .mejs-time-rail .mejs-time-total {
   margin: 5px;
   background: #333;
@@ -1019,6 +1350,70 @@ body {
   background: -ms-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
   background: linear-gradient(rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8)); }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003233}}
+.mejs-controls .mejs-time-rail .mejs-time-buffering {
+  width: 100%;
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  -webkit-background-size: 15px 15px;
+  -moz-background-size: 15px 15px;
+  -o-background-size: 15px 15px;
+  background-size: 15px 15px;
+  -webkit-animation: buffering-stripes 2s linear infinite;
+  -moz-animation: buffering-stripes 2s linear infinite;
+  -ms-animation: buffering-stripes 2s linear infinite;
+  -o-animation: buffering-stripes 2s linear infinite;
+  animation: buffering-stripes 2s linear infinite; }
+
+@-webkit-keyframes buffering-stripes {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003252}}
+  from {
+    background-position: 0 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003252}}
+  to {
+    background-position: 30px 0; } }
+
+@-moz-keyframes buffering-stripes {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003253}}
+  from {
+    background-position: 0 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003253}}
+  to {
+    background-position: 30px 0; } }
+
+@-ms-keyframes buffering-stripes {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003254}}
+  from {
+    background-position: 0 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003254}}
+  to {
+    background-position: 30px 0; } }
+
+@-o-keyframes buffering-stripes {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003255}}
+  from {
+    background-position: 0 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003255}}
+  to {
+    background-position: 30px 0; } }
+
+@keyframes buffering-stripes {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003256}}
+  from {
+    background-position: 0 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003256}}
+  to {
+    background-position: 30px 0; } }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003258}}
 .mejs-controls .mejs-time-rail .mejs-time-loaded {
   background: #3caac8;
   background: rgba(60, 170, 200, 0.8);
@@ -1030,6 +1425,7 @@ body {
   background: linear-gradient(rgba(44, 124, 145, 0.8), rgba(78, 183, 212, 0.8));
   width: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003269}}
 .mejs-controls .mejs-time-rail .mejs-time-current {
   width: 0;
   background: #fff;
@@ -1041,6 +1437,7 @@ body {
   background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
   background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8)); }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003281}}
 .mejs-controls .mejs-time-rail .mejs-time-handle {
   display: none;
   position: absolute;
@@ -1055,6 +1452,7 @@ body {
   top: -2px;
   text-align: center; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003296}}
 .mejs-controls .mejs-time-rail .mejs-time-float {
   position: absolute;
   display: none;
@@ -1067,6 +1465,7 @@ body {
   text-align: center;
   color: #111; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003309}}
 .mejs-controls .mejs-time-rail .mejs-time-float-current {
   margin: 2px;
   width: 30px;
@@ -1074,6 +1473,7 @@ body {
   text-align: center;
   left: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003316}}
 .mejs-controls .mejs-time-rail .mejs-time-float-corner {
   position: absolute;
   display: block;
@@ -1095,23 +1495,29 @@ body {
 */
 /* End: Progress bar */
 /* Start: Fullscreen */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003343}}
 .mejs-controls .mejs-fullscreen-button button {
   background-position: -32px 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003346}}
 .mejs-controls .mejs-unfullscreen button {
   background-position: -32px -16px; }
 
 /* End: Fullscreen */
 /* Start: Mute/Volume */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003356}}
 .mejs-controls .mejs-mute button {
   background-position: -16px -16px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003360}}
 .mejs-controls .mejs-unmute button {
   background-position: -16px 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003364}}
 .mejs-controls .mejs-volume-button {
   position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003368}}
 .mejs-controls .mejs-volume-button .mejs-volume-slider {
   display: none;
   height: 115px;
@@ -1127,6 +1533,7 @@ body {
   position: absolute;
   margin: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003383}}
 .mejs-controls .mejs-volume-button:hover {
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
@@ -1137,6 +1544,7 @@ body {
   display: block;
 }
 */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003394}}
 .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total {
   position: absolute;
   left: 11px;
@@ -1147,6 +1555,7 @@ body {
   background: rgba(255, 255, 255, 0.5);
   margin: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003405}}
 .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current {
   position: absolute;
   left: 11px;
@@ -1157,6 +1566,7 @@ body {
   background: rgba(255, 255, 255, 0.9);
   margin: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003416}}
 .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle {
   position: absolute;
   left: 4px;
@@ -1172,11 +1582,13 @@ body {
   margin: 0; }
 
 /* horizontal version */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003434}}
 .mejs-controls div.mejs-horizontal-volume-slider {
   height: 26px;
   width: 60px;
   position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003440}}
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
   position: absolute;
   left: 0;
@@ -1198,6 +1610,7 @@ body {
   background: -ms-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
   background: linear-gradient(rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8)); }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003465}}
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
   position: absolute;
   left: 0;
@@ -1219,17 +1632,21 @@ body {
   background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
   background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8)); }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003491}}
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle {
   display: none; }
 
 /* End: Mute/Volume */
 /* Start: TRACK (Captions and Chapters) */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003501}}
 .mejs-controls .mejs-captions-button {
   position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003505}}
 .mejs-controls .mejs-captions-button button {
   background-position: -48px 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003508}}
 .mejs-controls .mejs-captions-button .mejs-captions-selector {
   visibility: hidden;
   position: absolute;
@@ -1251,6 +1668,7 @@ body {
   visibility: visible;
 }
 */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003530}}
 .mejs-controls .mejs-captions-button .mejs-captions-selector ul {
   margin: 0;
   padding: 0;
@@ -1258,6 +1676,7 @@ body {
   list-style-type: none !important;
   overflow: hidden; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003537}}
 .mejs-controls .mejs-captions-button .mejs-captions-selector ul li {
   margin: 0 0 6px 0;
   padding: 0;
@@ -1266,11 +1685,13 @@ body {
   color: #fff;
   overflow: hidden; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003545}}
 .mejs-controls .mejs-captions-button .mejs-captions-selector ul li input {
   clear: both;
   float: left;
   margin: 3px 3px 0 5px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003550}}
 .mejs-controls .mejs-captions-button .mejs-captions-selector ul li label {
   width: 100px;
   float: left;
@@ -1279,17 +1700,21 @@ body {
   font-family: helvetica, arial;
   font-size: 10px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003559}}
 .mejs-controls .mejs-captions-button .mejs-captions-translations {
   font-size: 10px;
   margin: 0 0 5px 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003565}}
 .mejs-chapters {
   position: absolute;
   top: 0;
   left: 0;
   -xborder-right: solid 1px #fff;
-  width: 10000px; }
+  width: 10000px;
+  z-index: 1; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003573}}
 .mejs-chapters .mejs-chapter {
   position: absolute;
   float: left;
@@ -1305,6 +1730,7 @@ body {
   overflow: hidden;
   border: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003588}}
 .mejs-chapters .mejs-chapter .mejs-chapter-block {
   font-size: 11px;
   color: #fff;
@@ -1314,9 +1740,11 @@ body {
   border-bottom: solid 1px #333;
   cursor: pointer; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003597}}
 .mejs-chapters .mejs-chapter .mejs-chapter-block-last {
   border-right: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003601}}
 .mejs-chapters .mejs-chapter .mejs-chapter-block:hover {
   /*background: #333;*/
   background: #666;
@@ -1329,6 +1757,7 @@ body {
   background: linear-gradient(rgba(102, 102, 102, 0.7), rgba(50, 50, 50, 0.6));
   filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#666666,endColorstr=#323232); }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003613}}
 .mejs-chapters .mejs-chapter .mejs-chapter-block .ch-title {
   font-size: 12px;
   font-weight: bold;
@@ -1338,6 +1767,7 @@ body {
   margin: 0 0 3px 0;
   line-height: 12px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003622}}
 .mejs-chapters .mejs-chapter .mejs-chapter-block .ch-timespan {
   font-size: 12px;
   line-height: 12px;
@@ -1346,6 +1776,7 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003632}}
 .mejs-captions-layer {
   position: absolute;
   bottom: 0;
@@ -1356,64 +1787,78 @@ body {
   font-size: 12px;
   color: #fff; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003642}}
 .mejs-captions-layer a {
   color: #fff;
   text-decoration: underline; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003646}}
 .mejs-captions-layer[lang=ar] {
   font-size: 20px;
   font-weight: normal; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003651}}
 .mejs-captions-position {
   position: absolute;
   width: 100%;
   bottom: 15px;
   left: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003658}}
 .mejs-captions-position-hover {
   bottom: 45px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003662}}
 .mejs-captions-text {
   padding: 3px 5px;
   background: url(../images/video/background.png);
   background: rgba(20, 20, 20, 0.8); }
 
 /* End: TRACK (Captions and Chapters) */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003672}}
 .mejs-clear {
   clear: both; }
 
 /* Start: ERROR */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003679}}
 .me-cannotplay a {
   color: #fff;
   font-weight: bold; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003683}}
 .me-cannotplay span {
   padding: 15px;
   display: block; }
 
 /* End: ERROR */
 /* Start: Loop */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003691}}
 .mejs-controls .mejs-loop-off button {
   background-position: -64px -16px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003694}}
 .mejs-controls .mejs-loop-on button {
   background-position: -64px 0; }
 
 /* End: Loop */
 /* Start: backlight */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003700}}
 .mejs-controls .mejs-backlight-off button {
   background-position: -80px -16px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003703}}
 .mejs-controls .mejs-backlight-on button {
   background-position: -80px 0; }
 
 /* End: backlight */
 /* Start: picture controls */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003710}}
 .mejs-controls .mejs-picturecontrols-button {
   background-position: -96px 0; }
 
 /* End: picture controls */
 /* context menu */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003717}}
 .mejs-contextmenu {
   position: absolute;
   width: 150px;
@@ -1426,12 +1871,14 @@ body {
   z-index: 1001;
   /* make sure it shows on fullscreen */ }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003728}}
 .mejs-contextmenu .mejs-contextmenu-separator {
   height: 1px;
   font-size: 0;
   margin: 5px 6px;
   background: #333; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003735}}
 .mejs-contextmenu .mejs-contextmenu-item {
   font-family: Helvetica, Arial;
   font-size: 12px;
@@ -1439,17 +1886,21 @@ body {
   cursor: pointer;
   color: #333; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003742}}
 .mejs-contextmenu .mejs-contextmenu-item:hover {
   background: #2C7C91;
   color: #fff; }
 
 /* Start: SourceChooser */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003749}}
 .mejs-controls .mejs-sourcechooser-button {
   position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003753}}
 .mejs-controls .mejs-sourcechooser-button button {
   background-position: -128px 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003756}}
 .mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector {
   visibility: hidden;
   position: absolute;
@@ -1466,6 +1917,7 @@ body {
   -moz-border-radius: 0;
   border-radius: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003773}}
 .mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul {
   margin: 0;
   padding: 0;
@@ -1473,6 +1925,7 @@ body {
   list-style-type: none !important;
   overflow: hidden; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003780}}
 .mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li {
   margin: 0 0 6px 0;
   padding: 0;
@@ -1481,11 +1934,13 @@ body {
   color: #fff;
   overflow: hidden; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003788}}
 .mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li input {
   clear: both;
   float: left;
   margin: 3px 3px 0 5px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_video\.scss}line{font-family:\00003793}}
 .mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li label {
   width: 100px;
   float: left;
@@ -1495,113 +1950,1212 @@ body {
   font-size: 10px; }
 
 /* End: SourceChooser */
-#events-widget {
-  margin-bottom: 20px; }
-  #events-widget ul {
-    list-style: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_maps\.scss}line{font-family:\000032}}
+.infoBox {
+  padding: 15px;
+  color: white;
+  width: 250px;
+  background: #000;
+  margin-bottom: 100px;
+  -khtml-opacity: 0.95;
+  -moz-opacity: 0.95;
+  -webkit-opacity: 0.95;
+  -o-opacity: 0.95;
+  -ms-opacity: 0.95;
+  opacity: 0.95;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+  filter: alpha(opacity=95);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_maps\.scss}line{font-family:\0000310}}
+  .infoBox > img {
+    background: url("/images/close-btn.png") no-repeat 0 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_maps\.scss}line{font-family:\0000313}}
+  .infoBox h3 {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 20px;
+    line-height: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_maps\.scss}line{font-family:\0000319}}
+  .infoBox p {
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 10px;
+    line-height: 1rem;
+    line-height: 1em;
+    margin-bottom: 10px;
+    color: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_maps\.scss}line{font-family:\0000325}}
+  .infoBox:after {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_maps\.scss}line{font-family:\0000334}}
+  .infoBox:after {
+    border-bottom-color: #000000;
+    border-width: 10px;
+    left: 50%;
+    margin-left: -10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_maps\.scss}line{font-family:\0000340}}
+  .infoBox .more {
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 10px;
+    line-height: 1rem;
+    color: #ff0064;
+    cursor: pointer;
+    margin: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_maps\.scss}line{font-family:\0000346}}
+  .infoBox ul {
+    list-style-type: none;
+    margin-bottom: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_maps\.scss}line{font-family:\0000349}}
+    .infoBox ul li {
+      margin: 0 0 5px 0;
+      padding: 0 0 5px 24px;
+      border-bottom: 1px dotted #333;
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 20px;
+      line-height: 2rem;
+      line-height: 1em;
+      text-transform: capitalize; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_maps\.scss}line{font-family:\0000356}}
+      .infoBox ul li.film {
+        background: url("/images/film-small.png") no-repeat 0 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_maps\.scss}line{font-family:\0000359}}
+      .infoBox ul li.tv {
+        background: url("/images/tv-small.png") no-repeat 0 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_maps\.scss}line{font-family:\0000362}}
+      .infoBox ul li:last-child {
+        margin-bottom: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_maps\.scss}line{font-family:\0000365}}
+      .infoBox ul li h3 {
+        font-size: 11px;
+        font-size: 1.1rem;
+        line-height: 20px;
+        line-height: 2rem;
+        margin-bottom: 0; }
 
-nav.nav-bar {
-  background: #f6f6f6;
-  background-color: #e9e9e9;
-  background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e9e9e9));
-  background-image: -moz-linear-gradient(#f6f6f6, #e9e9e9);
-  background-image: -ms-linear-gradient(#f6f6f6, #e9e9e9);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #e9e9e9));
-  background-image: -webkit-linear-gradient(#f6f6f6, #e9e9e9);
-  background-image: -o-linear-gradient(#f6f6f6, #e9e9e9);
-  background-image: linear-gradient(#f6f6f6, #e9e9e9);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  border: 1px solid #dddddd;
-  padding: 0!important; }
-  nav.nav-bar ul li {
-    margin-right: 0!important;
-    border-right: 1px solid #dddddd; }
-    nav.nav-bar ul li a {
-      display: block;
-      padding: 10px 15px;
-      text-align: center;
-      font-size: 13px;
-      color: #5e5e5e;
-      -webkit-text-shadow: 0 1px 1px white;
-      -moz-text-shadow: 0 1px 1px white;
-      -ms-text-shadow: 0 1px 1px white;
-      -o-text-shadow: 0 1px 1px white;
-      text-shadow: 0 1px 1px white;
-      -webkit-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
-      -moz-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
-      -ms-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
-      -o-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
-      box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5); }
-      nav.nav-bar ul li a:hover {
-        background-color: #e4e4e4;
-        background-repeat: repeat-x;
-        background-image: -khtml-gradient(linear, left top, left bottom, from(#f1f1f1), to(#e4e4e4));
-        background-image: -moz-linear-gradient(#f1f1f1, #e4e4e4);
-        background-image: -ms-linear-gradient(#f1f1f1, #e4e4e4);
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f1f1f1), color-stop(100%, #e4e4e4));
-        background-image: -webkit-linear-gradient(#f1f1f1, #e4e4e4);
-        background-image: -o-linear-gradient(#f1f1f1, #e4e4e4);
-        background-image: linear-gradient(#f1f1f1, #e4e4e4);
-        color: #171717; }
-      nav.nav-bar ul li a:active {
-        background-color: #f3f3f3;
-        background-repeat: repeat-x;
-        background-image: -khtml-gradient(linear, left top, left bottom, from(#e9e9e9), to(#f3f3f3));
-        background-image: -moz-linear-gradient(#e9e9e9, #f3f3f3);
-        background-image: -ms-linear-gradient(#e9e9e9, #f3f3f3);
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e9e9e9), color-stop(100%, #f3f3f3));
-        background-image: -webkit-linear-gradient(#e9e9e9, #f3f3f3);
-        background-image: -o-linear-gradient(#e9e9e9, #f3f3f3);
-        background-image: linear-gradient(#e9e9e9, #f3f3f3); }
-
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\000032}}
 .flickr-photostream-widget img {
   margin-bottom: 20px; }
 
-/********************************************
-*
-* Homepage
-*
-********************************************/
-#page-header {
-  padding-bottom: 10px;
-  margin-bottom: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\000037}}
+#flickr-gallery {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  background-color: black;
+  margin-bottom: 20px; }
 
-/********************************************
-*
-* Search
-*
-********************************************/
-#search .search-results-header {
-  border: 1px solid #dddddd;
-  background: #f6f6f6;
-  padding: 20px;
-  margin: 0 0 20px 0;
-  overflow: hidden; }
-  #search .search-results-header .field-search {
-    width: 440px; }
-  #search .search-results-header .results {
-    float: left; }
-  #search .search-results-header .sort {
-    float: right; }
-#search .result-list {
-  margin-bottom: 20px; }
-  #search .result-list li {
-    border-bottom: 1px solid #dddddd;
-    margin-bottom: 20px; }
-    #search .result-list li:last-child {
-      border: none; }
-#search #search-filter select {
-  width: 100%;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\0000315}}
+.flickrGallery-thumbsContainer {
+  padding: 0px;
+  margin: 17px 0px 0px 132px;
+  width: 528px;
+  height: auto;
+  top: 400px;
+  overflow: hidden;
   display: block;
-  margin-bottom: 20px; }
-#search #search-filter input {
+  position: absolute;
+  z-index: 4; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\0000325}}
+  .flickrGallery-thumbsContainer img {
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: 62px;
+    height: 62px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\0000331}}
+  .flickrGallery-thumbsContainer a {
+    padding: 0px;
+    border: solid white;
+    width: 62px;
+    height: 62px;
+    float: left;
+    cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\0000338}}
+    .flickrGallery-thumbsContainer a.flickrGallery-thumb-selected {
+      border-width: 2px;
+      margin: 0px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\0000341}}
+    .flickrGallery-thumbsContainer a.flickrGallery-thumb {
+      border-width: 0px;
+      margin: 2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\0000344}}
+      .flickrGallery-thumbsContainer a.flickrGallery-thumb:hover {
+        border-width: 1px;
+        margin: 1px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\0000348}}
+#flickr-gallery-previewView {
+  width: inherit;
+  height: 400px;
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\0000356}}
+.flickrGallery-loadingContainer {
   width: 100%;
-  display: block; }
+  height: 100%;
+  color: white;
+  display: block;
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(1, 0, 0, 0.75); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\0000365}}
+.flickrGallery-loadingIcon {
+  left: 50%;
+  top: 50%;
+  margin-top: -16px;
+  margin-left: -16px;
+  position: absolute; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\0000372}}
+.flickrGallery-controlsContainer {
+  top: 400px;
+  height: auto;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  z-index: 3; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\0000380}}
+.flickrGallery-playPauseButton {
+  margin: 19px 2px 0px 2px;
+  padding: 0px;
+  width: 62px;
+  height: 62px;
+  float: left;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: 15px 15px;
+  background-color: black; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\0000392}}
+#flickr-gallery .paused {
+  background-image: url("../images/pause_up.gif"); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\0000394}}
+  #flickr-gallery .paused:hover {
+    background-image: url("../images/pause_down.gif");
+    background-color: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\0000397}}
+#flickr-gallery .playing {
+  background-image: url("../images/play_up.gif"); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\0000399}}
+  #flickr-gallery .playing:hover {
+    background-image: url("../images/play_down.gif");
+    background-color: white; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\00003103}}
+.flickrGallery-leftButton {
+  margin: 19px 2px 0px 2px;
+  padding: 0px;
+  width: 62px;
+  height: 62px;
+  float: left;
+  cursor: pointer;
+  background-image: url("../images/left_up.gif");
+  background-repeat: no-repeat;
+  background-position: 15px 15px;
+  background-color: black; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\00003114}}
+  .flickrGallery-leftButton:hover {
+    background-image: url("../images/left_down.gif");
+    background-color: white; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\00003118}}
+.flickrGallery-rightButton {
+  margin: 19px 2px 0px 2px;
+  padding: 0px;
+  width: 62px;
+  height: 62px;
+  float: right;
+  cursor: pointer;
+  background-image: url("../images/right_up.gif");
+  background-repeat: no-repeat;
+  background-position: 15px 15px;
+  background-color: black; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-photostream\.scss}line{font-family:\00003129}}
+  .flickrGallery-rightButton:hover {
+    background-image: url("../images/right_down.gif");
+    background-color: white; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-widget\.scss}line{font-family:\000031}}
+#flickr-widget {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-widget\.scss}line{font-family:\000037}}
+  #flickr-widget .flickrGallery-controlsContainer {
+    display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_flickr-widget\.scss}line{font-family:\0000310}}
+  #flickr-widget #flickr-widget-previewView {
+    height: 200px;
+    cursor: pointer; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_contact-form\.scss}line{font-family:\000032}}
+#contact-form .required {
+  color: #990000; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_contact-form\.scss}line{font-family:\000035}}
+#contact-form label {
+  display: inline-block;
+  vertical-align: top; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_contact-form\.scss}line{font-family:\0000313}}
+#contact-form textarea {
+  height: 100px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_contact-form\.scss}line{font-family:\0000316}}
+#contact-form .field-error {
+  color: #dddddd;
+  margin-left: 20px;
+  vertical-align: middle;
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_contact-widget\.scss}line{font-family:\000032}}
+#contact-widget .map {
+  margin-bottom: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_contact-widget\.scss}line{font-family:\000035}}
+#contact-widget .vcard {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 20px;
+  line-height: 2rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_contact-widget\.scss}line{font-family:\000037}}
+  #contact-widget .vcard .adr, #contact-widget .vcard .tel, #contact-widget .vcard .email {
+    margin-bottom: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_contact-widget\.scss}line{font-family:\0000311}}
+#contact-widget .read-more {
+  margin-bottom: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_contact-widget\.scss}line{font-family:\0000315}}
+#contact-widget .map a {
+  font-size: 8px;
+  font-size: 0.8rem;
+  line-height: 10px;
+  line-height: 1rem;
+  opacity: 0.4; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_blog\.scss}line{font-family:\000032}}
+#blog .vcard {
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 20px;
+  line-height: 2rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_blog\.scss}line{font-family:\000035}}
+  #blog .vcard address,
+  #blog .vcard time {
+    display: inline-block;
+    font-family: "Georgia", "Times New Roman", Times, sans-serif; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_blog\.scss}line{font-family:\000038}}
+    #blog .vcard address a,
+    #blog .vcard time a {
+      font-size: 13px;
+      font-size: 1.3rem;
+      line-height: 20px;
+      line-height: 2rem;
+      font-family: "Georgia", "Times New Roman", Times, sans-serif; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_blog\.scss}line{font-family:\0000314}}
+#blog footer {
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  overflow: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_blog\.scss}line{font-family:\0000321}}
+  #blog footer .categories,
+  #blog footer .tags {
+    margin-bottom: 10px;
+    float: left;
+    margin-right: 20px;
+    width: 120px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_blog\.scss}line{font-family:\0000326}}
+    #blog footer .categories ul,
+    #blog footer .tags ul {
+      list-style: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_blog\.scss}line{font-family:\0000333}}
+.blog-post-CTA {
+  margin-bottom: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_blog\.scss}line{font-family:\0000335}}
+  .blog-post-CTA img {
+    margin-bottom: 10px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_events-widget\.scss}line{font-family:\000031}}
+#events-widget {
+  margin-bottom: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_events-widget\.scss}line{font-family:\000033}}
+  #events-widget ul {
+    list-style: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_events-widget\.scss}line{font-family:\000036}}
+  #events-widget .event-item {
+    color: #242424; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000394}}
+    #events-widget .event-item:hover {
+      text-decoration: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_case-study\.scss}line{font-family:\000033}}
+article.case-study header h2 a {
+  font-size: 30px;
+  font-size: 3rem;
+  line-height: 30px;
+  line-height: 3rem;
+  line-height: 1em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_case-study\.scss}line{font-family:\000037}}
+article.case-study header img {
+  float: left;
+  margin-right: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_case-study\.scss}line{font-family:\0000312}}
+article.case-study ul {
+  border-top: 1px dotted #dddddd;
+  border-bottom: 1px dotted #dddddd;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  list-style: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_case-study\.scss}line{font-family:\0000318}}
+  article.case-study ul li {
+    display: inline-block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_events-listing\.scss}line{font-family:\000032}}
+.events-listing h2 {
+  margin-bottom: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_events-listing\.scss}line{font-family:\000035}}
+.events-listing .event-item {
+  overflow: hidden;
+  display: block;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #dddddd; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_events-listing\.scss}line{font-family:\0000310}}
+  .events-listing .event-item > a {
+    overflow: hidden;
+    display: block;
+    color: #242424; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000394}}
+    .events-listing .event-item > a:hover {
+      text-decoration: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_events-listing\.scss}line{font-family:\0000316}}
+  .events-listing .event-item header,
+  .events-listing .event-item figure {
+    margin-bottom: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_events-listing\.scss}line{font-family:\0000319}}
+  .events-listing .event-item:hover {
+    color: #242424; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/project\/_home\.scss}line{font-family:\000032}}
+#home .cta-list {
+  overflow: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/project\/_home\.scss}line{font-family:\000035}}
+  #home .cta-list .cta:nth-child(3n) {
+    margin-right: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/project\/_projects\.scss}line{font-family:\000032}}
+#projects #map {
+  margin-bottom: 30px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/project\/_projects\.scss}line{font-family:\000036}}
+#projects #project-listing ul {
+  list-style: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/project\/_projects\.scss}line{font-family:\0000310}}
+#projects #project-listing li img {
+  margin-bottom: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/project\/_projects\.scss}line{font-family:\0000313}}
+#projects #project-listing li:nth-child(3n) {
+  margin-right: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/project\/_projects\.scss}line{font-family:\0000316}}
+#projects #project-listing li:nth-child(4n) {
+  margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/project\/_projects\.scss}line{font-family:\0000320}}
+#projects #project-listing .project-item {
+  color: #242424; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000394}}
+  #projects #project-listing .project-item:hover {
+    text-decoration: none; }
+
+/*
+ * Bootstrap Responsive v2.0.4
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-utilities\.scss}line{font-family:\000036}}
+.hidden {
+  display: none;
+  visibility: hidden; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-utilities\.scss}line{font-family:\0000314}}
+.visible-phone {
+  display: none !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-utilities\.scss}line{font-family:\0000315}}
+.visible-tablet {
+  display: none !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-utilities\.scss}line{font-family:\0000319}}
+.hidden-desktop {
+  display: none !important; }
+
+@media (max-width: 767px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-utilities\.scss}line{font-family:\0000324}}
+  .visible-phone {
+    display: inherit !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-utilities\.scss}line{font-family:\0000326}}
+  .hidden-phone {
+    display: none !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-utilities\.scss}line{font-family:\0000328}}
+  .hidden-desktop {
+    display: inherit !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-utilities\.scss}line{font-family:\0000329}}
+  .visible-desktop {
+    display: none !important; } }
+@media (min-width: 768px) and (max-width: 979px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-utilities\.scss}line{font-family:\0000335}}
+  .visible-tablet {
+    display: inherit !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-utilities\.scss}line{font-family:\0000337}}
+  .hidden-tablet {
+    display: none !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-utilities\.scss}line{font-family:\0000339}}
+  .hidden-desktop {
+    display: inherit !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-utilities\.scss}line{font-family:\0000340}}
+  .visible-desktop {
+    display: none !important; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000349}}
+.row {
+  /* For modern browsers */
+  zoom: 1;
+  /* IE6/IE7 */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000355}}
+  .row:before, .row:after {
+    content: "";
+    display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000359}}
+  .row:after {
+    clear: both; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000353}}
+[class*="span"] {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000357}}
+  [class*="span"]:first-child {
+    margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000360}}
+  [class*="span"]:last-child {
+    margin-right: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000368}}
+.container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 940px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+.span12 {
+  width: 940px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+.span11 {
+  width: 860px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+.span10 {
+  width: 780px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+.span9 {
+  width: 700px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+.span8 {
+  width: 620px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+.span7 {
+  width: 540px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+.span6 {
+  width: 460px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+.span5 {
+  width: 380px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+.span4 {
+  width: 300px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+.span3 {
+  width: 220px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+.span2 {
+  width: 140px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+.span1 {
+  width: 60px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+.offset12 {
+  margin-left: 490px;
+  margin-right: 490px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+.offset11 {
+  margin-left: 450px;
+  margin-right: 450px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+.offset10 {
+  margin-left: 410px;
+  margin-right: 410px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+.offset9 {
+  margin-left: 370px;
+  margin-right: 370px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+.offset8 {
+  margin-left: 330px;
+  margin-right: 330px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+.offset7 {
+  margin-left: 290px;
+  margin-right: 290px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+.offset6 {
+  margin-left: 250px;
+  margin-right: 250px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+.offset5 {
+  margin-left: 210px;
+  margin-right: 210px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+.offset4 {
+  margin-left: 170px;
+  margin-right: 170px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+.offset3 {
+  margin-left: 130px;
+  margin-right: 130px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+.offset2 {
+  margin-left: 90px;
+  margin-right: 90px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+.offset1 {
+  margin-left: 50px;
+  margin-right: 50px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000392}}
+.row-fluid {
+  width: 100%;
+  /* For modern browsers */
+  zoom: 1;
+  /* IE6/IE7 */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000355}}
+  .row-fluid:before, .row-fluid:after {
+    content: "";
+    display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000359}}
+  .row-fluid:after {
+    clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000395}}
+  .row-fluid [class*="span"] {
+    float: left;
+    margin-left: 1.064%;
+    margin-right: 1.064%;
+    *margin-left: 2.101%;
+    *margin-right: 2.101%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003103}}
+  .row-fluid [class*="span"]:first-child {
+    margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+  .row-fluid .span12 {
+    width: 100.0%;
+    *width: 99.947%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+  .row-fluid .span11 {
+    width: 91.489%;
+    *width: 91.436%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+  .row-fluid .span10 {
+    width: 82.979%;
+    *width: 82.926%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+  .row-fluid .span9 {
+    width: 74.468%;
+    *width: 74.415%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+  .row-fluid .span8 {
+    width: 65.957%;
+    *width: 65.904%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+  .row-fluid .span7 {
+    width: 57.447%;
+    *width: 57.394%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+  .row-fluid .span6 {
+    width: 48.936%;
+    *width: 48.883%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+  .row-fluid .span5 {
+    width: 40.426%;
+    *width: 40.372%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+  .row-fluid .span4 {
+    width: 31.915%;
+    *width: 31.862%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+  .row-fluid .span3 {
+    width: 23.404%;
+    *width: 23.351%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+  .row-fluid .span2 {
+    width: 14.894%;
+    *width: 14.84%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+  .row-fluid .span1 {
+    width: 6.383%;
+    *width: 6.33%; }
+
+@media (max-width: 767px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-767px-max\.scss}line{font-family:\0000316}}
+  html {
+    margin: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-767px-max\.scss}line{font-family:\0000321}}
+  body {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-767px-max\.scss}line{font-family:\0000327}}
+  .container-fluid {
+    padding: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-767px-max\.scss}line{font-family:\0000335}}
+  .container {
+    width: auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-767px-max\.scss}line{font-family:\0000339}}
+  .row-fluid {
+    width: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-767px-max\.scss}line{font-family:\0000344}}
+  .row,
+  .thumbnails {
+    margin-left: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-767px-max\.scss}line{font-family:\0000349}}
+  [class*="span"],
+  .row-fluid [class*="span"] {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000373}}
+  #site-header {
+    margin: 0 0 10px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000375}}
+    #site-header #branding {
+      float: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000377}}
+      #site-header #branding a {
+        font-size: 25px;
+        font-size: 2.5rem;
+        line-height: 50px;
+        line-height: 5rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000380}}
+      #site-header #branding p {
+        display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000384}}
+    #site-header .mini-search {
+      float: none;
+      margin-top: 0;
+      display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\0000392}}
+  #site-nav #menuBtn {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 20px;
+    line-height: 2rem;
+    color: #242424;
+    cursor: Pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\00003102}}
+  #site-nav ul {
+    overflow: hidden;
+    min-height: 0px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\00003105}}
+    #site-nav ul.closed {
+      height: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\00003108}}
+    #site-nav ul li {
+      display: block;
+      float: none;
+      margin: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\00003112}}
+      #site-nav ul li a {
+        text-decoration: none;
+        border-bottom: none;
+        padding: 7px 0;
+        border-top: 1px solid #dddddd; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\00003117}}
+        #site-nav ul li a:hover {
+          border-bottom: none;
+          padding-bottom: 7px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\00003121}}
+        #site-nav ul li a.active {
+          border-bottom: none;
+          padding-bottom: 7px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_carousel\.scss}line{font-family:\0000383}}
+  .carousel figure figcaption {
+    position: relative;
+    margin-top: 0;
+    padding: 5px;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 20px;
+    line-height: 2rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_carousel\.scss}line{font-family:\0000390}}
+  .carousel .btn {
+    -moz-transform: scale(0.6);
+    -webkit-transform: scale(0.6);
+    -o-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    transform: scale(0.6);
+    top: 30%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_carousel\.scss}line{font-family:\0000393}}
+    .carousel .btn.next {
+      -moz-transform: scale(0.6) rotate(180deg);
+      -webkit-transform: scale(0.6) rotate(180deg);
+      -o-transform: scale(0.6) rotate(180deg);
+      -ms-transform: scale(0.6) rotate(180deg);
+      transform: scale(0.6) rotate(180deg); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-767px-max\.scss}line{font-family:\0000359}}
+  .button {
+    display: block;
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 20px;
+    line-height: 2rem; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive-767px-max\.scss}line{font-family:\0000363}}
+  .cta, .project-item {
+    width: 100%;
+    display: block;
+    float: none;
+    clear: both;
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 10px;
+    margin-left: 0;
+    overflow: hidden;
+    position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_generic-cta\.scss}line{font-family:\0000333}}
+    .cta:after, .project-item:after {
+      content: " ";
+      background: transparent url(../images/nav.png) -38px 0;
+      position: absolute;
+      right: 0;
+      top: 10px;
+      width: 38px;
+      height: 65px;
+      overflow: hidden;
+      -moz-transform: scale(0.4);
+      -webkit-transform: scale(0.4);
+      -o-transform: scale(0.4);
+      -ms-transform: scale(0.4);
+      transform: scale(0.4); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_generic-cta\.scss}line{font-family:\0000344}}
+    .cta figure, .project-item figure {
+      width: 100px;
+      float: left;
+      margin: 0 20px 10px 0;
+      line-height: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_generic-cta\.scss}line{font-family:\0000349}}
+      .cta figure img, .project-item figure img {
+        margin-bottom: 0!important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_generic-cta\.scss}line{font-family:\0000353}}
+    .cta h3, .project-item h3 {
+      margin-left: 10px;
+      display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_generic-cta\.scss}line{font-family:\0000357}}
+    .cta a, .project-item a {
+      padding-right: 40px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_generic-cta\.scss}line{font-family:\0000360}}
+    .cta p, .project-item p {
+      margin-bottom: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/modules\/_generic-cta\.scss}line{font-family:\0000363}}
+    .cta .button, .project-item .button {
+      display: none; } }
+@media (min-width: 768px) and (max-width: 979px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000349}}
+  .row {
+    /* For modern browsers */
+    zoom: 1;
+    /* IE6/IE7 */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000355}}
+    .row:before, .row:after {
+      content: "";
+      display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000359}}
+    .row:after {
+      clear: both; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000353}}
+  [class*="span"] {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000357}}
+    [class*="span"]:first-child {
+      margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000360}}
+    [class*="span"]:last-child {
+      margin-right: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000368}}
+  .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: 724px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+  .span12 {
+    width: 724px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+  .span11 {
+    width: 662px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+  .span10 {
+    width: 600px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+  .span9 {
+    width: 538px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+  .span8 {
+    width: 476px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+  .span7 {
+    width: 414px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+  .span6 {
+    width: 352px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+  .span5 {
+    width: 290px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+  .span4 {
+    width: 228px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+  .span3 {
+    width: 166px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+  .span2 {
+    width: 104px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000375}}
+  .span1 {
+    width: 42px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+  .offset12 {
+    margin-left: 382px;
+    margin-right: 382px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+  .offset11 {
+    margin-left: 351px;
+    margin-right: 351px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+  .offset10 {
+    margin-left: 320px;
+    margin-right: 320px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+  .offset9 {
+    margin-left: 289px;
+    margin-right: 289px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+  .offset8 {
+    margin-left: 258px;
+    margin-right: 258px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+  .offset7 {
+    margin-left: 227px;
+    margin-right: 227px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+  .offset6 {
+    margin-left: 196px;
+    margin-right: 196px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+  .offset5 {
+    margin-left: 165px;
+    margin-right: 165px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+  .offset4 {
+    margin-left: 134px;
+    margin-right: 134px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+  .offset3 {
+    margin-left: 103px;
+    margin-right: 103px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+  .offset2 {
+    margin-left: 72px;
+    margin-right: 72px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000381}}
+  .offset1 {
+    margin-left: 41px;
+    margin-right: 41px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000392}}
+  .row-fluid {
+    width: 100%;
+    /* For modern browsers */
+    zoom: 1;
+    /* IE6/IE7 */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000355}}
+    .row-fluid:before, .row-fluid:after {
+      content: "";
+      display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000359}}
+    .row-fluid:after {
+      clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\0000395}}
+    .row-fluid [class*="span"] {
+      float: left;
+      margin-left: 1.381%;
+      margin-right: 1.381%;
+      *margin-left: 2.736%;
+      *margin-right: 2.736%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003103}}
+    .row-fluid [class*="span"]:first-child {
+      margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+    .row-fluid .span12 {
+      width: 100.0%;
+      *width: 99.947%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+    .row-fluid .span11 {
+      width: 91.436%;
+      *width: 91.383%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+    .row-fluid .span10 {
+      width: 82.873%;
+      *width: 82.82%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+    .row-fluid .span9 {
+      width: 74.309%;
+      *width: 74.256%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+    .row-fluid .span8 {
+      width: 65.746%;
+      *width: 65.693%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+    .row-fluid .span7 {
+      width: 57.182%;
+      *width: 57.129%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+    .row-fluid .span6 {
+      width: 48.619%;
+      *width: 48.566%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+    .row-fluid .span5 {
+      width: 40.055%;
+      *width: 40.002%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+    .row-fluid .span4 {
+      width: 31.492%;
+      *width: 31.439%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+    .row-fluid .span3 {
+      width: 22.928%;
+      *width: 22.875%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+    .row-fluid .span2 {
+      width: 14.365%;
+      *width: 14.311%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003110}}
+    .row-fluid .span1 {
+      width: 5.801%;
+      *width: 5.748%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003140}}
+  input.span12,
+  textarea.span12,
+  .uneditable-input.span12 {
+    width: 714px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003140}}
+  input.span11,
+  textarea.span11,
+  .uneditable-input.span11 {
+    width: 652px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003140}}
+  input.span10,
+  textarea.span10,
+  .uneditable-input.span10 {
+    width: 590px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003140}}
+  input.span9,
+  textarea.span9,
+  .uneditable-input.span9 {
+    width: 528px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003140}}
+  input.span8,
+  textarea.span8,
+  .uneditable-input.span8 {
+    width: 466px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003140}}
+  input.span7,
+  textarea.span7,
+  .uneditable-input.span7 {
+    width: 404px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003140}}
+  input.span6,
+  textarea.span6,
+  .uneditable-input.span6 {
+    width: 342px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003140}}
+  input.span5,
+  textarea.span5,
+  .uneditable-input.span5 {
+    width: 280px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003140}}
+  input.span4,
+  textarea.span4,
+  .uneditable-input.span4 {
+    width: 218px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003140}}
+  input.span3,
+  textarea.span3,
+  .uneditable-input.span3 {
+    width: 156px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003140}}
+  input.span2,
+  textarea.span2,
+  .uneditable-input.span2 {
+    width: 94px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_grid-mixins\.scss}line{font-family:\00003140}}
+  input.span1,
+  textarea.span1,
+  .uneditable-input.span1 {
+    width: 32px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/_structure\.scss}line{font-family:\00003136}}
+  #site-header #site-nav ul li a {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 20px;
+    line-height: 2rem; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive\.scss}line{font-family:\0000336}}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  /* For modern browsers */
+  zoom: 1;
+  /* IE6/IE7 */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000355}}
+  .container:before, .container:after {
+    content: "";
+    display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000359}}
+  .container:after {
+    clear: both; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive\.scss}line{font-family:\0000341}}
+.container-fluid {
+  padding-right: 20px;
+  padding-left: 20px;
+  /* For modern browsers */
+  zoom: 1;
+  /* IE6/IE7 */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000355}}
+  .container-fluid:before, .container-fluid:after {
+    content: "";
+    display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/mixins\/_mixins\.scss}line{font-family:\0000359}}
+  .container-fluid:after {
+    clear: both; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/core\/grids\/bootstrap\/_responsive\.scss}line{font-family:\0000347}}
+img {
+  width: 100%;
+  height: auto; }
 
 /* ============================= */
 /* ! Layout for mobile version */
@@ -1631,6 +3185,7 @@ Richard Rutter: http://clagnut.com
 Khoi Vinh: http://subtraction.com
 
 -------------------------------------------------------------- */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\0000325}}
 .ie6 {
   /* sets all the below to the .ie6 class only */
   /* Body ---------------------------------------------------- */
@@ -1640,6 +3195,7 @@ Khoi Vinh: http://subtraction.com
   /* Tables -------------------------------------------------------------- */
   /* Forms -------------------------------------------------------------- */
   /* end */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\0000345}}
   .ie6 html, .ie6 body,
   .ie6 div, .ie6 span,
   .ie6 object, .ie6 iframe,
@@ -1667,6 +3223,7 @@ Khoi Vinh: http://subtraction.com
     font-size: 100%;
     font-family: inherit;
     vertical-align: baseline; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\0000357}}
   .ie6 body {
     width: 60%;
     /* http://www.cameronmoll.com/archives/000892.html */
@@ -1677,120 +3234,160 @@ Khoi Vinh: http://subtraction.com
     line-height: 1.4;
     background: #fff;
     color: #4c4c4c; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\0000371}}
   .ie6 h1, .ie6 h2, .ie6 h3, .ie6 h4, .ie6 h5, .ie6 h6 {
     font-weight: normal; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\0000374}}
   .ie6 h1 {
     margin-bottom: .5em;
     font-size: 3em;
     line-height: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\0000379}}
   .ie6 h2 {
     margin-bottom: .75em;
     font-size: 2em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\0000383}}
   .ie6 h3 {
     margin-bottom: 1em;
     font-size: 1.5em;
     line-height: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\0000388}}
   .ie6 h4 {
     margin-bottom: 1.25em;
     font-size: 1.2em;
     line-height: 1.25; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\0000393}}
   .ie6 h5, .ie6 h6 {
     margin-bottom: 1.5em;
     font-weight: bold;
     font-size: 1em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\0000398}}
   .ie6 h1 img, .ie6 h2 img, .ie6 h3 img, .ie6 h4 img, .ie6 h5 img, .ie6 h6 img {
     margin: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003103}}
   .ie6 p {
     margin: 0 0 1.5em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003106}}
   .ie6 a {
     color: #105cb6;
     text-decoration: underline; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003110}}
   .ie6 a:visited {
     color: #a8a8a8; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003113}}
   .ie6 a:focus, .ie6 a:hover {
     color: #a8a8a8; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003116}}
   .ie6 a img {
     border: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003119}}
   .ie6 blockquote {
     margin: 1.5em 1.5em 1.5em -1.5em;
     padding-left: 1.5em;
     border-left: 1px solid #a8a8a8;
     font: italic 1.2em "Times New Roman", Times, serif; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003125}}
   .ie6 strong {
     font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003128}}
   .ie6 em, .ie6 dfn {
     font-style: italic; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003131}}
   .ie6 dfn {
     font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003134}}
   .ie6 sup, .ie6 sub {
     line-height: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003137}}
   .ie6 abbr, .ie6 acronym {
     border-bottom: 1px dotted #a8a8a8;
     cursor: help; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003141}}
   .ie6 address {
     margin: 0 0 1.5em;
     font-style: italic; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003145}}
   .ie6 del {
     color: #666; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003148}}
   .ie6 pre, .ie6 code, .ie6 tt {
     margin: 1.5em 1.5em 1.5em -1.5em;
     padding-left: 1.5em;
     border-left: 1px dotted #a8a8a8;
     font: 1em 'andale mono', 'lucida console', monospace;
     line-height: 1.5; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003155}}
   .ie6 pre {
     white-space: pre; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003161}}
   .ie6 li ul, .ie6 li ol {
     list-style-type: circle;
     margin: 0 1.5em .75em 1.5em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003165}}
   .ie6 ul, .ie6 ol {
     margin: 0 1.5em 1.5em 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003168}}
   .ie6 ul {
     list-style-type: disc; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003171}}
   .ie6 ol {
     list-style-type: decimal; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003174}}
   .ie6 dl {
     margin-bottom: 1.5em;
     padding-top: 1.5em;
     border-top: 1px solid #a8a8a8; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003179}}
   .ie6 dl dt {
     margin-bottom: .75em;
     font-size: 1.2em;
     line-height: 1.25; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003184}}
   .ie6 dd {
     margin-bottom: 1.5em;
     padding-bottom: 1.5em;
     border-bottom: 1px solid #a8a8a8; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003191}}
   .ie6 table {
     border-collapse: separate;
     border-spacing: 0;
     margin-bottom: 1.4em;
     width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003197}}
   .ie6 table, .ie6 td, .ie6 th {
     vertical-align: top; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003200}}
   .ie6 th, .ie6 thead th {
     font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003203}}
   .ie6 th, .ie6 td, .ie6 caption {
     padding: 4px 10px 4px 5px;
     text-align: left;
     font-weight: normal; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003208}}
   .ie6 th, .ie6 td {
     border-bottom: 1px solid #a8a8a8; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003211}}
   .ie6 tfoot {
     font-size: .9em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003214}}
   .ie6 caption {
     margin-bottom: 1em;
     font-size: 1.5em;
     line-height: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003221}}
   .ie6 label {
     font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003224}}
   .ie6 fieldset {
     margin: 0 0 1.5em 0;
     padding: 1.4em 1.4em 0 1.4em;
     border: 1px solid #a8a8a8; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003229}}
   .ie6 legend {
     font-size: 1.2em;
     font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macmini\/Sites\/Mego\/source\/css\/_ie6\.scss}line{font-family:\00003233}}
   .ie6 textarea {
     width: 390px;
     height: 250px;

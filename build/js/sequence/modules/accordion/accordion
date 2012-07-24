@@ -3,9 +3,9 @@
   var animate, modules,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
-  modules = SEQ.utils.namespace('SEQ.modules');
+  modules = Namespace('SEQ.modules');
 
-  animate = SEQ.effects.Animate;
+  animate = Namespace('SEQ.effects.Animate');
 
   modules.AccordionGroup = (function() {
 

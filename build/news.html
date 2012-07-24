@@ -5,13 +5,18 @@
 <!--[if IE 9 ]>                 <html lang="en-GB" class="no-js ie9"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en-GB" class="no-js"> <!--<![endif]-->
 
-<head>
+<head prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#'>
   <meta charset='utf-8' />
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
   <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
   <title>News Listing</title>
   <meta content='' name='description' />
   <meta content='' name='author' />
+  <meta content='' property='og:title' />
+  <meta content='' property='og:type'><!-- see https://developers.facebook.com/docs/opengraph/objects/builtin/ for examples --></meta>
+  <meta content='' property='og:image'><!-- see https://developers.facebook.com/docs/share/ for dimensions --></meta>
+  <meta content='' property='og:url' />
+  <meta content='' property='og:description' />
   <!-- Mobile Specific Meta Tags -->
   <meta content='width=device-width, initial-scale=1' name='viewport' />
   <meta content='yes' name='apple-mobile-web-app-capable' />
@@ -20,13 +25,14 @@
   <link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/print.css" media="print" rel="stylesheet" type="text/css" />
   <script src='/js/thirdparty/modernizr.js'></script>
+  <script src='http://localhost:8081/target/target-script-min.js#anonymous'></script>
 </head>
 <body>
-  <form action='/' id='mainform' method='post'>
-    <div class='wrapper'>
-      <header id='site-header'>
+  <div class='container'>
+    <header id='site-header'>
+      <div class='row'>
         <section id='branding'>
-          <div class='col-5'>
+          <div class='span7'>
             <a href='#' title='Company Name'>
               Mego
             </a>
@@ -35,52 +41,80 @@
             </p>
           </div>
         </section>
-        <nav class='nav-bar' id='site-nav'>
-          <ul>
-            <li>
-              <a href='index.html'>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href='about-us.html'>
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href='projects.html'>
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href='news.html'>
-                News
-              </a>
-            </li>
-            <li>
-              <a href='events.html'>
-                Events
-              </a>
-            </li>
-            <li>
-              <a href='contact-us.html'>
-                Contact us
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <!-- START mini-search -->
+        <section class='mini-search '>
+          <label for='search'>Search</label>
+          <input class='field-search' id='search' placeholder='Enter keyword' type='text' />
+          <input class='btn-search' type='submit' value='Go' />
+        </section>
+        <!-- END mini-search -->
+      </div>
+      <div class='row'>
+        <div class='span12'>
+          <nav id='site-nav'>
+            <ul>
+              <li>
+                <a class='' href='index.html'>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a class='' href='about-us.html'>
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a class='' href='projects.html'>
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a class='active' href='news.html'>
+                  News
+                </a>
+              </li>
+              <li>
+                <a class='' href='events.html'>
+                  Events
+                </a>
+              </li>
+              <li>
+                <a class='' href='blog.html'>
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a class='' href='gallery.html'>
+                  Gallery
+                </a>
+              </li>
+              <li>
+                <a class='' href='case-studies.html'>
+                  Case Studies
+                </a>
+              </li>
+              <li>
+                <a class='' href='contact-us.html'>
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class='main' id='news-list'>
+      <header id='page-header'>
+        <h1>
+          Latest News
+        </h1>
+        <p>
+          Some sort of by-line here.
+          ut deserunt et ullam similique mollitia quia quam ipsum eos nesciunt nulla quia est aspernatur est aut eos libero reiciendis recusandae nihil dolores perspiciatis
+        </p>
       </header>
-      <div class='container' id='news-list'>
-        <header id='page-header'>
-          <h1>
-            Latest News
-          </h1>
-          <p>
-            Some sort of by-line here.
-            necessitatibus quisquam ipsum in qui occaecati quaerat aut dolor sed ad corporis nobis excepturi consectetur ex optio reiciendis id eligendi deserunt earum esse quia
-          </p>
-        </header>
-        <div class='col-8' id='content'>
+      <div class='row'>
+        <div class='span9' id='content'>
           <!-- START .news-listing -->
           <section class='news-listing'>
             <!-- START .news-item -->
@@ -88,27 +122,31 @@
               <article>
                 <header>
                   <h2>
-                    sint tempore ut nostrum dolorem libero
+                    maxime in est quo non asperiores
                   </h2>
                   <time datetime='2009-11-13T20:00Z'>
                     3 hours ago
                   </time>
                 </header>
-                <figure class=''>
-                  <img src="http://placehold.development2.sequence.co.uk/?form=png&w=640&h=320&f=Helvetica&fs=24&icol=hexf6f6f6&col=hexdddddd" width="640" height="320" />
-                  
-                  <figcaption>
-                    Est quisquam praesentium rem ut atque veritatis maiores non iste maiores accusantium
-                  </figcaption>
-                </figure>
-                <section class='copy'>
-                  <p>
-                    Quae distinctio eligendi et qui impedit ex laudantium repellendus corrupti facilis sunt quis qui est. Dicta culpa quis sunt ut. Voluptatem illo et distinctio doloribus perspiciatis debitis vero suscipit quidem. Aliquid esse voluptatibus sunt et qui ex qui. Eveniet vitae ex et ratione corrupti eos unde ut ex ipsa modi sunt. Neque et enim et. Quasi nemo et doloribus non. Quo quo molestiae sequi quia cumque minima et aut tempore dolores repellendus amet sapiente
-                  </p>
-                  <span class='read-more'>
-                    Read more &rarr;
-                  </span>
-                </section>
+                <div class='row'>
+                  <figure class=''>
+                    <img src="http://placehold.development2.sequence.co.uk/?form=png&w=726&h=405&f=Helvetica&fs=24&icol=hexdddddd&col=hex858585&t=726 x 405" width="726" height="405" />
+                    
+                    <figcaption>
+                      Vero omnis ipsa ratione doloribus molestiae eum voluptas ut quia laudantium
+                    </figcaption>
+                  </figure>
+                  <section class='copy span9'>
+                    <p>
+                      Magni aliquam voluptatem sapiente eius neque corrupti aliquid expedita laborum est in est beatae qui. Tenetur eveniet nobis fuga est nobis numquam excepturi aspernatur omnis cumque rerum. Beatae voluptatem ratione nihil asperiores saepe et voluptas aut libero non molestiae autem quo sequi. Magnam occaecati laborum et rerum consequuntur quod illum in praesentium id et. Vero ipsa ut quos odit voluptates laborum assumenda voluptas velit et ut temporibus. Omnis sed dolores laborum perspiciatis. Labore voluptas id libero natus. Quod sed omnis laborum cupiditate maiores labore eius totam impedit et impedit culpa fuga. Voluptas cupiditate totam ipsa. Temporibus ad accusamus earum magnam blanditiis vitae possimus saepe. Debitis pariatur officia eveniet occaecati ullam sit et fugiat provident molestiae ut rem saepe. Dolorem impedit at aut impedit quaerat
+                    </p>
+                    <footer>
+                      <span class='read-more'>
+                        Read more &rarr;
+                      </span>
+                    </footer>
+                  </section>
+                </div>
               </article>
             </a>
             <!-- END .news-item -->
@@ -117,27 +155,31 @@
               <article>
                 <header>
                   <h2>
-                    ea et autem in nihil quibusdam rem
+                    quos ad laudantium minima
                   </h2>
                   <time datetime='2009-11-13T20:00Z'>
                     3 hours ago
                   </time>
                 </header>
-                <figure class='col-3'>
-                  <img src="http://placehold.development2.sequence.co.uk/?form=png&w=230&h=150&f=Helvetica&fs=24&icol=hexf6f6f6&col=hexdddddd" width="230" height="150" />
-                  
-                  <figcaption>
-                    Nesciunt asperiores veniam voluptatum et aliquam rerum illum eos impedit delectus et harum adipisci consequatur
-                  </figcaption>
-                </figure>
-                <section class='copy col-5'>
-                  <p>
-                    Magnam laboriosam et rem nemo maiores assumenda sapiente. Quae odit numquam mollitia aut. Nulla minima quasi dignissimos qui et cupiditate debitis omnis perferendis aperiam occaecati vel. Voluptatibus cum vitae nam autem sapiente placeat sed quo dolore est quia. Architecto exercitationem qui quod ex. Qui et eum natus quidem non nemo. Porro beatae et nobis occaecati et voluptatum asperiores sunt atque reprehenderit. Saepe sit quasi architecto provident. Cupiditate rem at placeat non architecto id aperiam iure ducimus aut tempore
-                  </p>
-                  <span class='read-more'>
-                    Read more &rarr;
-                  </span>
-                </section>
+                <div class='row'>
+                  <figure class='span3'>
+                    <img src="http://placehold.development2.sequence.co.uk/?form=png&w=726&h=405&f=Helvetica&fs=24&icol=hexdddddd&col=hex858585&t=726 x 405" width="726" height="405" />
+                    
+                    <figcaption>
+                      Non quis rerum in omnis et enim consequatur sint dolores officiis incidunt quo
+                    </figcaption>
+                  </figure>
+                  <section class='copy span6'>
+                    <p>
+                      Consequatur et beatae similique eum aperiam minus architecto quasi ipsam corrupti magnam minima. Deserunt consectetur rem quos illum id repudiandae minima cumque minus voluptatem eligendi assumenda alias. Debitis similique dicta ducimus voluptas quidem dolores in ab aliquam recusandae accusantium. Repudiandae officia libero est veniam delectus et ad voluptatem et consequatur. Voluptas aut quia molestias quam eum nam sint at sed est. Et eius architecto magnam praesentium perspiciatis aut ut. Quia non occaecati temporibus magnam tenetur minus ut. Necessitatibus ducimus rerum omnis
+                    </p>
+                    <footer>
+                      <span class='read-more'>
+                        Read more &rarr;
+                      </span>
+                    </footer>
+                  </section>
+                </div>
               </article>
             </a>
             <!-- END .news-item -->
@@ -146,27 +188,31 @@
               <article>
                 <header>
                   <h2>
-                    corporis vitae laudantium et ab
+                    reiciendis magnam veniam
                   </h2>
                   <time datetime='2009-11-13T20:00Z'>
                     3 hours ago
                   </time>
                 </header>
-                <figure class='col-3'>
-                  <img src="http://placehold.development2.sequence.co.uk/?form=png&w=230&h=150&f=Helvetica&fs=24&icol=hexf6f6f6&col=hexdddddd" width="230" height="150" />
-                  
-                  <figcaption>
-                    Consequuntur est dolorem praesentium sint incidunt
-                  </figcaption>
-                </figure>
-                <section class='copy col-5'>
-                  <p>
-                    Est quis consequatur quasi minima magni. Minima iusto adipisci aut amet et repellat omnis dolorem facere. Corrupti ea id perferendis earum autem. Fugit fugit sed et ullam. Sint voluptatem ut voluptatum nobis. Asperiores quis doloremque quia nobis qui et et tenetur enim assumenda fugit sit. Aut omnis tenetur quos dolorem sint voluptatibus mollitia autem et iusto ducimus iste vitae. Voluptatibus quibusdam sint placeat tempore nihil quam eos. Aut cupiditate saepe velit recusandae. Culpa expedita aspernatur excepturi ex voluptate quod porro odit assumenda. Occaecati in ad fuga dolorem. Ducimus numquam natus est sunt reprehenderit modi nesciunt illo
-                  </p>
-                  <span class='read-more'>
-                    Read more &rarr;
-                  </span>
-                </section>
+                <div class='row'>
+                  <figure class='span3'>
+                    <img src="http://placehold.development2.sequence.co.uk/?form=png&w=726&h=405&f=Helvetica&fs=24&icol=hexdddddd&col=hex858585&t=726 x 405" width="726" height="405" />
+                    
+                    <figcaption>
+                      Ea esse rem nulla aperiam officiis unde dolorum molestiae dolor ut iusto
+                    </figcaption>
+                  </figure>
+                  <section class='copy span6'>
+                    <p>
+                      Modi vero error sapiente laboriosam dolores natus. Laudantium vero natus voluptatem modi temporibus est. Laboriosam magnam enim neque error rem autem debitis blanditiis. Voluptatum est quia illum doloribus sit numquam voluptas alias. Aut blanditiis aut qui. Deleniti placeat modi officia. Dolor similique quos similique est autem saepe nemo ut eum saepe. Vel sit blanditiis id laborum. Dolorem et impedit accusantium consequatur ut est ex aut velit id rerum
+                    </p>
+                    <footer>
+                      <span class='read-more'>
+                        Read more &rarr;
+                      </span>
+                    </footer>
+                  </section>
+                </div>
               </article>
             </a>
             <!-- END .news-item -->
@@ -175,27 +221,31 @@
               <article>
                 <header>
                   <h2>
-                    sequi voluptatem consequuntur consequuntur culpa
+                    iusto labore omnis fugiat
                   </h2>
                   <time datetime='2009-11-13T20:00Z'>
                     3 hours ago
                   </time>
                 </header>
-                <figure class='col-3'>
-                  <img src="http://placehold.development2.sequence.co.uk/?form=png&w=230&h=150&f=Helvetica&fs=24&icol=hexf6f6f6&col=hexdddddd" width="230" height="150" />
-                  
-                  <figcaption>
-                    Doloremque qui rem sed id cumque perferendis impedit
-                  </figcaption>
-                </figure>
-                <section class='copy col-5'>
-                  <p>
-                    Quam cupiditate est ex dolorum laboriosam. Nulla dolore ex dolorem totam quia distinctio numquam magnam. Nulla veniam neque officia placeat molestiae accusamus amet cupiditate aut. Cupiditate dignissimos animi repellat assumenda voluptatem nihil iste sunt ipsa quis quia quasi. Et ipsa molestiae deleniti neque cumque et et qui aliquid soluta reprehenderit cum veritatis molestiae. Dolor nemo dolore numquam vel sit nostrum ipsam minus vel provident et voluptates expedita. Delectus qui veniam provident totam cum occaecati repellat porro occaecati dolorem velit placeat. Earum animi commodi perspiciatis et omnis molestias ea assumenda libero a. Rerum aliquam impedit accusamus deserunt voluptas voluptatum. Dolores exercitationem qui perspiciatis pariatur. Amet ad vel debitis aut delectus repudiandae. Earum aperiam qui deleniti omnis
-                  </p>
-                  <span class='read-more'>
-                    Read more &rarr;
-                  </span>
-                </section>
+                <div class='row'>
+                  <figure class='span3'>
+                    <img src="http://placehold.development2.sequence.co.uk/?form=png&w=726&h=405&f=Helvetica&fs=24&icol=hexdddddd&col=hex858585&t=726 x 405" width="726" height="405" />
+                    
+                    <figcaption>
+                      Est sequi nam provident iste a
+                    </figcaption>
+                  </figure>
+                  <section class='copy span6'>
+                    <p>
+                      Voluptatem perspiciatis non vitae animi illo et rerum et. Repudiandae veritatis iure possimus in veniam impedit nesciunt quod quis quisquam eos minima est nesciunt. Aperiam accusantium qui dolorem velit aperiam. Voluptatem molestiae aut consequuntur quas qui ex ut. Et ut iste beatae autem cum consequatur voluptatem earum expedita fugit eos architecto nesciunt. Eos ad blanditiis vero qui cumque amet eos. Minus dolores numquam quo aut quod vel nihil. Quae amet odit cumque et vel quas adipisci qui recusandae est. Est dolorem qui aliquid reprehenderit minima et nihil qui hic. Illo officia excepturi quas nemo voluptatem dolorem earum. Debitis veritatis dignissimos consequuntur nesciunt non nam dolorem. Occaecati praesentium facere sit ut quaerat ut minus dolore impedit voluptatibus consequatur veniam aut optio
+                    </p>
+                    <footer>
+                      <span class='read-more'>
+                        Read more &rarr;
+                      </span>
+                    </footer>
+                  </section>
+                </div>
               </article>
             </a>
             <!-- END .news-item -->
@@ -204,27 +254,31 @@
               <article>
                 <header>
                   <h2>
-                    earum ipsum nam laboriosam
+                    impedit animi necessitatibus
                   </h2>
                   <time datetime='2009-11-13T20:00Z'>
                     3 hours ago
                   </time>
                 </header>
-                <figure class='col-3'>
-                  <img src="http://placehold.development2.sequence.co.uk/?form=png&w=230&h=150&f=Helvetica&fs=24&icol=hexf6f6f6&col=hexdddddd" width="230" height="150" />
-                  
-                  <figcaption>
-                    Nemo unde dolorem omnis rerum numquam id omnis hic ut
-                  </figcaption>
-                </figure>
-                <section class='copy col-5'>
-                  <p>
-                    Asperiores rerum fugiat est non similique molestiae omnis officiis ipsa harum ullam culpa earum. Delectus non excepturi et qui corrupti nisi laboriosam et voluptate. Nemo aut eveniet adipisci id voluptates et voluptas doloribus aspernatur dolore voluptatem provident voluptas doloremque. Voluptatibus dignissimos voluptatum qui nulla sed reiciendis illum ullam perspiciatis quaerat voluptas vel. Est et voluptas aut veniam accusamus rerum. Quam eos nulla rem quos hic velit corporis sit ullam. Nihil illo ad mollitia totam suscipit qui voluptatem unde. Porro rem ea fugiat officiis deleniti fugit hic molestiae voluptatem ratione qui molestiae voluptatibus
-                  </p>
-                  <span class='read-more'>
-                    Read more &rarr;
-                  </span>
-                </section>
+                <div class='row'>
+                  <figure class='span3'>
+                    <img src="http://placehold.development2.sequence.co.uk/?form=png&w=726&h=405&f=Helvetica&fs=24&icol=hexdddddd&col=hex858585&t=726 x 405" width="726" height="405" />
+                    
+                    <figcaption>
+                      Quae perferendis totam harum ipsa et deserunt nobis
+                    </figcaption>
+                  </figure>
+                  <section class='copy span6'>
+                    <p>
+                      Repudiandae sit repellendus earum voluptas labore odit nulla enim rerum repellendus sed. Reprehenderit et velit id commodi et unde id. Maxime facere voluptas est nemo sequi ad. Aut dolores ut amet aperiam vel vitae magni molestiae aliquam. Et molestiae molestias excepturi quo laboriosam. Similique vel rem totam dolores ea eum voluptas est corrupti. Dolorem ut consequatur occaecati porro labore amet doloribus ut ratione temporibus vel sit est. Numquam quia reiciendis magni eligendi dolor praesentium dolor sit delectus placeat aut. Quos nisi esse quibusdam asperiores perspiciatis molestiae consequatur esse voluptas. Quae placeat qui officiis autem maiores
+                    </p>
+                    <footer>
+                      <span class='read-more'>
+                        Read more &rarr;
+                      </span>
+                    </footer>
+                  </section>
+                </div>
               </article>
             </a>
             <!-- END .news-item -->
@@ -233,27 +287,31 @@
               <article>
                 <header>
                   <h2>
-                    voluptas facere assumenda iusto omnis beatae sed
+                    rerum exercitationem sequi fuga numquam
                   </h2>
                   <time datetime='2009-11-13T20:00Z'>
                     3 hours ago
                   </time>
                 </header>
-                <figure class='col-3'>
-                  <img src="http://placehold.development2.sequence.co.uk/?form=png&w=230&h=150&f=Helvetica&fs=24&icol=hexf6f6f6&col=hexdddddd" width="230" height="150" />
-                  
-                  <figcaption>
-                    Recusandae et nulla quidem ullam doloremque
-                  </figcaption>
-                </figure>
-                <section class='copy col-5'>
-                  <p>
-                    Corrupti qui reiciendis nam aut voluptas. Ut commodi iste doloremque corrupti odio. Dolores praesentium sapiente aut minima sit velit error harum qui consequatur aut voluptatem deserunt molestiae. Voluptatum in modi blanditiis illum enim distinctio quis fugiat voluptatem. Commodi voluptas sit consequatur illo quo tempore sed quis. Sed cumque soluta et quo dolorum et. Placeat eum vel aut aut dolorem eaque nulla beatae quidem nihil asperiores fugiat. Quis facilis ut optio non dolor ad et in. Et qui repudiandae aliquam. Laudantium omnis qui incidunt recusandae aut voluptates aut commodi architecto voluptate dolorum ducimus sit
-                  </p>
-                  <span class='read-more'>
-                    Read more &rarr;
-                  </span>
-                </section>
+                <div class='row'>
+                  <figure class='span3'>
+                    <img src="http://placehold.development2.sequence.co.uk/?form=png&w=726&h=405&f=Helvetica&fs=24&icol=hexdddddd&col=hex858585&t=726 x 405" width="726" height="405" />
+                    
+                    <figcaption>
+                      Animi id assumenda nihil nisi rerum odio
+                    </figcaption>
+                  </figure>
+                  <section class='copy span6'>
+                    <p>
+                      Et saepe voluptate perspiciatis quia qui saepe quo velit. Sunt aut est alias tenetur corrupti omnis nihil ex. Qui ut reiciendis reiciendis dolor. Repudiandae eos est eius sint sed quas eligendi delectus maiores et. Soluta repellendus nemo labore et eius sint. Sed illo hic assumenda nesciunt. Voluptatem sit facere exercitationem non et unde eos itaque dolor nesciunt temporibus sed nobis saepe. Minima cupiditate qui autem laudantium delectus tempore laudantium dolorem iste nostrum suscipit et. Qui provident qui qui ipsam possimus non at et in. Excepturi quas alias et quod ratione. Ut nulla est aut et facere quia nam. Sed nobis aut aspernatur in
+                    </p>
+                    <footer>
+                      <span class='read-more'>
+                        Read more &rarr;
+                      </span>
+                    </footer>
+                  </section>
+                </div>
               </article>
             </a>
             <!-- END .news-item -->
@@ -262,27 +320,97 @@
               <article>
                 <header>
                   <h2>
-                    dolores dolorem quibusdam similique perspiciatis voluptatibus
+                    esse ea ut expedita exercitationem repellat ratione
                   </h2>
                   <time datetime='2009-11-13T20:00Z'>
                     3 hours ago
                   </time>
                 </header>
-                <figure class='col-3'>
-                  <img src="http://placehold.development2.sequence.co.uk/?form=png&w=230&h=150&f=Helvetica&fs=24&icol=hexf6f6f6&col=hexdddddd" width="230" height="150" />
-                  
-                  <figcaption>
-                    Itaque officia consequuntur commodi soluta labore vel quidem cupiditate commodi voluptas magnam debitis laudantium
-                  </figcaption>
-                </figure>
-                <section class='copy col-5'>
-                  <p>
-                    Labore sint et ex dolores vitae harum deserunt quo. Cupiditate totam eum adipisci rerum dolor possimus rem omnis modi blanditiis ut assumenda. Aut consequatur aliquid hic dolorum dolores non culpa non sed quisquam et assumenda alias perspiciatis. Quia quibusdam dolores sed aut saepe placeat provident architecto blanditiis. Ipsam rem repellat facere dolores quia qui quasi soluta voluptas ullam doloremque. Magni voluptas omnis ratione dolorum autem in quis consequuntur. Vitae quis dolorem non et impedit. Officiis provident sint et deleniti quidem sunt veniam veritatis consequuntur asperiores ratione et nulla consequatur
-                  </p>
-                  <span class='read-more'>
-                    Read more &rarr;
-                  </span>
-                </section>
+                <div class='row'>
+                  <figure class='span3'>
+                    <img src="http://placehold.development2.sequence.co.uk/?form=png&w=726&h=405&f=Helvetica&fs=24&icol=hexdddddd&col=hex858585&t=726 x 405" width="726" height="405" />
+                    
+                    <figcaption>
+                      Modi et occaecati consectetur quasi minus sint iusto eos vel non
+                    </figcaption>
+                  </figure>
+                  <section class='copy span6'>
+                    <p>
+                      Quibusdam sequi est qui harum dolor at perferendis exercitationem aut distinctio error veritatis excepturi. Necessitatibus provident et rerum ex quo consequatur voluptate culpa dolores repellendus suscipit dolore. Vel modi maxime repellat amet eaque eaque omnis cum mollitia quidem laborum quas. Eveniet quaerat aut in mollitia ratione sint soluta possimus omnis aliquid animi dolores. Error assumenda sequi et suscipit id maiores sint. Corrupti aut blanditiis velit ab ullam beatae. Placeat impedit velit a aut magni omnis voluptas voluptatum. Sed qui maxime numquam aliquam aut. Ducimus praesentium est ducimus quia ex voluptate omnis adipisci necessitatibus corrupti. Dolorum eum quas sed dolor nam iusto rerum exercitationem vel laborum commodi recusandae. Quo qui est alias aspernatur ut aperiam dolorum ipsam consequuntur ut enim ipsam est recusandae. Ea accusantium et veritatis et quo accusamus temporibus saepe animi quia quod rerum quam
+                    </p>
+                    <footer>
+                      <span class='read-more'>
+                        Read more &rarr;
+                      </span>
+                    </footer>
+                  </section>
+                </div>
+              </article>
+            </a>
+            <!-- END .news-item -->
+            <!-- START .news-item -->
+            <a class='news-item' href='news-article.html' title='Summary of news article'>
+              <article>
+                <header>
+                  <h2>
+                    quo nam autem
+                  </h2>
+                  <time datetime='2009-11-13T20:00Z'>
+                    3 hours ago
+                  </time>
+                </header>
+                <div class='row'>
+                  <figure class='span3'>
+                    <img src="http://placehold.development2.sequence.co.uk/?form=png&w=726&h=405&f=Helvetica&fs=24&icol=hexdddddd&col=hex858585&t=726 x 405" width="726" height="405" />
+                    
+                    <figcaption>
+                      Qui laborum dolores minus praesentium nulla et esse
+                    </figcaption>
+                  </figure>
+                  <section class='copy span6'>
+                    <p>
+                      Aut ipsum est eum omnis rerum saepe vel et quia labore. Earum harum nesciunt in labore sit eaque. Atque debitis ut quia cum sunt facere quisquam itaque deserunt officiis voluptas ut aut deleniti. Qui maxime dolorem quibusdam accusantium animi. Nostrum ex ut qui rem quia omnis qui repudiandae modi. Officiis voluptatem tempore rerum accusantium consequuntur ad qui. Distinctio blanditiis est voluptas optio. Laudantium unde beatae repellendus ab delectus et. Necessitatibus beatae sunt dolorum delectus omnis maxime ut ipsam vel voluptatem
+                    </p>
+                    <footer>
+                      <span class='read-more'>
+                        Read more &rarr;
+                      </span>
+                    </footer>
+                  </section>
+                </div>
+              </article>
+            </a>
+            <!-- END .news-item -->
+            <!-- START .news-item -->
+            <a class='news-item' href='news-article.html' title='Summary of news article'>
+              <article>
+                <header>
+                  <h2>
+                    eaque voluptatibus ut est molestias
+                  </h2>
+                  <time datetime='2009-11-13T20:00Z'>
+                    3 hours ago
+                  </time>
+                </header>
+                <div class='row'>
+                  <figure class='span3'>
+                    <img src="http://placehold.development2.sequence.co.uk/?form=png&w=726&h=405&f=Helvetica&fs=24&icol=hexdddddd&col=hex858585&t=726 x 405" width="726" height="405" />
+                    
+                    <figcaption>
+                      Fuga asperiores et iure culpa et
+                    </figcaption>
+                  </figure>
+                  <section class='copy span6'>
+                    <p>
+                      Consequatur est expedita accusantium voluptas dolores nesciunt eum qui et. Voluptatem id quos nemo consequatur molestiae odio atque id nostrum consequatur. Asperiores quo aut id. Est nulla laborum laudantium iure modi illo reiciendis sunt sit aperiam dolorem. Libero beatae illo eos pariatur et velit aliquam incidunt necessitatibus doloribus laudantium minus nam magnam. Minima expedita quo itaque nisi aut tempore et aliquid. Recusandae deserunt eos velit est at cumque id cumque voluptatum vel. Et et minima nobis dolores consequatur animi debitis corrupti nisi ullam modi consequatur inventore. Adipisci id non distinctio dolore autem delectus tempora et et unde sequi. Sed quam reprehenderit iure minima veniam numquam nostrum. Blanditiis inventore qui aperiam porro totam eveniet ut incidunt quis dolor ipsam dolorem facere. Qui ipsum corporis dolores maiores labore temporibus voluptatem consequatur
+                    </p>
+                    <footer>
+                      <span class='read-more'>
+                        Read more &rarr;
+                      </span>
+                    </footer>
+                  </section>
+                </div>
               </article>
             </a>
             <!-- END .news-item -->
@@ -325,177 +453,175 @@
           </div>
           <!-- END Pagination -->
         </div>
-        <div class='col-4 last' id='sidebar'>
+        <div class='span3 last' id='sidebar'>
           <!-- START #events-widget -->
           <section class='widget' id='events-widget'>
-            <h2>
-              Upcoming events
-            </h2>
+            <header>
+              <h2>
+                Upcoming events
+              </h2>
+            </header>
             <ul>
               <li>
                 <a class='event-item' href='#' title='Brief summary of article'>
                   <h3>
-                    eveniet voluptas
+                    facere quis quo
                   </h3>
                   <time datetime='2012-04-13'>
-                    Sat Sep 22, 2007
+                    Wed Sep 19, 2001
                   </time>
                   <p>
-                    sequi maxime totam voluptatem delectus voluptas velit est quos at dolorem
+                    et autem quae ea deserunt autem cupiditate molestiae qui sed molestiae dolorem beatae velit officiis sit incidunt sint hic amet similique possimus
                   </p>
                 </a>
               </li>
               <li>
                 <a class='event-item' href='#' title='Brief summary of article'>
                   <h3>
-                    excepturi
+                    impedit odio
                   </h3>
                   <time datetime='2012-04-13'>
-                    Mon Jan 24, 2005
+                    Sun Nov 26, 2006
                   </time>
                   <p>
-                    illum aut molestiae ut deserunt explicabo quasi qui voluptas dolorem quas quibusdam aut veniam aut quae non et veniam minus qui temporibus ducimus sed
+                    eos qui blanditiis aut et cupiditate minima omnis soluta velit dolorem animi recusandae accusamus laborum delectus dolor praesentium maxime
                   </p>
                 </a>
               </li>
               <li>
                 <a class='event-item' href='#' title='Brief summary of article'>
                   <h3>
-                    consequatur nisi
+                    et alias odio
                   </h3>
                   <time datetime='2012-04-13'>
-                    Fri Oct 17, 1997
+                    Thu Aug 26, 2004
                   </time>
                   <p>
-                    consequatur iste sed magni officia delectus
+                    reiciendis et consequatur accusantium quo id possimus commodi totam neque autem nam cumque dolore rerum
                   </p>
                 </a>
               </li>
             </ul>
-            <a class='read-more' href='#' title='View all events'>
-              All Events &rarr;
-            </a>
+            <footer>
+              <a class='read-more' href='#' title='View all events'>
+                All Events &rarr;
+              </a>
+            </footer>
           </section>
           <!-- END #events-widget -->
           <!-- START news-widget -->
           <section class='widget' id='news-widget'>
-            <h2>
-              Latest news
-            </h2>
+            <header>
+              <h2>Latest news</h2>
+            </header>
             <ul>
               <li>
                 <a class='news-item' href='#' title='Brief summary of article'>
                   <h3>
-                    sunt velit reprehenderit et sapiente
+                    quibusdam labore
                   </h3>
                   <time datetime='2012-04-13'>
-                    Fri Sep 27, 1996
+                    Thu Oct 28, 2004
                   </time>
                 </a>
               </li>
               <li>
                 <a class='news-item' href='#' title='Brief summary of article'>
                   <h3>
-                    ab velit facere
+                    quas et rerum dolores doloribus
                   </h3>
                   <time datetime='2012-04-13'>
-                    Fri Oct 01, 1993
-                  </time>
-                </a>
-              </li>
-              <li>
-                <a class='news-item' href='#' title='Brief summary of article'>
-                  <h3>
-                    architecto aliquam
-                  </h3>
-                  <time datetime='2012-04-13'>
-                    Tue Dec 01, 1992
+                    Sat Jun 10, 2000
                   </time>
                 </a>
               </li>
             </ul>
-            <a class='read-more' href='#' title='View all events'>
-              All news &rarr;
-            </a>
+            <footer>
+              <a class='read-more' href='#' title='View all events'>
+                All news &rarr;
+              </a>
+            </footer>
           </section>
           <!-- END news-widget -->
+          <!-- START .video -->
+          <section class='video'>
+            <video controls='controls' height='125' id='player1' poster='http://placehold.development2.sequence.co.uk/?form=png&amp;w=320&amp;h=240&amp;t=splash%20screen' preload='none' width='222'>
+              <source src='http://www.youtube.com/watch?v=UAqdKKusisw' type='video/x-youtube'></source>
+            </video>
+            <span id='player1-mode'></span>
+          </section>
+          <!-- END .video -->
+          <!--
+            INTERNAL VIDEO
+            <video controls='controls' height='240' poster='' preload='none' width='320'>
+              <source src='media/video.mp4' type='video/mp4'></source>
+              <source src='media/video.webm' type='video/webm'></source>
+              <source src='media/video.ogv' type='video/ogg'></source>
+              <object data='player.swf' height='240' type='application/x-shockwave-flash' width='320'>
+                <param name='movie' value='player.swf' />
+                <param name='flashvars' value='controls=true&amp;amp;poster=media/video.jpg&amp;amp;file=media/video.mp4'>
+                  <img src="http://placehold.development2.sequence.co.uk/?form=png&w=320&h=240&f=Helvetica&fs=24&icol=hexdddddd&col=hex858585&t=320 x 240" width="320" height="240" />
+                  
+                </param>
+              </object>
+            </video>
+          -->
+          <!--
+            USAGE:
+            interal - video/mp4, video/webm, video/ogg
+            youtube - video/youtube
+            poster  - splash screen
+            object  - flash fallback
+          -->
         </div>
       </div>
-      <footer id='site-footer'>
-        <!-- START twitter -->
-        <section id='twitter'>
-          <h3>
-            What are we up to?
-          </h3>
-          <div class='tweet'>
-            <div class='user'>
-              @garndiffaith
-              <span>
-                Full Name
-              </span>
-            </div>
-            <p>Check out this #tweet that I sent to @someone.</p>
-            <div class='time'>
-              3 hours ago
-            </div>
-          </div>
-          <div class='tweet'>
-            <div class='user'>
-              @garndiffaith
-              <span>
-                Full Name
-              </span>
-            </div>
-            <p>Check out this #tweet that I sent to @someone.</p>
-            <div class='time'>
-              3 hours ago
-            </div>
-          </div>
-          <a>
-            Follow us on twitter &rarr;
-          </a>
-        </section>
-        <!-- END twitter -->
-        <!-- START facebook -->
-        <section id='facebook'>
-          <h3>
-            Woo Facebook!
-          </h3>
-          <div class='user'>
-            Facebook Username
-          </div>
-          <p>Check out this Facebook nonsense I posted to my 'wall' to appear down-with-the-kids.</p>
-          <div class='time'>
-            3 hours ago
-          </div>
-          <a>
-            Visit us on Facebook &rarr;
-          </a>
-        </section>
-        <!-- END facebook -->
-        <nav>
-          <li>
-            <a>Sitemap</a>
-          </li>
-          <li>
-            <a>Terms &amp; Conditions</a>
-          </li>
-          <li>
-            <a>Privacy Statement</a>
-          </li>
-        </nav>
-      </footer>
-      <script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
-      <script src='/js/sequence/utils/utils.js'></script>
-      <script src='/js/sequence/utils/date/dateutils.js'></script>
-      <script src='/js/sequence/effects/transition/transition.js'></script>
-      <script src='/js/sequence/modules/twitter/twitter.js'></script>
-      <script src='/js/sequence/modules/coffeeslider/basemodule.js'></script>
-      <script src='/js/sequence/modules/coffeeslider/dotnav.js'></script>
-      <script src='/js/sequence/modules/coffeeslider/coffeeslider.js'></script>
-      <script src='/js/sequence/modules/coffeeslider/thumbslider.js'></script>
-      <script src='/js/sequence/modules/video/mediaelement-and-player.js'></script>
-      <script src='/js/sequence/client/app.js'></script>
     </div>
-  </form>
+    <footer id='site-footer'>
+      <nav>
+        <li>
+          <a>Sitemap</a>
+        </li>
+        <li>
+          <a>Terms &amp; Conditions</a>
+        </li>
+        <li>
+          <a>Privacy Statement</a>
+        </li>
+      </nav>
+    </footer>
+    <!-- / 3rd party libs -->
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js'></script>
+    <script src='js/thirdparty/ga.social.js'></script>
+    <script src='js/thirdparty/harvey.js'></script>
+    <!-- %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"} -->
+    <!-- / Sequence libs -->
+    <script src='js/sequence/modules/googleanalytics/google-analytics.js'></script>
+    <script src='js/sequence/utils/utils.js'></script>
+    <script src='js/sequence/utils/date/dateutils.js'></script>
+    <script src='js/sequence/utils/browser/media-queries.js'></script>
+    <script src='js/sequence/effects/transition/transition.js'></script>
+    <script src='js/sequence/effects/transition/transitioncontroller.js'></script>
+    <script src='js/sequence/effects/transition/transitiondelegate.js'></script>
+    <script src='js/sequence/modules/nav/nav.js'></script>
+    <script src='js/sequence/modules/twitter/twitter.js'></script>
+    <script src='js/sequence/modules/facebook-stats/facebook-stats.js'></script>
+    <script src='js/sequence/modules/facebook-share/facebook-share.js'></script>
+    <script src='js/sequence/modules/twitter-share/twitter-share.js'></script>
+    <script src='js/sequence/modules/google-plus/google-plus.js'></script>
+    <script src='js/sequence/modules/coffeeslider/baseslider.js'></script>
+    <script src='js/sequence/modules/coffeeslider/dotnav.js'></script>
+    <script src='js/sequence/modules/coffeeslider/coffeeslider.js'></script>
+    <script src='js/sequence/modules/coffeeslider/thumbslider.js'></script>
+    <script src='js/sequence/modules/coffeeslider/coffeegallery.js'></script>
+    <script src='js/sequence/modules/facebook-stats/facebook-stats.js'></script>
+    <script src='js/sequence/modules/facebook-share/facebook-share.js'></script>
+    <script src='js/sequence/modules/twitter-share/twitter-share.js'></script>
+    <script src='js/sequence/modules/google-plus/google-plus.js'></script>
+    <script src='js/sequence/modules/video/mediaelement-and-player.js'></script>
+    <script src='js/sequence/modules/maps/googlemapsapicontroller.js'></script>
+    <script src='js/sequence/modules/maps/googlemap.js'></script>
+    <script src='js/sequence/modules/maps/maplocationscontroller.js'></script>
+    <script src='js/sequence/modules/flickrgallery/FlickrGallery-packaged.js'></script>
+    <script src='js/sequence/client/app.js'></script>
+  </div>
 </body>

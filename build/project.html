@@ -5,13 +5,18 @@
 <!--[if IE 9 ]>                 <html lang="en-GB" class="no-js ie9"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en-GB" class="no-js"> <!--<![endif]-->
 
-<head>
+<head prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#'>
   <meta charset='utf-8' />
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
   <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
   <title>Project</title>
   <meta content='' name='description' />
   <meta content='' name='author' />
+  <meta content='' property='og:title' />
+  <meta content='' property='og:type'><!-- see https://developers.facebook.com/docs/opengraph/objects/builtin/ for examples --></meta>
+  <meta content='' property='og:image'><!-- see https://developers.facebook.com/docs/share/ for dimensions --></meta>
+  <meta content='' property='og:url' />
+  <meta content='' property='og:description' />
   <!-- Mobile Specific Meta Tags -->
   <meta content='width=device-width, initial-scale=1' name='viewport' />
   <meta content='yes' name='apple-mobile-web-app-capable' />
@@ -20,13 +25,14 @@
   <link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/print.css" media="print" rel="stylesheet" type="text/css" />
   <script src='/js/thirdparty/modernizr.js'></script>
+  <script src='http://localhost:8081/target/target-script-min.js#anonymous'></script>
 </head>
 <body>
-  <form action='/' id='mainform' method='post'>
-    <div class='wrapper'>
-      <header id='site-header'>
+  <div class='container'>
+    <header id='site-header'>
+      <div class='row'>
         <section id='branding'>
-          <div class='col-5'>
+          <div class='span7'>
             <a href='#' title='Company Name'>
               Mego
             </a>
@@ -35,57 +41,90 @@
             </p>
           </div>
         </section>
-        <nav class='nav-bar' id='site-nav'>
-          <ul>
-            <li>
-              <a href='index.html'>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href='about-us.html'>
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href='projects.html'>
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href='news.html'>
-                News
-              </a>
-            </li>
-            <li>
-              <a href='events.html'>
-                Events
-              </a>
-            </li>
-            <li>
-              <a href='contact-us.html'>
-                Contact us
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <div class='container' id='projects'>
-        <div class='col-8' id='content'>
-          <h1>
-            Project Title
-          </h1>
-          <p>
-            Quia ut culpa enim hic qui consectetur quas laudantium voluptates modi dolorum ipsam quae voluptas. reprehenderit tempore alias ut et laudantium quia. nemo ut odit asperiores ut sit ad doloremque. et et pariatur ex quis iste et amet quod alias voluptatem ducimus. maxime eius qui ut sit facilis voluptatem quod sit. velit veniam ex quae
-          </p>
-          <p>
-            Autem qui sed possimus quia rerum ea quia labore fuga quos eos autem expedita. optio dolores voluptas ea sed saepe et. accusantium ut aut nisi provident vel officia corrupti. nobis beatae voluptatem distinctio id consectetur temporibus voluptatem. aliquam dolor dolore quia molestiae. est provident explicabo aut enim sed modi nam enim sint exercitationem molestias. illum voluptas similique explicabo molestiae impedit
-          </p>
-          <p>
-            Magni incidunt ex eum laboriosam facere est quo voluptatum enim ea. quo maiores perferendis nesciunt consequatur sit ratione enim quam saepe. et assumenda eveniet iusto voluptatem exercitationem aut ipsa qui ipsum atque sunt. et nostrum ea inventore quibusdam fugiat consequatur. amet dicta totam ad ipsa ratione adipisci doloremque doloremque et sint nam earum consequatur exercitationem. ea aut delectus ut non voluptate omnis voluptatibus et itaque animi itaque repellendus voluptas
-          </p>
+        <!-- START mini-search -->
+        <section class='mini-search '>
+          <label for='search'>Search</label>
+          <input class='field-search' id='search' placeholder='Enter keyword' type='text' />
+          <input class='btn-search' type='submit' value='Go' />
+        </section>
+        <!-- END mini-search -->
+      </div>
+      <div class='row'>
+        <div class='span12'>
+          <nav id='site-nav'>
+            <ul>
+              <li>
+                <a class='' href='index.html'>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a class='' href='about-us.html'>
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a class='' href='projects.html'>
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a class='' href='news.html'>
+                  News
+                </a>
+              </li>
+              <li>
+                <a class='' href='events.html'>
+                  Events
+                </a>
+              </li>
+              <li>
+                <a class='' href='blog.html'>
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a class='' href='gallery.html'>
+                  Gallery
+                </a>
+              </li>
+              <li>
+                <a class='' href='case-studies.html'>
+                  Case Studies
+                </a>
+              </li>
+              <li>
+                <a class='' href='contact-us.html'>
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <div class='col-4 last' id='sidebar'>
+      </div>
+    </header>
+    <div class='main' id='projects'>
+      <div class='row'>
+        <div class='span9' id='content'>
+          <header>
+            <h1>
+              Project Title
+            </h1>
+          </header>
+          <p>
+            Adipisci ut corporis placeat consequatur dolor hic inventore et perspiciatis modi. ducimus occaecati beatae sint. repellendus perspiciatis molestias dolorem aliquid recusandae. vitae enim expedita excepturi ut sit et ut perspiciatis repellendus deleniti tempora laboriosam maxime quasi. odio officiis consequatur iste repellendus deserunt
+          </p>
+          <p>
+            Illum cum laudantium nemo adipisci esse odit omnis praesentium. ipsam nemo fugit debitis qui. et et vel sequi. quis nulla voluptatem dolorem et eum rerum aut dolorum omnis suscipit aut est. ut suscipit accusantium animi earum et eum et tempore aut
+          </p>
+          <p>
+            Facere nostrum magni accusamus ut eius eum provident voluptas voluptates vel consequuntur. sequi distinctio aperiam doloribus ratione iusto soluta rerum eveniet non nihil et minus. eos tenetur magni et vitae corrupti deleniti delectus eveniet laborum. unde perspiciatis velit nobis. nulla ratione sunt est tempore iusto voluptatem amet exercitationem omnis et voluptatem facilis iure cumque. voluptatem incidunt aut dicta qui pariatur repellat alias ex voluptatum saepe est ipsum recusandae impedit
+          </p>
+          <a class='button' href='projects.html'>
+            &larr; Back to Projects
+          </a>
+        </div>
+        <div class='span3 last' id='sidebar'>
           <section class='widget' id='projects-widget'>
             <h2>
               Projects
@@ -93,22 +132,22 @@
             <ul>
               <li>
                 <a href='project.html'>
-                  vel eos distinctio qui
+                  voluptatem assumenda
                 </a>
               </li>
               <li>
                 <a href='project.html'>
-                  nostrum ullam
+                  porro sunt dignissimos fugit
                 </a>
               </li>
               <li>
                 <a href='project.html'>
-                  et nihil sequi blanditiis
+                  totam sit
                 </a>
               </li>
               <li>
                 <a href='project.html'>
-                  maxime est et
+                  possimus accusantium est
                 </a>
               </li>
             </ul>
@@ -117,11 +156,11 @@
           <section class='cta'>
             <a href='#' title='Title'>
               <figure>
-                <img src="http://placehold.development2.sequence.co.uk/?form=png&w=306&h=200&f=Helvetica&fs=24&icol=hexf6f6f6&col=hexdddddd" width="306" height="200" />
+                <img src="http://placehold.development2.sequence.co.uk/?form=png&w=220&h=165&f=Helvetica&fs=24&icol=hexdddddd&col=hex858585&t=220 x 165" width="220" height="165" />
                 
               </figure>
               <h3>
-                incidunt aut
+                facilis
               </h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               <span class='button' href=''>
@@ -132,81 +171,53 @@
           <!-- END Generic CTA -->
         </div>
       </div>
-      <footer id='site-footer'>
-        <!-- START twitter -->
-        <section id='twitter'>
-          <h3>
-            What are we up to?
-          </h3>
-          <div class='tweet'>
-            <div class='user'>
-              @garndiffaith
-              <span>
-                Full Name
-              </span>
-            </div>
-            <p>Check out this #tweet that I sent to @someone.</p>
-            <div class='time'>
-              3 hours ago
-            </div>
-          </div>
-          <div class='tweet'>
-            <div class='user'>
-              @garndiffaith
-              <span>
-                Full Name
-              </span>
-            </div>
-            <p>Check out this #tweet that I sent to @someone.</p>
-            <div class='time'>
-              3 hours ago
-            </div>
-          </div>
-          <a>
-            Follow us on twitter &rarr;
-          </a>
-        </section>
-        <!-- END twitter -->
-        <!-- START facebook -->
-        <section id='facebook'>
-          <h3>
-            Woo Facebook!
-          </h3>
-          <div class='user'>
-            Facebook Username
-          </div>
-          <p>Check out this Facebook nonsense I posted to my 'wall' to appear down-with-the-kids.</p>
-          <div class='time'>
-            3 hours ago
-          </div>
-          <a>
-            Visit us on Facebook &rarr;
-          </a>
-        </section>
-        <!-- END facebook -->
-        <nav>
-          <li>
-            <a>Sitemap</a>
-          </li>
-          <li>
-            <a>Terms &amp; Conditions</a>
-          </li>
-          <li>
-            <a>Privacy Statement</a>
-          </li>
-        </nav>
-      </footer>
-      <script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
-      <script src='/js/sequence/utils/utils.js'></script>
-      <script src='/js/sequence/utils/date/dateutils.js'></script>
-      <script src='/js/sequence/effects/transition/transition.js'></script>
-      <script src='/js/sequence/modules/twitter/twitter.js'></script>
-      <script src='/js/sequence/modules/coffeeslider/basemodule.js'></script>
-      <script src='/js/sequence/modules/coffeeslider/dotnav.js'></script>
-      <script src='/js/sequence/modules/coffeeslider/coffeeslider.js'></script>
-      <script src='/js/sequence/modules/coffeeslider/thumbslider.js'></script>
-      <script src='/js/sequence/modules/video/mediaelement-and-player.js'></script>
-      <script src='/js/sequence/client/app.js'></script>
     </div>
-  </form>
+    <footer id='site-footer'>
+      <nav>
+        <li>
+          <a>Sitemap</a>
+        </li>
+        <li>
+          <a>Terms &amp; Conditions</a>
+        </li>
+        <li>
+          <a>Privacy Statement</a>
+        </li>
+      </nav>
+    </footer>
+    <!-- / 3rd party libs -->
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js'></script>
+    <script src='js/thirdparty/ga.social.js'></script>
+    <script src='js/thirdparty/harvey.js'></script>
+    <!-- %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"} -->
+    <!-- / Sequence libs -->
+    <script src='js/sequence/modules/googleanalytics/google-analytics.js'></script>
+    <script src='js/sequence/utils/utils.js'></script>
+    <script src='js/sequence/utils/date/dateutils.js'></script>
+    <script src='js/sequence/utils/browser/media-queries.js'></script>
+    <script src='js/sequence/effects/transition/transition.js'></script>
+    <script src='js/sequence/effects/transition/transitioncontroller.js'></script>
+    <script src='js/sequence/effects/transition/transitiondelegate.js'></script>
+    <script src='js/sequence/modules/nav/nav.js'></script>
+    <script src='js/sequence/modules/twitter/twitter.js'></script>
+    <script src='js/sequence/modules/facebook-stats/facebook-stats.js'></script>
+    <script src='js/sequence/modules/facebook-share/facebook-share.js'></script>
+    <script src='js/sequence/modules/twitter-share/twitter-share.js'></script>
+    <script src='js/sequence/modules/google-plus/google-plus.js'></script>
+    <script src='js/sequence/modules/coffeeslider/baseslider.js'></script>
+    <script src='js/sequence/modules/coffeeslider/dotnav.js'></script>
+    <script src='js/sequence/modules/coffeeslider/coffeeslider.js'></script>
+    <script src='js/sequence/modules/coffeeslider/thumbslider.js'></script>
+    <script src='js/sequence/modules/coffeeslider/coffeegallery.js'></script>
+    <script src='js/sequence/modules/facebook-stats/facebook-stats.js'></script>
+    <script src='js/sequence/modules/facebook-share/facebook-share.js'></script>
+    <script src='js/sequence/modules/twitter-share/twitter-share.js'></script>
+    <script src='js/sequence/modules/google-plus/google-plus.js'></script>
+    <script src='js/sequence/modules/video/mediaelement-and-player.js'></script>
+    <script src='js/sequence/modules/maps/googlemapsapicontroller.js'></script>
+    <script src='js/sequence/modules/maps/googlemap.js'></script>
+    <script src='js/sequence/modules/maps/maplocationscontroller.js'></script>
+    <script src='js/sequence/modules/flickrgallery/FlickrGallery-packaged.js'></script>
+    <script src='js/sequence/client/app.js'></script>
+  </div>
 </body>

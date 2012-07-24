@@ -5,13 +5,18 @@
 <!--[if IE 9 ]>                 <html lang="en-GB" class="no-js ie9"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en-GB" class="no-js"> <!--<![endif]-->
 
-<head>
+<head prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#'>
   <meta charset='utf-8' />
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
   <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
   <title>News Item</title>
   <meta content='' name='description' />
   <meta content='' name='author' />
+  <meta content='' property='og:title' />
+  <meta content='' property='og:type'><!-- see https://developers.facebook.com/docs/opengraph/objects/builtin/ for examples --></meta>
+  <meta content='' property='og:image'><!-- see https://developers.facebook.com/docs/share/ for dimensions --></meta>
+  <meta content='' property='og:url' />
+  <meta content='' property='og:description' />
   <!-- Mobile Specific Meta Tags -->
   <meta content='width=device-width, initial-scale=1' name='viewport' />
   <meta content='yes' name='apple-mobile-web-app-capable' />
@@ -20,13 +25,14 @@
   <link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/print.css" media="print" rel="stylesheet" type="text/css" />
   <script src='/js/thirdparty/modernizr.js'></script>
+  <script src='http://localhost:8081/target/target-script-min.js#anonymous'></script>
 </head>
 <body>
-  <form action='/' id='mainform' method='post'>
-    <div class='wrapper'>
-      <header id='site-header'>
+  <div class='container'>
+    <header id='site-header'>
+      <div class='row'>
         <section id='branding'>
-          <div class='col-5'>
+          <div class='span7'>
             <a href='#' title='Company Name'>
               Mego
             </a>
@@ -35,283 +41,337 @@
             </p>
           </div>
         </section>
-        <nav class='nav-bar' id='site-nav'>
-          <ul>
-            <li>
-              <a href='index.html'>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href='about-us.html'>
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href='projects.html'>
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href='news.html'>
-                News
-              </a>
-            </li>
-            <li>
-              <a href='events.html'>
-                Events
-              </a>
-            </li>
-            <li>
-              <a href='contact-us.html'>
-                Contact us
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <!-- START mini-search -->
+        <section class='mini-search '>
+          <label for='search'>Search</label>
+          <input class='field-search' id='search' placeholder='Enter keyword' type='text' />
+          <input class='btn-search' type='submit' value='Go' />
+        </section>
+        <!-- END mini-search -->
+      </div>
+      <div class='row'>
+        <div class='span12'>
+          <nav id='site-nav'>
+            <ul>
+              <li>
+                <a class='' href='index.html'>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a class='' href='about-us.html'>
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a class='' href='projects.html'>
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a class='' href='news.html'>
+                  News
+                </a>
+              </li>
+              <li>
+                <a class='' href='events.html'>
+                  Events
+                </a>
+              </li>
+              <li>
+                <a class='' href='blog.html'>
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a class='' href='gallery.html'>
+                  Gallery
+                </a>
+              </li>
+              <li>
+                <a class='' href='case-studies.html'>
+                  Case Studies
+                </a>
+              </li>
+              <li>
+                <a class='' href='contact-us.html'>
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class='main'>
+      <header id='page-header'>
+        <h1>
+          voluptatem cum eos atque
+        </h1>
+        <time datetime='2012-04-13'>
+          13th April 2012
+        </time>
       </header>
-      <div class='container'>
-        <header id='page-header'>
-          <h1>
-            aut rerum ipsa
-          </h1>
-          <time datetime='2012-04-13'>
-            13th April 2012
-          </time>
-        </header>
-        <div class='col-8' id='content'>
+      <div class='row'>
+        <div class='span9' id='content'>
           <figure>
-            <img src="http://placehold.development2.sequence.co.uk/?form=png&w=640&h=320&f=Helvetica&fs=24&icol=hexf6f6f6&col=hexdddddd" width="640" height="320" />
+            <img src="http://placehold.development2.sequence.co.uk/?form=png&w=726&h=405&f=Helvetica&fs=24&icol=hexdddddd&col=hex858585&t=726 x 405" width="726" height="405" />
             
             <figcaption>
-              Expedita vero quasi quasi repellendus rerum
+              Exercitationem corporis blanditiis est
             </figcaption>
-            <h2>
-              exercitationem
-            </h2>
-            <p>
-              Repellendus minima id sunt iste. Quas molestiae cumque modi ea aliquam consectetur impedit facere est laborum odit totam
-            </p>
-            <p>
-              Veritatis sed vero culpa voluptatem. Repellat quisquam aperiam et qui rem consequatur culpa delectus aspernatur sed tenetur alias est quia. Qui suscipit et voluptas et est. Laborum dolorum fugiat dolore dolorem magnam et eligendi magnam
-            </p>
-            <p>
-              Eos autem nulla ut. Mollitia minus illo dolorem soluta
-            </p>
-            <h2>
-              accusantium
-            </h2>
-            <p>
-              Beatae quos delectus quia. Magnam ea aut dignissimos iste enim. Numquam a eum veritatis aut laborum aperiam iusto. Est temporibus nulla magni laboriosam eaque aut
-            </p>
-            <p>
-              Est fugiat dolorem vel et. Omnis facilis odio nisi. Consequuntur qui veritatis iste. Libero accusantium ut quos veritatis eum vero nulla tempora. Vero quo error quas tempora magnam cupiditate architecto. Quis et molestiae ullam illum ut quae voluptatum mollitia nihil architecto incidunt occaecati occaecati
-            </p>
-            <p>
-              Sint alias laudantium laborum maxime id aut libero eligendi aliquam. Nulla dicta doloremque dolor et dicta officia temporibus molestiae maxime quod nostrum aut eum hic. Voluptas facere et odio est mollitia impedit eum in saepe et quasi cumque est ut. Commodi tempora doloremque et et nobis accusamus adipisci illo voluptatem eum atque fugit ut. Explicabo tempore non impedit provident voluptates molestiae quidem nulla reprehenderit repellendus perferendis et assumenda. Explicabo quas et animi aspernatur et. Qui odit voluptatem officia et nam ipsum voluptas. Unde eius qui commodi labore modi labore consequuntur voluptatum quia et quae. Officiis sit quam et quia
-            </p>
-            <p>
-              Velit natus dolores est. Assumenda neque natus consectetur dicta. Ut cupiditate magnam minima neque debitis. Et tenetur earum est nihil quia eum totam quae quibusdam natus error cupiditate. Sit voluptas ipsa molestias est neque maxime nemo ipsam occaecati. Deleniti veritatis sed ad
-            </p>
-            <h2>
-              nisi
-            </h2>
-            <p>
-              Dolorem rerum voluptatem ea illo quo expedita. Et esse commodi ut dolore reiciendis animi quam est atque. Officiis porro in quo magnam beatae beatae. Sit fugiat nihil alias sed molestiae natus
-            </p>
-            <p>
-              Voluptatem architecto pariatur voluptatem est qui aut provident. Architecto expedita ab quo culpa non ad cum repellendus laboriosam vel odio et sunt dolor. Quae quia architecto perferendis et qui consequatur ex corrupti corrupti hic voluptatem et. Ullam eaque porro est fuga maxime aut ducimus possimus enim laudantium velit qui. Et eaque aperiam corporis quo. Maxime dignissimos soluta et debitis optio ut dolore blanditiis. Qui voluptatibus voluptatem et illum atque vitae enim. Vel laboriosam corrupti hic
-            </p>
-            <p>
-              Non possimus ipsum veritatis et commodi consectetur id in tempore quia officia eum. Consequuntur repellendus omnis delectus quia aut omnis incidunt numquam dicta et exercitationem. Qui dicta rerum eveniet blanditiis nostrum eos corporis harum molestiae est quia. Distinctio quibusdam saepe sit eveniet consequuntur officiis aut consequatur molestias laudantium
-            </p>
-            <p>
-              Dolorem corrupti eum nihil molestiae aut dolores accusamus voluptates eum asperiores. Autem et iusto exercitationem consectetur aut et iste et rem aut nisi quisquam sequi. Nam explicabo voluptatem voluptatibus ex sed eum harum numquam voluptatem minus. Et earum blanditiis quas suscipit deserunt voluptatem dolorem necessitatibus et vel eveniet odit. Culpa fugiat voluptatem omnis veniam quae expedita dolor possimus id temporibus
-            </p>
-            <p>
-              Vel ipsa et sequi quae et suscipit voluptatem est eligendi odio enim commodi qui. Adipisci dolore sed voluptatem quasi et libero aliquid quia aperiam quo reprehenderit hic possimus. Qui sint eveniet velit quod possimus aut est quasi qui aut pariatur soluta sed. Enim est voluptas veniam est dolore unde excepturi neque aperiam nihil. Sed voluptates quia iusto sit placeat consequatur. Doloribus occaecati repellendus error quo et quisquam voluptatem amet ut fugiat quo. Rerum voluptas rerum dolor earum quia fuga est rerum recusandae qui modi quisquam mollitia. Est reiciendis dolores et libero aut nesciunt exercitationem
-            </p>
-            <a class='button' href='/news'>
-              &larr; Back
-            </a>
-            <footer id='news-footer'>
-              <!-- START fb-like -->
-              <div class='fb-like' data-href='http://www.github.com/sequencelabs/mego' data-layout='button_count' data-send='false' data-show-faces='false' data-width='150'></div>
-              <!-- END fb-like -->
-            </footer>
           </figure>
+          <h2>
+            illum quia
+          </h2>
+          <p>
+            Molestiae esse sequi non facere. Minima beatae dolor sequi cum quas omnis velit maxime in temporibus nostrum non deserunt
+          </p>
+          <blockquote>
+            Sint voluptatem voluptas sit inventore at quo et praesentium facilis incidunt qui. Veniam et temporibus voluptatem totam
+          </blockquote>
+          <p>
+            Molestiae voluptatibus qui aspernatur. Non eligendi quas esse sed numquam sed vitae numquam quidem ut qui qui est. Aspernatur aut magni tempore magnam necessitatibus qui error quia repellat autem necessitatibus sunt. Temporibus distinctio omnis consequatur qui minima maxime nobis maiores similique nesciunt eum blanditiis ad enim
+          </p>
+          <p>
+            Labore pariatur repudiandae deleniti aut assumenda eum asperiores. Illum est animi eligendi officia qui ut ut in eligendi accusantium. Consequuntur quam cum dolorum consectetur culpa ut. Atque rerum eos veritatis ut et minima ut et. Iusto amet in error enim quo quidem in debitis sint ut. Aut adipisci laudantium fugit quia est corrupti quasi et consequatur ut sit sint
+          </p>
+          <p>
+            Dolore adipisci ea suscipit omnis et illo velit doloremque et necessitatibus quas. Dolores nemo occaecati in quo et est ex ab voluptas
+          </p>
+          <p>
+            Nobis aut beatae alias sequi quidem. Optio aut aut aut enim id sint id repellat tenetur blanditiis et qui maiores. Et iusto similique eius et quod neque nobis soluta et quasi. Dolore qui dolorum reiciendis sit animi ipsam id repudiandae necessitatibus et. Repellendus nihil dolores aut dolores et et ut minima magni quia nihil
+          </p>
+          <h2>
+            blanditiis est
+          </h2>
+          <p>
+            Et expedita sunt optio consequatur. Magnam facere omnis eius. Omnis vitae ab molestiae eaque illo rerum. Non consequuntur et ea at praesentium eum. Incidunt eum et hic alias consequatur a necessitatibus quibusdam qui reprehenderit sapiente. Eveniet minima cupiditate repellendus doloribus sint. Ut et incidunt facere sunt aut ut quia amet sint vel ipsa rerum voluptas odit
+          </p>
+          <blockquote>
+            Et ipsum nostrum unde enim consequatur in incidunt qui recusandae necessitatibus magnam ut tenetur officia. Consequatur temporibus odio tempore dolor omnis doloremque ut recusandae et ullam
+          </blockquote>
+          <p>
+            Sint qui unde vitae aut consequuntur est atque cupiditate ut. Tempore aliquam et quibusdam aut officiis est aut veritatis et saepe. Ut alias eligendi omnis. Necessitatibus aut veritatis et nostrum rerum quia repellat voluptas molestiae ratione non rerum
+          </p>
+          <p>
+            Qui id ducimus dolorem illum iste quia maxime voluptate officiis non dignissimos ut voluptas quod. Occaecati voluptas qui eius omnis nesciunt eveniet. Recusandae qui aut dolores sit minima similique voluptas fugiat nihil. Est perferendis ratione distinctio rerum sint. Itaque similique nisi voluptate voluptatem aut illo vitae distinctio similique laudantium ad dolores inventore. Iusto eaque occaecati ut inventore voluptas et ipsum aut consectetur et voluptatum eos iure
+          </p>
+          <p>
+            Iure quo ratione reprehenderit ratione voluptatem. Et asperiores quasi fugiat perferendis odit rerum corrupti. Adipisci voluptatem autem asperiores consectetur reiciendis. Non molestiae nulla dolor neque voluptas qui eum veritatis ratione non ratione maiores unde. Quaerat et eum tenetur laboriosam commodi libero quisquam atque nihil. Vero mollitia saepe velit vero et ut mollitia omnis debitis officiis voluptate nobis beatae quo
+          </p>
+          <p>
+            Est rem excepturi est accusamus enim. Minima quia eius qui optio maxime iure ut eaque nisi aliquid consequuntur. Dolorem voluptates quo culpa rerum nisi et
+          </p>
+          <p>
+            Deleniti dolor labore dolor qui. Perferendis quisquam distinctio quas quaerat ad consequuntur numquam sequi dolor rerum minima sint vel facere
+          </p>
+          <h2>
+            consequatur ipsum
+          </h2>
+          <p>
+            Enim aut quas ut sequi quos eligendi. Reiciendis fugiat minus debitis omnis. Quis autem pariatur vero explicabo eum quis quos nihil quidem commodi ab. Laborum necessitatibus facere maxime quidem accusantium libero illum porro
+          </p>
+          <blockquote>
+            Et cumque consequatur ut animi et assumenda dolorum labore in est consequatur tenetur ex nisi. Ut nihil itaque dolores alias fugiat quia ex quia cupiditate expedita eligendi qui eaque
+          </blockquote>
+          <p>
+            Numquam explicabo maiores earum. Consequatur expedita culpa non soluta porro veniam rerum officiis itaque voluptatem. Architecto expedita accusamus mollitia. Quis repudiandae soluta est. Voluptatum blanditiis consequatur iusto dolorum omnis illo illum ea. Omnis qui in eum blanditiis in dolorem. Ad voluptas numquam natus nemo quo neque id quis quos laudantium. Ratione tempora molestiae voluptatem impedit et
+          </p>
+          <p>
+            Sit voluptates molestiae modi hic sint ex tempora aliquam laborum sit unde. Sed quo voluptatum est magni dolore facilis voluptatem totam dolores provident iure quod. Atque magni dolore veritatis doloremque voluptatibus sed sunt in omnis non. Omnis unde illum in voluptatem aut nulla dolorum nam porro. Qui recusandae voluptatem corporis impedit dolorem deleniti debitis fuga ab atque. Porro ratione hic corrupti occaecati aut magnam nulla consequatur eos. Veritatis quasi provident fugiat quae vitae dolor ut est at eligendi at. Vel dolorem ex officia exercitationem quo. Harum qui et minima fugiat dolores voluptas
+          </p>
+          <p>
+            Sint laudantium eveniet commodi rerum ut. Rem tenetur dolor beatae excepturi voluptates maxime quae quia qui eligendi est. Delectus similique omnis error molestiae ea eligendi. Animi facilis dolores eligendi id eum quae nam cupiditate eos ut sed harum non quam. Perferendis fugit nostrum qui repellat vel beatae ipsum et repudiandae nisi. Dolore voluptas odio modi inventore
+          </p>
+          <h2>
+            dolorem blanditiis
+          </h2>
+          <p>
+            Ut minus perspiciatis quo veritatis voluptas minus. Earum quis aut ipsum dolor. Dolorem provident eos aperiam omnis sit sit eius. Aut quia maiores et. Vel et dolorum est eveniet ut explicabo et quos
+          </p>
+          <blockquote>
+            Qui est repellendus expedita atque asperiores reprehenderit dolores tempore labore totam nulla. Laboriosam id odit aut quas libero exercitationem
+          </blockquote>
+          <p>
+            Quos culpa at qui sint ea voluptas laborum. Est non consequatur ad qui libero quia et laudantium sed ducimus. Dignissimos repudiandae et voluptatem architecto inventore aut blanditiis asperiores provident ea et saepe velit. Aut excepturi aperiam explicabo dolores tenetur voluptatem ea. Labore magni ut quia molestiae autem vitae quaerat. Cumque molestias molestias odit eos. Est sunt odit facere. Sint et aut iste nihil dolorem est
+          </p>
+          <p>
+            Excepturi autem amet quas fugit. Quia voluptatibus natus eum laboriosam eligendi repellendus. Tempore aliquam est molestiae vero omnis sit consequatur illo quo cumque dolorem est rerum. Non aut consequuntur repellendus ratione fugiat aperiam nemo. Accusamus beatae quis officia fuga quia et earum reprehenderit necessitatibus nobis distinctio adipisci natus. Enim eum et voluptatem cumque vel est nihil quia culpa consequatur officiis. Facere quam tempora a nihil eum consectetur qui nihil doloremque magni architecto. Nesciunt voluptates rerum aliquid iusto
+          </p>
+          <p>
+            Quod soluta magnam magni voluptatem tenetur nemo. Qui dolorum aspernatur officiis sint accusamus. Dolor omnis sint harum nihil sunt molestiae ratione quo qui consequatur recusandae natus corrupti. Eum modi cumque aut illum atque sunt adipisci provident dolor quia minima sed possimus beatae. Eos labore porro natus doloremque soluta. Magni fugiat ratione est tenetur itaque doloribus sed id corrupti esse fugiat cumque. Doloremque et consequatur eius architecto ut quod dolorum consequatur quo modi in autem at odit
+          </p>
+          <a class='button' href='/news.html'>
+            &larr; Back
+          </a>
+          <footer id='news-footer'>
+            <!-- START social share/bookmarking -->
+            <section id='social'>
+              <h3>Share this page</h3>
+              <ul>
+                <!-- START fb-like -->
+                <li class='social-share'>
+                  <div id='fb-root'></div>
+                  <div class='fb-like' data-href='http://www.sequence.co.uk' data-layout='button_count' data-send='false' data-show-faces='false' data-width='100'></div>
+                </li>
+                <!-- END fb.like -->
+                <!-- START twitter -->
+                <!-- https://dev.twitter.com/docs/tweet-button -->
+                <li class='social-share'>
+                  <a class='twitter-share-button' data-size='2' data-url='http://www.fenka.co.uk' data-via='your_screen_name' href='http://twitter.com/share'>
+                    Tweet!
+                  </a>
+                  <!-- END twitter -->
+                </li>
+                <!-- START Google+ -->
+                <li class='social-share'>
+                  <div class='g-plus' data-action='share' data-annotation='bubble' data-href='http://www.sequence.co.uk'></div>
+                </li>
+                <!-- END Google+ -->
+              </ul>
+            </section>
+            <!-- START Facebook stats -->
+            <h3>Facebook Stats</h3>
+            <div class='facebook-stats'></div>
+          </footer>
         </div>
-        <div class='col-4 last' id='sidebar'>
+        <div class='span3 last' id='sidebar'>
           <!-- START #events-widget -->
           <section class='widget' id='events-widget'>
-            <h2>
-              Upcoming events
-            </h2>
+            <header>
+              <h2>
+                Upcoming events
+              </h2>
+            </header>
             <ul>
               <li>
                 <a class='event-item' href='#' title='Brief summary of article'>
                   <h3>
-                    et possimus suscipit est laboriosam
+                    accusamus debitis ex recusandae
                   </h3>
                   <time datetime='2012-04-13'>
-                    Tue Apr 06, 1999
+                    Tue Jan 20, 2004
                   </time>
                   <p>
-                    amet inventore dolores sit quos id perferendis provident rerum exercitationem alias qui animi et sit minima dolor commodi est non perspiciatis error
+                    harum repudiandae nesciunt earum at voluptas architecto aliquid molestias ab magni et mollitia ullam dolorem veniam quo ea reiciendis aspernatur
                   </p>
                 </a>
               </li>
               <li>
                 <a class='event-item' href='#' title='Brief summary of article'>
                   <h3>
-                    in aspernatur maxime modi occaecati
+                    et expedita
                   </h3>
                   <time datetime='2012-04-13'>
-                    Thu Jan 30, 1992
+                    Sun Jul 12, 2009
                   </time>
                   <p>
-                    pariatur nulla reiciendis sequi consequuntur laboriosam et at dicta eveniet et quis sint optio
-                  </p>
-                </a>
-              </li>
-              <li>
-                <a class='event-item' href='#' title='Brief summary of article'>
-                  <h3>
-                    ea laboriosam ex
-                  </h3>
-                  <time datetime='2012-04-13'>
-                    Tue Oct 24, 2006
-                  </time>
-                  <p>
-                    ab nihil ut enim voluptas aut voluptate dolorum natus voluptas aperiam quaerat animi architecto ipsa perferendis ea tempora iste alias
+                    aspernatur odio harum architecto commodi aut natus ipsa blanditiis asperiores dolorem quidem omnis nam perferendis odit
                   </p>
                 </a>
               </li>
             </ul>
-            <a class='read-more' href='#' title='View all events'>
-              All Events &rarr;
-            </a>
+            <footer>
+              <a class='read-more' href='#' title='View all events'>
+                All Events &rarr;
+              </a>
+            </footer>
           </section>
           <!-- END #events-widget -->
           <!-- START news-widget -->
           <section class='widget' id='news-widget'>
-            <h2>
-              Latest news
-            </h2>
+            <header>
+              <h2>Latest news</h2>
+            </header>
             <ul>
               <li>
                 <a class='news-item' href='#' title='Brief summary of article'>
                   <h3>
-                    cum
+                    eveniet maiores
                   </h3>
                   <time datetime='2012-04-13'>
-                    Thu Jul 08, 1999
+                    Sat Feb 23, 2008
                   </time>
                 </a>
               </li>
               <li>
                 <a class='news-item' href='#' title='Brief summary of article'>
                   <h3>
-                    quo quia quia
+                    repudiandae rerum nulla iure nisi
                   </h3>
                   <time datetime='2012-04-13'>
-                    Mon Mar 11, 1996
+                    Wed Dec 29, 2004
                   </time>
                 </a>
               </li>
               <li>
                 <a class='news-item' href='#' title='Brief summary of article'>
                   <h3>
-                    repellat
+                    sint autem rerum natus esse
                   </h3>
                   <time datetime='2012-04-13'>
-                    Tue Oct 13, 1998
+                    Wed Apr 30, 2003
                   </time>
                 </a>
               </li>
             </ul>
-            <a class='read-more' href='#' title='View all events'>
-              All news &rarr;
-            </a>
+            <footer>
+              <a class='read-more' href='#' title='View all events'>
+                All news &rarr;
+              </a>
+            </footer>
           </section>
           <!-- END news-widget -->
         </div>
       </div>
-      <footer id='site-footer'>
-        <!-- START twitter -->
-        <section id='twitter'>
-          <h3>
-            What are we up to?
-          </h3>
-          <div class='tweet'>
-            <div class='user'>
-              @garndiffaith
-              <span>
-                Full Name
-              </span>
-            </div>
-            <p>Check out this #tweet that I sent to @someone.</p>
-            <div class='time'>
-              3 hours ago
-            </div>
-          </div>
-          <div class='tweet'>
-            <div class='user'>
-              @garndiffaith
-              <span>
-                Full Name
-              </span>
-            </div>
-            <p>Check out this #tweet that I sent to @someone.</p>
-            <div class='time'>
-              3 hours ago
-            </div>
-          </div>
-          <a>
-            Follow us on twitter &rarr;
-          </a>
-        </section>
-        <!-- END twitter -->
-        <!-- START facebook -->
-        <section id='facebook'>
-          <h3>
-            Woo Facebook!
-          </h3>
-          <div class='user'>
-            Facebook Username
-          </div>
-          <p>Check out this Facebook nonsense I posted to my 'wall' to appear down-with-the-kids.</p>
-          <div class='time'>
-            3 hours ago
-          </div>
-          <a>
-            Visit us on Facebook &rarr;
-          </a>
-        </section>
-        <!-- END facebook -->
-        <nav>
-          <li>
-            <a>Sitemap</a>
-          </li>
-          <li>
-            <a>Terms &amp; Conditions</a>
-          </li>
-          <li>
-            <a>Privacy Statement</a>
-          </li>
-        </nav>
-      </footer>
-      <script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
-      <script src='/js/sequence/utils/utils.js'></script>
-      <script src='/js/sequence/utils/date/dateutils.js'></script>
-      <script src='/js/sequence/effects/transition/transition.js'></script>
-      <script src='/js/sequence/modules/twitter/twitter.js'></script>
-      <script src='/js/sequence/modules/coffeeslider/basemodule.js'></script>
-      <script src='/js/sequence/modules/coffeeslider/dotnav.js'></script>
-      <script src='/js/sequence/modules/coffeeslider/coffeeslider.js'></script>
-      <script src='/js/sequence/modules/coffeeslider/thumbslider.js'></script>
-      <script src='/js/sequence/modules/video/mediaelement-and-player.js'></script>
-      <script src='/js/sequence/client/app.js'></script>
     </div>
-  </form>
+    <footer id='site-footer'>
+      <nav>
+        <li>
+          <a>Sitemap</a>
+        </li>
+        <li>
+          <a>Terms &amp; Conditions</a>
+        </li>
+        <li>
+          <a>Privacy Statement</a>
+        </li>
+      </nav>
+    </footer>
+    <!-- / 3rd party libs -->
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js'></script>
+    <script src='js/thirdparty/ga.social.js'></script>
+    <script src='js/thirdparty/harvey.js'></script>
+    <!-- %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"} -->
+    <!-- / Sequence libs -->
+    <script src='js/sequence/modules/googleanalytics/google-analytics.js'></script>
+    <script src='js/sequence/utils/utils.js'></script>
+    <script src='js/sequence/utils/date/dateutils.js'></script>
+    <script src='js/sequence/utils/browser/media-queries.js'></script>
+    <script src='js/sequence/effects/transition/transition.js'></script>
+    <script src='js/sequence/effects/transition/transitioncontroller.js'></script>
+    <script src='js/sequence/effects/transition/transitiondelegate.js'></script>
+    <script src='js/sequence/modules/nav/nav.js'></script>
+    <script src='js/sequence/modules/twitter/twitter.js'></script>
+    <script src='js/sequence/modules/facebook-stats/facebook-stats.js'></script>
+    <script src='js/sequence/modules/facebook-share/facebook-share.js'></script>
+    <script src='js/sequence/modules/twitter-share/twitter-share.js'></script>
+    <script src='js/sequence/modules/google-plus/google-plus.js'></script>
+    <script src='js/sequence/modules/coffeeslider/baseslider.js'></script>
+    <script src='js/sequence/modules/coffeeslider/dotnav.js'></script>
+    <script src='js/sequence/modules/coffeeslider/coffeeslider.js'></script>
+    <script src='js/sequence/modules/coffeeslider/thumbslider.js'></script>
+    <script src='js/sequence/modules/coffeeslider/coffeegallery.js'></script>
+    <script src='js/sequence/modules/facebook-stats/facebook-stats.js'></script>
+    <script src='js/sequence/modules/facebook-share/facebook-share.js'></script>
+    <script src='js/sequence/modules/twitter-share/twitter-share.js'></script>
+    <script src='js/sequence/modules/google-plus/google-plus.js'></script>
+    <script src='js/sequence/modules/video/mediaelement-and-player.js'></script>
+    <script src='js/sequence/modules/maps/googlemapsapicontroller.js'></script>
+    <script src='js/sequence/modules/maps/googlemap.js'></script>
+    <script src='js/sequence/modules/maps/maplocationscontroller.js'></script>
+    <script src='js/sequence/modules/flickrgallery/FlickrGallery-packaged.js'></script>
+    <script src='js/sequence/client/app.js'></script>
+  </div>
 </body>

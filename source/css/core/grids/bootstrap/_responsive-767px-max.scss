@@ -47,11 +47,7 @@
   // Make all grid-sized elements block level again
   [class*="span"],
   .row-fluid [class*="span"] {
-    float: none;
-    display: block;
-    // width: auto; changed this, not sure if will break elsewhere
-    width: 100%;
-    margin-left: 0;
+    @include row-fluid();
   }
 
   // MIXINS
