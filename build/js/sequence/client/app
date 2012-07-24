@@ -31,6 +31,7 @@
       this.initFlickrWidget();
       this.initFacebookStats();
       this.initSiteNav();
+      this.initFaceBookFeed();
       return this.initMediaQueries();
     };
 
@@ -162,6 +163,11 @@
         page: 'site',
         debug: true
       });
+    };
+
+    App.prototype.initFaceBookFeed = function() {
+      var facebookFeed;
+      return facebookFeed = new modules.facebook.FacebookAPILoader();
     };
 
     App.prototype.initSiteNav = function() {

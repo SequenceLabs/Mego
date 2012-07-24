@@ -18,7 +18,7 @@ CoffeeSlider = modules.CoffeeSlider
 class App
   #init function happens as soon as javascript is loaded
   constructor: ->   
-  	$(document).ready @onDocReady
+    $(document).ready @onDocReady
 
   # executes when document is ready
   onDocReady: =>
@@ -31,6 +31,7 @@ class App
     @initFlickrWidget()
     @initFacebookStats()
     @initSiteNav()
+    @initFaceBookFeed()
 
     # do this last or any references in the callbacks will be undefined
     @initMediaQueries()
@@ -142,6 +143,9 @@ class App
       container: $(".facebook-stats")
       page: 'site'
       debug: true
+      
+  initFaceBookFeed: ->
+    facebookFeed = new modules.facebook.FacebookAPILoader()
 
   initSiteNav: ->
     @siteNav = new modules.Nav(document.querySelector("#site-nav"))
