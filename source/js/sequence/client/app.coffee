@@ -31,6 +31,7 @@ class mego.App
       initMaps()
       initFlickrGallery()
       initFlickrWidget()
+      initFacebookStats()
     
   initCoffeeSlider = ->  
     # init CoffeeSlider
@@ -60,8 +61,15 @@ class mego.App
 
   initVideoPlayer = ->
     if $("#player1").length > 0  
-     # init video player
-     player = new MediaElementPlayer("#player1")  
+      # init video player
+      # to see player mode rendered just do:
+      # player = new MediaElementPlayer("#player1",
+      #  success: (media, node, player) ->
+      #    console.log "Player mode: " + media.pluginType
+      # )
+      # See http://mediaelementjs.com/#api for callback options
+      #
+      player = new MediaElementPlayer("#player1")
 
   initMaps = ->
     if document.querySelector('#contact-widget .map')?
@@ -84,7 +92,7 @@ class mego.App
       mapEl: document.querySelector('#projects #map')
       locations: document.querySelectorAll('#project-listing li')
       mapTypeId: google.maps.MapTypeId.ROADMAP
-    
+  
   initContactWidgetMap = -> 
     gmap = new maps.GoogleMap
       mapEl: document.querySelector('#contact-widget .map')
@@ -123,5 +131,12 @@ class mego.App
         showThumbs:false
         scaleMode:"scaleToFill"
         loaderGifSrc:"images/icons/ajax-loader.gif"
-        
+
+  # NOTE: if debug is true, http://www.sequence.co.uk is used
+  initFacebookStats = ->
+    facebook = new modules.FacebookStats
+      container: $(".facebook-stats")
+      page: 'site'
+      debug: true
+
 new mego.App()
