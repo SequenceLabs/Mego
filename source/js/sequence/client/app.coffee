@@ -29,9 +29,9 @@ class App
     @initMaps()
     @initFlickrGallery()
     @initFlickrWidget()
-    @initFacebookStats()
+    # @initFacebookStats()
     @initSiteNav()
-    @initFaceBookFeed()
+    # @initFaceBookFeed()
 
     # do this last or any references in the callbacks will be undefined
     @initMediaQueries()
