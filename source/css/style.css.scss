@@ -18,45 +18,40 @@
 @import "core/grids/bootstrap/grid-mixins";
 
 // Typography
-@import "core/typography/elements";
-@import "core/typography/headings";
+@import "project/typography/elements";
+@import "project/typography/headings";
 
 // helpers
-@import "core/helpers/buttons";
-@import "core/helpers/forms";
-@import "core/helpers/tables";
-@import "core/helpers/components";
+@import "project/helpers/buttons";
+@import "project/helpers/forms";
+@import "project/helpers/tables";
+@import "project/helpers/components";
 
 // main structural stuff
 @import "core/structure";
 
 // modules
 @import "core/modules/carousel";
-@import "core/modules/gallery";
-@import "core/modules/social-share";
-@import "core/modules/facebook-stats";
-@import "core/modules/generic-cta";
-@import "core/modules/mini-search";
-@import "core/modules/pagination";
-@import "core/modules/twitter";
-@import "core/modules/news-listing";
-@import "core/modules/video";
-@import "core/modules/maps";
-@import "core/modules/flickr-photostream";
-@import "core/modules/flickr-widget";
-@import "core/modules/contact-form";
-@import "core/modules/contact-widget";
-@import "core/modules/blog";
-@import "core/modules/events-widget";
-@import "core/modules/case-study";
-@import "core/modules/events-listing";
+@import "project/modules/social-share";
+@import "project/modules/facebook-stats";
+// @import "core/modules/generic-cta";
+@import "project/modules/mini-search";
+@import "project/modules/pagination";
+@import "project/modules/twitter";
+@import "project/modules/news-listing";
+
+@import "project/modules/contact-form";
+@import "project/modules/contact-widget";
+@import "project/modules/events-widget";
+
+@import "project/modules/events-listing";
 
 // pages
 @import "project/home";
 @import "project/projects";
 
 // Grid
-@import "core/grids/bootstrap/responsive";
+@import "core/grids/bootstrap/fixed";
 
 // media queries
 @import "core/media-queries";

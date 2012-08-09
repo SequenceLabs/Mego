@@ -1,7 +1,6 @@
 %header#site-header
   .row
-    = partial('includes/structure/branding')
     = partial('includes/modules/search/mini-search', :locals=>{:name=>"search"})
-  .row
     .span12
+      = partial('includes/structure/branding')
       = partial('includes/structure/site-nav')

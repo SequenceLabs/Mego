@@ -1,0 +1,46 @@
+@mixin button($background-color){
+  padding: 15px 25px 12px;
+  background: $background-color;
+  color: $white;
+  @include font-size(1.6, 1);
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  text-align: center;
+  margin: 0 0 $baseline * 2 0; 
+  border: none;
+  
+  &:visited {
+    color: $white;
+  }
+  &:hover {
+    color: $white;
+    text-decoration: none!important;
+  }
+  &:active {
+    color: $white;
+    position: relative;
+    top: 1px;
+  }
+}
+
+.button {
+  @include button($blue);
+  &:hover {
+    background-color: $light-blue;
+  }
+}
+
+.button-small {
+  @extend .button;
+  @include font-size(1.6, 2);
+  padding: 7px 12px 5px;
+}
+
+.button-blue {
+  background: $blue;
+  &:hover {
+    background-color: $light-blue;
+  }
+}

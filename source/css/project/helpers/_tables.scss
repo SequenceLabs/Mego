@@ -1,0 +1,33 @@
+table {
+  margin-bottom: $baseline;
+  width: 100%;
+  border:1px solid #ddd;
+}
+
+th {
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 2px solid #2f2f2f;
+  border-right:1px solid #ddd;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  border-right:1px solid #ddd;
+}
+
+th {
+  padding: 10px 10px 6px 10px;
+}
+
+tr:nth-child(even) {
+}
+
+tfoot {
+  font-style: italic;
+}
+
+caption {
+  background: #ffffcc;
+}

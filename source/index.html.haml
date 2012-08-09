@@ -3,13 +3,18 @@
   tag_id: home
 ---
 
-%header#page-header
-  = partial('includes/modules/carousel')
-
 #content
+  %header#page-header
+    = partial('includes/modules/carousel')
+    %article
+      %h1 Who are Penn Pharma?
+      %p Using our knowledge of Pharmaceutical Development, Clinical Trials and Commercial Supply, Penn has become the trusted supply partner of many of the top healthcare companies during our 30 years of trading.
+      %p We are rightly proud of our reputation for providing quality, flexible and reliable services which have been recognised by the UK Government and our clients in USA, Japan and Europe.
+      %p Our mission is to become the partner of choice, for the development, testing and supply of pharmaceuticals requiring the highest standards of GMP facilities backed by an enviable team of development scientists and supply chain professionals.
+
   = partial('includes/modules/cta/cta-list', :locals=>{:count=>6})
     
 #sidebar
+  = partial('includes/modules/cta/ctas-widget', :locals=>{count:1})
   = partial('includes/modules/news/news-widget')
   = partial('includes/modules/events/events-widget')
-  

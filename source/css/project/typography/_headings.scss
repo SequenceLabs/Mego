@@ -1,0 +1,47 @@
+.h {
+  font-weight: normal;
+  font-style: normal;
+  color: $text-color;
+  margin-bottom: $baseline * 1;
+}
+
+.h1 {
+  @include font-size(3.0, 4);
+  color: $blue;
+}
+.h2 {
+  @include font-size(2.4, 3);
+  color: $blue;
+}
+.h3 {
+  @include font-size(2.4, 3);
+}
+.h4 {
+  @include font-size(2.4, 3);
+  color: $blue;
+}
+.h5 {
+  @include font-size(2.2, 3);
+}
+.h6 {
+  @include font-size(1.6, 2);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  @extend .h;
+}
+h1{
+  @extend .h1;  
+}
+h2 {
+  @extend .h2;
+}
+h3 {
+  @extend .h3;
+}
+h4 {
+  @extend .h4;
+}
+h5 {
+  @extend .h5;
+}
