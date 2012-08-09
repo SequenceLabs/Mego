@@ -8,14 +8,14 @@
 
 @import "core/reset";
 
+@import "settings";
+
 // CSS3 mixins
 @import "core/mixins/css3";
 // General mixins
 @import "core/mixins/mixins";
 // grid mixins
 @import "core/grids/bootstrap/grid-mixins";
-
-@import "settings";
 
 // Typography
 @import "core/typography/elements";

@@ -1,7 +1,7 @@
 //Grid
 
-$col_width: ($width - $gutters * ($columns - 1)) / $columns;
-$col_total_width: $col_width + $gutters;
+$col_width: ($width - $gridGutterWidth * ($columns - 1)) / $columns;
+$col_total_width: $col_width + $gridGutterWidth;
 
 @mixin col($n: 1) {
   float: left;
@@ -11,13 +11,13 @@ $col_total_width: $col_width + $gutters;
   margin-right: 0; }
 
 @mixin buildColumn($n: 1) {
-  width: $n * $col_width + ($n - 1) * $gutters;
+  width: $n * $col_width + ($n - 1) * $gridGutterWidth;
   @if $n == 1 {
     @include last; }
   @if $n == columns {
     @include last; }
   @else {
-    margin-right: $gutters; } }
+    margin-right: $gridGutterWidth; } }
 
 @for $i from 1 through $columns {
   .col-#{$i} {

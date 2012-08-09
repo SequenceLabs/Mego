@@ -4,15 +4,19 @@
 *
 ********************************************/
 
+::selection {
+  background: $highlight-color; /* Safari */
+}
+::-moz-selection {
+  background: $highlight-color; /* Firefox */
+}
+
 html  {
   background: #ffffff;
-  margin: $gutters;
+  margin: $gridGutterWidth;
   text-rendering: optimizelegibility;
 }
-.wrapper {
-  width: $width;
-  margin: 0 auto;
-}
+
 #site-header {
   margin: $baseline * 3 0;
   position: relative;
@@ -48,7 +52,7 @@ html  {
     li {
       display: block;
       float: left;
-      margin-right: $gutters;
+      margin-right: $gridGutterWidth;
       a {
         font-weight: bold;
         display: block;

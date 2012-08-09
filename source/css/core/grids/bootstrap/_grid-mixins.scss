@@ -1,5 +1,7 @@
 // Grid System
 // -----------
+$width: 1000px;
+$gridRowWidth: ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) !default;
 
 // Centered container element
 @mixin container-fixed() {

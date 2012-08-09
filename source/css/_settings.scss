@@ -29,24 +29,6 @@ $red: #990000;
 $text-color: $black;
 $highlight-color: $pink;
 
-::selection {
-  background: $highlight-color; /* Safari */
-}
-::-moz-selection {
-  background: $highlight-color; /* Firefox */
-}
-
-// Base settings
-$width: 960px;
-$gutters: 20px;
-$columns: 12;
-$font-size: 16px;
-$baseline: 10px;
-
-// Debug helpers
-$debug: false;
-$debug-grid: griddle; // none, structure, griddle, baseline
-
 // Typography settings
 $sans: "Helvetica Neue", Arial, sans-serif;
 $serif: "Georgia", "Times New Roman", Times, sans-serif;
@@ -65,23 +47,21 @@ $hr-border: $light-grey;
 
 $border-radius: 4px;
 
-
-// Bootstrap Variables
-
 // GRID
 // --------------------------------------------------
 
-// Default 940px grid
-// -------------------------
 $gridColumns:             12 !default;
 $gridColumnWidth:         60px !default;
 $gridGutterWidth:         20px !default;
-$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) !default;
 
 // Fluid grid
 // -------------------------
 $fluidGridColumnWidth:    6.382978723% !default;
 $fluidGridGutterWidth:    2.127659574% !default;
 
-$baseFontSize:          13px !default;
-$baseLineHeight:        18px !default;
+$font-size: 16px;
+$baseline: 10px;
+
+// Debug helpers
+$debug: false;
+$debug-grid: griddle; // none, structure, griddle, baseline

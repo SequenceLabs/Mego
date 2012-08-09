@@ -21,7 +21,7 @@
     .tags {
         margin-bottom: $baseline;
         float: left;
-        margin-right: $gutters;
+        margin-right: $gridGutterWidth;
         width: $gridColumnWidth * 2;
         ul {
           list-style: none;
