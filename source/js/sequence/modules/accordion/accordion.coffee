@@ -1,7 +1,7 @@
 "use strict"
 
 modules = Namespace('SEQ.modules')
-animate = Namespace('SEQ.effects.Animate')
+animate = Namespace('SEQ.effects.Transition')
 
 class modules.AccordionGroup
   
@@ -47,21 +47,29 @@ class modules.Accordion
       
     @header = @container.find(@settings.selectors.header)
     @header.css
-        cursor: "pointer"
-    @header.on("click", =>
-      if @isOpen 
-        @close(@settings.openDuration)
-      else 
-        @open(@settings.closeDuration)
+      cursor: "pointer"
+    
+    @header.on("click", @onHeaderClick)
+    #prevent selection
+    @header.on("mousedown", (e) =>
+      e.preventDefault();
     )
-    
+
     @close 0
-    
+   
+  onHeaderClick: (e) =>
+    e.preventDefault()
+    if @isOpen 
+      @close(@settings.openDuration)
+    else 
+      @open(@settings.closeDuration)
+
   close:(duration) =>
     @container.addClass("closed").removeClass("open")
     @isOpen = false;
-    @inner.css
-      height: @inner.outerHeight()       
+    # @inner.css
+    #   height: @inner.outerHeight()       
+    
     setTimeout =>
       animate.To
        target: @inner,
@@ -69,12 +77,12 @@ class modules.Accordion
        props:
          height: "0px",
          opacity: 0
-    , 1
+    , 100
  
   open: (duration) =>
     @container.addClass("open").removeClass("closed")    
     @isOpen = true
- 
+
     animate.To
      target: @inner,
      duration: duration,
