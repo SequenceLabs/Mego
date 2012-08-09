@@ -26,13 +26,19 @@ $really-light-grey: #f6f6f6;
 $pink: #ff0064;
 $red: #990000;
 
+//brand
+$black: #525252;
+$blue: #0079C0;
+$light-blue: #96bde7;
+$light-gre: #f6f6f6;
+
 $text-color: $black;
-$highlight-color: $pink;
+$highlight-color: $blue;
 
 // Typography settings
 $sans: "Helvetica Neue", Arial, sans-serif;
 $serif: "Georgia", "Times New Roman", Times, sans-serif;
-$mono: "Monaco", Courier New, monospace;
+$mono: "Monaco", "Courier New", monospace;
 
 // Links settings
 $links-normal: $highlight-color;
