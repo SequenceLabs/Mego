@@ -5,18 +5,17 @@
       %h2
         = lorem.words (3 + rand(5))
       %time{:datetime=>"2009-11-13T20:00Z"}
-        3 hours ago
+        19th August 2012
 
-    .row    
-      %figure{:class=>"#{featured ? '' : 'span3'}"}
-        - img_placehold 726, (726/16)*9
-        %figcaption
-          = lorem.sentence
+    - if featured    
+      .row    
+        %figure
+          - img_placehold 320, (320/16)*9
           
-      %section{:class=>"#{featured ? 'copy span9' : 'copy span6'}"}
-        %p
-          = lorem.sentences (8 + rand(5))
-        %footer
-          %span.read-more
-            Read more &rarr;
+    %section{:class=>"#{featured ? 'copy span9' : 'copy span6'}"}
+      %p
+        = lorem.sentences (3 + rand(5))
+      %footer
+        %span.read-more
+          Read more >
 / END .news-item

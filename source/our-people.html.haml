@@ -1,0 +1,40 @@
+---
+  page_title: Our people
+  tag_id: our-people
+---
+  
+%header#page-header
+  = partial('includes/modules/nav/breadcrumbs')
+  %h1 Page title
+   
+#sidebar
+  %h2 Page title
+  = partial('includes/modules/nav/nav')
+
+#content
+  %header
+    %h2 This is a landing page
+    %p 
+      This is an intro type thing. 
+      = lorem.sentences 3
+  - 3.times do
+    %p 
+      = lorem.sentences 3
+
+  %section.people
+    - ["Board Members", "Executive Comittee"].each do |title|
+      %section
+        %h3 #{title}
+        - 6.times do
+          %a.member{:href=>"content-page.html"}
+            %figure
+              - img_placehold 235, 250
+              %figcaption
+                %h4 John Smith
+                %span Project Manager
+
+
+
+  
+  
+

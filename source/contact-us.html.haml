@@ -2,10 +2,25 @@
   page_title: Contact Us
   tag_id: contact-us
 ---
+
+%header#page-header
+  = partial('includes/modules/nav/breadcrumbs')
+  %h1
+    Get in touch with Penn
+
 .row
-  #content.span9
+  #sidebar
+
+    %h3 Contact us
+    %nav
+      %ul
+        %li
+          %a{:href=>"content-page.html", :title=>"Directions"} Directions to Penn
+        %li
+          %a{:href=>"content-page.html", :title=>"Travel"} Travel Information
+
+    = partial('includes/modules/widgets/contact-widget')
+
+  #content
     = partial('includes/modules/contact-form')
     
-  #sidebar.span3.last
-    = partial('includes/modules/widgets/contact-widget')
-    = partial('includes/modules/cta/generic-cta')

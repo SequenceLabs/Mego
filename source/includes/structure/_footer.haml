@@ -1,8 +1,28 @@
 %footer#site-footer
-  %nav
-    %li
-      %a Sitemap
-    %li
-      %a Terms &amp; Conditions
-    %li
-      %a Privacy Statement
+  %div
+    %nav.our-services
+      %h3 Our services
+      = partial('includes/modules/nav/nav')
+    %section.keep-in-touch
+      %h3 Keep in touch
+      %nav.social-links
+        %ul
+          %li.linkedin
+            %a{:href=>"http://www.linkedin.com", :target=>"_blank", :title=>"LinkedIn"}
+              = image_tag 'icon-linkedin.png'
+          %li.twitter
+            %a{:href=>"http://www.twitter.com", :target=>"_blank", :title=>"Twitter"}
+              = image_tag 'icon-twitter.png'
+      %div
+        You can call us on:
+      %div.tel
+        +44 (0) 1495 711 222
+      %div.tel
+        +1 215 862 1273 (USA)
+  %div
+    %p © Copyright 2012 Penn Pharma® & the Penn Logo® are Trade Marks of Penn Pharmaceutical Services Limited
+    %nav
+      %li
+        %a Sitemap
+      %li
+        %a Terms &amp; Conditions

@@ -4,11 +4,10 @@
 ---
 
 %header#page-header
+  = partial('includes/modules/nav/breadcrumbs')
   %h1
     Latest News
-  %p
-    Some sort of by-line here. 
-    = lorem.words 24
+  
 .row
   #content.span9
     = partial('includes/modules/news/news-listing', :locals=>{:include_featured=>true})

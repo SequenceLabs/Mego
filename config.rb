@@ -24,7 +24,7 @@ configure :build do
   # activate :cache_buster
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Compress PNGs after build
   # First: gem install middleman-smusher
@@ -38,6 +38,14 @@ end
 compass_config do |compass|
   compass.sass_options = {:debug_info => true}
 end
+
+# Generic page templates
+["about", "dick", "harry"].each do |page|
+  page "/#{page}.html", :proxy => "/generic-page.html" do
+    @page_title = page
+  end
+end
+
 # ----------------------------
 # Helpers
 helpers do
