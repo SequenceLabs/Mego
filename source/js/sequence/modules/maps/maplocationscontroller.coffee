@@ -7,13 +7,17 @@ class maps.MapLocationsController extends maps.GoogleMap
   
   constructor: (@options) -> 
     @INFO_BOX_CLASS = "infoBox"
-   
-    super(@options)
+    @init()
         
   init: =>
     super()
+    @createMap()
+
     @loadInfoBoxJs @addMarkers
   
+  createMap: () =>
+
+
   loadInfoBoxJs: (callback) =>
     script = document.createElement("script")
     script.async = true
@@ -25,12 +29,11 @@ class maps.MapLocationsController extends maps.GoogleMap
     document.body.appendChild(script)
     
   addMarkers: =>
-    
     @markers = []
     for location, i in @options.locations                           
       $location = $(location)
       latLng = $location.attr("data-latLng")
-      latLngSplit = latLng.split(",")   
+      latLngSplit = latLng.split(",")  
            
       @markers.push(@addMarker(new google.maps.LatLng(latLngSplit[0], latLngSplit[1]), i))
       

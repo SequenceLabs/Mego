@@ -75,7 +75,7 @@ class mego.App
     if document.querySelector('#contact-widget .map')?
       loadMapsApi initContactWidgetMap
   
-    if document.querySelector('#projects')?
+    if document.querySelector('#locations')?
       loadMapsApi initMapLocations  
     
   loadMapsApi = (callback)->
@@ -89,8 +89,8 @@ class mego.App
   initMapLocations = ->
     new maps.MapLocationsController
       zoom: 12
-      mapEl: document.querySelector('#projects #map')
-      locations: document.querySelectorAll('#project-listing li')
+      mapEl: document.querySelector('#locations #map')
+      DOMlocations: document.querySelectorAll('#location-listing li')
       mapTypeId: google.maps.MapTypeId.ROADMAP
   
   initContactWidgetMap = -> 
