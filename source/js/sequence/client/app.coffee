@@ -83,28 +83,17 @@ class mego.App
       callback.call() 
     else
       mapsController = new maps.GoogleMapsApiController
-        sensor: true
         callback: callback
 
   initMapLocations = ->
     new maps.MapLocationsController
-      zoom: 12
-      mapEl: document.querySelector('#locations #map')
       DOMlocations: document.querySelectorAll('#location-listing li')
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      mapOpts:
+        mapEl: document.querySelector('#locations #map')
   
   initContactWidgetMap = -> 
     gmap = new maps.GoogleMap
       mapEl: document.querySelector('#contact-widget .map')
-      zoom: 12
-      mapTypeId: google.maps.MapTypeId.ROADMAP      
-      mapTypeIds: []
-      panControl: false
-      zoomControl: false
-      mapTypeControl: false
-      scaleControl: false
-      streetViewControl: false
-      overviewMapControl: false
     gmap.centerOnAddress($("#contact-widget .adr"))
 
   initFlickrGallery = ->
