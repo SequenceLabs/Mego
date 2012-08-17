@@ -3,59 +3,79 @@
 modules = Namespace('SEQ.modules')
 
 class modules.CoffeeModal
+
+	constructor: (this.options) ->
+		this._runOnce: false;
+		this._container = this.options.container
+		this._el = {}
+		this._overlay = {}
+		this._outer = {}
+		this._inner = {}
+		this._closeBtn = {}
+
+	# 
+  # Private Methods
+  # _____________________________________________________________________________________
+
+	_onIframeLoaded: =>
+		dimensions =
+			width:this.iframe.contents().find("object").attr("width")
+			height:this.iframe.contents().find("object").attr("height")
+		
+		this.iframe.attr
+			"width": dimensions.width
+			"height": dimensions.height
+		this.setDimensions dimensions
+		
+		if this.callback? 
+			this.callback()
+
+	# 
+  # Public Methods
+  # _____________________________________________________________________________________
 	
-	@runOnce: false;
-
-	constructor: (@options) ->
-		@container = @options.container
-		@el = {}
-		@overlay = {}
-		@outer = {}
-		@inner = {}
-		@closeBtn = {}
-
 	render: (html) ->
-		if !@html?
-			@html = html	
+		if !this.html?
+			this.html = html	
 			
-		@container.append(
-			@el = $("<div />").addClass("modal-window").append(
-				@overlay = $("<div />").addClass("overlay").append(
-				  @outer = $("<div />").addClass("outer").append(
-				    @closeBtn = $("<div />").addClass("close-btn"),
-						@inner = $("<div />").addClass("inner").html(@html)
+		this._container.append(
+			this._el = $("<div />").addClass("modal-window").append(
+				this._overlay = $("<div />").addClass("overlay").append(
+				  this._outer = $("<div />").addClass("outer").append(
+				    this._closeBtn = $("<div />").addClass("close-btn"),
+						this._inner = $("<div />").addClass("inner").html(this.html)
 				  )
 				)
 			)
 		)
 
-		if !@runOnce
+		if !this._runOnce
 
-			@overlay.fadeOut(0)
-			@outer.fadeOut(0)
+			this._overlay.fadeOut(0)
+			this._outer.fadeOut(0)
 
-			@runOnce = true
+			this._runOnce = true
 		
-		@closeBtn.click =>
-			@remove()	
+		this._closeBtn.click =>
+			this.remove()	
 				
 	add: () ->
-		@overlay.fadeIn(300, =>
-			@outer.fadeIn(500)
+		this._overlay.fadeIn(300, =>
+			this._outer.fadeIn(500)
 		)		
 					
 	remove: () ->
-		@outer.fadeOut(200)
-		@overlay.fadeOut(300, =>
-			@el.remove()
+		this._outer.fadeOut(200)
+		this._overlay.fadeOut(300, =>
+			this._el.remove()
 		)
 
 	setDimensions: (dimensions) ->
-		@outer.css dimensions
-		@inner.css dimensions
+		this._outer.css dimensions
+		this._inner.css dimensions
 
-	renderIframe: (url, width, height, @callback) ->
-		@iframe = $("<iframe />").attr
+	renderIframe: (url, width, height, this.callback) ->
+		this.iframe = $("<iframe />").attr
 			"id": "frame"
 			"src": url
 			"width": width
@@ -63,18 +83,5 @@ class modules.CoffeeModal
 			"scrolling": "no"
 			"frameBorder": "0"
 		
-		@iframe.bind "load", @onIframeLoaded
-		@render @iframe
-
-	onIframeLoaded: =>
-		dimensions =
-			width:@iframe.contents().find("object").attr("width")
-			height:@iframe.contents().find("object").attr("height")
-		
-		@iframe.attr
-			"width": dimensions.width
-			"height": dimensions.height
-		@setDimensions dimensions
-		
-		if @callback? 
-			@callback()
+		this.iframe.bind "load", this._onIframeLoaded
+		this.render this.iframe

@@ -5,21 +5,25 @@ animate = Namespace('SEQ.effects.Transition')
 
 class modules.AccordionGroup
   
-   # initial settings
-  @settings = {}
+  # initial settings
+  this.settings = {}
   
-  constructor: (@container, options) ->
+  constructor: (this.container, options) ->
     
-    @applySettings(options)
-    @sections = []
+    this.applySettings(options)
+    this.sections = []
     
-    for section in @container.find(@settings.selectors.main)
-      @sections.push(new modules.Accordion(section, @settings))     
-        
+    for section in this.container.find(this.settings.selectors.main)
+      this.sections.push(new modules.Accordion(section, this.settings))     
+  
+  # 
+  # Private Methods
+  # _____________________________________________________________________________________
+
   applySettings: (options) =>
     
     # merge defaults with options
-    @settings =
+    this.settings =
       openDuration: 300
       closeDuration: 300
       selectors:
@@ -27,52 +31,56 @@ class modules.AccordionGroup
         header: "header"
         inner: ".inner"
         
-    $.extend true, @settings, options
+    $.extend true, this.settings, options
    
-   open: (index, openDuration) =>    
-     @sections[index||=0].open(openDuration||=@settings.openDuration)
+  open: (index, openDuration) =>    
+    this.sections[index||=0].open(openDuration||=this.settings.openDuration)
    
 class modules.Accordion
   
-  constructor: (container, @settings) ->
-    
-    @isOpen = false
-    
-    @container = $(container)
-    
-    @inner = @container.find(@settings.selectors.inner)
-    @inner.css
+  constructor: (container, settings) ->
+    this.isOpen = false
+    this.settings = settings
+    this.container = $(container)
+
+    this.inner = this.container.find(this.settings.selectors.inner)
+    this.inner.css
       overflow: "hidden"
-    @openHeight = @inner.outerHeight()
+    this.openHeight = this.inner.outerHeight()
       
-    @header = @container.find(@settings.selectors.header)
-    @header.css
+    this.header = this.container.find(this.settings.selectors.header)
+    this.header.css
       cursor: "pointer"
     
-    @header.on("click", @onHeaderClick)
+    this.header.on("click", this.onHeaderClick)
     #prevent selection
-    @header.on("mousedown", (e) =>
+    this.header.on("mousedown", (e) =>
       e.preventDefault();
     )
 
-    @close 0
+    this.close 0
    
   onHeaderClick: (e) =>
     e.preventDefault()
-    if @isOpen 
-      @close(@settings.openDuration)
+    if this.isOpen 
+      this.close(this.settings.openDuration)
     else 
-      @open(@settings.closeDuration)
+      this.open(this.settings.closeDuration)
+
+  # 
+  # Public Methods
+  # _____________________________________________________________________________________
+
 
   close:(duration) =>
-    @container.addClass("closed").removeClass("open")
-    @isOpen = false;
-    # @inner.css
-    #   height: @inner.outerHeight()       
+    this.container.addClass("closed").removeClass("open")
+    this.isOpen = false;
+    # this.inner.css
+    #   height: this.inner.outerHeight()       
     
     setTimeout =>
       animate.To
-       target: @inner,
+       target: this.inner,
        duration: duration,
        props:
          height: "0px",
@@ -80,17 +88,17 @@ class modules.Accordion
     , 100
  
   open: (duration) =>
-    @container.addClass("open").removeClass("closed")    
-    @isOpen = true
+    this.container.addClass("open").removeClass("closed")    
+    this.isOpen = true
 
     animate.To
-     target: @inner,
+     target: this.inner,
      duration: duration,
      props:
-       height: "#{@openHeight}px",
+       height: "#{this.openHeight}px",
        opacity: 1    
      complete: =>
-       @inner.css
+       this.inner.css
         height: "auto"
         
         

@@ -35,6 +35,8 @@ class maps.MapLocationsController
     this.settings = $.extend true, defaults, options
     this._init()
   
+  
+
   # 
   # Private Methods
   # _____________________________________________________________________________________
