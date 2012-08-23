@@ -4,19 +4,17 @@
 *
 ********************************************/
 
+::selection {
+  background: $highlight-color; /* Safari */
+}
+::-moz-selection {
+  background: $highlight-color; /* Firefox */
+}
+
 html  {
   background: #ffffff;
-  margin: $gutters;
-}
-body {
-  color: $text-color;  
-}
-.container {
-  overflow: hidden;
-}
-.wrapper {
-  width: $width;
-  margin: 0 auto;
+  margin: $gridGutterWidth;
+  text-rendering: optimizelegibility;
 }
 
 #site-header {
@@ -27,8 +25,7 @@ body {
     clear:both;
     overflow:hidden;
     a {
-      @include font-size(4.5);
-      line-height: 60px;
+      @include font-size(4.5, 6);
       font-weight: bold;
       color: $black!important;
       &:hover {
@@ -42,15 +39,20 @@ body {
     margin-bottom: 20px;
   }
 }
+
 #site-nav {
   clear: both;
+  #mobile-menu {
+    display: none;
+  }
   ul {
     overflow: hidden;
     border-bottom: 1px solid $black;
+    min-height: 33px;
     li {
       display: block;
       float: left;
-      margin-right: $gutters;
+      margin-right: $gridGutterWidth;
       a {
         font-weight: bold;
         display: block;
@@ -58,25 +60,103 @@ body {
         padding-bottom: 10px;
         &:hover {
           text-decoration: none;
-          color: $highlight-colour;
+          color: $highlight-color;
           border-bottom: 2px solid $black;
           padding-bottom: 13px;
         }
         &.active {
           border-bottom: 5px solid $black;
-          padding-bottom: 10px!important;
+          padding-bottom: 10px;
         }
       }
     }
   }
 }
 
+@mixin site-header-small-screen {
+  #site-header {
+    margin: 0 0 10px 0;
+    #branding {
+      float: none;
+      a {
+        @include font-size(2.5, 5);
+      }
+      p {
+        display: none;
+      }
+    }
+    .mini-search {
+      float: none;
+      margin-top: 0;
+      display: none;
+    }
+  }
+
+  #site-nav {
+    #menuBtn {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 20px;
+      @include font-size(1.4);
+      color: $black;
+      cursor: Pointer;
+    }
+    ul {
+      overflow: hidden;
+      min-height: 0px;
+      &.closed {
+        height: 0;
+      }
+      li {
+        display: block;
+        float: none;
+        margin: 0;
+        a {
+          text-decoration: none;
+          border-bottom: none;
+          padding: 7px 0;
+          border-top: 1px solid $light-grey;
+          &:hover {
+            border-bottom: none;
+            padding-bottom: 7px;
+          }
+          &.active {
+            border-bottom: none;
+            padding-bottom: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin site-header-medium-screen {
+  #site-header {
+    #site-nav {
+     ul {
+        li {
+          a {
+            @include font-size(1.4);
+          }
+        }
+      }
+    }
+  }
+}
+
+#content {
+  @include column(9);
+  margin-left: 0;
+}
+
 #site-footer {
+  clear: both;
   padding: $baseline * 3 0;
   margin: $baseline * 3 0;
   border-top: 1px solid $borders;
 }
-
 #footer-nav {
   ul {
     li {
@@ -85,8 +165,8 @@ body {
     }
   }
 }
-
 #sidebar {
+  @include column(3);
   section.widget {
     margin-bottom: $baseline * 2;
     padding-bottom: $baseline * 2;
@@ -96,7 +176,6 @@ body {
     }
   }
 }
-
 #page-header {
   padding-bottom: $baseline * 1;
   margin-bottom: $baseline * 1;

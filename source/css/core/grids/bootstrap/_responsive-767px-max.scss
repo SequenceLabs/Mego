@@ -1,0 +1,66 @@
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+@media (max-width: 480px) {
+
+
+}
+
+
+
+// LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
+// --------------------------------------------------
+
+@media (max-width: 767px) {
+
+  html {
+    margin: 0;
+  }
+
+  // Padding to set content in a bit
+  body {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1px;
+  }
+  // Remove padding on container given explicit padding set on body
+  .container-fluid {
+    padding: 0;
+  }
+
+  // GRID & CONTAINERS
+  // -----------------
+  // Remove width from containers
+
+  .container {
+    width: auto;
+  }
+  // Fluid rows
+  .row-fluid {
+    width: 100%;
+  }
+  // Undo negative margin on rows and thumbnails
+  .row,
+  .thumbnails {
+    margin-left: 0;
+  }
+  // Make all grid-sized elements block level again
+  [class*="span"],
+  .row-fluid [class*="span"] {
+    @include row-fluid();
+  }
+
+  // MIXINS
+  // -----------------
+
+  @include site-header-small-screen();
+  @include carousel-small-screen();
+
+  .button {
+    display: block;
+    @include font-size(1.5);
+  }
+  .cta, .project-item {
+    @include cta-small-screen();
+  }
+}

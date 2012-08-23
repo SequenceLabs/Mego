@@ -1,12 +1,12 @@
 .coffee-slider {
   position:relative;
   margin: 0;
-  height: 518px;
+  height: auto;
   background: url(../images/icons/loading.gif) no-repeat center center;
   figure {
     position: relative;
-    width: 978px;
-    height: 480px;
+    width: 100%;
+    height: auto;
     opacity: 0;
     figcaption {
       background: rgba(0,0,0,.7);
@@ -72,6 +72,26 @@
         &:hover, :focus {
           @include opacity(0.6);
         }
+      }
+    }
+  }
+}
+
+@mixin carousel-small-screen {
+  .carousel {
+    figure {
+      figcaption {
+        position: relative;
+        margin-top: 0;
+        padding: 5px;
+        @include font-size(1.2);
+      }
+    }
+    .btn {
+      @include transform(scale(0.6));
+      top: 30%;
+      &.next {
+        @include transform(scale(0.6) rotate(180deg));
       }
     }
   }

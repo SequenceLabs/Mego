@@ -10,8 +10,7 @@
   cursor: pointer;
   text-decoration: none;
   font-weight: bold;
-  line-height: $baseline * 2;
-  @include font-size(1.2);
+  @include font-size(1.2, 2);
   text-align: center;
   margin: 0 0 $baseline * 2 0; 
   &:visited {
@@ -26,5 +25,5 @@
 }
 
 .button {
-  @include button($highlight-colour);
+  @include button($highlight-color);
 }

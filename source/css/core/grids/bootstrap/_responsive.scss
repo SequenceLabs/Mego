@@ -1,0 +1,50 @@
+/*!
+ * Bootstrap Responsive v2.0.4
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+
+
+// Responsive
+// For phone and tablet devices
+// -------------------------------------------------------------
+
+// RESPONSIVE CLASSES
+// ------------------
+
+// @import "grid-mixins";
+@import "responsive-utilities";
+@import "grid";
+
+// MEDIA QUERIES
+// ------------------
+
+// Phones to portrait tablets and narrow desktops
+@import "responsive-767px-max";
+
+// Tablets to regular desktops
+@import "responsive-768px-979px";
+
+// Large desktops
+// @import "responsive-1200px-min";
+
+// Container (centered, fixed-width layouts)
+.container {
+  @include container-fixed();
+}
+
+// Fluid layouts (left aligned, with sidebar, min- & max-width content)
+.container-fluid {
+  padding-right: $gridGutterWidth;
+  padding-left: $gridGutterWidth;
+  @include clearfix();
+}
+
+img {
+  width: 100%;
+  height: auto;
+}

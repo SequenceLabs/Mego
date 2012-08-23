@@ -3,21 +3,19 @@
     color: $red;
   }
   label {
-    width:$col_total_width * 2;
     display: inline-block;
     vertical-align: top;
   }
   input[type="text"],
   input[type="email"],
   textarea {
-    width:$col_total_width * 4;
   }
   textarea {
     height: 100px;
   }
   .field-error {
     color: $light-grey;
-    margin-left: $gutters;
+    margin-left: $gridGutterWidth;
     vertical-align: middle;
     display: none;
   }

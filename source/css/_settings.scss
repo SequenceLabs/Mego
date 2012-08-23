@@ -24,14 +24,7 @@ $really-light-grey: #f6f6f6;
 $red: #990000;
 
 $text-color: $black;
-$highlight-colour: #ff0064;
-
-// Base settings
-$width: 978px;
-$gutters: 30px;
-$columns: 12;
-$font-size: 16px;
-$baseline: 10px;
+$highlight-color: #ff0064;
 
 // Debug helpers
 $debug: false;
@@ -43,11 +36,11 @@ $serif: "Georgia", "Times New Roman", Times, sans-serif;
 $mono: "Monaco", Courier New, monospace;
 
 // Links settings
-$links-normal: $highlight-colour;
-$links-hover: $highlight-colour;
-$links-active: $highlight-colour;
-$links-visited: $highlight-colour;
-$links-focus: $highlight-colour;
+$links-normal: $highlight-color;
+$links-hover: $highlight-color;
+$links-active: $highlight-color;
+$links-visited: $highlight-color;
+$links-focus: $highlight-color;
 
 // Border settings
 $borders: $light-grey;
@@ -55,9 +48,20 @@ $hr-border: $light-grey;
 
 $border-radius: 4px;
 
-::selection {
-	background: $highlight-colour; /* Safari */
-	}
-::-moz-selection {
-	background: $highlight-colour; /* Firefox */
-}
+// GRID
+// --------------------------------------------------
+
+$gridColumns:             12 !default;
+$gridColumnWidth:         50px !default;
+$gridGutterWidth:         20px !default;
+
+// Fluid grid
+// -------------------------
+$fluidGridColumnWidth:    6.382978723% !default;
+$fluidGridGutterWidth:    2.127659574% !default;
+
+$baseline: 10px;
+
+// Debug helpers
+$debug: false;
+$debug-grid: griddle; // none, structure, griddle, baseline

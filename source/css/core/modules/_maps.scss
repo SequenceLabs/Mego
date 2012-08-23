@@ -1,5 +1,5 @@
 
-.info-box {
+.infoBox {
   padding: 15px;
   color: $white;  
   width: 250px;
@@ -11,8 +11,7 @@
     background: url("/images/close-btn.png") no-repeat 0 0;
   }
   h3 {
-    @include font-size();
-    line-height: 1em;
+    @include font-size(1.6);
     font-weight: bold;
     margin-bottom: 10px;
     color: $white;
@@ -40,7 +39,7 @@
   }
   .more {
     @include font-size(1);
-    color: $highlight-colour;
+    color: $highlight-color;
     cursor: pointer;
     margin:0;
   }

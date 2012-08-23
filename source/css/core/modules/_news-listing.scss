@@ -9,16 +9,19 @@
     figure {
       margin-bottom: $baseline * 2;
     }
-  
-    &:hover {
-      color: $black;
+    .copy {
+      margin-left: 0;
     }
+    @include unlinkify();
   }
 }
 
 #news-widget {
   ul {
     list-style: none;
+  }
+  a {
+    @include unlinkify();  
   }
 }
 

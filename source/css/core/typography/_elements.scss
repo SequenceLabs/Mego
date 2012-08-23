@@ -1,9 +1,13 @@
-body,a,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,input,textarea {
-  line-height: $baseline * 2;
+html {
   color: $text-color;
   font-family: $sans;
-  @include font-size();
-  line-height: 18px;
+  font-size: 62.5%;
+  line-height: 2;
+}
+
+a,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,input,textarea {
+  font-family: $sans;
+  @include font-size(1.6, 2);
 }
 
 p {
@@ -34,7 +38,6 @@ del {
 }
 
 a {
-  
   color: $links-normal;
   @include link-colours($links-normal, $links-hover, $links-active, $links-visited, $links-focus);
   text-decoration: none;
@@ -55,14 +58,12 @@ blockquote {
   margin: ($baseline * 4) 0 ($baseline * 4) ($baseline * 10);
   display: block;
   font-weight: bold;
-  @include font-size(3);
-  line-height: ($baseline*3);
+  @include font-size(3, 4);
   font-family: serif;
   color: $text-color;
   position: relative;
   &:before,
   &:after {
-    
     position: relative;
     width: 60px;
     height: 60px;
@@ -115,7 +116,7 @@ figcaption, time {
   font-family: $serif;
   color: $black;
   font-style: italic;
-  @include font-size(1.3);
+  @include font-size(1.3, 2);
   margin: $baseline 0;
 }
 
@@ -126,3 +127,5 @@ small {
 strong {
   font-weight: bold;
 }
+
+
