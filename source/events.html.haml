@@ -6,13 +6,10 @@
 %header#page-header
   %h1
     Events
-
-#content.col-9
-  = partial('includes/modules/events/events-listing')
-  = partial('includes/modules/events/events-listing', :locals=>{:title=>"Past Events"})
-  
-  = partial('includes/modules/pagination')
-#sidebar.col-3.last
-  = partial('includes/modules/news/news-widget')
-  = partial('includes/modules/cta/ctas-widget', :locals=>{:count=>2})
-    
+.row
+  #content
+    = partial('includes/modules/events/events-listing', :locals=>{:include_featured=>true})
+    = partial('includes/modules/pagination')
+  #sidebar
+    = partial('includes/modules/news/news-widget')
+    = partial('includes/modules/news/news-widget')

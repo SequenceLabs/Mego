@@ -5,6 +5,7 @@
 
 %article.news-item
   %header
+<<<<<<< HEAD:source/locations.html.haml
     %h1 Locations
         
 #content.col-12
@@ -24,3 +25,24 @@
               %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             %span.button{:href=>"location.html"}
               View location &rarr;
+=======
+    %h1 Projects
+.row        
+  #content.span12
+    #map
+      -img_placehold 978, 500
+      
+    #project-listing
+      %ul.row 
+        - ['51.583, -3.018', '51.481, -3.175', '51.604, -3.341', '51.722, -3.161', '51.703, -3.374', '51.658, -3.595'].each do |latLng|
+          %li.span4{:data=>{:latLng=>"#{latLng}"}}
+            %a.project-item{:href => "project.html", :title => "Title"}
+              %figure
+                - img_placehold 306, 200
+              %h3 
+                = lorem.words 1 + rand(2)
+              .info 
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              %span.button{:href=>"project.html"}
+                View project &rarr;
+>>>>>>> ResponiveNewGridSystem:source/projects.html.haml

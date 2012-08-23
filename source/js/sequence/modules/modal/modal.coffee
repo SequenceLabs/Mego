@@ -1,4 +1,4 @@
-"use strict" 
+"use strict"
 
 modules = Namespace('SEQ.modules')
 
@@ -13,7 +13,7 @@ class modules.CoffeeModal
 		this._inner = {}
 		this._closeBtn = {}
 
-	# 
+	#
   # Private Methods
   # _____________________________________________________________________________________
 
@@ -21,23 +21,22 @@ class modules.CoffeeModal
 		dimensions =
 			width:this.iframe.contents().find("object").attr("width")
 			height:this.iframe.contents().find("object").attr("height")
-		
+
 		this.iframe.attr
 			"width": dimensions.width
 			"height": dimensions.height
 		this.setDimensions dimensions
-		
-		if this.callback? 
+
+		if this.callback?
 			this.callback()
 
-	# 
+	#
   # Public Methods
   # _____________________________________________________________________________________
-	
+
 	render: (html) ->
 		if !this.html?
-			this.html = html	
-			
+			this.html = html
 		this._container.append(
 			this._el = $("<div />").addClass("modal-window").append(
 				this._overlay = $("<div />").addClass("overlay").append(
@@ -50,20 +49,18 @@ class modules.CoffeeModal
 		)
 
 		if !this._runOnce
-
 			this._overlay.fadeOut(0)
 			this._outer.fadeOut(0)
-
 			this._runOnce = true
-		
+
 		this._closeBtn.click =>
-			this.remove()	
-				
+			this.remove()
+
 	add: () ->
 		this._overlay.fadeIn(300, =>
 			this._outer.fadeIn(500)
-		)		
-					
+		)
+
 	remove: () ->
 		this._outer.fadeOut(200)
 		this._overlay.fadeOut(300, =>
@@ -82,6 +79,6 @@ class modules.CoffeeModal
 			"height": height
 			"scrolling": "no"
 			"frameBorder": "0"
-		
+
 		this.iframe.bind "load", this._onIframeLoaded
 		this.render this.iframe

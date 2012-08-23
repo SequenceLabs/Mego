@@ -6,10 +6,9 @@
 %header#page-header
   = partial('includes/modules/carousel')
 
-#content.col-9
+%section#content
   = partial('includes/modules/cta/cta-list', :locals=>{:count=>6})
-    
-#sidebar.col-3.last
+
+%section#sidebar
   = partial('includes/modules/news/news-widget')
   = partial('includes/modules/events/events-widget')
-  

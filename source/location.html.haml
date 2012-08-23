@@ -2,8 +2,8 @@
   page_title: Location
   tag_id: location
 ---
-      
-#content.col-9
+
+%section#content
   %header
     %h1 Location Title
   - 3.times do
@@ -11,7 +11,7 @@
       = lorem.paragraph
   %a.button{:href=>"locations.html"}
     &larr; Back to Projects
-#sidebar.col-3.last
+%section#sidebar
   %section#location-widget.widget
     %h2 Locations
     %ul
@@ -20,4 +20,4 @@
           %a{:href=>"location.html"}
             = lorem.words 2+rand(3)
 
-  = partial('includes/modules/cta/generic-cta')
+    = partial('includes/modules/cta/generic-cta')

@@ -5,7 +5,10 @@ window.twttr = (function (d,s,id) {
   return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
 }(document, "script", "twitter-wjs"));
 
+// disabled this for now as it's throwing errors
+
 // Wait for the asynchronous resources to load
-twttr.ready(function(twttr) {
-    _ga.trackTwitter(); //Google Analytics tracking
-});
+// twttr.ready(function(twttr) {
+//     _ga.trackTwitter(); //Google Analytics tracking
+// });
+

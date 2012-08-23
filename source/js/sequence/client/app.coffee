@@ -1,11 +1,11 @@
-#  ____                                       
-# / ___|  ___  __ _ _   _  ___ _ __   ___  ___ 
+#  ____
+# / ___|  ___  __ _ _   _  ___ _ __   ___  ___
 # \___ \ / _ \/ _` | | | |/ _ \ '_ \ / __|/ _ \
 #  ___) |  __/ (_| | |_| |  __/ | | | (__|  __/
 # |____/ \___|\__, |\__,_|\___|_| |_|\___|\___|
-#                |_|   
-         
-"use strict"  
+#                |_|
+
+"use strict"
 
 utils = Namespace('SEQ.utils')
 maps = Namespace('SEQ.gmaps')
@@ -15,28 +15,34 @@ mego = Namespace("SEQ.mego")
 # cache this reference
 CoffeeSlider = modules.CoffeeSlider
 
-class mego.App
-
+class App
   #init function happens as soon as javascript is loaded
   constructor: ->
-    
-  	# console.log "init"
-  	$(document).ready ->
-      onDocReady()
+    $(document).ready @onDocReady
+
   # executes when document is ready
-  onDocReady = ->
-      initCoffeeSlider()
-      initGallery()
-      initVideoPlayer()   
-      initMaps()
-      initFlickrGallery()
-      initFlickrWidget()
-      initFacebookStats()
-    
-  initCoffeeSlider = ->  
+  onDocReady: =>
+
+    @initCoffeeSlider()
+    @initGallery()
+    @initVideoPlayer()
+    @initMaps()
+    @initFlickrGallery()
+    @initFlickrWidget()
+    # @initFacebookStats()
+    @initSiteNav()
+    # @initFaceBookFeed()
+
+    # do this last or any references in the callbacks will be undefined
+    @initMediaQueries()
+
+  initMediaQueries: =>
+    @mediaQueries = new utils.browser.MediaQueries()
+
+  initCoffeeSlider: =>
     # init CoffeeSlider
     if $(".carousel").length > 0
-      coffeeSlider = new CoffeeSlider
+      @coffeeSlider = new CoffeeSlider
         container: $(".carousel")
         transitionType: CoffeeSlider.TRANSITION_SLIDE
         loop: CoffeeSlider.LOOP_LIMIT
@@ -45,22 +51,22 @@ class mego.App
         transitionDirection: CoffeeSlider.DIRECTION_HORIZONTAL
         touchStyle: CoffeeSlider.TOUCH_DRAG
         preload: true
-        responsive: false
+        responsive: true
         selectors:
           slide: "figure"
 
-  initGallery = ->
+  initGallery: =>
     # init CoffeeSlider
     if $(".gallery").length > 0
-      gallery = new modules.CoffeeGallery
+      @gallery = new modules.CoffeeGallery
         gallery: ".gallery"
         slider: ".gallery-carousel"
         thumbslider: ".thumbnails"
         autoThumbs: true
         stripElements: ["figcaption"]
 
-  initVideoPlayer = ->
-    if $("#player1").length > 0  
+  initVideoPlayer: ->
+    if $("#player1").length > 0
       # init video player
       # to see player mode rendered just do:
       # player = new MediaElementPlayer("#player1",
@@ -71,32 +77,38 @@ class mego.App
       #
       player = new MediaElementPlayer("#player1")
 
-  initMaps = ->
+  initMaps: ->
     if document.querySelector('#contact-widget .map')?
-      loadMapsApi initContactWidgetMap
-  
+      @loadMapsApi @initContactWidgetMap
+
     if document.querySelector('#locations')?
-      loadMapsApi initMapLocations  
-    
-  loadMapsApi = (callback)->
-    if google? and google.maps? 
-      callback.call() 
+      loadMapsApi initMapLocations
+
+  loadMapsApi: (callback)->
+    if google? and google.maps?
+      callback.call()
     else
       mapsController = new maps.GoogleMapsApiController
         callback: callback
 
-  initMapLocations = ->
+  initMapLocations: ->
     new maps.MapLocationsController
       DOMlocations: document.querySelectorAll('#location-listing li')
       mapOpts:
         mapEl: document.querySelector('#locations #map')
-  
-  initContactWidgetMap = -> 
+
+  initContactWidgetMap = ->
+      zoom: 12
+      mapEl: document.querySelector('#projects #map')
+      locations: document.querySelectorAll('#project-listing li')
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+
+  initContactWidgetMap: ->
     gmap = new maps.GoogleMap
       mapEl: document.querySelector('#contact-widget .map')
     gmap.centerOnAddress($("#contact-widget .adr"))
 
-  initFlickrGallery = ->
+  initFlickrGallery: ->
     if document.querySelector('#flickr-gallery')?
       flickr = new modules.FlickrGallery
         apiKey:"a57204d74e7d388185a326741d19941f"
@@ -108,8 +120,7 @@ class mego.App
         scaleMode:"scaleToFill"
         loaderGifSrc:"images/icons/ajax-loader.gif"
 
-
-  initFlickrWidget = ->
+  initFlickrWidget: ->
     if document.querySelector('#flickr-widget')?
       flickr = new modules.FlickrGallery
         apiKey:"a57204d74e7d388185a326741d19941f"
@@ -122,10 +133,17 @@ class mego.App
         loaderGifSrc:"images/icons/ajax-loader.gif"
 
   # NOTE: if debug is true, http://www.sequence.co.uk is used
-  initFacebookStats = ->
+  initFacebookStats: ->
     facebook = new modules.FacebookStats
       container: $(".facebook-stats")
       page: 'site'
       debug: true
 
-new mego.App()
+  initFaceBookFeed: ->
+    facebookFeed = new modules.facebook.FacebookAPILoader()
+
+  initSiteNav: ->
+    @siteNav = new modules.Nav(document.querySelector("#site-nav"))
+
+mego.app = new App()
+

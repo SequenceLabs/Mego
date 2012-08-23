@@ -5,10 +5,9 @@
 = partial('includes/structure/html-header')
 
 %body
-  %form{:id => "mainform", :action => "/", :method => "post"}
-    .wrapper
-      = partial('includes/structure/header')
-      .container{:id=>data.page.tag_id}
-        = yield
-      = partial('includes/structure/footer')
-      = partial('includes/structure/javascripts')
+  .container
+    = partial('includes/structure/header')
+    .main{:id=>data.page.tag_id, :class=>data.page.tag_class}
+      = yield
+    = partial('includes/structure/footer')
+  = partial('includes/structure/javascripts')

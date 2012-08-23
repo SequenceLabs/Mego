@@ -53,6 +53,11 @@ html  {
       display: block;
       float: left;
       margin-right: $gridGutterWidth;
+<<<<<<< HEAD
+=======
+      margin-left: 0;
+      padding: 0;
+>>>>>>> ResponiveNewGridSystem
       a {
         font-weight: bold;
         display: block;
@@ -67,6 +72,8 @@ html  {
         &.active {
           border-bottom: 5px solid $black;
           padding-bottom: 10px;
+<<<<<<< HEAD
+=======
         }
       }
     }
@@ -126,12 +133,75 @@ html  {
             border-bottom: none;
             padding-bottom: 7px;
           }
+>>>>>>> ResponiveNewGridSystem
         }
       }
     }
   }
 }
 
+<<<<<<< HEAD
+@mixin site-header-small-screen {
+  #site-header {
+    margin: 0 0 10px 0;
+    #branding {
+      float: none;
+      a {
+        @include font-size(2.5, 5);
+      }
+      p {
+        display: none;
+      }
+    }
+    .mini-search {
+      float: none;
+      margin-top: 0;
+      display: none;
+    }
+  }
+
+  #site-nav {
+    #menuBtn {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 20px;
+      @include font-size(1.4);
+      color: $black;
+      cursor: Pointer;
+    }
+    ul {
+      overflow: hidden;
+      min-height: 0px;
+      &.closed {
+        height: 0;
+      }
+      li {
+        display: block;
+        float: none;
+        margin: 0;
+        a {
+          text-decoration: none;
+          border-bottom: none;
+          padding: 7px 0;
+          border-top: 1px solid $light-grey;
+          &:hover {
+            border-bottom: none;
+            padding-bottom: 7px;
+          }
+          &.active {
+            border-bottom: none;
+            padding-bottom: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+=======
+>>>>>>> ResponiveNewGridSystem
 @mixin site-header-medium-screen {
   #site-header {
     #site-nav {
@@ -171,8 +241,15 @@ html  {
     margin-bottom: $baseline * 2;
     padding-bottom: $baseline * 2;
     border-bottom: 1px solid $borders;
+    h3, h4 {
+      margin-bottom: 0;
+    }
     ul {
       list-style: none;
+    }
+    li {
+      margin-left: 0;
+      margin-bottom: 10px;
     }
   }
 }

@@ -1,3 +1,6 @@
+
+
+
 //
 //  Configurable settings
 //  Use this file to override or customise site
@@ -12,7 +15,7 @@
 //  @BrowserSupport   IE8, IE9, Safari, Firefox, Chrome
 //
 
-// colors
+// palette
 $white: #fff;
 $black: #242424;
 $really-dark-grey: #333;
@@ -20,20 +23,16 @@ $dark-grey: #5e5e5e;
 $mid-grey: #858585;
 $light-grey: #ddd;
 $really-light-grey: #f6f6f6;
-
+$pink: #ff0064;
 $red: #990000;
 
 $text-color: $black;
-$highlight-color: #ff0064;
-
-// Debug helpers
-$debug: false;
-$debug-grid: griddle; // none, structure, griddle, baseline
+$highlight-color: $blue;
 
 // Typography settings
 $sans: "Helvetica Neue", Arial, sans-serif;
 $serif: "Georgia", "Times New Roman", Times, sans-serif;
-$mono: "Monaco", Courier New, monospace;
+$mono: "Monaco", "Courier New", monospace;
 
 // Links settings
 $links-normal: $highlight-color;
@@ -43,16 +42,16 @@ $links-visited: $highlight-color;
 $links-focus: $highlight-color;
 
 // Border settings
-$borders: $light-grey;
-$hr-border: $light-grey;
+$borders: $mid-grey;
+$hr-border: $mid-grey;
 
-$border-radius: 4px;
+$border-radius: 0px;
 
 // GRID
 // --------------------------------------------------
 
 $gridColumns:             12 !default;
-$gridColumnWidth:         50px !default;
+$gridColumnWidth:         65px !default;
 $gridGutterWidth:         20px !default;
 
 // Fluid grid

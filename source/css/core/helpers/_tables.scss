@@ -1,20 +1,22 @@
 table {
-  margin-bottom: $baseline;
+  margin-bottom: $baseline * 2;
   width: 100%;
-  border:1px solid #ddd;
+  @include font-size(1.6, 2)
+}
+
+thead {
+  background: $highlight-color;
+  color: $white;
 }
 
 th {
   font-weight: bold;
   text-align: left;
-  border-bottom: 2px solid #2f2f2f;
-  border-right:1px solid #ddd;
 }
 
 td {
   padding: 10px;
-  border-bottom: 1px solid #ddd;
-  border-right:1px solid #ddd;
+
 }
 
 th {
@@ -29,5 +31,7 @@ tfoot {
 }
 
 caption {
-  background: #ffffcc;
+  background: $light-grey;
+  padding: 20px;
+  @include font-size(1.6, 2);
 }

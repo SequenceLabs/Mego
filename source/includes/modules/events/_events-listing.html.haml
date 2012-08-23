@@ -1,21 +1,9 @@
-/ START #events-listing
-
-%section.events-listing
-  %header
-    %h2
-      - if defined? title
-        = title
-      - else  
-        Upcoming Events
-  %ul
-    - (2 + rand(2)).times do
-      %li.event-item
-        %a{:href=>"#",:title=>"Brief summary of article"}
-          %h3
-            = lorem.words 1+rand(5)
-          %time{:datetime=>"2012-04-13"}
-            = lorem.date
-          %p
-            = lorem.words (6 + rand(20))
- 
-/ END #events-listing
+/ START .event-listing
+%section.event-listing
+  - if defined? include_featured
+    = partial('includes/modules/events/event-item', :locals=>{:featured=>true}) 
+  %section.latest-event
+    %h2 Latest Events
+    - (6 + rand(6)).times do
+      = partial('includes/modules/events/event-item', :locals=>{:featured=>false})
+/ END .event-listing

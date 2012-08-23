@@ -1,0 +1,17 @@
+---
+  page_title: Event
+  tag_id: event
+---
+
+%header#page-header
+  %h1 Event Title
+  %time{:datetime=>"2012-04-13"}
+    13th April 2012
+.row
+  #content
+    %figure
+      - img_placehold 660, (660/16)*9
+    = partial("includes/modules/random-content")
+  #sidebar.last
+    = partial('includes/modules/events/events-widget')
+    = partial('includes/modules/news/news-widget')

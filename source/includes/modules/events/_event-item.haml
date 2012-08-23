@@ -1,0 +1,21 @@
+/ START .event-item
+%article{:class=>"#{featured ? 'event-item featured' : 'event-item'}"}
+  - if featured
+    %figure
+      - img_placehold 320, (320/16)*9
+  %header
+    %a.read-more{:href=>"event.html"}
+      %h3
+        = lorem.words (3 + rand(5))
+    %time{:datetime=>"2009-11-13T20:00Z"}
+      19th August 2012
+    %a.location{:href=>"content-page.html"}
+      Location here
+        
+  %section{:class=>"copy"}
+    %p
+      = lorem.sentences (3 + rand(5))
+    %footer
+      %a.read-more{:href=>"event.html"}
+        Read more >
+/ END .event-item

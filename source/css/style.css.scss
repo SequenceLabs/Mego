@@ -7,7 +7,6 @@
 */
 
 @import "core/reset";
-
 @import "settings";
 
 // CSS3 mixins
@@ -40,8 +39,7 @@
 @import "core/modules/pagination";
 @import "core/modules/twitter";
 @import "core/modules/news-listing";
-// @import "core/modules/video";
-
+@import "core/modules/video";
 @import "core/modules/maps";
 @import "core/modules/flickr-photostream";
 @import "core/modules/flickr-widget";
@@ -55,6 +53,9 @@
 
 // pages
 @import "project/home";
+
+// Grid
+@import "core/grids/bootstrap/fixed";
 
 // Grid
 @import "core/grids/bootstrap/fixed";

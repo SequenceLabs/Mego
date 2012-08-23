@@ -178,16 +178,9 @@ helpers do
 
   # ----------------------------
   # Render placeholder image
-  def img_placehold(width="200", height="200", text="", background="hexdddddd", forecolour="hex858585", font="Helvetica", fontsize="24")
-    placehold_params = "?form=png&w=#{width}&h=#{height}&f=#{font}&fs=#{fontsize}&icol=#{background}&col=#{forecolour}"
-    
-    if text == ""
-      placehold_params = placehold_params + "&t=#{width} x #{height}"
-    else
-      placehold_params = placehold_params + "&t=#{text}"
-    end
-    
-    placehold_url = "http://placehold.development2.sequence.co.uk/" + placehold_params
+  def img_placehold(width="200", height="200", text="", background="dddddd", forecolour="858585", font="Helvetica", fontsize="24")
+    placehold_params = "#{width}x#{height}/#{background}/#{forecolour}"    
+    placehold_url = "http://www.imgsrc.me/" + placehold_params
 
     haml_concat <<-"HTML".gsub( /^\s+/, '' )
       <img src="#{placehold_url}" width="#{width}" height="#{height}" />
