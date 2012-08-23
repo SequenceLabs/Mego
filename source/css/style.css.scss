@@ -1,13 +1,12 @@
 /*
- _____             
-|     |___ ___ ___ 
+ _____
+|     |___ ___ ___
 | | | | -_| . | . |
 |_|_|_|___|_  |___|
-          |___|            
+          |___|
 */
 
 @import "core/reset";
-
 @import "settings";
 
 // CSS3 mixins
@@ -56,7 +55,7 @@
 @import "project/projects";
 
 // Grid
-@import "core/grids/bootstrap/responsive";
+@import "core/grids/bootstrap/fixed";
 
 // media queries
 @import "core/media-queries";

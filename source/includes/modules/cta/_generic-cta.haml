@@ -1,11 +1,12 @@
 /START Generic CTA
-%section.cta
-  %a{:href => "#", :title => "Title"}
-    %figure
-      - img_placehold 220, (220/4)*3
-    %h3 
-      = lorem.words 1 + rand(2)
-    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    %span.button{:href=>""}
-      Call to action &rarr;
+%a.cta{:href => "#", :title => "Title"}
+  %figure
+    - if defined? width
+      - img_placehold width, height
+    - else
+      - img_placehold 235, 140
+  %h3 
+    = lorem.words 1 + rand(2)
+  %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+
 /END Generic CTA

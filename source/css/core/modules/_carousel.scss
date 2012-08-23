@@ -62,11 +62,11 @@
         height: 12px;
         margin-right: 12px;
         text-indent: -9999px;
-        
+        margin-left: 0;
         cursor: pointer;
         background: transparent url(../images/dot.png) no-repeat 0 0;
         @include opacity(0.2);
-        &.active { 
+        &.active {
           @include opacity(0.5);
         }
         &:hover, :focus {

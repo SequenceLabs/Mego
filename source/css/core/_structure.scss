@@ -53,6 +53,8 @@ html  {
       display: block;
       float: left;
       margin-right: $gridGutterWidth;
+      margin-left: 0;
+      padding: 0;
       a {
         font-weight: bold;
         display: block;
@@ -132,7 +134,7 @@ html  {
   }
 }
 
-@mixin site-header-medium-screen { 
+@mixin site-header-medium-screen {
   #site-header {
     #site-nav {
      ul {
@@ -171,8 +173,15 @@ html  {
     margin-bottom: $baseline * 2;
     padding-bottom: $baseline * 2;
     border-bottom: 1px solid $borders;
+    h3, h4 {
+      margin-bottom: 0;
+    }
     ul {
       list-style: none;
+    }
+    li {
+      margin-left: 0;
+      margin-bottom: 10px;
     }
   }
 }

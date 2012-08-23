@@ -7,19 +7,18 @@
   %h1
     Frequently Asked Questions
 
-#content.span9
+#content
   .search
     %h3
       Search by keyword
     = partial('includes/modules/search/mini-search', :locals=>{:name=>"search"})
-  
   %nav.category-quicklinks
     %h3 Category quick links
     %ul
     - 4.times do |i|
       %li
         %a{:href=>"#category-#{i}", :title=>"Category #{i} Title"} Category #{i} Title
-      
+
   - 4.times do |i|
     %section.category{:id=>"category-#{i}"}
       %h2 Category #{i} Title
@@ -37,6 +36,3 @@
       .to-top
         %a{:href=>"#", :title=>"back to top"}
           Back to top &uarr;
-            
-              
-  

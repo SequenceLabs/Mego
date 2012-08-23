@@ -4,10 +4,10 @@
 
 = partial('includes/structure/html-header')
 
-%body  
+%body
   .container
     = partial('includes/structure/header')
-    .main{:id=>data.page.tag_id}
+    .main{:id=>data.page.tag_id, :class=>data.page.tag_class}
       = yield
     = partial('includes/structure/footer')
-    = partial('includes/structure/javascripts')
+  = partial('includes/structure/javascripts')

@@ -3,20 +3,32 @@
     color: $red;
   }
   label {
-    display: inline-block;
+    display: block;
     vertical-align: top;
   }
   input[type="text"],
   input[type="email"],
-  textarea {
+  textarea,
+  select {
+    @include column-width(4);
+  }
+  select {
+    height: 38px;
+    width: 350px;
   }
   textarea {
     height: 100px;
+    width: 320px;
   }
   .field-error {
-    color: $light-grey;
+    color: $red;
+    @include font-size(1.6);
     margin-left: $gridGutterWidth;
     vertical-align: middle;
-    display: none;
+    padding: 10px 0 10px 40px;
+    background: url(../images/icon-validation.png) no-repeat 0 6px;
+    position: absolute;
+    top: 38px;
+    font-style: italic;
   }
 }

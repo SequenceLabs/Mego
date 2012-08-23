@@ -1,4 +1,4 @@
-.events-listing {
+.event-listing {
   h2 {
     margin-bottom: $baseline * 2;
   }
@@ -15,9 +15,16 @@
     header,
     figure {
       margin-bottom: $baseline * 2;
-    } 
+    }
     &:hover {
       color: $black;
+    }
+    &.featured {
+      header {
+        @include column-width(4);
+        float: right;
+        margin-right: 0;
+      }
     }
   }
 }
