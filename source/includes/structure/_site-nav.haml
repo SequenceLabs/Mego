@@ -1,17 +1,11 @@
-- structure = [{:href=>"index", :title=>"Home"},
-  {:href=>"about-us", :title=>"About Us"},
-  {:href=>"locations", :title=>"Locations"},
-  {:href=>"news", :title=>"News"},
-  {:href=>"events", :title=>"Events"},
-  {:href=>"blog", :title=>"Blog"},
-  {:href=>"gallery", :title=>"Gallery"},
-  {:href=>"case-studies", :title=>"Case Studies"},
-  {:href=>"contact-us", :title=>"Contact Us"}]
+- pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/)}
+- pages = pages.find_all{|p| !p.data.hide_from_nav}
+- pages = pages.sort_by{|p| p.data.nav_pos || 100}
 
 %nav#site-nav
-
   %ul
-    - structure.each do |page|
+    - pages.each do |page|
       %li
-        %a{:href=>"#{page[:href]}.html", :class=>"#{page[:href]+'.html' == request.path ? 'active' : ''}"}
-          #{page[:title]}
+        - path = page.destination_path.gsub('/index.html','')
+        %a{:href=>"#{path}", :class=>"#{'/'+page.destination_path == request.path ? 'active' : ''}"}
+          #{page.data.nav_title? ? page.data.nav_title : page.data.page_title}

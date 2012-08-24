@@ -1,18 +1,19 @@
 ---
   page_title: About Us
   tag_id: about-us
+  hide_from_nav: true
 ---
 
-%header#page-header
+- content_for :page_header do
   %h1
     About Us
-%section#content
+- content_for :content do
   - 3.times do
     %p
       = lorem.paragraph
   = partial('includes/modules/social/flickr-photostream')
 
-%section#sidebar
+- content_for :sidebar do
   = partial('includes/modules/widgets/contact-widget')
   = partial('includes/modules/cta/generic-cta')
   = partial('includes/modules/social/flickr-photostream-widget')

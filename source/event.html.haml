@@ -1,17 +1,25 @@
 ---
   page_title: Event
   tag_id: event
+  hide_from_nav: true
+  dynamic_pages:
+    - event1
+    - event2
+    - event3
+    - event4
+  parent: events
 ---
 
-%header#page-header
+- content_for :page_header do
   %h1 Event Title
   %time{:datetime=>"2012-04-13"}
     13th April 2012
-.row
-  #content
-    %figure
-      - img_placehold 660, (660/16)*9
-    = partial("includes/modules/random-content")
-  #sidebar.last
-    = partial('includes/modules/events/events-widget')
-    = partial('includes/modules/news/news-widget')
+
+- content_for :content do
+  %figure
+    - img_placehold 660, (660/16)*9
+  = partial("includes/modules/random-content")
+
+- content_for :sidebar do
+  = partial('includes/modules/events/events-widget')
+  = partial('includes/modules/news/news-widget')

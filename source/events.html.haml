@@ -3,13 +3,11 @@
   tag_id: events
 ---
 
-%header#page-header
-  %h1
-    Events
-.row
-  #content
-    = partial('includes/modules/events/events-listing', :locals=>{:include_featured=>true})
-    = partial('includes/modules/pagination')
-  #sidebar
-    = partial('includes/modules/news/news-widget')
-    = partial('includes/modules/news/news-widget')
+- content_for :page_header do
+  %h1 Events
+- content_for :content do
+  = partial('includes/modules/events/events-listing', :locals=>{:include_featured=>true})
+  = partial('includes/modules/pagination')
+- content_for :sidebar do
+  = partial('includes/modules/news/news-widget')
+  = partial('includes/modules/news/news-widget')

@@ -1,20 +1,20 @@
 ---
   page_title: News Listing
   tag_id: news-list
+  nav_title: News
 ---
 
-%header#page-header
+- content_for :page_header do
   %h1
     Latest News
   %p
-    Some sort of by-line here. 
+    Some sort of byline here.
     = lorem.words 24
-.row
-  #content.span9
-    = partial('includes/modules/news/news-listing', :locals=>{:include_featured=>true})
-    = partial('includes/modules/pagination')
-  #sidebar.span3.last
-    = partial('includes/modules/events/events-widget')
-    = partial('includes/modules/news/news-widget')
-    = partial('includes/modules/video')
+- content_for :content do
+  = partial('includes/modules/news/news-listing', :locals=>{:include_featured=>true})
+  = partial('includes/modules/pagination')
+- content_for :sidebar do
+  = partial('includes/modules/events/events-widget')
+  = partial('includes/modules/news/news-widget')
+  = partial('includes/modules/video')
 

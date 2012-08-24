@@ -1,10 +1,12 @@
 ---
   page_title: Login
   tag_id: Login-page
+  hide_from_nav: true
 ---
 
-#content
-  .span4
-    = partial('includes/modules/login-form')
-  .span4
-    = partial('includes/modules/password-reset')
+- content_for :page_header do
+  %h1 Login
+
+- content_for :content do
+  = partial('includes/modules/login-form')
+  = partial('includes/modules/password-reset')

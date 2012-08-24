@@ -27,7 +27,7 @@ $pink: #ff0064;
 $red: #990000;
 
 $text-color: $black;
-$highlight-color: $blue;
+$highlight-color: $pink;
 
 // Typography settings
 $sans: "Helvetica Neue", Arial, sans-serif;
@@ -42,17 +42,17 @@ $links-visited: $highlight-color;
 $links-focus: $highlight-color;
 
 // Border settings
-$borders: $mid-grey;
+$borders: $light-grey;
 $hr-border: $mid-grey;
 
-$border-radius: 0px;
+$border-radius: 4px;
 
 // GRID
 // --------------------------------------------------
 
 $gridColumns:             12 !default;
-$gridColumnWidth:         65px !default;
-$gridGutterWidth:         20px !default;
+$gridColumnWidth:         50px !default;
+$gridGutterWidth:         30px !default;
 
 // Fluid grid
 // -------------------------

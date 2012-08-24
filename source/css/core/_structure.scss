@@ -53,11 +53,8 @@ html  {
       display: block;
       float: left;
       margin-right: $gridGutterWidth;
-<<<<<<< HEAD
-=======
       margin-left: 0;
       padding: 0;
->>>>>>> ResponiveNewGridSystem
       a {
         font-weight: bold;
         display: block;
@@ -72,8 +69,6 @@ html  {
         &.active {
           border-bottom: 5px solid $black;
           padding-bottom: 10px;
-<<<<<<< HEAD
-=======
         }
       }
     }
@@ -133,14 +128,12 @@ html  {
             border-bottom: none;
             padding-bottom: 7px;
           }
->>>>>>> ResponiveNewGridSystem
         }
       }
     }
   }
 }
 
-<<<<<<< HEAD
 @mixin site-header-small-screen {
   #site-header {
     margin: 0 0 10px 0;
@@ -200,8 +193,6 @@ html  {
   }
 }
 
-=======
->>>>>>> ResponiveNewGridSystem
 @mixin site-header-medium-screen {
   #site-header {
     #site-nav {
@@ -236,7 +227,7 @@ html  {
   }
 }
 #sidebar {
-  @include column(3);
+  @include column(3, $last-child: true);
   section.widget {
     margin-bottom: $baseline * 2;
     padding-bottom: $baseline * 2;

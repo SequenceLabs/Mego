@@ -2,10 +2,10 @@
   page_title: Case Studies
   tag_id: case-studies
 ---
-.row      
-  #content.span8
-    %header
-      %h1
-        Case Studies
-    - 5.times do
-      = partial('includes/modules/case-study')
+
+- content_for :page_header do
+  %h1
+    Case Studies
+- content_for :content do
+  - 5.times do
+    = partial('includes/modules/case-study')

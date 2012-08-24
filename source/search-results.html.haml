@@ -1,19 +1,18 @@
 ---
   page_title: Search Results
   body_id: search
+  hide_from_nav: true
 ---
 
-#content.span9
-  %header
-    %h1
-      Search Results
-  
-  .search-results-header  
+- content_for :page_header do
+  %h1 Search Results
+- content_for :content do
+  .search-results-header
     = partial('includes/modules/mini-search', :locals=>{:name=>"keywords"})
     .results
       1-10 of #{rand(6000)} results
     .sort
-      Sort by:    
+      Sort by:
       %a.relevance{:href=>"", :title=>"Sort by relevance"} Relevance
       |
       %a.date{:href=>"", :title=>"Sort by date"} Date
@@ -21,9 +20,9 @@
     - (3 + rand(6)).times do
       %li
         = partial('includes/modules/search-item')
-    
-  = partial('includes/modules/pagination')  
-    
-%section#sidebar.span3.last
+
+  = partial('includes/modules/pagination')
+
+- content_for :sidebar do
   = partial('includes/modules/search-filter')
   = partial('includes/modules/search-media-type')

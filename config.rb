@@ -6,6 +6,7 @@
 set :css_dir, "css"
 set :images_dir, "images"
 set :js_dir, "js"
+set :nav, @nav
 
 # ----------------------------
 # Build-specific configuration
@@ -179,15 +180,24 @@ helpers do
   # ----------------------------
   # Render placeholder image
   def img_placehold(width="200", height="200", text="", background="dddddd", forecolour="858585", font="Helvetica", fontsize="24")
-    placehold_params = "#{width}x#{height}/#{background}/#{forecolour}"    
+    placehold_params = "#{width}x#{height}/#{background}/#{forecolour}"
     placehold_url = "http://www.imgsrc.me/" + placehold_params
 
     haml_concat <<-"HTML".gsub( /^\s+/, '' )
       <img src="#{placehold_url}" width="#{width}" height="#{height}" />
     HTML
-
   end
-
-
 end # end of helpers
+
+ready do
+  sitemap.resources.find_all{|p| p.source_file.match(/\.html/)}.each do |page|
+    if page.data.dynamic_pages && !page.proxy?
+      page.data.dynamic_pages.each do |dynamic_page|
+        page "/#{page.data.parent}/#{dynamic_page}.html", :proxy => "#{page.url}" do
+
+        end
+      end
+    end
+  end
+end
 

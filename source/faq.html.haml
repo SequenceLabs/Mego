@@ -1,13 +1,14 @@
 ---
+  layout: one-col
   page_title: Frequently Asked Questions
+  nav_title: FAQs
   tag_id: faq
 ---
 
-%header#page-header
-  %h1
-    Frequently Asked Questions
+- content_for :page_header do
+  %h1 Frequently Asked Questions
 
-#content
+- content_for :content do
   .search
     %h3
       Search by keyword
