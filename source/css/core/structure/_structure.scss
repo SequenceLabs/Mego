@@ -1,0 +1,28 @@
+/********************************************
+*
+* Main Structure
+*
+********************************************/
+
+::selection {
+  background: $highlight-color; /* Safari */
+}
+::-moz-selection {
+  background: $highlight-color; /* Firefox */
+}
+
+html  {
+  background: #ffffff;
+  margin: $gridGutterWidth;
+  text-rendering: optimizelegibility;
+}
+
+#content {
+  @include column(9);
+  margin-left: 0;
+}
+
+#page-header {
+  padding-bottom: $baseline * 1;
+  margin-bottom: $baseline * 1;
+}

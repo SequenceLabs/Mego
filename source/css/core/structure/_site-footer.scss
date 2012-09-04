@@ -1,0 +1,50 @@
+#site-footer {
+  clear: both;
+  padding: $baseline * 3 0;
+  margin: $baseline * 3 0;
+  border-top: 1px solid $borders;
+  @include font-size(1.4);
+  a {
+    color: $text-color;
+    @include font-size(1.4);
+    &:hover {
+      color: $highlight-color;
+    }
+  }
+  .social-links {
+    @include column(4, $last-child: true);
+    ul {
+      float: right;
+    }
+    li {
+      display: inline-block;
+      margin: 0 10px 0 0;
+      .twitter {
+        background-image: url('../images/icons/icon-twitter.png');
+      }
+      .facebook {
+        background-image: url('../images/icons/icon-facebook.png');
+      }
+      a {
+        width: 24px;
+        height: 24px;
+        display: block;
+        text-indent: -9999px;
+        overflow: hidden;
+      }
+    }
+
+  }
+  .copyright {
+    margin-bottom: 10px;
+  }
+}
+#footer-nav {
+  @include column(8, $first-child: true);
+  ul {
+    li {
+      display: inline-block;
+      margin: 0 10px 0 0;
+    }
+  }
+}

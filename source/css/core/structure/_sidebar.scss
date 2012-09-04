@@ -1,0 +1,37 @@
+#sidebar {
+  @include column(3, $last-child: true);
+  section.widget {
+    position: relative;
+    margin-bottom: $baseline * 2;
+    padding-bottom: $baseline * 2;
+    border-bottom: 1px solid $borders;
+    h4, h5 {
+      margin-bottom: 0;
+    }
+    ul {
+      list-style: none;
+    }
+    li {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    .rss {
+      position: absolute;
+      text-indent: -9999em;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 24px;
+      height: 24px;
+      overflow: hidden;
+      background: transparent url('../images/icons/icon-rss.png') no-repeat 0 0;
+      @include opacity(0.8);
+      &:hover {
+        @include opacity(1);
+      }
+    }
+  }
+}

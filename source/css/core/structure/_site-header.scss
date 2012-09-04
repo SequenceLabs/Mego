@@ -1,22 +1,3 @@
-/********************************************
-*
-* Main Structure
-*
-********************************************/
-
-::selection {
-  background: $highlight-color; /* Safari */
-}
-::-moz-selection {
-  background: $highlight-color; /* Firefox */
-}
-
-html  {
-  background: #ffffff;
-  margin: $gridGutterWidth;
-  text-rendering: optimizelegibility;
-}
-
 #site-header {
   margin: $baseline * 3 0;
   position: relative;
@@ -41,6 +22,7 @@ html  {
 }
 
 #site-nav {
+  @include unlistify();
   clear: both;
   #mobile-menu {
     display: none;
@@ -53,7 +35,6 @@ html  {
       display: block;
       float: left;
       margin-right: $gridGutterWidth;
-      margin-left: 0;
       padding: 0;
       a {
         font-weight: bold;
@@ -95,7 +76,7 @@ html  {
   }
 
   #site-nav {
-    #menuBtn {
+    #menu-btn {
       display: block;
       position: absolute;
       top: 0;
@@ -154,7 +135,7 @@ html  {
   }
 
   #site-nav {
-    #menuBtn {
+    #menu-btn {
       display: block;
       position: absolute;
       top: 0;
@@ -206,47 +187,3 @@ html  {
     }
   }
 }
-
-#content {
-  @include column(9);
-  margin-left: 0;
-}
-
-#site-footer {
-  clear: both;
-  padding: $baseline * 3 0;
-  margin: $baseline * 3 0;
-  border-top: 1px solid $borders;
-}
-#footer-nav {
-  ul {
-    li {
-      display: inline-block;
-      margin-right: 20px;
-    }
-  }
-}
-#sidebar {
-  @include column(3, $last-child: true);
-  section.widget {
-    margin-bottom: $baseline * 2;
-    padding-bottom: $baseline * 2;
-    border-bottom: 1px solid $borders;
-    h3, h4 {
-      margin-bottom: 0;
-    }
-    ul {
-      list-style: none;
-    }
-    li {
-      margin-left: 0;
-      margin-bottom: 10px;
-    }
-  }
-}
-#page-header {
-  padding-bottom: $baseline * 1;
-  margin-bottom: $baseline * 1;
-}
-
-

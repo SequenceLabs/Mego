@@ -10,8 +10,8 @@ class modules.Nav
     @init()
 
   init: () =>
-    @menuBtn.id = "menuBtn"
-    
+    @menuBtn.id = "menu-btn"
+
   attach: () =>
     @el.insertBefore(@menuBtn, @el.firstChild)
     @menuBtn.addEventListener("click", @toggle)

@@ -4,6 +4,7 @@
 
 .cta {
   @include column(3);
+  @include unlinkify();
   &:nth-child(3n) {
     margin-right: 0;
   }
@@ -14,9 +15,8 @@
   figure {
     margin-bottom: $baseline * 2;
   }
-  a {
-    @include unlinkify();
-    display: block;
+  p {
+    color: $text-color;
   }
 }
 

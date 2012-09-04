@@ -20,17 +20,6 @@
   %a.button{:href=>"locations.html"}
     &larr; Back to Projects
 
-  %ul
-    - pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/)}
-    - pages = pages.sort_by{|p| p.data.nav_pos || 100}
-    - pages.each do |page|
-      %li
-        #{page.path}
-        - pages.each do |p|
-          - if !p.data.parent.nil? && p.proxy? && p.data.parent == page.path.gsub('.html', '')
-            %li
-              #{p.path}
-
 - content_for :sidebar do
   %section#location-widget.widget
     %h2 Locations

@@ -86,6 +86,13 @@ cite {
   display: block;
 }
 
+figure {
+  margin-bottom: $baseline * 2;
+  img {
+    margin-bottom: $baseline;
+  }
+}
+
 figcaption, time {
   display: block;
   color: $black;

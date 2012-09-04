@@ -19,8 +19,8 @@
     src: url('#{$src/$filename}.eot');
     src: url('#{$src/$filename}.eot?iefix') format("eot"), url('#{$src/$filename}.woff') format("woff"), url('#{$src/$filename}.ttf') format("truetype"), url('#{$src/$filename}.svg#webfontZam02nTh') format("svg");
     font-weight: $font-weight;
-    font-style: $font-style; 
-    } 
+    font-style: $font-style;
+    }
 }
 
 // Sets link colours
@@ -82,12 +82,14 @@
   @if $lineHeight == "auto" {
     line-height: (ceil($sizeValue) * 10) + px;
     line-height: ceil($sizeValue) + rem;
-  } 
+  }
   @else {
     line-height: ($lineHeight * 10) + px;
     line-height: $lineHeight + rem;
   }
 }
+
+// mixin to remove default styling of links
 
 @mixin unlinkify() {
   color: $text-color;
@@ -96,7 +98,18 @@
   }
 }
 
-@mixin arrow($pos: "top", $size: 30px, $color: "#fff"){
+// mixin to remove list styling
+
+@mixin unlistify() {
+  list-style: none;
+  margin-bottom: 0;
+  li {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+@mixin arrow($pos: "top", $size: 30px, $color: "#fff") {
   position: relative;
   background: $color; 
   &:after {

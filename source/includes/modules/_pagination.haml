@@ -3,13 +3,12 @@
   %ul
     %li
       %a.prev{:href=>"#"}
-        &larr;
+        &larr; older
     - 4.times do |i|
       %li
         %a{:class=>"#{i==0 ? 'selected' : ''}"}
-          = "#{i}"  
+          = "#{i}"
     %li
       %a.next{:href=>"#"}
-        &rarr;
-  
+        newer &rarr;
 /END Pagination

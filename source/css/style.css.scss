@@ -27,7 +27,10 @@
 @import "core/helpers/components";
 
 // main structural stuff
-@import "core/structure";
+@import "core/structure/structure";
+@import "core/structure/site-header";
+@import "core/structure/site-footer";
+@import "core/structure/sidebar";
 
 // modules
 @import "core/modules/carousel";
