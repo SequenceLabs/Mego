@@ -10,7 +10,7 @@
     .main{:id=>data.page.tag_id, :class=>data.page.tag_class}
       %header#page-header
         = yield_content :page_header
-      %section#content
+      %article#content
         = yield_content :content
       %section#sidebar
         = yield_content :sidebar
