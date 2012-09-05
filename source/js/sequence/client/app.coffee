@@ -23,6 +23,10 @@ class App
   # executes when document is ready
   onDocReady: =>
 
+
+    $("html").addClass("fade")
+
+
     @initCoffeeSlider()
     @initGallery()
     @initVideoPlayer()

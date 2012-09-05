@@ -1,7 +1,5 @@
 #contact-widget {
-  .map {
-    margin-bottom: $baseline;
-  }
+  padding-bottom: $baseline*2;
   .vcard {
     @include font-size(1.6);
     .adr,.tel, .email {
@@ -12,6 +10,7 @@
     margin-bottom:$baseline*2;
   }
   .map {
+    margin-bottom: $baseline;
     a {
       @include font-size(0.8);
       opacity: 0.4;

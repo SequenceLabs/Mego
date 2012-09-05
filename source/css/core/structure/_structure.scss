@@ -15,6 +15,10 @@ html  {
   background: #ffffff;
   margin: $gridGutterWidth;
   text-rendering: optimizelegibility;
+  .fade {
+    background: red;
+    @include transition(background-color, 5s)
+  }
 }
 
 #content {

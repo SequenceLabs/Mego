@@ -10,25 +10,26 @@
   input[type="email"],
   textarea,
   select {
-    @include column-width(4);
+    @include column-width(5);
   }
   select {
     height: 38px;
-    width: 350px;
+    @include column-width(5);
   }
   textarea {
     height: 100px;
-    width: 320px;
+    @include column-width(5);
+  }
+  .field {
+    position: relative;
   }
   .field-error {
     color: $red;
     @include font-size(1.6);
     margin-left: $gridGutterWidth;
     vertical-align: middle;
-    padding: 10px 0 10px 40px;
-    background: url(../images/icon-validation.png) no-repeat 0 6px;
+    padding: 10px 0 10px 0px;
+    background: url(../images/icons/icon-validation.png) no-repeat 0 6px;
     position: absolute;
-    top: 38px;
-    font-style: italic;
   }
 }

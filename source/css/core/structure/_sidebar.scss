@@ -3,17 +3,40 @@
   section.widget {
     position: relative;
     margin-bottom: $baseline * 2;
-    padding-bottom: $baseline * 2;
     border-bottom: 1px solid $borders;
     h4, h5 {
       margin-bottom: 0;
     }
     ul {
-      list-style: none;
+      @include unlistify();
     }
     li {
-      margin-left: 0;
-      margin-bottom: 10px;
+      margin-bottom: $baseline;
+      border-bottom: 1px dotted $borders;
+      padding-bottom: $baseline;
+      position: relative;
+      a {
+        @include unlinkify();
+      }
+      &:after {
+        content: url(../images/icons/icon-chevron.png);
+        display: block;
+        width: 22px;
+        height: 35px;
+        position: absolute;
+        right: 0;
+        top: 30%;
+        @include opacity(0);
+      }
+      &:hover {
+        &:after {
+          @include opacity(0.3);
+          right: -5px;
+        }
+      }
+      &:last-child {
+        border-bottom: none;
+      }
     }
     &:last-child {
       border-bottom: none;
@@ -28,10 +51,13 @@
       height: 24px;
       overflow: hidden;
       background: transparent url('../images/icons/icon-rss.png') no-repeat 0 0;
-      @include opacity(0.8);
+      @include opacity(0.5);
       &:hover {
         @include opacity(1);
       }
     }
+  }
+  .cta {
+    margin-left: 0;
   }
 }

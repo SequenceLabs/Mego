@@ -41,10 +41,7 @@
 
 #news-widget {
   ul {
-    list-style: none;
-  }
-  a {
-    @include unlinkify();
+    @include unlistify();
   }
 }
 

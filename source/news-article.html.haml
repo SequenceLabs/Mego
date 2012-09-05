@@ -4,7 +4,6 @@
   hide_from_nav: true
 ---
 
-
 - content_for :page_header do
   %h1
     = lorem.words (3 + rand(5))
@@ -22,7 +21,7 @@
     &larr; Back
   %footer#news-footer
     = partial("includes/modules/social/social-share")
-    = partial("includes/modules/social/facebook-stats")
+    / = partial("includes/modules/social/facebook-stats")
 
 - content_for :sidebar do
   = partial('includes/modules/events/events-widget')
