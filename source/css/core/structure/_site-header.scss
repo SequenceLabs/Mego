@@ -8,9 +8,10 @@
     a {
       @include font-size(4.5, 6);
       font-weight: bold;
-      color: $black!important;
+      font-family: $sans;
+      color: $white!important;
       &:hover {
-        color: $black;
+        color: $white;
       }
     }
   }
@@ -29,7 +30,7 @@
   }
   ul {
     overflow: hidden;
-    border-bottom: 1px solid $black;
+    border-bottom: 1px solid $white;
     min-height: 33px;
     li {
       display: block;
@@ -39,16 +40,16 @@
       a {
         font-weight: bold;
         display: block;
-        color: $black;
+        color: $white;
         padding-bottom: 10px;
         &:hover {
           text-decoration: none;
           color: $highlight-color;
-          border-bottom: 2px solid $black;
+          border-bottom: 2px solid $white;
           padding-bottom: 13px;
         }
         &.active {
-          border-bottom: 5px solid $black;
+          border-bottom: 5px solid $white;
           padding-bottom: 10px;
         }
       }
@@ -83,7 +84,7 @@
       right: 0;
       padding: 20px;
       @include font-size(1.4);
-      color: $black;
+      color: $white;
       cursor: Pointer;
     }
     ul {
@@ -142,7 +143,7 @@
       right: 0;
       padding: 20px;
       @include font-size(1.4);
-      color: $black;
+      color: $white;
       cursor: Pointer;
     }
     ul {

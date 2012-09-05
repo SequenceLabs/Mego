@@ -1,0 +1,1 @@
+throw Error("ExecJS::ProgramError: Error: Parse error on line 7: Unexpected 'THIS'\n  (in /Users/macmini/Sites/Mego/source/js/sequence/modules/modal/modal.coffee)")

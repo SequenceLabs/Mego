@@ -12,15 +12,21 @@
 }
 
 html  {
-  background: #ffffff;
-  margin: $gridGutterWidth;
+  background: $mid-grey;
+  margin: 0 $gridGutterWidth;
   text-rendering: optimizelegibility;
+
   .fade {
     background: red;
     @include transition(background-color, 5s)
   }
 }
-
+body {
+  > .container {
+    background: $dark-grey;
+    padding: 0 50px;
+  }
+}
 #content {
   @include column(9);
   margin-left: 0;

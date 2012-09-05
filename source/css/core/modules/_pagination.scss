@@ -12,7 +12,7 @@
       margin-left: 0;
       padding: 0;
       a {
-        color: $black;
+        color: $white;
         display: block;
         padding: 0 20px;
         margin-left: -4px;
@@ -22,6 +22,7 @@
         cursor: pointer;
         &:hover,
         &.selected {
+          color: $black;
           text-decoration: none;
           background: $really-light-grey;
           @include vertical-gradient($really-light-grey, darken($really-light-grey, 5%));

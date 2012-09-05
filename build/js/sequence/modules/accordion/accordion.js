@@ -1,0 +1,1 @@
+throw Error("ExecJS::ProgramError: Error: Parse error on line 11: Unexpected 'THIS'\n  (in /Users/macmini/Sites/Mego/source/js/sequence/modules/accordion/accordion.coffee)")
