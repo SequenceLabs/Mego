@@ -5,15 +5,14 @@
 = partial('includes/structure/html-header')
 
 %body
-  .container
-    = partial('includes/structure/header')
-    .main{:id=>data.page.tag_id, :class=>data.page.tag_class}
+  %article#main-container.container
+    = partial('includes/structure/site-header')
+    %section.main{:id=>data.page.tag_id, :class=>data.page.tag_class}
       %header#page-header
         = yield_content :page_header
       %article#content
         = yield_content :content
       %section#sidebar
         = yield_content :sidebar
-
-    = partial('includes/structure/footer')
+    = partial('includes/structure/site-footer')
   = partial('includes/structure/javascripts')

@@ -1,5 +1,5 @@
 #site-header {
-  margin: $baseline * 3 0;
+  margin: $baseline * 2 0;
   position: relative;
   #branding {
     float: left;
@@ -21,7 +21,7 @@
   }
 }
 
-#site-nav {
+#primary-nav {
   @include unlistify();
   clear: both;
   #mobile-menu {
@@ -75,7 +75,7 @@
     }
   }
 
-  #site-nav {
+  #primary-nav {
     #menu-btn {
       display: block;
       position: absolute;
@@ -134,7 +134,7 @@
     }
   }
 
-  #site-nav {
+  #primary-nav {
     #menu-btn {
       display: block;
       position: absolute;
@@ -176,7 +176,7 @@
 
 @mixin site-header-medium-screen {
   #site-header {
-    #site-nav {
+    #primary-nav {
      ul {
         li {
           a {

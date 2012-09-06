@@ -22,8 +22,16 @@ html  {
 }
 
 #content {
-  @include column(9);
-  margin-left: 0;
+  @include column(9, $first-child: true);
+}
+
+#generic-page {
+  #content {
+    @include column(9, $last-child: true);
+  }
+  #sidebar {
+    @include column(3, $first-child: true);
+  }
 }
 
 #page-header {

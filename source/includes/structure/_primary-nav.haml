@@ -2,7 +2,7 @@
 - pages = pages.find_all{|p| !p.data.hide_from_nav}
 - pages = pages.sort_by{|p| p.data.nav_pos || 100}
 
-%nav#site-nav
+%nav#primary-nav
   %ul
     - pages.each do |page|
       %li
