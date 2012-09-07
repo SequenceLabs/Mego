@@ -3,4 +3,5 @@
     = partial('includes/structure/branding')
     = partial('includes/modules/search/mini-search', :locals=>{:name=>"search"})
   .row
-    = partial('includes/structure/site-nav')
+    = partial('includes/structure/primary-nav')
+  = yield_content :breadcrumbs

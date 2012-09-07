@@ -1,0 +1,19 @@
+---
+  page_title: Generic Page
+  tag_id: generic-page
+  nav_title: Generic Page
+  layout: two-col-sidebar-left
+---
+- content_for :breadcrumbs do
+  = partial('includes/modules/nav/breadcrumbs')
+
+- content_for :page_header do
+  %h1 Generic Page
+  %p
+    Optional byline here.
+    = lorem.words 24
+
+- content_for :content do
+  = partial('includes/modules/kitchen-sink')
+- content_for :sidebar do
+  = partial('includes/modules/nav/secondary-nav')

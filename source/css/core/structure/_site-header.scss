@@ -1,5 +1,5 @@
 #site-header {
-  margin: $baseline * 3 0;
+  margin: $baseline * 2 0;
   position: relative;
   #branding {
     float: left;
@@ -22,41 +22,6 @@
   }
 }
 
-#site-nav {
-  @include unlistify();
-  clear: both;
-  #mobile-menu {
-    display: none;
-  }
-  ul {
-    overflow: hidden;
-    border-bottom: 1px solid $white;
-    min-height: 33px;
-    li {
-      display: block;
-      float: left;
-      margin-right: $gridGutterWidth;
-      padding: 0;
-      a {
-        font-weight: bold;
-        display: block;
-        color: $white;
-        padding-bottom: 10px;
-        &:hover {
-          text-decoration: none;
-          color: $highlight-color;
-          border-bottom: 2px solid $white;
-          padding-bottom: 13px;
-        }
-        &.active {
-          border-bottom: 5px solid $white;
-          padding-bottom: 10px;
-        }
-      }
-    }
-  }
-}
-
 @mixin site-header-small-screen {
   #site-header {
     margin: 0 0 10px 0;
@@ -76,7 +41,7 @@
     }
   }
 
-  #site-nav {
+  #primary-nav {
     #menu-btn {
       display: block;
       position: absolute;
@@ -135,7 +100,7 @@
     }
   }
 
-  #site-nav {
+  #primary-nav {
     #menu-btn {
       display: block;
       position: absolute;
@@ -177,7 +142,7 @@
 
 @mixin site-header-medium-screen {
   #site-header {
-    #site-nav {
+    #primary-nav {
      ul {
         li {
           a {

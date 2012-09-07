@@ -2,10 +2,19 @@
 - pages = pages.find_all{|p| !p.data.hide_from_nav}
 - pages = pages.sort_by{|p| p.data.nav_pos || 100}
 
-%nav#site-nav
+%nav#primary-nav
   %ul
     - pages.each do |page|
-      %li
+    - subnav_parent = page.data.page_title == "Generic Page" ? true : false
+
+      %li{:class=>"#{subnav_parent ? 'subnav-parent' : ''}"}
         - path = page.destination_path.gsub('/index.html','')
         %a{:href=>"#{path}", :class=>"#{'/'+page.destination_path == request.path ? 'active' : ''}"}
           #{page.data.nav_title? ? page.data.nav_title : page.data.page_title}
+        - if subnav_parent
+          %ul.sub-nav
+            - 3.times do |i|
+              %li
+                %a{:href=>"#{path}", :class=>"#{'/'+page.destination_path == request.path ? 'active' : ''}"}
+                  Some Inner Page #{i+1}
+

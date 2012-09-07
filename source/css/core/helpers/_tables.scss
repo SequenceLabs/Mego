@@ -1,5 +1,5 @@
 table {
-  margin-bottom: $baseline * 2;
+  margin-bottom: $baseline * 4;
   width: 100%;
   @include font-size(1.6, 2)
 }
@@ -27,11 +27,13 @@ tr:nth-child(even) {
 }
 
 tfoot {
-  font-style: italic;
+  font-weight: bold;
+  border-top: 1px dotted $mid-grey;
+  border-bottom: 1px dotted $mid-grey;
 }
 
 caption {
-  background: $light-grey;
+  background: $really-light-grey;
   padding: 20px;
   @include font-size(1.6, 2);
 }
