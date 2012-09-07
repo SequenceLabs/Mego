@@ -31,11 +31,13 @@
 @import "core/structure/site-header";
 @import "core/structure/site-footer";
 @import "core/structure/sidebar";
+@import "core/structure/primary-nav";
 
 // modules
+
+@import "core/modules/nav/secondary-nav";
 @import "core/modules/nav/pagination";
 @import "core/modules/nav/breadcrumbs";
-@import "core/modules/nav/secondary-nav";
 @import "core/modules/carousel";
 @import "core/modules/gallery";
 @import "core/modules/social/social-share";
