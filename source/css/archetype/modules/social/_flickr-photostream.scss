@@ -1,0 +1,131 @@
+.flickr-photostream-widget {
+  img {
+    margin-bottom: $baseline * 2;
+  }
+}
+
+#flickr-gallery {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  margin-bottom: $baseline * 2; }
+
+.flickrGallery-thumbsContainer {
+  padding: 0px;
+  margin:17px 0px 0px 132px;
+  width: 528px;
+  height: auto;
+  top: 400px;
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  z-index: 4;
+  img {
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: 62px;
+    height: 62px; }
+  a {
+    padding: 0px;
+    border: solid rgb(255, 255, 255);
+    width: 62px;
+    height: 62px;
+    float: left;
+    cursor: pointer;
+    &.flickrGallery-thumb-selected {
+      border-width: 2px;
+      margin: 0px; }
+    &.flickrGallery-thumb {
+      border-width: 0px;
+      margin: 2px;
+      &:hover {
+        border-width: 1px;
+        margin: 1px; } } } }
+
+#flickr-gallery-previewView {
+  width: inherit;
+  height: 400px;
+  position: absolute;
+  overflow:hidden;
+  z-index: 1; 
+  cursor: pointer; }
+
+.flickrGallery-loadingContainer {
+  width: 100%;
+  height: 100%;
+  color: rgb(255, 255, 255);
+  display: block;
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(1, 0, 0, 0.75); }
+
+.flickrGallery-loadingIcon {
+  left: 50%;
+  top: 50%;
+  margin-top: -16px;
+  margin-left: -16px;
+  position: absolute; }
+
+.flickrGallery-controlsContainer {
+  top: 400px;
+  height: auto;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  z-index: 3; }
+
+.flickrGallery-playPauseButton {
+  margin: 19px 2px 0px 2px;
+  padding: 0px;
+  width: 62px;
+  height: 62px;
+  float: left;
+  cursor: pointer; 
+  background-repeat: no-repeat;
+  background-position: 15px 15px;
+  background-color: black; }
+
+#flickr-gallery {
+  .paused {
+    background-image: url("../images/pause_up.gif");
+    &:hover {
+      background-image: url("../images/pause_down.gif");
+      background-color: white; } }
+  .playing {
+    background-image: url("../images/play_up.gif");
+    &:hover {
+      background-image: url("../images/play_down.gif");
+      background-color: white; } } }
+
+.flickrGallery-leftButton {
+  margin: 19px 2px 0px 2px;
+  padding: 0px;
+  width: 62px;
+  height: 62px;
+  float: left;
+  cursor: pointer;
+  background-image: url("../images/left_up.gif");
+  background-repeat: no-repeat;
+  background-position: 15px 15px;
+  background-color: black;
+  &:hover {
+    background-image: url("../images/left_down.gif");
+    background-color: white; } }
+
+.flickrGallery-rightButton {
+  margin: 19px 2px 0px 2px;
+  padding: 0px;
+  width: 62px;
+  height: 62px;
+  float: right;
+  cursor: pointer;
+  background-image: url("../images/right_up.gif");
+  background-repeat: no-repeat;
+  background-position: 15px 15px;
+  background-color: black;
+  &:hover {
+    background-image: url("../images/right_down.gif");
+    background-color: white; } }

@@ -1,11 +1,11 @@
-#  ____
-# / ___|  ___  __ _ _   _  ___ _ __   ___  ___
+#  ____                                       
+# / ___|  ___  __ _ _   _  ___ _ __   ___  ___ 
 # \___ \ / _ \/ _` | | | |/ _ \ '_ \ / __|/ _ \
 #  ___) |  __/ (_| | |_| |  __/ | | | (__|  __/
 # |____/ \___|\__, |\__,_|\___|_| |_|\___|\___|
-#                |_|
-
-"use strict"
+#                |_|   
+         
+"use strict"  
 
 utils = Namespace('SEQ.utils')
 maps = Namespace('SEQ.gmaps')
@@ -17,19 +17,15 @@ CoffeeSlider = modules.CoffeeSlider
 
 class App
   #init function happens as soon as javascript is loaded
-  constructor: ->
+  constructor: ->   
     $(document).ready @onDocReady
 
   # executes when document is ready
   onDocReady: =>
 
-
-    $("html").addClass("fade")
-
-
     @initCoffeeSlider()
     @initGallery()
-    @initVideoPlayer()
+    @initVideoPlayer()   
     @initMaps()
     @initFlickrGallery()
     @initFlickrWidget()
@@ -39,11 +35,11 @@ class App
 
     # do this last or any references in the callbacks will be undefined
     @initMediaQueries()
-
+  
   initMediaQueries: =>
     @mediaQueries = new utils.browser.MediaQueries()
 
-  initCoffeeSlider: =>
+  initCoffeeSlider: => 
     # init CoffeeSlider
     if $(".carousel").length > 0
       @coffeeSlider = new CoffeeSlider
@@ -70,7 +66,7 @@ class App
         stripElements: ["figcaption"]
 
   initVideoPlayer: ->
-    if $("#player1").length > 0
+    if $("#player1").length > 0  
       # init video player
       # to see player mode rendered just do:
       # player = new MediaElementPlayer("#player1",
@@ -84,32 +80,37 @@ class App
   initMaps: ->
     if document.querySelector('#contact-widget .map')?
       @loadMapsApi @initContactWidgetMap
-
-    if document.querySelector('#locations')?
-      loadMapsApi initMapLocations
-
+  
+    if document.querySelector('#projects')?
+      @loadMapsApi @initMapLocations  
+    
   loadMapsApi: (callback)->
-    if google? and google.maps?
-      callback.call()
+    if google? and google.maps? 
+      callback.call() 
     else
       mapsController = new maps.GoogleMapsApiController
+        sensor: true
         callback: callback
 
   initMapLocations: ->
     new maps.MapLocationsController
-      DOMlocations: document.querySelectorAll('#location-listing li')
-      mapOpts:
-        mapEl: document.querySelector('#locations #map')
-
-  initContactWidgetMap = ->
       zoom: 12
       mapEl: document.querySelector('#projects #map')
       locations: document.querySelectorAll('#project-listing li')
       mapTypeId: google.maps.MapTypeId.ROADMAP
 
-  initContactWidgetMap: ->
+  initContactWidgetMap: -> 
     gmap = new maps.GoogleMap
       mapEl: document.querySelector('#contact-widget .map')
+      zoom: 12
+      mapTypeId: google.maps.MapTypeId.ROADMAP      
+      mapTypeIds: []
+      panControl: false
+      zoomControl: false
+      mapTypeControl: false
+      scaleControl: false
+      streetViewControl: false
+      overviewMapControl: false
     gmap.centerOnAddress($("#contact-widget .adr"))
 
   initFlickrGallery: ->
@@ -142,7 +143,7 @@ class App
       container: $(".facebook-stats")
       page: 'site'
       debug: true
-
+      
   initFaceBookFeed: ->
     facebookFeed = new modules.facebook.FacebookAPILoader()
 

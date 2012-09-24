@@ -1,0 +1,23 @@
+---
+  layout: one-col
+  page_title: 404
+  hide_from_nav: true
+  tag_id: 404
+---
+
+- content_for :page_header do
+  %h1 Page not found
+  %p We're sorry, but we can't find the page you were looking for
+
+- content_for :content do
+  %p The link you clicked on might have been broken, or you may have mistyped the web address.
+  %p Instead, you might like to:
+
+  %nav
+    %ul
+      %li
+        %a{:href=>"/"} Visit our home page
+      %li
+        %a{:href=>"/news.html"} Read our latest news
+      %li
+        %a{:href=>"/faq.html"} Look up your query in our FAQs

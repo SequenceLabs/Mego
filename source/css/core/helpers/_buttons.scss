@@ -18,7 +18,6 @@
   }
   &:hover {
     @include vertical-gradient($background-color, darken($background-color, 15%));
-    text-decoration:none;
   }
   &:active {
     @include vertical-gradient(darken($background-color, 15%), darken($background-color, 10%));

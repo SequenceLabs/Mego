@@ -1,0 +1,144 @@
+@mixin block{
+  clear:both;
+  margin:$baseline 0;
+  overflow:hidden;
+}
+// Legacy support for inline-block in IE7
+@mixin inline-block {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+}
+@mixin font-face($name, $filename, $src: fonts, $font-weight: normal, $font-style: normal) {
+  @font-face {
+    font-family: $name;
+    src: url('#{$src/$filename}.eot');
+    src: url('#{$src/$filename}.eot?iefix') format("eot"), url('#{$src/$filename}.woff') format("woff"), url('#{$src/$filename}.ttf') format("truetype"), url('#{$src/$filename}.svg#webfontZam02nTh') format("svg");
+    font-weight: $font-weight;
+    font-style: $font-style;
+    }
+}
+
+// Sets link colours
+// Inspired by Compass
+@mixin link-colours($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+  color: $normal;
+  @if $visited {
+    &:visited {
+      color: $visited;
+    }
+  }
+  @if $focus {
+    &:focus {
+      color: $focus;
+    }
+  }
+  @if $hover {
+    &:hover {
+      color: $hover;
+    }
+  }
+  @if $active {
+    &:active {
+      color: $active;
+    }
+  }
+}
+
+@mixin clearfix {
+  /* For modern browsers */
+  &:before,
+  &:after {
+    content:"";
+    display:table;
+  }
+  &:after {
+    clear:both;
+  }
+  zoom:1; /* IE6/IE7 */
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+// Converts pixels to em
+@mixin px-to-em($px, $base: 16){
+  font-size: #{$px/$base}em;/*16 x !ems = !pixels*/
+}
+// Converts pixels to rem
+@mixin px-to-rem($px, $base: 16){
+  font-size: #{$px/$base}rem;
+}
+
+@mixin font-size($sizeValue: 1.6, $lineHeight: "auto"){
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+
+  @if $lineHeight == "auto" {
+    line-height: (ceil($sizeValue) * 10) + px;
+    line-height: ceil($sizeValue) + rem;
+  }
+  @else {
+    line-height: ($lineHeight * 10) + px;
+    line-height: $lineHeight + rem;
+  }
+}
+
+// mixin to remove default styling of links
+
+@mixin unlinkify() {
+  color: $text-color;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// mixin to remove list styling
+
+@mixin unlistify() {
+  list-style: none;
+  margin-bottom: 0;
+  li {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+@mixin arrow($pos: "top", $size: 30px, $color: "#fff") {
+  position: relative;
+  background: $color;
+  &:after {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-width: $size;
+    pointer-events: none;
+    @if $pos == "top" {
+      bottom: 100%;
+      border-bottom-color: $color;
+      left: 50%;
+      margin-left: -$size;
+    } @else if $pos == "right" {
+      left: 100%;
+      border-left-color: $color;
+      top: 50%;
+      margin-left: -$size;
+    } @else if $pos == "bottom" {
+      top: 100%;
+      left: 50%;
+      border-top-color: $color;
+    } @else if $pos == "left" {
+      right: 100%;
+      top: 50%;
+      border-right-color: $color;
+    }
+  }
+}
+

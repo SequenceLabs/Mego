@@ -1,0 +1,27 @@
+.news-listing {
+  .news-item {
+    overflow: hidden;
+    display: block;
+    margin-bottom: $baseline * 2;
+    padding-bottom: $baseline * 2;
+    border-bottom: 1px solid $borders;
+    header,
+    figure {
+      margin-bottom: $baseline * 2;
+    }
+    .copy {
+      margin-left: 0;
+    }
+    @include unlinkify();
+  }
+}
+
+#news-widget {
+  ul {
+    list-style: none;
+  }
+  a {
+    @include unlinkify();  
+  }
+}
+
