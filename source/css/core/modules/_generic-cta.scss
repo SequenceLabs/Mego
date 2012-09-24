@@ -1,0 +1,66 @@
+.cta-list {
+  @include row();
+}
+
+.cta {
+  @include column(3);
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+  &:nth-child(4n) {
+    margin-left: 0;
+  }
+  margin-bottom: $baseline * 2;
+  figure {
+    margin-bottom: $baseline * 2;
+  }
+  a {
+    @include unlinkify();
+    display: block;
+  }
+}
+
+@mixin cta-small-screen() {
+  width: 100%;
+  display: block;
+  float: none;
+  clear: both;
+  border-bottom: 1px solid $borders;
+  margin-bottom: 10px;
+  margin-left: 0;
+  overflow: hidden;
+  position: relative;
+  &:after {
+    content: " ";
+    background: transparent url(../images/nav.png) -38px 0;
+    position: absolute;
+    right:0;
+    top: 10px;
+    width: 38px;
+    height: 65px;
+    overflow: hidden;
+    @include scale(0.4);
+  }
+  figure {
+    width: 100px;
+    float: left;
+    margin: 0 20px 10px 0;
+    line-height: 0;
+    img {
+      margin-bottom: 0!important;
+    }
+  }
+  h3 {
+    margin-left: 10px;
+    display: block;
+  }
+  a {
+    padding-right: 40px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .button {
+    display: none;
+  }
+}

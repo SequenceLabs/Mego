@@ -19,8 +19,8 @@
     src: url('#{$src/$filename}.eot');
     src: url('#{$src/$filename}.eot?iefix') format("eot"), url('#{$src/$filename}.woff') format("woff"), url('#{$src/$filename}.ttf') format("truetype"), url('#{$src/$filename}.svg#webfontZam02nTh') format("svg");
     font-weight: $font-weight;
-    font-style: $font-style;
-    }
+    font-style: $font-style; 
+    } 
 }
 
 // Sets link colours
@@ -82,14 +82,12 @@
   @if $lineHeight == "auto" {
     line-height: (ceil($sizeValue) * 10) + px;
     line-height: ceil($sizeValue) + rem;
-  }
+  } 
   @else {
     line-height: ($lineHeight * 10) + px;
     line-height: $lineHeight + rem;
   }
 }
-
-// mixin to remove default styling of links
 
 @mixin unlinkify() {
   color: $text-color;
@@ -98,47 +96,4 @@
   }
 }
 
-// mixin to remove list styling
-
-@mixin unlistify() {
-  list-style: none;
-  margin-bottom: 0;
-  li {
-    margin-left: 0;
-    padding-left: 0;
-  }
-}
-
-@mixin arrow($pos: "top", $size: 30px, $color: "#fff") {
-  position: relative;
-  background: $color; 
-  &:after {
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    border-width: $size;
-    pointer-events: none;
-    @if $pos == "top" {
-      bottom: 100%;
-      border-bottom-color: $color;
-      left: 50%;
-      margin-left: -$size;
-    } @else if $pos == "right" {
-      left: 100%;
-      border-left-color: $color;
-      top: 50%;
-      margin-left: -$size;
-    } @else if $pos == "bottom" {
-      top: 100%;
-      left: 50%;
-      border-top-color: $color;
-    } @else if $pos == "left" {
-      right: 100%;
-      top: 50%;
-      border-right-color: $color;
-    }
-  }
-}
 

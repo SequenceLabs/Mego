@@ -7,7 +7,6 @@
   %h1 Events
 - content_for :content do
   = partial('includes/modules/events/events-listing', :locals=>{:include_featured=>true})
-  = partial('includes/modules/pagination')
+  / = partial('includes/modules/nav/pagination')
 - content_for :sidebar do
-  = partial('includes/modules/news/news-widget')
   = partial('includes/modules/news/news-widget')

@@ -7,68 +7,75 @@
 */
 
 @import "core/reset";
-@import "settings";
+@import "archetype/settings";
 
-// CSS3 mixins
-@import "core/mixins/css3";
-// General mixins
-@import "core/mixins/mixins";
+// helpers
+@import "core/helpers/css3";
+@import "core/helpers/mixins";
+@import "core/helpers/debug";
+
 // grid mixins
 @import "core/grids/bootstrap/grid-mixins";
 
 // Typography
-@import "core/typography/elements";
-@import "core/typography/headings";
+@import "archetype/typography/elements";
+@import "archetype/typography/headings";
 
 // helpers
-@import "core/helpers/buttons";
-@import "core/helpers/forms";
-@import "core/helpers/tables";
-@import "core/helpers/components";
+@import "archetype/helpers/forms";
+@import "archetype/helpers/tables";
+@import "archetype/helpers/components";
 
 // main structural stuff
-@import "core/structure/structure";
-@import "core/structure/site-header";
-@import "core/structure/site-footer";
-@import "core/structure/sidebar";
-@import "core/structure/primary-nav";
+@import "archetype/structure/structure";
+@import "archetype/structure/primary-nav";
+@import "archetype/structure/sidebar";
+@import "archetype/structure/site-footer";
+@import "archetype/structure/site-header";
 
 // modules
+@import "archetype/modules/blog/blog";
 
-@import "core/modules/nav/secondary-nav";
-@import "core/modules/nav/pagination";
-@import "core/modules/nav/breadcrumbs";
-@import "core/modules/carousel";
-@import "core/modules/gallery";
-@import "core/modules/social/social-share";
-@import "core/modules/social/facebook-stats";
-@import "core/modules/social/twitter";
-@import "core/modules/social/flickr-photostream";
-@import "core/modules/social/flickr-widget";
-@import "core/modules/cta/generic-cta";
-@import "core/modules/search/mini-search";
-@import "core/modules/news/news-listing";
-@import "core/modules/video";
-@import "core/modules/maps";
-@import "core/modules/contact-form";
-@import "core/modules/contact-widget";
-@import "core/modules/blog/blog";
-@import "core/modules/events/events-widget";
-@import "core/modules/events/events-listing";
-@import "core/modules/case-study";
-@import "core/modules/locations";
+@import "archetype/modules/contact/contact-form";
+@import "archetype/modules/contact/contact-widget";
+
+@import "archetype/modules/cta/generic-cta";
+
+@import "archetype/modules/events/events-listing";
+@import "archetype/modules/events/events-widget";
+
+@import "archetype/modules/nav/breadcrumbs";
+@import "archetype/modules/nav/pagination";
+@import "archetype/modules/nav/secondary-nav";
+
+@import "archetype/modules/news/news-listing";
+
+@import "archetype/modules/search/mini-search";
+
+@import "archetype/modules/social/facebook-like";
+@import "archetype/modules/social/facebook-stats";
+@import "archetype/modules/social/flickr-gallery";
+@import "archetype/modules/social/flickr-photostream";
+@import "archetype/modules/social/flickr-widget";
+@import "archetype/modules/social/social-share";
+@import "archetype/modules/social/twitter";
+
+@import "archetype/modules/carousel";
+@import "archetype/modules/case-study";
+@import "archetype/modules/gallery";
+@import "archetype/modules/locations";
+
+@import "archetype/modules/video";
 
 // pages
 @import "project/home";
+@import "project/projects";
 
 // Grid
-@import "core/grids/bootstrap/fixed";
-
-// Grid
-@import "core/grids/bootstrap/fixed";
+@import "archetype/grids/bootstrap/responsive";
 
 // media queries
-@import "core/media-queries";
+@import "archetype/media-queries";
 
 // IE conditional stylesheet
 @import "ie6";
@@ -76,4 +83,4 @@
 @import "ie8";
 @import "ie9";
 
-@import "core/helpers/debug";
+

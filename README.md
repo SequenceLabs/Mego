@@ -44,3 +44,99 @@ http://www.sequence.co.uk
 
 Unless required by applicable law or agreed to in writing, this work is published on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+
+Roadmap
+-------
+
+Version 1.0
+
+### Pages
+
+These are individual pages:
+
+- home
+- news
+  - news article
+- events
+  - event article
+- contact us
+- case studies
+- blog
+  - blog article
+  - categories page
+  - tags page
+  - archive page
+- locations
+  - location page
+- faqs
+- 404
+- login & reset password
+
+### Core Structure
+
+These are the 'core' structural elements of the page:
+
+- branding
+- primary nav
+- site header
+- site footers
+
+### Modules
+
+The following modules are included, along with any relevant JavaScript required for functionality. Modules should be location-agnostic in terms of their position on the page.
+
+- carousel
+- ctas
+  - simple cta
+  - generic cta
+  - cta list
+- navigation
+  - generic nav
+  - pagination
+  - breadcrumbs
+  - secondary nav
+- search
+  - mini search
+  - site search
+  - search filter
+  - search item
+  - search media type
+- users
+  - login
+  - password reset
+- blog
+  - article
+  - post cta
+- events
+  - event item
+  - events listing
+- news
+  - news item
+  - news listing
+- social
+  - facebook stats
+  - twitter feed
+  - flickr photostream
+  - flickr photostream widget
+  - social share
+- widgets
+  - categories widget
+  - archives widget
+  - subscribe widget
+  - events widget
+  - contact widget
+  - cta widget
+  - cta list widget
+  - cta newsletter subscribe widget
+  - news widget
+
+### SASS
+
+- grid
+ - fixed
+ - responsive/adaptive
+- default styling 'Archetype' fixed grid 'theme'
+
+
+

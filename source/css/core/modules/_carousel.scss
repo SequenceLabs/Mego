@@ -7,11 +7,7 @@
     position: relative;
     width: 100%;
     height: auto;
-    margin-bottom: 0;
-    @include opacity(0);
-    img {
-      margin-bottom: 0;
-    }
+    opacity: 0;
     figcaption {
       background: rgba(0,0,0,.7);
       position: absolute;
@@ -66,11 +62,11 @@
         height: 12px;
         margin-right: 12px;
         text-indent: -9999px;
-        margin-left: 0;
+        
         cursor: pointer;
         background: transparent url(../images/dot.png) no-repeat 0 0;
         @include opacity(0.2);
-        &.active {
+        &.active { 
           @include opacity(0.5);
         }
         &:hover, :focus {

@@ -1,22 +1,20 @@
 table {
-  margin-bottom: $baseline * 4;
+  margin-bottom: $baseline;
   width: 100%;
-  @include font-size(1.6, 2)
-}
-
-thead {
-  background: $highlight-color;
-  color: $white;
+  border:1px solid #ddd;
 }
 
 th {
   font-weight: bold;
   text-align: left;
+  border-bottom: 2px solid #2f2f2f;
+  border-right:1px solid #ddd;
 }
 
 td {
   padding: 10px;
-
+  border-bottom: 1px solid #ddd;
+  border-right:1px solid #ddd;
 }
 
 th {
@@ -27,13 +25,9 @@ tr:nth-child(even) {
 }
 
 tfoot {
-  font-weight: bold;
-  border-top: 1px dotted $mid-grey;
-  border-bottom: 1px dotted $mid-grey;
+  font-style: italic;
 }
 
 caption {
-  background: $really-light-grey;
-  padding: 20px;
-  @include font-size(1.6, 2);
+  background: #ffffcc;
 }

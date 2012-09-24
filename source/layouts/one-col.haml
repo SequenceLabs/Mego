@@ -6,7 +6,7 @@
 
 %body
   .container
-    = partial('includes/structure/header')
+    = partial('includes/structure/site-header')
     #main{:id=>data.page.tag_id, :class=>data.page.tag_class}
 
       %header#page-header
@@ -15,5 +15,5 @@
       %section#content
         = yield_content :content
 
-    = partial('includes/structure/footer')
+    = partial('includes/structure/site-footer')
   = partial('includes/structure/javascripts')
