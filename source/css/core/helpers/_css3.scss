@@ -11,7 +11,7 @@
   -moz-background-clip: $clip;
   -ms-background-clip: $clip;
   -o-background-clip: $clip;
-  background-clip: $clip; 
+  background-clip: $clip;
 }
 
 @mixin background-size ($size) {
@@ -27,7 +27,7 @@
   -moz-border-radius: $radius;
   -ms-border-radius: $radius;
   -o-border-radius: $radius;
-  border-radius: $radius; 
+  border-radius: $radius;
 }
 
 @mixin box-shadow($shadow: 0 1px 3px rgba(0, 0, 0, 0.25)) {
@@ -35,7 +35,13 @@
   -moz-box-shadow: $shadow;
   -ms-box-shadow: $shadow;
   -o-box-shadow: $shadow;
-  box-shadow: $shadow; 
+  box-shadow: $shadow;
+}
+
+@mixin border-box($border-box: border-box) {
+  -moz-box-sizing: $border-box;
+  -webkit-box-sizing: $border-box;
+  box-sizing: border-box;
 }
 
 @mixin content-columns($columnCount, $columnGap: 20px) {

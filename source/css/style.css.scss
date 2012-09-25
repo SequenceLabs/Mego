@@ -6,7 +6,7 @@
           |___|
 */
 
-@import "core/reset";
+@import "core/helpers/reset";
 @import "archetype/settings";
 
 // helpers
@@ -18,13 +18,11 @@
 @import "core/grids/bootstrap/grid-mixins";
 
 // Typography
-@import "archetype/typography/elements";
-@import "archetype/typography/headings";
-
-// helpers
-@import "archetype/helpers/forms";
-@import "archetype/helpers/tables";
-@import "archetype/helpers/components";
+@import "archetype/elements/components";
+@import "archetype/elements/elements";
+@import "archetype/elements/headings";
+@import "archetype/elements/forms";
+@import "archetype/elements/tables";
 
 // main structural stuff
 @import "archetype/structure/structure";
@@ -42,13 +40,11 @@
 @import "archetype/modules/cta/generic-cta";
 
 @import "archetype/modules/events/events-listing";
-@import "archetype/modules/events/events-widget";
+@import "archetype/modules/news/news-listing";
 
 @import "archetype/modules/nav/breadcrumbs";
 @import "archetype/modules/nav/pagination";
 @import "archetype/modules/nav/secondary-nav";
-
-@import "archetype/modules/news/news-listing";
 
 @import "archetype/modules/search/mini-search";
 
@@ -64,23 +60,23 @@
 @import "archetype/modules/case-study";
 @import "archetype/modules/gallery";
 @import "archetype/modules/locations";
-
 @import "archetype/modules/video";
 
-// pages
-@import "project/home";
-@import "project/projects";
-
 // Grid
-@import "archetype/grids/bootstrap/responsive";
+@import "core/grids/bootstrap/fixed";
 
 // media queries
 @import "archetype/media-queries";
 
-// IE conditional stylesheet
-@import "ie6";
-@import "ie7";
-@import "ie8";
-@import "ie9";
+
+// page-specific styles
+@import "archetype/pages/search";
+@import "archetype/pages/faqs";
+
+// // IE conditional stylesheet
+@import "archetype/ie/ie6";
+@import "archetype/ie/ie7";
+@import "archetype/ie/ie8";
+@import "archetype/ie/ie9";
 
 

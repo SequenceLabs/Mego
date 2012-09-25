@@ -22,11 +22,6 @@ class App
 
   # executes when document is ready
   onDocReady: =>
-
-
-    $("html").addClass("fade")
-
-
     @initCoffeeSlider()
     @initGallery()
     @initVideoPlayer()
@@ -34,9 +29,10 @@ class App
     @initFlickrGallery()
     @initFlickrWidget()
     # @initFacebookStats()
-    @initSiteNav()
+    # @initSiteNav()
     # @initFaceBookFeed()
 
+    @initFaq()
     # do this last or any references in the callbacks will be undefined
     @initMediaQueries()
 
@@ -145,6 +141,13 @@ class App
 
   initFaceBookFeed: ->
     facebookFeed = new modules.facebook.FacebookAPILoader()
+
+  initFaq: ->
+    @accordion = new modules.AccordionGroup $(".category"),
+      selectors:
+        main: "article"
+        header: ".question"
+        inner: ".answer"
 
   initSiteNav: ->
     @siteNav = new modules.Nav(document.querySelector("#site-nav"))

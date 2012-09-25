@@ -34,10 +34,8 @@ class maps.MapLocationsController
 
     this.settings = $.extend true, defaults, options
     this._init()
-  
-  
 
-  # 
+  #
   # Private Methods
   # _____________________________________________________________________________________
 
@@ -47,7 +45,6 @@ class maps.MapLocationsController
       this._loadInfoBoxJs this._addMarkers
     else
       this._addMarkers()
-  
   _createMap: () =>
     this.map = new maps.GoogleMap this.settings.mapOpts
 
@@ -60,7 +57,6 @@ class maps.MapLocationsController
     script.onreadystatechange = callback
     script.onload = callback
     document.body.appendChild(script)
-    
   _addInfoBox: (marker) =>
     boxText = document.createElement("div")
     boxText.innerHTML = marker.locationDOMElement.html()
@@ -97,13 +93,13 @@ class maps.MapLocationsController
     $content
       .append($location.find("h3").clone())
       .append($location.find(".info").clone())
-  
+
     $button = $location.find(".button")
     $link = $("<a />")
       .addClass("more")
       .attr("href", $button.attr("href"))
       .html($button.html())
-    
+
     $content.append($link)
 
     return $content
@@ -112,7 +108,7 @@ class maps.MapLocationsController
     $("html,body").animate
       scrollTop: $(location).offset().top - 10
     , 500
-    
+
   _onMarkerClick: (e) =>
     marker = this._findMarkerFromLatLng(e.latLng)
 
@@ -122,7 +118,7 @@ class maps.MapLocationsController
     this.currInfoBox = marker.infoBox
     this.currInfoBox.open(this.map.gmap, marker)
 
-    $(this.currInfoBox.getContent()).find(".more").on("click", (e) => 
+    $(this.currInfoBox.getContent()).find(".more").on("click", (e) =>
       this._onInfoboxLinkClick(this._getLocationFromMarker(marker))
     )
 
@@ -132,15 +128,15 @@ class maps.MapLocationsController
         return marker
 
   _addMarkers: =>
-    for location, i in this.settings.DOMlocations                           
+    for location, i in this.settings.DOMlocations
       $location = $(location)
       latLng = $location.attr("data-latLng")
       latLngSplit = latLng.split(",")
       marker = this.addMarker(new google.maps.LatLng(latLngSplit[0], latLngSplit[1]), i)
-      
+
     this.map.fitMarkerBounds()
-     
-  # 
+
+  #
   # Public Methods
   # _____________________________________________________________________________________
 
@@ -148,7 +144,7 @@ class maps.MapLocationsController
     # cache this reference
     opts = this.settings.markerOpts
     # mix in some new settings
-    
+
     if i?
       opts.zIndex = i
 
@@ -159,5 +155,5 @@ class maps.MapLocationsController
     marker.infoBox = this._addInfoBox(marker)
 
     google.maps.event.addListener(marker, 'click', this._onMarkerClick)
-        
+
     return marker

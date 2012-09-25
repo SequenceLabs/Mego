@@ -1,31 +1,55 @@
-.event-listing {
+.event-item {
+  overflow: hidden;
+  display: block;
+  margin-bottom: $baseline * 2;
+  padding-bottom: $baseline * 2;
+  border-bottom: 1px solid $borders;
+  &:last-child {
+    border-bottom: none;
+  }
   h2 {
     margin-bottom: $baseline * 2;
   }
-  .event-item {
-    overflow: hidden;
-    display: block;
+  header {
     margin-bottom: $baseline * 2;
-    border-bottom: 1px solid $borders;
-    > a {
-      overflow: hidden;
-      display: block;
-      @include unlinkify();
+    h3 {
+      margin-bottom: $baseline;
     }
-    header,
-    figure {
+    img {
+      margin-bottom: $baseline;
+    }
+    .read-more {
 
     }
-    &:hover {
-      color: $black;
-    }
-    &.featured {
-      header {
-        @include column-width(4);
-        float: right;
-        margin-right: 0;
+    time {
+      &:before {
+        content:"\A";
+        white-space:pre;
+        display: block;
       }
+    }
+    time,
+    .location {
+      @include font-size(1.4);
+      display: inline;
+    }
+  }
+  figure {
+    @include column(4);
+  }
+  .copy {
+    margin-left: 0;
+    @include column(5);
+  }
+  &.featured {
+    figure,
+    .copy {
+      width: auto;
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 }
+
 

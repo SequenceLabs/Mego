@@ -26,9 +26,9 @@
   .field-error {
     color: $red;
     @include font-size(1.6);
-    margin-left: $gridGutterWidth;
+    margin-left: 20px;
     vertical-align: middle;
-    padding: 10px 0 10px 0px;
+    padding: 10px 0 10px 40px;
     background: url(../images/icons/icon-validation.png) no-repeat 0 6px;
     position: absolute;
   }

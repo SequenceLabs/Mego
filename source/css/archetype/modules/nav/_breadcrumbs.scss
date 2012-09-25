@@ -1,6 +1,6 @@
 .breadcrumbs {
   margin: 0 0 20px;
-  padding: 0 0 10px 0;
+  padding: $baseline 0 $baseline 0;
   border-bottom: 1px solid $borders;
   ul {
     @include unlistify();

@@ -1,9 +1,0 @@
-#events-widget {
-  margin-bottom: $baseline * 2;
-  ul {
-    list-style: none;
-  }
-  .event-item {
-    @include unlinkify();
-  }
-}

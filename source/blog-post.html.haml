@@ -1,0 +1,30 @@
+---
+  page_title: Blog Post
+  tag_id: blog-post
+---
+
+- content_for :page_header do
+  %h1 Title of the blog post
+  .meta
+    .vcard
+      by
+      %address.author
+        %a{:title=>"Posts by John Doe", :href=>"#"}
+          John Doe
+      on
+      %time{:datetime=>"2009-11-04", :class=>"published updated"}
+        November 4th, 2009
+
+- content_for :content do
+  %section#relevant-posts
+    %h2
+      You might also be interested in:
+    .row
+      - (3).times do
+        = partial('includes/modules/blog/blog-post-CTA')
+
+- content_for :sidebar do
+  = partial('includes/modules/blog/blog-subscribe-widget')
+  = partial('includes/modules/search/mini-search', :locals=>{:name=>"search_posts", :title=>"Search Posts", :widget=>true})
+  = partial('includes/modules/blog/blog-categories-widget')
+  = partial('includes/modules/blog/blog-archives-widget')

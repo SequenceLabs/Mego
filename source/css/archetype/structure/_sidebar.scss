@@ -12,11 +12,13 @@
     }
     li {
       margin-bottom: $baseline;
-      border-bottom: 1px dotted $borders;
+      border-bottom: 1px solid $really-light-grey;
       padding-bottom: $baseline;
       position: relative;
       a {
         @include unlinkify();
+        margin: 0;
+        padding: 0;
       }
       &:after {
         content: url(../images/icons/icon-chevron.png);
