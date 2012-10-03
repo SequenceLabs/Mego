@@ -29,7 +29,7 @@
   <!-- %script{:src => "http://localhost:8081/target/target-script-min.js#anonymous"} -->
 </head>
 <body>
-  <div class='container'>
+  <article class='container' id='main-container'>
     <header id='site-header'>
       <div class='row'>
         <section id='branding'>
@@ -51,58 +51,92 @@
         <!-- END mini-search -->
       </div>
       <div class='row'>
-        <nav id='site-nav'>
+        <nav id='primary-nav'>
           <ul>
-            <li>
+            <li class=''>
               <a class='active' href='index.html'>
                 Home
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='faq.html'>
                 FAQs
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='contact-us.html'>
                 Contact Us
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='events.html'>
                 Events
               </a>
             </li>
-            <li>
-              <a class='' href='case-studies.html'>
-                Case Studies
-              </a>
-            </li>
-            <li>
-              <a class='' href='gallery.html'>
-                Gallery
-              </a>
-            </li>
-            <li>
+            <li class=''>
               <a class='' href='blog.html'>
                 Blog
               </a>
             </li>
-            <li>
+            <li class='subnav-parent'>
+              <a class='' href='generic-page.html'>
+                Generic Page
+              </a>
+              <ul class='sub-nav'>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 1
+                  </a>
+                </li>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 2
+                  </a>
+                </li>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 3
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class=''>
+              <a class='' href='blog-post.html'>
+                Blog Post
+              </a>
+            </li>
+            <li class=''>
               <a class='' href='locations.html'>
                 Locations
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='news.html'>
                 News
               </a>
             </li>
           </ul>
         </nav>
+        <!-- MM 2 style nav -->
+        <!-- - structure = [{:href=>"index", :title=>"Home"}, -->
+        <!-- {:href=>"about-us", :title=>"About Us"}, -->
+        <!-- {:href=>"projects", :title=>"Projects"}, -->
+        <!-- {:href=>"news", :title=>"News"}, -->
+        <!-- {:href=>"events", :title=>"Events"}, -->
+        <!-- {:href=>"blog", :title=>"Blog"}, -->
+        <!-- {:href=>"gallery", :title=>"Gallery"}, -->
+        <!-- {:href=>"case-studies", :title=>"Case Studies"}, -->
+        <!-- {:href=>"contact-us", :title=>"Contact Us"}] -->
+        <!-- %nav#primary-nav -->
+        <!-- %ul -->
+        <!-- - structure.each do |page| -->
+        <!-- %li -->
+        <!-- %a{:href=>"#{page[:href]}.html", :class=>"#{page[:href]+'.html' == request.path ? 'active' : ''}"} -->
+        <!-- #{page[:title]} -->
       </div>
+      
     </header>
-    <div class='main' id='home'>
+    <section class='main' id='home'>
       <header id='page-header'>
         <!-- START .carousel -->
 <section class='carousel'>
@@ -110,41 +144,41 @@
     <img src="http://www.imgsrc.me/978x480/dddddd/858585" width="978" height="480" />
     
     <figcaption>
-      Voluptas id ad sunt reiciendis assumenda perferendis dignissimos sequi minima autem exercitationem praesentium debitis quaerat
+      Consequatur tempora tempora voluptatem
     </figcaption>
   </figure>
   <figure class='figure-1'>
     <img src="http://www.imgsrc.me/978x480/dddddd/858585" width="978" height="480" />
     
     <figcaption>
-      Reprehenderit optio repellat soluta necessitatibus illo ut aperiam
+      Reprehenderit distinctio ab voluptas odio nihil dolorem officia molestias et
     </figcaption>
   </figure>
   <figure class='figure-2'>
     <img src="http://www.imgsrc.me/978x480/dddddd/858585" width="978" height="480" />
     
     <figcaption>
-      Error ut libero odio nihil porro et dolores corrupti similique
+      Illo aut aut rem debitis
     </figcaption>
   </figure>
   <figure class='figure-3'>
     <img src="http://www.imgsrc.me/978x480/dddddd/858585" width="978" height="480" />
     
     <figcaption>
-      Qui consequatur ut ea eos omnis soluta architecto velit praesentium
+      Ut qui rerum odio provident dolores minima sint iste commodi perferendis quia
     </figcaption>
   </figure>
   <figure class='figure-4'>
     <img src="http://www.imgsrc.me/978x480/dddddd/858585" width="978" height="480" />
     
     <figcaption>
-      Voluptatum est error optio neque voluptates blanditiis enim facilis impedit necessitatibus qui atque aliquid voluptatem
+      Et tempore non nulla est
     </figcaption>
   </figure>
 </section>
 <!-- END .carousel -->
       </header>
-      <section id='content'>
+      <article id='content'>
         <!-- START CTA list -->
         <section class='cta-list'>
           <!-- START Generic CTA -->
@@ -154,7 +188,7 @@
               
             </figure>
             <h3>
-              tempore modi
+              voluptas
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </a>
@@ -166,7 +200,7 @@
               
             </figure>
             <h3>
-              et
+              totam
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </a>
@@ -178,7 +212,7 @@
               
             </figure>
             <h3>
-              repellat
+              earum
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </a>
@@ -190,7 +224,7 @@
               
             </figure>
             <h3>
-              harum voluptas
+              repellendus
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </a>
@@ -202,7 +236,7 @@
               
             </figure>
             <h3>
-              deleniti
+              et harum
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </a>
@@ -214,14 +248,14 @@
               
             </figure>
             <h3>
-              sunt
+              aut
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </a>
           <!-- END Generic CTA -->
         </section>
         <!-- END CTA list -->
-      </section>
+      </article>
       <section id='sidebar'>
         <!-- START news-widget -->
         <section class='widget' id='news-widget'>
@@ -233,20 +267,30 @@
             <li>
               <a class='news-item' href='#' title='Brief summary of article'>
                 <h4>
-                  dignissimos neque consectetur incidunt a
+                  et voluptas adipisci nisi
                 </h4>
                 <time datetime='2012-04-13'>
-                  Wed Jun 22, 1994
+                  Fri Aug 11, 2006
                 </time>
               </a>
             </li>
             <li>
               <a class='news-item' href='#' title='Brief summary of article'>
                 <h4>
-                  perferendis
+                  aspernatur suscipit tenetur
                 </h4>
                 <time datetime='2012-04-13'>
-                  Thu Jun 20, 1996
+                  Mon Nov 01, 2004
+                </time>
+              </a>
+            </li>
+            <li>
+              <a class='news-item' href='#' title='Brief summary of article'>
+                <h4>
+                  sit doloremque
+                </h4>
+                <time datetime='2012-04-13'>
+                  Fri Feb 09, 2007
                 </time>
               </a>
             </li>
@@ -273,7 +317,7 @@
                   Event title
                 </h4>
                 <time datetime='2012-04-13'>
-                  Sat Apr 06, 2002
+                  Sun Jul 07, 1991
                 </time>
                 <h5>Event Location</h5>
               </a>
@@ -284,7 +328,7 @@
                   Event title
                 </h4>
                 <time datetime='2012-04-13'>
-                  Sun Jan 28, 2001
+                  Fri Mar 29, 2002
                 </time>
                 <h5>Event Location</h5>
               </a>
@@ -298,7 +342,7 @@
         </section>
         <!-- END #events-widget -->
       </section>
-    </div>
+    </section>
     <footer id='site-footer'>
       <div class='copyright'>&copy; Sequence 2012</div>
       <nav id='footer-nav'>
@@ -331,7 +375,7 @@
         </ul>
       </nav>
     </footer>
-  </div>
+  </article>
   <!-- / 3rd party libs -->
   <script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js'></script>
   <script src='js/thirdparty/ga.social.js'></script>
@@ -362,6 +406,7 @@
   <script src='/js/sequence/modules/maps/googlemapsapicontroller.js'></script>
   <script src='/js/sequence/modules/maps/googlemap.js'></script>
   <script src='/js/sequence/modules/maps/maplocationscontroller.js'></script>
-  <script src='/js/sequence/modules/flickrgallery/FlickrGallery-packaged.js'></script>
-  <script src='/js/sequence/client/app.js'></script>
+  <script src='/js/sequence/modules/accordion/accordion.js'></script>
+  <script src='/js/sequence/modules/accordion/accordiongroup.js'></script>
+  <script src='/js/sequence/app.js'></script>
 </body>

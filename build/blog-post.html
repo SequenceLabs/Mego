@@ -9,7 +9,7 @@
   <meta charset='utf-8' />
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
   <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
-  <title>Location</title>
+  <title>Blog Post</title>
   <meta content='' name='description' />
   <meta content='' name='author' />
   <!-- Facebook Opengraph - https://developers.facebook.com/docs/opengraph/objects/builtin/ for examples, https://developers.facebook.com/docs/share/ for image dimensions -->
@@ -101,7 +101,7 @@
               </ul>
             </li>
             <li class=''>
-              <a class='' href='blog-post.html'>
+              <a class='active' href='blog-post.html'>
                 Blog Post
               </a>
             </li>
@@ -136,61 +136,227 @@
       </div>
       
     </header>
-    <section class='main' id='location'>
+    <section class='main' id='blog-post'>
       <header id='page-header'>
-        <h1>Location Title</h1>
+        <h1>Title of the blog post</h1>
+        <div class='meta'>
+          <div class='vcard'>
+            by
+            <address class='author'>
+              <a href='#' title='Posts by John Doe'>
+                John Doe
+              </a>
+            </address>
+            on
+            <time class='published updated' datetime='2009-11-04'>
+              November 4th, 2009
+            </time>
+          </div>
+        </div>
       </header>
       <article id='content'>
-        <p>
-          Quod veniam mollitia eligendi. eveniet mollitia quas cumque quis a nostrum officiis tenetur laboriosam autem. accusamus necessitatibus vel sint fugiat asperiores. ut voluptatem veritatis dolorum dolores corrupti. id iste quis quisquam repellat vel rerum quas illo officia accusantium. quos ducimus quibusdam officiis est distinctio aut
-        </p>
-        <p>
-          Totam alias modi aliquid. facere magnam laboriosam culpa dolor modi dolore. aliquid aut magni porro et perferendis quas quae neque. nisi est dolorem autem voluptas fugit modi atque est ut ipsam repellendus
-        </p>
-        <p>
-          Velit tempore et excepturi quos amet omnis quasi et doloribus quasi. quia dolores cupiditate sit consequatur consequuntur facere nostrum corporis deleniti qui veniam velit. aut rerum esse temporibus sapiente eum nisi impedit similique eos aut blanditiis nam hic facilis. eaque eius est occaecati ducimus rerum ipsum architecto laborum veritatis sunt et quis nesciunt
-        </p>
-        <a class='button' href='locations.html'>
-          &larr; Back to Projects
-        </a>
+        <section id='relevant-posts'>
+          <h2>
+            You might also be interested in:
+          </h2>
+          <div class='row'>
+            <article class='blog-post-CTA'>
+              <img src="http://www.imgsrc.me/220x117/dddddd/858585" width="220" height="117" />
+              
+              <header>
+                <h3>
+                  quia explicabo quod
+                </h3>
+                <time class='published updated' datetime='2009-11-04'>
+                  November 4th, 2009
+                </time>
+              </header>
+              <p>
+                Aut nostrum rerum quo sit nihil labore et facilis qui
+              </p>
+              <div class='social'></div>
+              <a class='read-more'>
+                Read more &rarr;
+              </a>
+            </article>
+            <article class='blog-post-CTA'>
+              <img src="http://www.imgsrc.me/220x117/dddddd/858585" width="220" height="117" />
+              
+              <header>
+                <h3>
+                  illum totam sit velit quos
+                </h3>
+                <time class='published updated' datetime='2009-11-04'>
+                  November 4th, 2009
+                </time>
+              </header>
+              <p>
+                Dolorem aliquam asperiores qui omnis
+              </p>
+              <div class='social'></div>
+              <a class='read-more'>
+                Read more &rarr;
+              </a>
+            </article>
+            <article class='blog-post-CTA'>
+              <img src="http://www.imgsrc.me/220x117/dddddd/858585" width="220" height="117" />
+              
+              <header>
+                <h3>
+                  qui vero ut ut
+                </h3>
+                <time class='published updated' datetime='2009-11-04'>
+                  November 4th, 2009
+                </time>
+              </header>
+              <p>
+                Voluptas iste nihil nam aliquam quia
+              </p>
+              <div class='social'></div>
+              <a class='read-more'>
+                Read more &rarr;
+              </a>
+            </article>
+          </div>
+        </section>
       </article>
       <section id='sidebar'>
-        <section class='widget' id='location-widget'>
-          <h2>Locations</h2>
+        <section class='widget' id='blog-subscribe'>
+          <header>
+            <h3>Subscribe</h3>
+          </header>
           <ul>
             <li>
-              <a href='location.html'>
-                voluptatem est
+              <a class='RSS' href='#'>
+                Subscribe via RSS
               </a>
             </li>
             <li>
-              <a href='location.html'>
-                illum molestias
+              <a class='email' href='#'>
+                Subscribe via Email
               </a>
             </li>
             <li>
-              <a href='location.html'>
-                totam voluptatibus aut rem
+              <a class='twitter' href='#'>
+                Follow us on Twitter
               </a>
             </li>
             <li>
-              <a href='location.html'>
-                beatae nihil quisquam
+              <a class='facebook' href='#'>
+                Like our Facebook Page
               </a>
             </li>
           </ul>
-          <!-- START Generic CTA -->
-          <a class='cta' href='#' title='Title'>
-            <figure>
-              <img src="http://www.imgsrc.me/222x140/dddddd/858585" width="222" height="140" />
-              
-            </figure>
+        </section>
+        <!-- START mini-search -->
+        <section class='mini-search widget'>
+          <h3>
+            Search Posts
+          </h3>
+          <label for='search_posts'>Search</label>
+          <input class='field-search' id='search_posts' placeholder='Enter keyword' type='text' />
+          <button class='btn-search' type='submit'>
+            Search
+          </button>
+        </section>
+        <!-- END mini-search -->
+        <section class='widget' id='categories-widget'>
+          <header>
             <h3>
-              cum
+              Browse Categories
             </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </a>
-          <!-- END Generic CTA -->
+          </header>
+          <ul>
+            <li>
+              <a href='#' title='Category description'>
+                animi
+              </a>
+            </li>
+            <li>
+              <a href='#' title='Category description'>
+                eligendi nisi
+              </a>
+            </li>
+            <li>
+              <a href='#' title='Category description'>
+                necessitatibus
+              </a>
+            </li>
+            <li>
+              <a href='#' title='Category description'>
+                voluptas
+              </a>
+            </li>
+            <li>
+              <a href='#' title='Category description'>
+                eaque quibusdam
+              </a>
+            </li>
+            <li>
+              <a href='#' title='Category description'>
+                fugiat in
+              </a>
+            </li>
+            <li>
+              <a href='#' title='Category description'>
+                et et
+              </a>
+            </li>
+            <li>
+              <a href='#' title='Category description'>
+                ipsum nihil
+              </a>
+            </li>
+            <li>
+              <a href='#' title='Category description'>
+                rerum quam
+              </a>
+            </li>
+            <li>
+              <a href='#' title='Category description'>
+                dolorum soluta
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class='widget' id='archives-widget'>
+          <header>
+            <h3>
+              Archives
+            </h3>
+          </header>
+          <ul>
+            <li>
+              <a href='#' title='Archive description'>
+                January 2012 (4)
+              </a>
+            </li>
+            <li>
+              <a href='#' title='Archive description'>
+                February 2012 (4)
+              </a>
+            </li>
+            <li>
+              <a href='#' title='Archive description'>
+                March 2012 (4)
+              </a>
+            </li>
+            <li>
+              <a href='#' title='Archive description'>
+                April 2012 (3)
+              </a>
+            </li>
+            <li>
+              <a href='#' title='Archive description'>
+                May 2012 (3)
+              </a>
+            </li>
+            <li>
+              <a href='#' title='Archive description'>
+                June 2012 (1)
+              </a>
+            </li>
+          </ul>
         </section>
       </section>
     </section>

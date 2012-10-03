@@ -51,56 +51,90 @@
         <!-- END mini-search -->
       </div>
       <div class='row'>
-        <nav id='site-nav'>
+        <nav id='primary-nav'>
           <ul>
-            <li>
+            <li class=''>
               <a class='' href='index.html'>
                 Home
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='faq.html'>
                 FAQs
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='contact-us.html'>
                 Contact Us
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='events.html'>
                 Events
               </a>
             </li>
-            <li>
-              <a class='' href='case-studies.html'>
-                Case Studies
-              </a>
-            </li>
-            <li>
-              <a class='active' href='gallery.html'>
-                Gallery
-              </a>
-            </li>
-            <li>
+            <li class=''>
               <a class='' href='blog.html'>
                 Blog
               </a>
             </li>
-            <li>
+            <li class='subnav-parent'>
+              <a class='' href='generic-page.html'>
+                Generic Page
+              </a>
+              <ul class='sub-nav'>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 1
+                  </a>
+                </li>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 2
+                  </a>
+                </li>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 3
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class=''>
+              <a class='' href='blog-post.html'>
+                Blog Post
+              </a>
+            </li>
+            <li class=''>
               <a class='' href='locations.html'>
                 Locations
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='news.html'>
                 News
               </a>
             </li>
           </ul>
         </nav>
+        <!-- MM 2 style nav -->
+        <!-- - structure = [{:href=>"index", :title=>"Home"}, -->
+        <!-- {:href=>"about-us", :title=>"About Us"}, -->
+        <!-- {:href=>"projects", :title=>"Projects"}, -->
+        <!-- {:href=>"news", :title=>"News"}, -->
+        <!-- {:href=>"events", :title=>"Events"}, -->
+        <!-- {:href=>"blog", :title=>"Blog"}, -->
+        <!-- {:href=>"gallery", :title=>"Gallery"}, -->
+        <!-- {:href=>"case-studies", :title=>"Case Studies"}, -->
+        <!-- {:href=>"contact-us", :title=>"Contact Us"}] -->
+        <!-- %nav#primary-nav -->
+        <!-- %ul -->
+        <!-- - structure.each do |page| -->
+        <!-- %li -->
+        <!-- %a{:href=>"#{page[:href]}.html", :class=>"#{page[:href]+'.html' == request.path ? 'active' : ''}"} -->
+        <!-- #{page[:title]} -->
       </div>
+      
     </header>
     <div id='main_gallery'>
       <header id='page-header'>
@@ -108,98 +142,98 @@
       </header>
       <section id='content'>
         <!-- START .gallery -->
-<section class='gallery'>
-  <!-- START .carousel -->
-  <section class='gallery-carousel'>
-    <figure class='figure-0'>
-      <!-- - img_placehold 978, 480, "Slide #{i}" -->
-      <img src='http://lorempixel.com/978/480/abstract/0' />
-      <figcaption>
-        Vero aut dicta nostrum harum sit error rerum sunt
-      </figcaption>
-    </figure>
-    <figure class='figure-1'>
-      <!-- - img_placehold 978, 480, "Slide #{i}" -->
-      <img src='http://lorempixel.com/978/480/abstract/1' />
-      <figcaption>
-        Incidunt adipisci odit molestiae ipsam eum ut repudiandae aut sequi est at aperiam voluptatem illum
-      </figcaption>
-    </figure>
-    <figure class='figure-2'>
-      <!-- - img_placehold 978, 480, "Slide #{i}" -->
-      <img src='http://lorempixel.com/978/480/abstract/2' />
-      <figcaption>
-        Deserunt magnam beatae neque
-      </figcaption>
-    </figure>
-    <figure class='figure-3'>
-      <!-- - img_placehold 978, 480, "Slide #{i}" -->
-      <img src='http://lorempixel.com/978/480/abstract/3' />
-      <figcaption>
-        Rerum dolore velit et tenetur beatae natus
-      </figcaption>
-    </figure>
-    <figure class='figure-4'>
-      <!-- - img_placehold 978, 480, "Slide #{i}" -->
-      <img src='http://lorempixel.com/978/480/abstract/4' />
-      <figcaption>
-        Deleniti ut voluptas cumque ipsum nisi reprehenderit non velit et architecto consequatur quisquam illo
-      </figcaption>
-    </figure>
-    <figure class='figure-5'>
-      <!-- - img_placehold 978, 480, "Slide #{i}" -->
-      <img src='http://lorempixel.com/978/480/abstract/5' />
-      <figcaption>
-        Nesciunt facere dolorem aliquam accusantium eius vel explicabo corporis quidem in assumenda et
-      </figcaption>
-    </figure>
-    <figure class='figure-6'>
-      <!-- - img_placehold 978, 480, "Slide #{i}" -->
-      <img src='http://lorempixel.com/978/480/abstract/6' />
-      <figcaption>
-        Nemo laboriosam veniam laudantium
-      </figcaption>
-    </figure>
-    <figure class='figure-7'>
-      <!-- - img_placehold 978, 480, "Slide #{i}" -->
-      <img src='http://lorempixel.com/978/480/abstract/7' />
-      <figcaption>
-        Aut unde sit quibusdam amet autem illum eligendi inventore
-      </figcaption>
-    </figure>
-    <figure class='figure-8'>
-      <!-- - img_placehold 978, 480, "Slide #{i}" -->
-      <img src='http://lorempixel.com/978/480/abstract/8' />
-      <figcaption>
-        Excepturi voluptatem sit impedit nemo et quo accusantium sed sint quibusdam laborum voluptas
-      </figcaption>
-    </figure>
-    <figure class='figure-9'>
-      <!-- - img_placehold 978, 480, "Slide #{i}" -->
-      <img src='http://lorempixel.com/978/480/abstract/9' />
-      <figcaption>
-        Porro et in quo eius ut dolores porro perferendis dolor ad
-      </figcaption>
-    </figure>
-    <figure class='figure-10'>
-      <!-- - img_placehold 978, 480, "Slide #{i}" -->
-      <img src='http://lorempixel.com/978/480/abstract/10' />
-      <figcaption>
-        Quisquam dolorum amet earum quo
-      </figcaption>
-    </figure>
-    <figure class='figure-11'>
-      <!-- - img_placehold 978, 480, "Slide #{i}" -->
-      <img src='http://lorempixel.com/978/480/abstract/11' />
-      <figcaption>
-        Mollitia nostrum eius magnam voluptas natus non aut ea omnis sit voluptates labore
-      </figcaption>
-    </figure>
-  </section>
-  <!-- END .carousel -->
-  <section class='thumbnails'></section>
-</section>
-<!-- END .gallery -->
+        <section class='gallery'>
+          <!-- START .carousel -->
+          <section class='gallery-carousel'>
+            <figure class='figure-0'>
+              <!-- - img_placehold 978, 480, "Slide #{i}" -->
+              <img src='http://lorempixel.com/978/480/abstract/0' />
+              <figcaption>
+                Et debitis culpa voluptatibus harum commodi velit excepturi qui fugiat voluptas
+              </figcaption>
+            </figure>
+            <figure class='figure-1'>
+              <!-- - img_placehold 978, 480, "Slide #{i}" -->
+              <img src='http://lorempixel.com/978/480/abstract/1' />
+              <figcaption>
+                Consequatur fugiat eaque iusto culpa in vel ut laboriosam voluptatem expedita
+              </figcaption>
+            </figure>
+            <figure class='figure-2'>
+              <!-- - img_placehold 978, 480, "Slide #{i}" -->
+              <img src='http://lorempixel.com/978/480/abstract/2' />
+              <figcaption>
+                Similique expedita temporibus dolor rem inventore quidem odio
+              </figcaption>
+            </figure>
+            <figure class='figure-3'>
+              <!-- - img_placehold 978, 480, "Slide #{i}" -->
+              <img src='http://lorempixel.com/978/480/abstract/3' />
+              <figcaption>
+                Quas blanditiis a ut itaque cum quod ab at dolores
+              </figcaption>
+            </figure>
+            <figure class='figure-4'>
+              <!-- - img_placehold 978, 480, "Slide #{i}" -->
+              <img src='http://lorempixel.com/978/480/abstract/4' />
+              <figcaption>
+                Aspernatur pariatur voluptas recusandae porro atque dolores
+              </figcaption>
+            </figure>
+            <figure class='figure-5'>
+              <!-- - img_placehold 978, 480, "Slide #{i}" -->
+              <img src='http://lorempixel.com/978/480/abstract/5' />
+              <figcaption>
+                Officia consectetur soluta voluptatem et eos
+              </figcaption>
+            </figure>
+            <figure class='figure-6'>
+              <!-- - img_placehold 978, 480, "Slide #{i}" -->
+              <img src='http://lorempixel.com/978/480/abstract/6' />
+              <figcaption>
+                Inventore dolorem unde dicta ex qui dolorem
+              </figcaption>
+            </figure>
+            <figure class='figure-7'>
+              <!-- - img_placehold 978, 480, "Slide #{i}" -->
+              <img src='http://lorempixel.com/978/480/abstract/7' />
+              <figcaption>
+                Iusto et et architecto numquam a qui officia asperiores ipsa velit eos
+              </figcaption>
+            </figure>
+            <figure class='figure-8'>
+              <!-- - img_placehold 978, 480, "Slide #{i}" -->
+              <img src='http://lorempixel.com/978/480/abstract/8' />
+              <figcaption>
+                Tempore laborum quaerat repellendus excepturi aliquid qui et deserunt fugit voluptas et dolor
+              </figcaption>
+            </figure>
+            <figure class='figure-9'>
+              <!-- - img_placehold 978, 480, "Slide #{i}" -->
+              <img src='http://lorempixel.com/978/480/abstract/9' />
+              <figcaption>
+                Sunt suscipit assumenda voluptates
+              </figcaption>
+            </figure>
+            <figure class='figure-10'>
+              <!-- - img_placehold 978, 480, "Slide #{i}" -->
+              <img src='http://lorempixel.com/978/480/abstract/10' />
+              <figcaption>
+                Eligendi quas culpa cumque enim
+              </figcaption>
+            </figure>
+            <figure class='figure-11'>
+              <!-- - img_placehold 978, 480, "Slide #{i}" -->
+              <img src='http://lorempixel.com/978/480/abstract/11' />
+              <figcaption>
+                Aut architecto hic est voluptas
+              </figcaption>
+            </figure>
+          </section>
+          <!-- END .carousel -->
+          <section class='thumbnails'></section>
+        </section>
+        <!-- END .gallery -->
       </section>
     </div>
     <footer id='site-footer'>
@@ -265,6 +299,7 @@
   <script src='/js/sequence/modules/maps/googlemapsapicontroller.js'></script>
   <script src='/js/sequence/modules/maps/googlemap.js'></script>
   <script src='/js/sequence/modules/maps/maplocationscontroller.js'></script>
-  <script src='/js/sequence/modules/flickrgallery/FlickrGallery-packaged.js'></script>
-  <script src='/js/sequence/client/app.js'></script>
+  <script src='/js/sequence/modules/accordion/accordion.js'></script>
+  <script src='/js/sequence/modules/accordion/accordiongroup.js'></script>
+  <script src='/js/sequence/app.js'></script>
 </body>

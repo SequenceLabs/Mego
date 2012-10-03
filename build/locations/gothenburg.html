@@ -29,7 +29,7 @@
   <!-- %script{:src => "http://localhost:8081/target/target-script-min.js#anonymous"} -->
 </head>
 <body>
-  <div class='container'>
+  <article class='container' id='main-container'>
     <header id='site-header'>
       <div class='row'>
         <section id='branding'>
@@ -51,97 +51,131 @@
         <!-- END mini-search -->
       </div>
       <div class='row'>
-        <nav id='site-nav'>
+        <nav id='primary-nav'>
           <ul>
-            <li>
+            <li class=''>
               <a class='' href='index.html'>
                 Home
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='faq.html'>
                 FAQs
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='contact-us.html'>
                 Contact Us
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='events.html'>
                 Events
               </a>
             </li>
-            <li>
-              <a class='' href='case-studies.html'>
-                Case Studies
-              </a>
-            </li>
-            <li>
-              <a class='' href='gallery.html'>
-                Gallery
-              </a>
-            </li>
-            <li>
+            <li class=''>
               <a class='' href='blog.html'>
                 Blog
               </a>
             </li>
-            <li>
+            <li class='subnav-parent'>
+              <a class='' href='generic-page.html'>
+                Generic Page
+              </a>
+              <ul class='sub-nav'>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 1
+                  </a>
+                </li>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 2
+                  </a>
+                </li>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 3
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class=''>
+              <a class='' href='blog-post.html'>
+                Blog Post
+              </a>
+            </li>
+            <li class=''>
               <a class='' href='locations.html'>
                 Locations
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='news.html'>
                 News
               </a>
             </li>
           </ul>
         </nav>
+        <!-- MM 2 style nav -->
+        <!-- - structure = [{:href=>"index", :title=>"Home"}, -->
+        <!-- {:href=>"about-us", :title=>"About Us"}, -->
+        <!-- {:href=>"projects", :title=>"Projects"}, -->
+        <!-- {:href=>"news", :title=>"News"}, -->
+        <!-- {:href=>"events", :title=>"Events"}, -->
+        <!-- {:href=>"blog", :title=>"Blog"}, -->
+        <!-- {:href=>"gallery", :title=>"Gallery"}, -->
+        <!-- {:href=>"case-studies", :title=>"Case Studies"}, -->
+        <!-- {:href=>"contact-us", :title=>"Contact Us"}] -->
+        <!-- %nav#primary-nav -->
+        <!-- %ul -->
+        <!-- - structure.each do |page| -->
+        <!-- %li -->
+        <!-- %a{:href=>"#{page[:href]}.html", :class=>"#{page[:href]+'.html' == request.path ? 'active' : ''}"} -->
+        <!-- #{page[:title]} -->
       </div>
+      
     </header>
-    <div class='main' id='location'>
+    <section class='main' id='location'>
       <header id='page-header'>
         <h1>Location Title</h1>
       </header>
-      <section id='content'>
+      <article id='content'>
         <p>
-          Est quaerat voluptatem ex provident ipsa debitis est voluptatem. ea adipisci nobis eligendi sit illo aliquam expedita qui suscipit omnis tempore velit consectetur itaque. aut vel laborum nostrum modi velit excepturi consequatur quia numquam. voluptates excepturi dolor qui et laudantium repellendus nostrum exercitationem maxime non ipsam aut est. non eum non assumenda recusandae qui consequuntur et eius est quo id iure
+          Molestiae fugiat voluptate voluptas tenetur dignissimos ea aut culpa ratione sint sunt earum. et repellat facere ipsum. est vel sit ipsam ut officiis ut. fugit id earum at atque molestias facere et impedit illum repudiandae minima odio eligendi accusantium. pariatur voluptas mollitia eos possimus ut neque molestiae quis hic ipsam ad. explicabo voluptas ut et explicabo necessitatibus eos ut sit occaecati in odit id perspiciatis
         </p>
         <p>
-          Sed officia necessitatibus rerum eum sit sint in quisquam numquam. earum recusandae possimus sequi cupiditate quia repellendus ut modi ratione commodi aut. commodi dicta fugit alias. quis dignissimos consequatur iure vero molestiae perferendis iusto ratione magnam aut inventore nostrum et reiciendis. ipsa dolorem dignissimos molestiae sit repudiandae consequatur. nulla sunt ab praesentium rerum distinctio voluptas quo facilis praesentium vel aut aut libero ipsum
+          Aliquid omnis mollitia adipisci amet dignissimos quo necessitatibus qui et voluptatem repudiandae illo rem. nisi voluptas est est ducimus perspiciatis et repellendus magnam non nesciunt occaecati. doloremque non temporibus dolorem cupiditate quo odit corrupti impedit et iste aperiam ab quia. voluptatem cupiditate omnis consequatur ea numquam
         </p>
         <p>
-          Libero quod et recusandae eligendi nihil accusamus sed praesentium atque dignissimos deserunt dolorum et. voluptatem architecto et nihil facere ipsum autem sit earum quidem voluptates qui neque quis. laboriosam omnis iure sit et voluptates praesentium repellendus accusamus iure aut. esse earum et recusandae sequi est
+          Aperiam sed qui iure alias est est et deserunt. dolorum laborum pariatur tempore eligendi consequatur architecto aut. distinctio ut accusantium ut molestiae vel eius. nesciunt sit et culpa quasi voluptate et
         </p>
         <a class='button' href='locations.html'>
           &larr; Back to Projects
         </a>
-      </section>
+      </article>
       <section id='sidebar'>
         <section class='widget' id='location-widget'>
           <h2>Locations</h2>
           <ul>
             <li>
               <a href='location.html'>
-                deserunt adipisci
+                ea rerum aliquam
               </a>
             </li>
             <li>
               <a href='location.html'>
-                quis odio delectus corrupti
+                velit nihil asperiores
               </a>
             </li>
             <li>
               <a href='location.html'>
-                consequuntur at
+                soluta possimus
               </a>
             </li>
             <li>
               <a href='location.html'>
-                asperiores ipsa
+                adipisci minima blanditiis dolores
               </a>
             </li>
           </ul>
@@ -152,14 +186,14 @@
               
             </figure>
             <h3>
-              dolorem
+              ut pariatur
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </a>
           <!-- END Generic CTA -->
         </section>
       </section>
-    </div>
+    </section>
     <footer id='site-footer'>
       <div class='copyright'>&copy; Sequence 2012</div>
       <nav id='footer-nav'>
@@ -192,7 +226,7 @@
         </ul>
       </nav>
     </footer>
-  </div>
+  </article>
   <!-- / 3rd party libs -->
   <script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js'></script>
   <script src='js/thirdparty/ga.social.js'></script>
@@ -223,6 +257,7 @@
   <script src='/js/sequence/modules/maps/googlemapsapicontroller.js'></script>
   <script src='/js/sequence/modules/maps/googlemap.js'></script>
   <script src='/js/sequence/modules/maps/maplocationscontroller.js'></script>
-  <script src='/js/sequence/modules/flickrgallery/FlickrGallery-packaged.js'></script>
-  <script src='/js/sequence/client/app.js'></script>
+  <script src='/js/sequence/modules/accordion/accordion.js'></script>
+  <script src='/js/sequence/modules/accordion/accordiongroup.js'></script>
+  <script src='/js/sequence/app.js'></script>
 </body>

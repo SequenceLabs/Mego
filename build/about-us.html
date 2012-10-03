@@ -29,7 +29,7 @@
   <!-- %script{:src => "http://localhost:8081/target/target-script-min.js#anonymous"} -->
 </head>
 <body>
-  <div class='container'>
+  <article class='container' id='main-container'>
     <header id='site-header'>
       <div class='row'>
         <section id='branding'>
@@ -51,81 +51,115 @@
         <!-- END mini-search -->
       </div>
       <div class='row'>
-        <nav id='site-nav'>
+        <nav id='primary-nav'>
           <ul>
-            <li>
+            <li class=''>
               <a class='' href='index.html'>
                 Home
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='faq.html'>
                 FAQs
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='contact-us.html'>
                 Contact Us
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='events.html'>
                 Events
               </a>
             </li>
-            <li>
-              <a class='' href='case-studies.html'>
-                Case Studies
-              </a>
-            </li>
-            <li>
-              <a class='' href='gallery.html'>
-                Gallery
-              </a>
-            </li>
-            <li>
+            <li class=''>
               <a class='' href='blog.html'>
                 Blog
               </a>
             </li>
-            <li>
+            <li class='subnav-parent'>
+              <a class='' href='generic-page.html'>
+                Generic Page
+              </a>
+              <ul class='sub-nav'>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 1
+                  </a>
+                </li>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 2
+                  </a>
+                </li>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 3
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class=''>
+              <a class='' href='blog-post.html'>
+                Blog Post
+              </a>
+            </li>
+            <li class=''>
               <a class='' href='locations.html'>
                 Locations
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='news.html'>
                 News
               </a>
             </li>
           </ul>
         </nav>
+        <!-- MM 2 style nav -->
+        <!-- - structure = [{:href=>"index", :title=>"Home"}, -->
+        <!-- {:href=>"about-us", :title=>"About Us"}, -->
+        <!-- {:href=>"projects", :title=>"Projects"}, -->
+        <!-- {:href=>"news", :title=>"News"}, -->
+        <!-- {:href=>"events", :title=>"Events"}, -->
+        <!-- {:href=>"blog", :title=>"Blog"}, -->
+        <!-- {:href=>"gallery", :title=>"Gallery"}, -->
+        <!-- {:href=>"case-studies", :title=>"Case Studies"}, -->
+        <!-- {:href=>"contact-us", :title=>"Contact Us"}] -->
+        <!-- %nav#primary-nav -->
+        <!-- %ul -->
+        <!-- - structure.each do |page| -->
+        <!-- %li -->
+        <!-- %a{:href=>"#{page[:href]}.html", :class=>"#{page[:href]+'.html' == request.path ? 'active' : ''}"} -->
+        <!-- #{page[:title]} -->
       </div>
+      
     </header>
-    <div class='main' id='about-us'>
+    <section class='main' id='about-us'>
       <header id='page-header'>
         <h1>
           About Us
         </h1>
       </header>
-      <section id='content'>
+      <article id='content'>
         <p>
-  Aperiam commodi alias inventore ipsam blanditiis quia dolorum dicta pariatur in vero sit reprehenderit rerum. consequatur dolores iusto molestias cumque aliquid. odio voluptas ipsum ratione accusamus sed iure et. recusandae omnis ea repellat qui. officiis quaerat ut dolor illum illum ea sit rerum ut voluptas aut enim
-</p>
-<p>
-  Autem ut et error facere nihil molestiae. id reprehenderit ducimus quasi est quidem. quis quae vel molestiae ipsum necessitatibus aliquam alias doloribus eligendi distinctio. quia et corrupti deserunt debitis et sequi rerum porro qui. repudiandae qui et quis inventore eius porro voluptates eaque consequatur consequatur. quo commodi impedit asperiores laboriosam aut voluptas et soluta officia provident velit rerum nihil
-</p>
-<p>
-  Delectus est sapiente quod ea facilis nam eveniet exercitationem eum nostrum. laborum adipisci voluptas eaque quia quos enim. consequatur eum asperiores qui quod repellendus et ut molestias quos quis odio minima. veniam et non debitis deserunt et ducimus qui totam commodi
-</p>
-<section id='flickr-gallery-module'>
-  <h3>Flickr Photostream</h3>
-  <div id='flickr-gallery'></div>
-  <a>
-    View all images &rarr;
-  </a>
-</section>
-      </section>
+          Sint dolores ducimus dolor ea dolor enim beatae maiores nesciunt placeat minus nisi. est officia sunt impedit nam nulla alias non expedita est itaque consequuntur nostrum impedit recusandae. molestias labore rerum est minus qui quia maiores tempore quae numquam. voluptatem neque odit nobis voluptatem temporibus architecto et illo dolorem ipsa quas. eveniet iusto quasi praesentium omnis autem eum placeat
+        </p>
+        <p>
+          Natus accusantium repellendus rerum et. hic hic et nemo vitae architecto nesciunt numquam. corporis inventore autem rem suscipit praesentium nostrum nihil delectus officiis excepturi omnis expedita. aperiam maxime praesentium sint. dignissimos molestias consequatur consequatur fugiat. ullam ut ut enim deleniti praesentium
+        </p>
+        <p>
+          Iusto ducimus ullam vero quo ut omnis nobis aut molestias est voluptatum qui qui delectus. nihil voluptatem recusandae tenetur odit iste quam enim qui. id aperiam quia et qui at quod maxime neque exercitationem ut quam
+        </p>
+        <section id='flickr-gallery-module'>
+          <h3>Flickr Photostream</h3>
+          <div id='flickr-gallery'></div>
+          <a>
+            View all images &rarr;
+          </a>
+        </section>
+      </article>
       <section id='sidebar'>
         <section class='widget' id='contact-widget'>
   <h3>Get in touch</h3>
@@ -158,7 +192,7 @@
     
   </figure>
   <h3>
-    quo quod
+    harum laborum
   </h3>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </a>
@@ -175,7 +209,7 @@
   </footer>
 </section>
       </section>
-    </div>
+    </section>
     <footer id='site-footer'>
       <div class='copyright'>&copy; Sequence 2012</div>
       <nav id='footer-nav'>
@@ -208,7 +242,7 @@
         </ul>
       </nav>
     </footer>
-  </div>
+  </article>
   <!-- / 3rd party libs -->
   <script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js'></script>
   <script src='js/thirdparty/ga.social.js'></script>
@@ -239,6 +273,7 @@
   <script src='/js/sequence/modules/maps/googlemapsapicontroller.js'></script>
   <script src='/js/sequence/modules/maps/googlemap.js'></script>
   <script src='/js/sequence/modules/maps/maplocationscontroller.js'></script>
-  <script src='/js/sequence/modules/flickrgallery/FlickrGallery-packaged.js'></script>
-  <script src='/js/sequence/client/app.js'></script>
+  <script src='/js/sequence/modules/accordion/accordion.js'></script>
+  <script src='/js/sequence/modules/accordion/accordiongroup.js'></script>
+  <script src='/js/sequence/app.js'></script>
 </body>

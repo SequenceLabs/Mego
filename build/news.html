@@ -29,7 +29,7 @@
   <!-- %script{:src => "http://localhost:8081/target/target-script-min.js#anonymous"} -->
 </head>
 <body>
-  <div class='container'>
+  <article class='container' id='main-container'>
     <header id='site-header'>
       <div class='row'>
         <section id='branding'>
@@ -51,109 +51,143 @@
         <!-- END mini-search -->
       </div>
       <div class='row'>
-        <nav id='site-nav'>
+        <nav id='primary-nav'>
           <ul>
-            <li>
+            <li class=''>
               <a class='' href='index.html'>
                 Home
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='faq.html'>
                 FAQs
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='contact-us.html'>
                 Contact Us
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='events.html'>
                 Events
               </a>
             </li>
-            <li>
-              <a class='' href='case-studies.html'>
-                Case Studies
-              </a>
-            </li>
-            <li>
-              <a class='' href='gallery.html'>
-                Gallery
-              </a>
-            </li>
-            <li>
+            <li class=''>
               <a class='' href='blog.html'>
                 Blog
               </a>
             </li>
-            <li>
+            <li class='subnav-parent'>
+              <a class='' href='generic-page.html'>
+                Generic Page
+              </a>
+              <ul class='sub-nav'>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 1
+                  </a>
+                </li>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 2
+                  </a>
+                </li>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 3
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class=''>
+              <a class='' href='blog-post.html'>
+                Blog Post
+              </a>
+            </li>
+            <li class=''>
               <a class='' href='locations.html'>
                 Locations
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='active' href='news.html'>
                 News
               </a>
             </li>
           </ul>
         </nav>
+        <!-- MM 2 style nav -->
+        <!-- - structure = [{:href=>"index", :title=>"Home"}, -->
+        <!-- {:href=>"about-us", :title=>"About Us"}, -->
+        <!-- {:href=>"projects", :title=>"Projects"}, -->
+        <!-- {:href=>"news", :title=>"News"}, -->
+        <!-- {:href=>"events", :title=>"Events"}, -->
+        <!-- {:href=>"blog", :title=>"Blog"}, -->
+        <!-- {:href=>"gallery", :title=>"Gallery"}, -->
+        <!-- {:href=>"case-studies", :title=>"Case Studies"}, -->
+        <!-- {:href=>"contact-us", :title=>"Contact Us"}] -->
+        <!-- %nav#primary-nav -->
+        <!-- %ul -->
+        <!-- - structure.each do |page| -->
+        <!-- %li -->
+        <!-- %a{:href=>"#{page[:href]}.html", :class=>"#{page[:href]+'.html' == request.path ? 'active' : ''}"} -->
+        <!-- #{page[:title]} -->
       </div>
+      
     </header>
-    <div class='main' id='news'>
+    <section class='main' id='news'>
       <header id='page-header'>
         <h1>Latest News</h1>
         <p>
           Some sort of byline here.
-          et aut est repellendus suscipit error facere sapiente quia quia odit eos ut dignissimos quasi architecto qui numquam sed non sit doloremque exercitationem doloribus
+          magnam quibusdam deleniti omnis labore consectetur placeat voluptatum dolorum nemo dolor explicabo qui numquam dolores et veritatis laboriosam vel dicta doloribus tenetur fuga impedit
         </p>
       </header>
-      <section id='content'>
+      <article id='content'>
         <!-- START .news-listing -->
 <section class='news-listing'>
   <!-- START .news-item -->
-  <article class='news-item featured'>
-    <header>
-      <a class='read-more' href='news-article.html' title='Summary of news article'>
-        <h2>
-          in culpa officiis iure voluptas consequatur
-        </h2>
+<article class='news-item featured'>
+  <header>
+    <a class='read-more' href='news-article.html' title='Summary of news article'>
+      <h2>
+        maiores eum et ut animi id qui
+      </h2>
+    </a>
+    <time datetime='2009-11-13T20:00Z'>
+      3 hours ago
+    </time>
+  </header>
+  <div class='row'>
+    <figure class=''>
+      <a href='news-article.html' title='Summary of news article'>
+        <img src="http://www.imgsrc.me/726x405/dddddd/858585" width="726" height="405" />
+        
       </a>
-      <time datetime='2009-11-13T20:00Z'>
-        3 hours ago
-      </time>
-    </header>
-    <div class='row'>
-      <figure class=''>
-        <a href='news-article.html' title='Summary of news article'>
-          <img src="http://www.imgsrc.me/726x405/dddddd/858585" width="726" height="405" />
-          
+      <figcaption>
+        Repellendus ipsa sequi quas culpa sapiente
+      </figcaption>
+    </figure>
+    <section class='copy'>
+      <p>
+        Quas consequuntur adipisci molestiae vel et nobis voluptatem eos sed et qui esse. Eos numquam excepturi ad reprehenderit autem est voluptas aut impedit dolor. Enim autem nesciunt quibusdam doloribus ratione eligendi porro consequatur iusto eligendi doloribus et vel. Non doloremque nihil doloribus veniam fugiat aut aliquam amet possimus quia illo et. Cumque et tempora et adipisci ratione sapiente. Enim libero est quidem quo rerum veritatis dolores explicabo facilis repudiandae deleniti. Qui eligendi dolorum itaque ex est quisquam consequuntur molestiae laudantium. Et soluta rerum similique quidem est est et et sed ipsa dolorem tempore. Tenetur a dolorem quia rerum ut
+      </p>
+      <footer>
+        <a class='read-more' href='news-article.html' title='Summary of news article'>
+          Read more &rarr;
         </a>
-        <figcaption>
-          Dolore ipsum temporibus est et sed fugit quidem omnis nam necessitatibus nesciunt consectetur asperiores vitae
-        </figcaption>
-      </figure>
-      <section class='copy'>
-        <p>
-          In qui atque impedit repudiandae ut laborum minus. Et rerum voluptatem perferendis velit. Quo recusandae quae quas velit qui cupiditate aut eos cum cupiditate. Molestiae distinctio molestiae pariatur iusto nulla voluptas deleniti neque ab sequi. Nobis nihil modi consequuntur optio corporis quia nihil eos dolorum. Perspiciatis consequatur rerum dolorum laudantium optio sunt ut velit animi. Voluptas consequuntur eos id aliquam. Ut quae eaque perferendis ut sint maiores assumenda a quo omnis at quisquam eligendi. Adipisci aut dicta voluptatibus similique voluptate quo recusandae dolores qui similique quas cumque omnis nulla
-        </p>
-        <footer>
-          <a class='read-more' href='news-article.html' title='Summary of news article'>
-            Read more &rarr;
-          </a>
-        </footer>
-      </section>
-    </div>
-  </article>
-  <!-- END .news-item -->
+      </footer>
+    </section>
+  </div>
+</article>
+<!-- END .news-item -->
   <!-- START .news-item -->
 <article class='news-item'>
   <header>
     <a class='read-more' href='news-article.html' title='Summary of news article'>
       <h2>
-        enim porro harum est
+        similique in ut impedit
       </h2>
     </a>
     <time datetime='2009-11-13T20:00Z'>
@@ -167,12 +201,47 @@
         
       </a>
       <figcaption>
-        Et aspernatur aut est itaque voluptatibus qui voluptate aut quia facere eum in doloribus
+        Odio in architecto perspiciatis et mollitia aut enim vel aut veritatis
       </figcaption>
     </figure>
     <section class='copy'>
       <p>
-        Praesentium aut quia quia voluptates. Est dolores recusandae dolor. Placeat neque iste quisquam ut. Et accusamus dolorum est aut neque. Molestiae explicabo quas aliquam ipsam non similique aliquam voluptatem. Quo enim incidunt nostrum sint aut reiciendis nulla. Et voluptas voluptas beatae sunt praesentium temporibus perferendis esse veritatis et ut voluptatem temporibus facilis. Qui distinctio rem adipisci quis. Illo nulla aut sit nesciunt praesentium veritatis consequatur maxime dolor iure fugit. In odit sit perspiciatis odio ut recusandae animi corrupti reprehenderit ut enim ut. Dolores quidem earum minima velit
+        Quaerat et sit itaque saepe totam laborum est. Consequatur consequatur voluptatem earum et amet quod. Est quis voluptatem error earum accusamus reprehenderit et assumenda. Et illo est deserunt incidunt. Reiciendis sit iste beatae quisquam aut quaerat nihil. Et illum veritatis ea et aut repellat et magnam eveniet nostrum maxime laborum vitae et. Ipsa ducimus eligendi tempora amet ad omnis. Fugiat ipsum odio autem aperiam ipsa nam doloribus quis voluptas quaerat aut sint quia ut
+      </p>
+      <footer>
+        <a class='read-more' href='news-article.html' title='Summary of news article'>
+          Read more &rarr;
+        </a>
+      </footer>
+    </section>
+  </div>
+</article>
+<!-- END .news-item -->
+  <!-- START .news-item -->
+<article class='news-item'>
+  <header>
+    <a class='read-more' href='news-article.html' title='Summary of news article'>
+      <h2>
+        perspiciatis veniam ex non nulla quod quia
+      </h2>
+    </a>
+    <time datetime='2009-11-13T20:00Z'>
+      3 hours ago
+    </time>
+  </header>
+  <div class='row'>
+    <figure class=''>
+      <a href='news-article.html' title='Summary of news article'>
+        <img src="http://www.imgsrc.me/306x171/dddddd/858585" width="306" height="171" />
+        
+      </a>
+      <figcaption>
+        Recusandae doloremque et repellendus eum
+      </figcaption>
+    </figure>
+    <section class='copy'>
+      <p>
+        Accusantium aut nesciunt beatae possimus culpa doloremque velit. Ex itaque necessitatibus rerum molestias id qui fuga et aspernatur voluptates error in distinctio. Tenetur numquam alias nostrum eos voluptates quo quas corporis laudantium dolore reprehenderit ab facere omnis. Voluptatum inventore voluptatibus molestiae voluptatem at autem deleniti. Et atque consectetur aut quaerat error et omnis ipsum natus. Non consequuntur aut modi eius explicabo architecto eligendi aut. Quis saepe in accusantium aut quas id ipsum voluptas. Dolorem fuga accusantium rem voluptas corrupti magni eius. Enim id a rerum libero natus
       </p>
       <footer>
         <a class='read-more' href='news-article.html' title='Summary of news article'>
@@ -188,7 +257,7 @@
     <header>
       <a class='read-more' href='news-article.html' title='Summary of news article'>
         <h2>
-          in minima aliquam autem
+          quisquam omnis et
         </h2>
       </a>
       <time datetime='2009-11-13T20:00Z'>
@@ -202,12 +271,12 @@
           
         </a>
         <figcaption>
-          Nobis dolorem similique voluptate unde labore tenetur maxime adipisci recusandae sunt expedita
+          Similique vel unde molestiae ipsa vel quaerat quia eos atque debitis
         </figcaption>
       </figure>
       <section class='copy'>
         <p>
-          Ipsam quo voluptas explicabo quisquam deleniti error ea quos qui doloremque hic maiores sed unde. Tempore consequatur voluptas in sunt tenetur vitae rerum. Aliquid veritatis animi aut pariatur temporibus quisquam quia possimus aut ratione. Est veritatis ipsam sint et magni illo omnis hic similique eos necessitatibus aliquid sed. Nulla illo error doloremque iste nulla autem aut quia. Qui minima quae sit magni mollitia explicabo et repudiandae non pariatur dolore. Non explicabo facere recusandae maxime molestias consequatur et culpa eius molestiae et voluptate. Perferendis ipsum omnis tempore quia explicabo et velit vel libero. Iure exercitationem voluptatem adipisci debitis sit sed provident ipsam
+          Aperiam deleniti id molestiae ratione laboriosam molestiae accusamus est illum quisquam illo et vel. Sit a explicabo voluptatem quos animi itaque repudiandae sed eligendi nobis molestiae magnam maiores. Consequatur ea sapiente facilis cumque sapiente et dignissimos nihil vel eum accusamus. Animi fugit repellendus illum in soluta autem similique molestiae. Excepturi aperiam perferendis amet inventore aliquid corrupti ratione consequatur maxime. Labore quis voluptas sed doloribus laudantium qui adipisci quidem sint ullam. Id velit quas expedita provident asperiores quam temporibus ipsa vero maiores tempore ullam. Dolorem blanditiis vel repellat officia aliquid eos optio explicabo enim inventore accusantium sapiente. Adipisci nihil aut et. Repellat veritatis aut eius at
         </p>
         <footer>
           <a class='read-more' href='news-article.html' title='Summary of news article'>
@@ -223,7 +292,7 @@
     <header>
       <a class='read-more' href='news-article.html' title='Summary of news article'>
         <h2>
-          ratione omnis voluptatem dolores asperiores
+          nihil et tempora beatae in minus est
         </h2>
       </a>
       <time datetime='2009-11-13T20:00Z'>
@@ -237,12 +306,12 @@
           
         </a>
         <figcaption>
-          Harum fuga officia qui similique quibusdam dolores velit placeat
+          Voluptas eius iste in modi ratione quia saepe omnis
         </figcaption>
       </figure>
       <section class='copy'>
         <p>
-          Sit maxime in maiores qui et dolores autem quia tempore minus quis repudiandae sit et. Eveniet quo qui eaque fugiat. Consectetur et repellendus reiciendis. Molestias consequuntur excepturi quam aut. Dignissimos et harum vero dolor totam delectus nihil sit quia doloribus sint. Nesciunt quis quaerat dicta sequi incidunt. Blanditiis sunt consequatur cumque dolorem earum officiis nihil ratione architecto perferendis corporis. Et eum iusto suscipit placeat dolorum maxime amet ratione est ut amet. Ullam quasi vel alias numquam assumenda rem
+          Aliquid consectetur esse placeat fuga non sed saepe dolorum necessitatibus non et sed et. Tenetur similique consequatur ipsa neque et quaerat repudiandae non tempore repudiandae consequuntur et. Eos id voluptas esse. Qui placeat enim tempora. Quo qui fugit blanditiis est cupiditate perspiciatis. Ut quasi molestiae aut quia vitae officia adipisci velit veritatis. Qui culpa nihil suscipit suscipit quis aliquid enim quo ducimus nam expedita quam voluptate. Nulla perferendis non ipsam est quod repudiandae culpa eveniet reiciendis tempore omnis quia enim. Aperiam quia nulla ut suscipit dolor voluptatibus ex omnis. Sequi quod sit possimus ea voluptates aut optio. Qui voluptas aut non inventore aut asperiores assumenda
         </p>
         <footer>
           <a class='read-more' href='news-article.html' title='Summary of news article'>
@@ -258,7 +327,7 @@
   <header>
     <a class='read-more' href='news-article.html' title='Summary of news article'>
       <h2>
-        in quis voluptas maiores officia
+        corporis ut qui
       </h2>
     </a>
     <time datetime='2009-11-13T20:00Z'>
@@ -272,47 +341,12 @@
         
       </a>
       <figcaption>
-        Dolor nihil animi aut id qui quis nostrum harum culpa est dicta nihil provident perferendis
+        Fugit placeat quaerat qui non
       </figcaption>
     </figure>
     <section class='copy'>
       <p>
-        Molestias nesciunt aut aut quaerat recusandae. Neque quidem natus sit in quia cupiditate vero. Qui quidem tempora velit iste rerum. Unde numquam delectus magnam ut illum aut autem ducimus. Quaerat consequatur placeat doloribus sint ratione atque qui voluptatum suscipit nesciunt. Omnis itaque perferendis quia illum pariatur maxime reprehenderit. Illum sit aliquam qui quo totam. Rerum corrupti voluptatum voluptas quia. Distinctio voluptates odio dolores unde in eligendi temporibus officiis reiciendis et omnis placeat. Inventore debitis illum quia ut qui inventore voluptatem qui velit modi et occaecati. Eum dolorem at quibusdam enim sequi natus ad saepe ut
-      </p>
-      <footer>
-        <a class='read-more' href='news-article.html' title='Summary of news article'>
-          Read more &rarr;
-        </a>
-      </footer>
-    </section>
-  </div>
-</article>
-<!-- END .news-item -->
-  <!-- START .news-item -->
-<article class='news-item'>
-  <header>
-    <a class='read-more' href='news-article.html' title='Summary of news article'>
-      <h2>
-        reiciendis animi sed occaecati necessitatibus quia
-      </h2>
-    </a>
-    <time datetime='2009-11-13T20:00Z'>
-      3 hours ago
-    </time>
-  </header>
-  <div class='row'>
-    <figure class=''>
-      <a href='news-article.html' title='Summary of news article'>
-        <img src="http://www.imgsrc.me/306x171/dddddd/858585" width="306" height="171" />
-        
-      </a>
-      <figcaption>
-        Quo beatae ut laboriosam dolorem
-      </figcaption>
-    </figure>
-    <section class='copy'>
-      <p>
-        Est eius est ducimus et dolorem eligendi inventore deserunt ipsum dolorum quam est sed. Qui voluptatem necessitatibus esse voluptate aut maiores. Nesciunt esse corporis atque voluptas ad illum. Soluta velit repudiandae provident quas sed consequatur molestiae earum. Porro rerum error vel nemo. Iste vel culpa harum qui distinctio quo tempore. Est occaecati rerum quas enim dolor odit laborum dicta qui nihil ut voluptatem praesentium reprehenderit. Amet magnam aut quia illum est adipisci sapiente nobis maiores rem. Fugiat tempora autem dolore ducimus dolores deleniti
+        Reprehenderit tempora sapiente impedit quis nam assumenda ea iusto iure quae odit eum corporis laudantium. Ut dolores officia quod natus voluptatem ratione incidunt omnis consequuntur voluptatem laborum suscipit voluptatibus. Est aut aut et necessitatibus rerum assumenda molestias eveniet iste. Voluptas recusandae sapiente unde optio placeat eveniet perferendis qui vel optio. Voluptatem dolor fuga perferendis quia dolorem voluptates laudantium nostrum vero. Ad repudiandae et aut sapiente qui tempore laudantium amet quo voluptate officiis sint corporis ut. Aut consectetur illo fuga officiis dolores ullam assumenda veritatis. Et velit et minus deserunt exercitationem et sed
       </p>
       <footer>
         <a class='read-more' href='news-article.html' title='Summary of news article'>
@@ -328,7 +362,7 @@
     <header>
       <a class='read-more' href='news-article.html' title='Summary of news article'>
         <h2>
-          unde alias qui perspiciatis ducimus amet
+          suscipit aliquid facilis itaque
         </h2>
       </a>
       <time datetime='2009-11-13T20:00Z'>
@@ -342,12 +376,47 @@
           
         </a>
         <figcaption>
-          Molestias sit ea amet dolore voluptatem qui dolorem inventore possimus
+          Nihil suscipit non repudiandae culpa sit vel sed porro voluptatem ipsum commodi
         </figcaption>
       </figure>
       <section class='copy'>
         <p>
-          Ut qui autem eos natus ab rerum non voluptatem corporis harum sed ut. Impedit sequi omnis veniam aut fugiat ut commodi voluptatem deleniti. Quia ipsum voluptas iusto corrupti tempore amet dolores a dolorem minus ipsum nam sed non. Voluptatem voluptatem aspernatur magnam aliquid eligendi autem a. Non non enim nisi omnis porro aliquam deleniti veritatis consequatur aut et unde necessitatibus. Expedita aut maiores praesentium autem quis ut doloremque aut quia rerum. Ab veniam ut recusandae dolores iusto. Aliquid esse suscipit qui nisi. Nostrum est et aliquid eveniet saepe magnam recusandae amet totam vel minima commodi aspernatur et. Voluptatem sapiente et voluptatem eveniet unde eius
+          Nisi tempore doloribus dolores voluptatem delectus maiores quod minus tenetur eos dignissimos. Exercitationem nostrum excepturi in atque aut cum officiis harum consequatur minima blanditiis molestiae. Enim quae consequatur ut quos id molestiae quae et iste quia architecto deserunt cumque. Enim ipsam laboriosam at repudiandae animi laborum autem veniam expedita corrupti repudiandae et. Provident beatae a ea beatae laudantium ad. Architecto debitis rerum beatae nisi sunt nostrum suscipit at at libero minima eius velit. Voluptatum qui exercitationem fugit fugiat animi magnam ea ut fugiat et et qui libero. Quasi ut ex quos delectus cumque ut voluptatem dolorem hic. Quidem est dolorem id
+        </p>
+        <footer>
+          <a class='read-more' href='news-article.html' title='Summary of news article'>
+            Read more &rarr;
+          </a>
+        </footer>
+      </section>
+    </div>
+  </article>
+  <!-- END .news-item -->
+  <!-- START .news-item -->
+  <article class='news-item'>
+    <header>
+      <a class='read-more' href='news-article.html' title='Summary of news article'>
+        <h2>
+          eum pariatur dolor porro dolores tenetur
+        </h2>
+      </a>
+      <time datetime='2009-11-13T20:00Z'>
+        3 hours ago
+      </time>
+    </header>
+    <div class='row'>
+      <figure class=''>
+        <a href='news-article.html' title='Summary of news article'>
+          <img src="http://www.imgsrc.me/306x171/dddddd/858585" width="306" height="171" />
+          
+        </a>
+        <figcaption>
+          Fugit doloribus dolorum accusamus saepe quia sunt asperiores quasi non provident qui sit esse
+        </figcaption>
+      </figure>
+      <section class='copy'>
+        <p>
+          Et ut et inventore aut dicta et placeat voluptas. Ducimus quas beatae omnis ut et voluptas vel labore porro eum ex sunt voluptatum ut. Et qui debitis doloremque. Et ut quibusdam cumque debitis rem consequatur et eum illum ut ex. Iure incidunt ipsa ut ab odio adipisci numquam et quo alias sunt. Et aliquid velit maiores et voluptatum aliquid repudiandae. Officia consequatur velit vero fugiat omnis omnis sequi sed sit vero voluptatibus. Voluptates id soluta omnis dolorem quasi numquam molestiae qui cupiditate veritatis. Expedita aut fuga impedit quaerat consequatur voluptate quo dolor qui aperiam velit iusto
         </p>
         <footer>
           <a class='read-more' href='news-article.html' title='Summary of news article'>
@@ -363,7 +432,7 @@
   <header>
     <a class='read-more' href='news-article.html' title='Summary of news article'>
       <h2>
-        quos totam et sit aut similique voluptatem
+        nostrum fugiat nulla est voluptatibus aspernatur
       </h2>
     </a>
     <time datetime='2009-11-13T20:00Z'>
@@ -377,12 +446,12 @@
         
       </a>
       <figcaption>
-        Veritatis temporibus earum quis minima qui exercitationem
+        Vel dolore qui quas
       </figcaption>
     </figure>
     <section class='copy'>
       <p>
-        Vitae voluptatem ut dicta autem in et. Sint et consequatur laborum odio non eum id quas. Doloremque repudiandae et perspiciatis ex qui et nisi sed sit. Sed at eos minus. Excepturi adipisci possimus voluptas voluptates eum quam corrupti asperiores. Reprehenderit nulla ab sed nesciunt minus eligendi repellendus iste voluptas enim. Aut sed eos sit. Sunt tenetur eligendi rerum dolore id ipsam provident sunt illo. Qui dolorem rerum cum eligendi sunt error enim et perferendis fugit illum nam nemo et
+        Recusandae ducimus quo et ea rem sequi minus modi ut voluptate consectetur sequi. Rem voluptas iure at est corrupti sed qui. Officia sunt sint explicabo quidem architecto blanditiis animi delectus ducimus. Eum quos reiciendis officia. Explicabo hic ut enim et nemo sit rerum sapiente illo. Rerum ut recusandae reprehenderit vel tempore. Ex voluptas rerum non neque debitis ratione consectetur nemo molestiae. Odio itaque sit aut excepturi. Sint aliquid debitis dolorem et. Est amet et aut provident quis expedita voluptatem libero ducimus molestiae repellat ea nemo. Consequatur quae dicta harum unde et nesciunt commodi ducimus. Ad exercitationem et et magni consequatur animi itaque architecto dolor quo aliquam iste et
       </p>
       <footer>
         <a class='read-more' href='news-article.html' title='Summary of news article'>
@@ -393,6 +462,41 @@
   </div>
 </article>
 <!-- END .news-item -->
+  <!-- START .news-item -->
+  <article class='news-item'>
+    <header>
+      <a class='read-more' href='news-article.html' title='Summary of news article'>
+        <h2>
+          accusamus assumenda dolorum sunt
+        </h2>
+      </a>
+      <time datetime='2009-11-13T20:00Z'>
+        3 hours ago
+      </time>
+    </header>
+    <div class='row'>
+      <figure class=''>
+        <a href='news-article.html' title='Summary of news article'>
+          <img src="http://www.imgsrc.me/306x171/dddddd/858585" width="306" height="171" />
+          
+        </a>
+        <figcaption>
+          Magni ducimus omnis inventore est repudiandae itaque est
+        </figcaption>
+      </figure>
+      <section class='copy'>
+        <p>
+          Voluptatum cumque autem alias dolorum assumenda saepe praesentium. Qui aut incidunt ipsum corporis iusto facere eos quidem. Alias dignissimos est et minima ex tempora iusto ea expedita aliquam repellendus atque amet. Quisquam dolorem libero blanditiis ex voluptatem nam sit. Corporis sit enim rerum natus quis necessitatibus amet maxime sapiente aut eum. Voluptas repellat molestias impedit vero aut nam aut sapiente sint quaerat velit sit aut sunt. Qui assumenda hic amet sunt error vel et. Non nesciunt quasi quo odio possimus dolorem numquam ut ut quia. Ut dolores ratione et similique iste ut eligendi quo. Et neque sed esse quidem repellat et. Dolore quasi sint reiciendis tempora totam explicabo aspernatur autem autem repellendus similique consequuntur quos sit
+        </p>
+        <footer>
+          <a class='read-more' href='news-article.html' title='Summary of news article'>
+            Read more &rarr;
+          </a>
+        </footer>
+      </section>
+    </div>
+  </article>
+  <!-- END .news-item -->
 </section>
 <!-- END .news-listing -->
 <!-- START Pagination -->
@@ -431,7 +535,7 @@
   </ul>
 </div>
 <!-- END Pagination -->
-      </section>
+      </article>
       <section id='sidebar'>
         <!-- START news-widget -->
         <section class='widget' id='news-widget'>
@@ -443,30 +547,20 @@
             <li>
               <a class='news-item' href='#' title='Brief summary of article'>
                 <h4>
-                  pariatur numquam ut est
+                  dolores
                 </h4>
                 <time datetime='2012-04-13'>
-                  Wed Aug 14, 1996
+                  Mon Oct 07, 2002
                 </time>
               </a>
             </li>
             <li>
               <a class='news-item' href='#' title='Brief summary of article'>
                 <h4>
-                  et quo molestiae
+                  fugit
                 </h4>
                 <time datetime='2012-04-13'>
-                  Mon May 12, 2008
-                </time>
-              </a>
-            </li>
-            <li>
-              <a class='news-item' href='#' title='Brief summary of article'>
-                <h4>
-                  qui eveniet dolores
-                </h4>
-                <time datetime='2012-04-13'>
-                  Mon May 14, 1990
+                  Wed May 12, 1993
                 </time>
               </a>
             </li>
@@ -493,7 +587,7 @@
                   Event title
                 </h4>
                 <time datetime='2012-04-13'>
-                  Sun Oct 07, 1990
+                  Sun Oct 04, 1992
                 </time>
                 <h5>Event Location</h5>
               </a>
@@ -504,18 +598,7 @@
                   Event title
                 </h4>
                 <time datetime='2012-04-13'>
-                  Sat Nov 10, 1990
-                </time>
-                <h5>Event Location</h5>
-              </a>
-            </li>
-            <li>
-              <a class='event-item' href='#' title='Brief summary of article'>
-                <h4>
-                  Event title
-                </h4>
-                <time datetime='2012-04-13'>
-                  Fri Feb 20, 2004
+                  Sat Jul 18, 2009
                 </time>
                 <h5>Event Location</h5>
               </a>
@@ -530,7 +613,7 @@
         <!-- END #events-widget -->
         <!-- = partial('includes/modules/video') -->
       </section>
-    </div>
+    </section>
     <footer id='site-footer'>
       <div class='copyright'>&copy; Sequence 2012</div>
       <nav id='footer-nav'>
@@ -563,7 +646,7 @@
         </ul>
       </nav>
     </footer>
-  </div>
+  </article>
   <!-- / 3rd party libs -->
   <script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js'></script>
   <script src='js/thirdparty/ga.social.js'></script>
@@ -594,6 +677,7 @@
   <script src='/js/sequence/modules/maps/googlemapsapicontroller.js'></script>
   <script src='/js/sequence/modules/maps/googlemap.js'></script>
   <script src='/js/sequence/modules/maps/maplocationscontroller.js'></script>
-  <script src='/js/sequence/modules/flickrgallery/FlickrGallery-packaged.js'></script>
-  <script src='/js/sequence/client/app.js'></script>
+  <script src='/js/sequence/modules/accordion/accordion.js'></script>
+  <script src='/js/sequence/modules/accordion/accordiongroup.js'></script>
+  <script src='/js/sequence/app.js'></script>
 </body>

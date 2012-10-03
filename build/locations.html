@@ -51,56 +51,90 @@
         <!-- END mini-search -->
       </div>
       <div class='row'>
-        <nav id='site-nav'>
+        <nav id='primary-nav'>
           <ul>
-            <li>
+            <li class=''>
               <a class='' href='index.html'>
                 Home
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='faq.html'>
                 FAQs
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='contact-us.html'>
                 Contact Us
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='events.html'>
                 Events
               </a>
             </li>
-            <li>
-              <a class='' href='case-studies.html'>
-                Case Studies
-              </a>
-            </li>
-            <li>
-              <a class='' href='gallery.html'>
-                Gallery
-              </a>
-            </li>
-            <li>
+            <li class=''>
               <a class='' href='blog.html'>
                 Blog
               </a>
             </li>
-            <li>
+            <li class='subnav-parent'>
+              <a class='' href='generic-page.html'>
+                Generic Page
+              </a>
+              <ul class='sub-nav'>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 1
+                  </a>
+                </li>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 2
+                  </a>
+                </li>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 3
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class=''>
+              <a class='' href='blog-post.html'>
+                Blog Post
+              </a>
+            </li>
+            <li class=''>
               <a class='active' href='locations.html'>
                 Locations
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='news.html'>
                 News
               </a>
             </li>
           </ul>
         </nav>
+        <!-- MM 2 style nav -->
+        <!-- - structure = [{:href=>"index", :title=>"Home"}, -->
+        <!-- {:href=>"about-us", :title=>"About Us"}, -->
+        <!-- {:href=>"projects", :title=>"Projects"}, -->
+        <!-- {:href=>"news", :title=>"News"}, -->
+        <!-- {:href=>"events", :title=>"Events"}, -->
+        <!-- {:href=>"blog", :title=>"Blog"}, -->
+        <!-- {:href=>"gallery", :title=>"Gallery"}, -->
+        <!-- {:href=>"case-studies", :title=>"Case Studies"}, -->
+        <!-- {:href=>"contact-us", :title=>"Contact Us"}] -->
+        <!-- %nav#primary-nav -->
+        <!-- %ul -->
+        <!-- - structure.each do |page| -->
+        <!-- %li -->
+        <!-- %a{:href=>"#{page[:href]}.html", :class=>"#{page[:href]+'.html' == request.path ? 'active' : ''}"} -->
+        <!-- #{page[:title]} -->
       </div>
+      
     </header>
     <div id='main_locations'>
       <header id='page-header'>
@@ -120,7 +154,7 @@
                   
                 </figure>
                 <h3>
-                  facere
+                  molestias harum
                 </h3>
                 <div class='info'>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -137,7 +171,7 @@
                   
                 </figure>
                 <h3>
-                  sed ut
+                  repudiandae illo
                 </h3>
                 <div class='info'>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -154,7 +188,7 @@
                   
                 </figure>
                 <h3>
-                  voluptatem
+                  doloribus quia
                 </h3>
                 <div class='info'>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -171,7 +205,7 @@
                   
                 </figure>
                 <h3>
-                  aut et
+                  non quos
                 </h3>
                 <div class='info'>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -188,7 +222,7 @@
                   
                 </figure>
                 <h3>
-                  quod facilis
+                  qui quam
                 </h3>
                 <div class='info'>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -205,7 +239,7 @@
                   
                 </figure>
                 <h3>
-                  est odio
+                  exercitationem hic
                 </h3>
                 <div class='info'>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -282,6 +316,7 @@
   <script src='/js/sequence/modules/maps/googlemapsapicontroller.js'></script>
   <script src='/js/sequence/modules/maps/googlemap.js'></script>
   <script src='/js/sequence/modules/maps/maplocationscontroller.js'></script>
-  <script src='/js/sequence/modules/flickrgallery/FlickrGallery-packaged.js'></script>
-  <script src='/js/sequence/client/app.js'></script>
+  <script src='/js/sequence/modules/accordion/accordion.js'></script>
+  <script src='/js/sequence/modules/accordion/accordiongroup.js'></script>
+  <script src='/js/sequence/app.js'></script>
 </body>

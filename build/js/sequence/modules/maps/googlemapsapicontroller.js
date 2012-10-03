@@ -38,6 +38,9 @@
       script = document.createElement("script");
       script.type = "text/javascript";
       script.src = "http://maps.googleapis.com/maps/api/js?&sensor=" + this.settings.sensor + "&callback=" + this.settings.onLoad;
+      if (this.settings.key != null) {
+        script.src += "&key=" + this.settings.key;
+      }
       return document.body.appendChild(script);
     };
 

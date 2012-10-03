@@ -29,7 +29,7 @@
   <!-- %script{:src => "http://localhost:8081/target/target-script-min.js#anonymous"} -->
 </head>
 <body>
-  <div class='container'>
+  <article class='container' id='main-container'>
     <header id='site-header'>
       <div class='row'>
         <section id='branding'>
@@ -51,80 +51,116 @@
         <!-- END mini-search -->
       </div>
       <div class='row'>
-        <nav id='site-nav'>
+        <nav id='primary-nav'>
           <ul>
-            <li>
+            <li class=''>
               <a class='' href='index.html'>
                 Home
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='faq.html'>
                 FAQs
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='contact-us.html'>
                 Contact Us
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='events.html'>
                 Events
               </a>
             </li>
-            <li>
-              <a class='' href='case-studies.html'>
-                Case Studies
-              </a>
-            </li>
-            <li>
-              <a class='' href='gallery.html'>
-                Gallery
-              </a>
-            </li>
-            <li>
+            <li class=''>
               <a class='active' href='blog.html'>
                 Blog
               </a>
             </li>
-            <li>
+            <li class='subnav-parent'>
+              <a class='' href='generic-page.html'>
+                Generic Page
+              </a>
+              <ul class='sub-nav'>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 1
+                  </a>
+                </li>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 2
+                  </a>
+                </li>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 3
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class=''>
+              <a class='' href='blog-post.html'>
+                Blog Post
+              </a>
+            </li>
+            <li class=''>
               <a class='' href='locations.html'>
                 Locations
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='news.html'>
                 News
               </a>
             </li>
           </ul>
         </nav>
+        <!-- MM 2 style nav -->
+        <!-- - structure = [{:href=>"index", :title=>"Home"}, -->
+        <!-- {:href=>"about-us", :title=>"About Us"}, -->
+        <!-- {:href=>"projects", :title=>"Projects"}, -->
+        <!-- {:href=>"news", :title=>"News"}, -->
+        <!-- {:href=>"events", :title=>"Events"}, -->
+        <!-- {:href=>"blog", :title=>"Blog"}, -->
+        <!-- {:href=>"gallery", :title=>"Gallery"}, -->
+        <!-- {:href=>"case-studies", :title=>"Case Studies"}, -->
+        <!-- {:href=>"contact-us", :title=>"Contact Us"}] -->
+        <!-- %nav#primary-nav -->
+        <!-- %ul -->
+        <!-- - structure.each do |page| -->
+        <!-- %li -->
+        <!-- %a{:href=>"#{page[:href]}.html", :class=>"#{page[:href]+'.html' == request.path ? 'active' : ''}"} -->
+        <!-- #{page[:title]} -->
       </div>
+      
     </header>
-    <div class='main' id='blog'>
+    <section class='main' id='blog'>
       <header id='page-header'>
         <h1>
           Blog
         </h1>
       </header>
-      <section id='content'>
-        <article id='blog'>
+      <article id='content'>
+        <article class='post'>
   <header>
-    <h1>
-      dolor quas laudantium reprehenderit voluptatem
-    </h1>
-    <div class='vcard'>
-      by
-      <address class='author'>
-        <a href='#' title='Posts by John Doe'>
-          John Doe
-        </a>
-      </address>
-      on
-      <time class='published updated' datetime='2009-11-04'>
-        November 4th, 2009
-      </time>
+    <h2>
+      quibusdam perspiciatis deleniti rerum
+    </h2>
+    <div class='meta'>
+      <div class='vcard'>
+        by
+        <address class='author'>
+          <a href='#' title='Posts by John Doe'>
+            John Doe
+          </a>
+        </address>
+        on
+        <time class='published updated' datetime='2009-11-04'>
+          November 4th, 2009
+        </time>
+      </div>
     </div>
   </header>
   <figure>
@@ -135,143 +171,76 @@
     </figcaption>
   </figure>
   <h2>
-    et amet commodi hic consequatur
+    voluptates quia odio minima non nisi qui
   </h2>
   <p>
-    Et amet et ad totam quam. Eum odio quo sit ut cumque neque voluptates. Voluptatibus repellendus ex iste et deserunt
-  </p>
-  <p>
-    Veritatis enim molestias qui libero aut aut qui quia. Impedit dolore corporis cupiditate non dolores dignissimos pariatur harum omnis in. Ut voluptates et facilis dolor deserunt ut temporibus
+    Exercitationem aliquam reprehenderit sed molestiae voluptate natus repellendus sit dignissimos id. Temporibus id eaque sequi vero qui sit. Sint voluptatem et molestiae dolores eum laudantium necessitatibus ut nam quam. Totam neque natus recusandae facilis facilis
   </p>
   <footer>
     <section class='categories'>
-      <h5>
+      <h4>
         Featured in:
-      </h5>
+      </h4>
       <ul>
         <li>
+          "2"
           <a href='#' title='Category'>
-            debitis
+            necessitatibus
           </a>
         </li>
         <li>
+          "2"
           <a href='#' title='Category'>
-            est
+            quia
           </a>
         </li>
       </ul>
     </section>
     <section class='tags'>
-      <h5>
+      <h4>
         Tagged:
-      </h5>
+      </h4>
       <ul>
         <li>
           <a href='#' title='Tag'>
-            sit
+            et
           </a>
         </li>
         <li>
           <a href='#' title='Tag'>
-            amet
+            molestias
           </a>
         </li>
       </ul>
     </section>
-    <div class='social'>
-      <!-- START social share/bookmarking -->
-      <section class='social-share'>
-        <h3>Share this page</h3>
-        <ul>
-          <!-- START fb-like -->
-          <li>
-            <div id='fb-root'></div>
-            <div class='fb-like' data-href='http://www.sequence.co.uk' data-layout='button_count' data-send='false' data-show-faces='false' data-width='100'></div>
-          </li>
-          <!-- END fb.like -->
-          <!-- START twitter -->
-          <!-- https://dev.twitter.com/docs/tweet-button -->
-          <li>
-            <a class='twitter-share-button' data-size='2' data-url='http://www.sequence.co.uk' data-via='your_screen_name' href='http://twitter.com/share'>
-              Tweet!
-            </a>
-            <!-- END twitter -->
-          </li>
-          <!-- START Google+ -->
-          <li>
-            <div class='g-plus' data-action='share' data-annotation='bubble' data-href='http://www.sequence.co.uk'></div>
-          </li>
-          <!-- END Google+ -->
-        </ul>
-      </section>
-    </div>
+    <!-- START social share/bookmarking -->
+    <section class='social-share'>
+      <h3>Share this page</h3>
+      <ul>
+        <!-- START fb-like -->
+        <li>
+          <div id='fb-root'></div>
+          <div class='fb-like' data-href='http://www.sequence.co.uk' data-layout='button_count' data-send='false' data-show-faces='false' data-width='100'></div>
+        </li>
+        <!-- END fb.like -->
+        <!-- START twitter -->
+        <!-- https://dev.twitter.com/docs/tweet-button -->
+        <li>
+          <a class='twitter-share-button' data-size='2' data-url='http://www.sequence.co.uk' data-via='your_screen_name' href='http://twitter.com/share'>
+            Tweet!
+          </a>
+          <!-- END twitter -->
+        </li>
+        <!-- START Google+ -->
+        <li>
+          <div class='g-plus' data-action='share' data-annotation='bubble' data-href='http://www.sequence.co.uk'></div>
+        </li>
+        <!-- END Google+ -->
+      </ul>
+    </section>
   </footer>
 </article>
-<section id='relevant-posts'>
-  <h2>
-    You might also be interested in:
-  </h2>
-  <div class='row'>
-    <article class='blog-post-CTA'>
-      <img src="http://www.imgsrc.me/220x117/dddddd/858585" width="220" height="117" />
-      
-      <header>
-        <h3>
-          qui rem qui aut
-        </h3>
-        <time class='published updated' datetime='2009-11-04'>
-          November 4th, 2009
-        </time>
-      </header>
-      <p>
-        Laborum commodi magni ratione in ab illo quaerat et ea quia cumque
-      </p>
-      <div class='social'></div>
-      <a class='read-more'>
-        Read more &rarr;
-      </a>
-    </article>
-    <article class='blog-post-CTA'>
-      <img src="http://www.imgsrc.me/220x117/dddddd/858585" width="220" height="117" />
-      
-      <header>
-        <h3>
-          dolorem occaecati necessitatibus quia
-        </h3>
-        <time class='published updated' datetime='2009-11-04'>
-          November 4th, 2009
-        </time>
-      </header>
-      <p>
-        Consequatur est minus aliquam quod laborum pariatur voluptas ut exercitationem voluptatem
-      </p>
-      <div class='social'></div>
-      <a class='read-more'>
-        Read more &rarr;
-      </a>
-    </article>
-    <article class='blog-post-CTA'>
-      <img src="http://www.imgsrc.me/220x117/dddddd/858585" width="220" height="117" />
-      
-      <header>
-        <h3>
-          aut et harum et inventore voluptatem
-        </h3>
-        <time class='published updated' datetime='2009-11-04'>
-          November 4th, 2009
-        </time>
-      </header>
-      <p>
-        Eum et quas sit dolore minus sint unde dolorum sit ut dolorem
-      </p>
-      <div class='social'></div>
-      <a class='read-more'>
-        Read more &rarr;
-      </a>
-    </article>
-  </div>
-</section>
-      </section>
+      </article>
       <section id='sidebar'>
         <section class='widget' id='blog-subscribe'>
           <header>
@@ -321,7 +290,12 @@
           <ul>
             <li>
               <a href='#' title='Category description'>
-                voluptatem laboriosam
+                voluptatibus
+              </a>
+            </li>
+            <li>
+              <a href='#' title='Category description'>
+                facere
               </a>
             </li>
             <li>
@@ -331,42 +305,37 @@
             </li>
             <li>
               <a href='#' title='Category description'>
-                dolorum ut
+                recusandae repellat
               </a>
             </li>
             <li>
               <a href='#' title='Category description'>
-                id
+                rem
               </a>
             </li>
             <li>
               <a href='#' title='Category description'>
-                quam
+                fuga
               </a>
             </li>
             <li>
               <a href='#' title='Category description'>
-                tempore quia
+                quas est
               </a>
             </li>
             <li>
               <a href='#' title='Category description'>
-                nulla optio
+                eligendi magni
               </a>
             </li>
             <li>
               <a href='#' title='Category description'>
-                sapiente
+                voluptatem
               </a>
             </li>
             <li>
               <a href='#' title='Category description'>
-                et maiores
-              </a>
-            </li>
-            <li>
-              <a href='#' title='Category description'>
-                et
+                cumque laboriosam
               </a>
             </li>
           </ul>
@@ -395,23 +364,23 @@
             </li>
             <li>
               <a href='#' title='Archive description'>
-                April 2012 (3)
+                April 2012 (4)
               </a>
             </li>
             <li>
               <a href='#' title='Archive description'>
-                May 2012 (3)
+                May 2012 (4)
               </a>
             </li>
             <li>
               <a href='#' title='Archive description'>
-                June 2012 (1)
+                June 2012 (2)
               </a>
             </li>
           </ul>
         </section>
       </section>
-    </div>
+    </section>
     <footer id='site-footer'>
       <div class='copyright'>&copy; Sequence 2012</div>
       <nav id='footer-nav'>
@@ -444,7 +413,7 @@
         </ul>
       </nav>
     </footer>
-  </div>
+  </article>
   <!-- / 3rd party libs -->
   <script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js'></script>
   <script src='js/thirdparty/ga.social.js'></script>
@@ -475,6 +444,7 @@
   <script src='/js/sequence/modules/maps/googlemapsapicontroller.js'></script>
   <script src='/js/sequence/modules/maps/googlemap.js'></script>
   <script src='/js/sequence/modules/maps/maplocationscontroller.js'></script>
-  <script src='/js/sequence/modules/flickrgallery/FlickrGallery-packaged.js'></script>
-  <script src='/js/sequence/client/app.js'></script>
+  <script src='/js/sequence/modules/accordion/accordion.js'></script>
+  <script src='/js/sequence/modules/accordion/accordiongroup.js'></script>
+  <script src='/js/sequence/app.js'></script>
 </body>

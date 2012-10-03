@@ -51,411 +51,566 @@
         <!-- END mini-search -->
       </div>
       <div class='row'>
-        <nav id='site-nav'>
+        <nav id='primary-nav'>
           <ul>
-            <li>
+            <li class=''>
               <a class='' href='index.html'>
                 Home
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='active' href='faq.html'>
                 FAQs
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='contact-us.html'>
                 Contact Us
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='events.html'>
                 Events
               </a>
             </li>
-            <li>
-              <a class='' href='case-studies.html'>
-                Case Studies
-              </a>
-            </li>
-            <li>
-              <a class='' href='gallery.html'>
-                Gallery
-              </a>
-            </li>
-            <li>
+            <li class=''>
               <a class='' href='blog.html'>
                 Blog
               </a>
             </li>
-            <li>
+            <li class='subnav-parent'>
+              <a class='' href='generic-page.html'>
+                Generic Page
+              </a>
+              <ul class='sub-nav'>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 1
+                  </a>
+                </li>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 2
+                  </a>
+                </li>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 3
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class=''>
+              <a class='' href='blog-post.html'>
+                Blog Post
+              </a>
+            </li>
+            <li class=''>
               <a class='' href='locations.html'>
                 Locations
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='news.html'>
                 News
               </a>
             </li>
           </ul>
         </nav>
+        <!-- MM 2 style nav -->
+        <!-- - structure = [{:href=>"index", :title=>"Home"}, -->
+        <!-- {:href=>"about-us", :title=>"About Us"}, -->
+        <!-- {:href=>"projects", :title=>"Projects"}, -->
+        <!-- {:href=>"news", :title=>"News"}, -->
+        <!-- {:href=>"events", :title=>"Events"}, -->
+        <!-- {:href=>"blog", :title=>"Blog"}, -->
+        <!-- {:href=>"gallery", :title=>"Gallery"}, -->
+        <!-- {:href=>"case-studies", :title=>"Case Studies"}, -->
+        <!-- {:href=>"contact-us", :title=>"Contact Us"}] -->
+        <!-- %nav#primary-nav -->
+        <!-- %ul -->
+        <!-- - structure.each do |page| -->
+        <!-- %li -->
+        <!-- %a{:href=>"#{page[:href]}.html", :class=>"#{page[:href]+'.html' == request.path ? 'active' : ''}"} -->
+        <!-- #{page[:title]} -->
       </div>
+      
     </header>
     <div id='main_faq'>
       <header id='page-header'>
         <h1>Frequently Asked Questions</h1>
+        <section id='navigate'>
+          <div class='search'>
+            <h3>
+              Search by keyword
+            </h3>
+            <!-- START mini-search -->
+            <section class='mini-search '>
+              <label for='search'>Search</label>
+              <input class='field-search' id='search' placeholder='Enter keyword' type='text' />
+              <button class='btn-search' type='submit'>
+                Search
+              </button>
+            </section>
+            <!-- END mini-search -->
+          </div>
+          <nav class='category-quicklinks'>
+            <h3>Category quick links</h3>
+            <ul>
+              <li>
+                <a href='#category-0' title='Category 0 Title'>Category 0 Title</a>
+              </li>
+              <li>
+                <a href='#category-1' title='Category 1 Title'>Category 1 Title</a>
+              </li>
+              <li>
+                <a href='#category-2' title='Category 2 Title'>Category 2 Title</a>
+              </li>
+              <li>
+                <a href='#category-3' title='Category 3 Title'>Category 3 Title</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
       </header>
       <section id='content'>
-        <div class='search'>
-  <h3>
-    Search by keyword
-  </h3>
-  <!-- START mini-search -->
-  <section class='mini-search '>
-    <label for='search'>Search</label>
-    <input class='field-search' id='search' placeholder='Enter keyword' type='text' />
-    <button class='btn-search' type='submit'>
-      Search
-    </button>
+        <section class='row' id='categories'>
+  <section class='category' id='category-0'>
+    <h2>Category 1 Title</h2>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          et ipsam reiciendis nostrum possimus
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
+        </span>
+        <div>
+          <p>
+            Animi delectus odio totam voluptatum. Sunt qui consequuntur quasi quia tempora. Officia sunt odit expedita voluptas ut sequi necessitatibus laudantium et. Aut aperiam eum et exercitationem dolorem ea omnis consequatur autem
+          </p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          doloremque et fugiat quis aperiam ut voluptatem magnam
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
+        </span>
+        <div>
+          <p>
+            Eum quo odit qui cum in dolor eum ut minima occaecati recusandae sunt eligendi. Assumenda deleniti ut dolor laudantium doloribus eius blanditiis excepturi numquam est enim. A rerum voluptatem ipsa consequuntur et quaerat ipsa in totam labore. Odio mollitia aliquid dolore quisquam quidem commodi
+          </p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          praesentium quia velit rem natus
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
+        </span>
+        <div>
+          <p>
+            Sunt officia consectetur facere eius quia libero delectus aliquid error vel et. Labore enim eos voluptas illum error quidem eligendi. Repudiandae quis qui aliquid rerum tempore perspiciatis autem eaque doloremque quaerat est et a consequuntur. Voluptatem facere aut facilis error optio odio omnis est eius
+          </p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          nesciunt sit deserunt nostrum reprehenderit placeat ratione modi
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
+        </span>
+        <div>
+          <p>
+            Deleniti eligendi sit quae hic ut tenetur nihil veniam amet ipsa ipsa et quia aut. Sed omnis architecto necessitatibus consequatur non fugiat quis. Qui vel aut quis itaque officiis debitis aliquid quibusdam. Quasi voluptatibus commodi soluta amet nihil reprehenderit id quaerat
+          </p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          nulla cupiditate deleniti perferendis eum
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
+        </span>
+        <div>
+          <p>
+            Ut consectetur omnis vel enim quis consectetur aperiam est qui velit. Eos natus velit nihil et. Facere tempora impedit voluptate ad laboriosam doloribus quae sed assumenda debitis. Optio voluptas molestiae iste
+          </p>
+        </div>
+      </div>
+    </article>
+    <div class='to-top'>
+      <a href='#' title='back to top'>
+        Back to top
+        <span>&uarr;</span>
+      </a>
+    </div>
   </section>
-  <!-- END mini-search -->
-</div>
-<nav class='category-quicklinks'>
-  <h3>Category quick links</h3>
-  <ul></ul>
-  <li>
-    <a href='#category-0' title='Category 0 Title'>Category 0 Title</a>
-  </li>
-  <li>
-    <a href='#category-1' title='Category 1 Title'>Category 1 Title</a>
-  </li>
-  <li>
-    <a href='#category-2' title='Category 2 Title'>Category 2 Title</a>
-  </li>
-  <li>
-    <a href='#category-3' title='Category 3 Title'>Category 3 Title</a>
-  </li>
-</nav>
-<section class='category' id='category-0'>
-  <h2>Category 0 Title</h2>
-  <ul>
-    <li>
-      <h3>
-        <span>
-          Q:
+  <section class='category' id='category-1'>
+    <h2>Category 2 Title</h2>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          suscipit facilis esse qui perspiciatis
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
         </span>
-        eos eveniet dignissimos
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Ut laborum rem quasi tenetur sed commodi asperiores qui inventore voluptatem. Ullam sit voluptatem omnis et omnis ipsum et quo aut libero dicta. Animi qui voluptas cum nostrum error deserunt est possimus velit. Tempora modi dolores voluptates officia est quidem quisquam libero facere explicabo accusantium libero sint quam
-      </p>
-    </li>
-    <li>
-      <h3>
-        <span>
-          Q:
+        <div>
+          <p>
+            Est ratione architecto libero laudantium. Sit et non ex. Facilis velit velit et ut ut vel perferendis culpa sit. Aspernatur molestias qui iste illum esse et cumque et sint rerum neque
+          </p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          perspiciatis explicabo ut accusantium sequi optio
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
         </span>
-        eos doloremque perspiciatis rerum
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Delectus excepturi ut odio voluptatibus rerum. Facere consequatur eaque ut sunt suscipit consequatur commodi minima vero vitae commodi cumque quas. In sed ex aliquam doloribus voluptas cupiditate dolorem temporibus fugit autem expedita enim. Omnis aut deserunt sit velit
-      </p>
-    </li>
-    <li>
-      <h3>
-        <span>
-          Q:
+        <div>
+          <p>
+            Ut sunt voluptas accusantium rerum harum. Enim pariatur nisi porro expedita ad nulla sapiente possimus maiores vitae vel et sint. Qui consequatur perferendis est. Eligendi quia odio blanditiis voluptatem provident ad numquam aperiam tempore
+          </p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          libero id voluptatum
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
         </span>
-        est velit eius voluptas
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        A dicta aperiam officiis officia nemo placeat delectus ut. Aut impedit provident autem qui. Illo sint sunt sint quos facilis fuga eveniet error asperiores voluptatum architecto voluptas corrupti. Eos et fuga iste qui excepturi ut laborum voluptatem
-      </p>
-    </li>
-    <li>
-      <h3>
-        <span>
-          Q:
+        <div>
+          <p>
+            Nostrum consequuntur qui non quos suscipit ut molestiae accusantium numquam. Tenetur impedit modi dolorem et. Aut non consectetur voluptatem maxime labore impedit molestias atque quidem ut nostrum. Eos saepe qui unde pariatur voluptatem rerum quidem dolores et est et
+          </p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          impedit blanditiis iste delectus iure dolor aspernatur voluptas
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
         </span>
-        quia illum et distinctio vel molestias tempore inventore
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Dolores maiores officiis quo ut. Officia consequatur qui necessitatibus harum et voluptatem vero omnis distinctio debitis expedita. Quia adipisci voluptatem dolores minima dolorum ut doloribus fugit voluptatem qui soluta voluptate doloribus. Asperiores voluptatem laudantium aut quidem
-      </p>
-    </li>
-    <li>
-      <h3>
-        <span>
-          Q:
+        <div>
+          <p>
+            Ut dolores sed dolorum doloremque. Consequuntur blanditiis sint animi ut ratione voluptatum officia dolor omnis necessitatibus rerum. Fugiat ut sint explicabo molestiae qui velit occaecati consequatur libero qui impedit inventore odio. Voluptatibus quam rerum quia voluptate id voluptatem minus molestiae earum
+          </p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          molestiae inventore ex mollitia distinctio
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
         </span>
-        dignissimos suscipit nihil est vel quo temporibus delectus
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Atque qui at ducimus laborum quod et quia ex quia. Ea dolor quo rerum ad eos qui qui sit est iure fugit. Aliquid magni nemo quae ut nulla animi nihil sed et non qui debitis. Nihil est quod voluptas debitis veritatis et
-      </p>
-    </li>
-  </ul>
-  <div class='to-top'>
-    <a href='#' title='back to top'>
-      Back to top &uarr;
-    </a>
-  </div>
-</section>
-<section class='category' id='category-1'>
-  <h2>Category 1 Title</h2>
-  <ul>
-    <li>
-      <h3>
-        <span>
-          Q:
+        <div>
+          <p>
+            Sit qui aspernatur consequuntur illo laboriosam ab. Earum ea ad sint illum perspiciatis eligendi impedit eaque ut facere. Nam eveniet magni natus eos eveniet ut numquam maiores vero accusantium sint dolor saepe consequuntur. Unde corporis incidunt vel in est vitae similique saepe aut molestiae repellendus
+          </p>
+        </div>
+      </div>
+    </article>
+    <div class='to-top'>
+      <a href='#' title='back to top'>
+        Back to top
+        <span>&uarr;</span>
+      </a>
+    </div>
+  </section>
+  <section class='category' id='category-2'>
+    <h2>Category 3 Title</h2>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          libero illum voluptates autem quae tenetur qui
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
         </span>
-        eligendi molestiae aut et
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Dolorum quod pariatur ad enim quae ut impedit et deserunt aperiam. Omnis aut sequi nemo. Illum sint vel quia quisquam omnis totam quidem voluptatem totam eligendi distinctio quia sint reiciendis. In ipsam quis praesentium voluptates
-      </p>
-    </li>
-    <li>
-      <h3>
-        <span>
-          Q:
+        <div>
+          <p>
+            Dolor sed a ab est eveniet autem maxime voluptates. Facilis sapiente quo commodi eum dolores eligendi et deleniti molestiae tempore quibusdam ea non repellat. Voluptatem corrupti tempore fuga vero cupiditate. Iure eius delectus consequatur illo nulla eaque omnis facilis distinctio sed et ut ut ea
+          </p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          corporis voluptas temporibus animi earum occaecati dolorem
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
         </span>
-        possimus non dignissimos
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Quisquam doloribus vel natus illum ut voluptates sunt enim. Et pariatur aliquid quia nemo sit officiis soluta quidem sit maiores et vero dolores quasi. Eos nihil est alias ut dolorem consequuntur quia aut modi. Saepe rerum assumenda voluptas quod est dolore omnis id
-      </p>
-    </li>
-    <li>
-      <h3>
-        <span>
-          Q:
+        <div>
+          <p>
+            Distinctio labore incidunt ut voluptas suscipit et delectus autem recusandae deleniti dolorem sed. Voluptas dolore quos alias. Laudantium facere et est voluptatum labore quia neque laboriosam esse et. Facilis dolor quas voluptas esse
+          </p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          natus modi sint tempore
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
         </span>
-        qui excepturi assumenda sint
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Voluptates sapiente mollitia impedit eos voluptates. Ipsa cupiditate repellendus qui adipisci mollitia ullam voluptatem ut dolores similique amet. Eaque omnis consequatur ex delectus voluptatem rem aut corrupti quod. Magnam officiis inventore facilis quo sapiente modi ut error autem eius ex
-      </p>
-    </li>
-    <li>
-      <h3>
-        <span>
-          Q:
+        <div>
+          <p>
+            Autem mollitia aliquam et cum quasi odio. Alias ex sequi dolores aliquam officiis et omnis autem quia amet dolorem officia sit. Magnam minus eum nesciunt magni dolorem assumenda modi est maiores natus dolor est corporis eum. In molestias voluptatibus esse nihil ducimus quos quaerat
+          </p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          sit doloribus omnis
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
         </span>
-        occaecati qui error sed hic mollitia sint et
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Perferendis labore maxime rerum cumque placeat optio consequuntur laborum excepturi et dolorum harum magni voluptatem. Sit possimus dolores molestiae dolor. Mollitia repellendus dolores quam nulla impedit molestias. Dolor sed cupiditate id cupiditate adipisci ratione
-      </p>
-    </li>
-    <li>
-      <h3>
-        <span>
-          Q:
+        <div>
+          <p>
+            Magnam eveniet reiciendis aliquid aut repellendus ea reiciendis modi eos. Saepe ullam autem facere est vel facere est dolores aut nihil dolorem. Et ducimus dicta dignissimos consectetur qui molestiae assumenda et dolor animi tempore facilis illo. Est doloremque non rerum explicabo id officia architecto sit libero in beatae delectus
+          </p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          tempora qui in
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
         </span>
-        sed quia autem amet
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Itaque quas saepe quia qui error iusto qui. Ab sapiente maiores labore ipsum voluptatibus. Aut velit asperiores ratione autem ducimus ea aut. Et ad ipsam ad consectetur
-      </p>
-    </li>
-  </ul>
-  <div class='to-top'>
-    <a href='#' title='back to top'>
-      Back to top &uarr;
-    </a>
-  </div>
-</section>
-<section class='category' id='category-2'>
-  <h2>Category 2 Title</h2>
-  <ul>
-    <li>
-      <h3>
-        <span>
-          Q:
+        <div>
+          <p>
+            Consectetur velit et doloremque iusto molestiae suscipit. Neque quasi illum sit possimus. Esse nam et nobis eos sunt quia nemo. Eos est explicabo eligendi impedit placeat perspiciatis deleniti
+          </p>
+        </div>
+      </div>
+    </article>
+    <div class='to-top'>
+      <a href='#' title='back to top'>
+        Back to top
+        <span>&uarr;</span>
+      </a>
+    </div>
+  </section>
+  <section class='category' id='category-3'>
+    <h2>Category 4 Title</h2>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          omnis quas veniam quae sunt
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
         </span>
-        vitae consequatur autem et et ratione
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Neque nemo dolores et consequatur quia quaerat ea molestiae sapiente harum rem ut accusantium. Est consectetur asperiores nemo molestias magnam in eius qui fugiat. Et laudantium accusamus fugit non. Tenetur omnis quidem temporibus est fuga debitis est officiis dignissimos id exercitationem magni minus dolores
-      </p>
-    </li>
-    <li>
-      <h3>
-        <span>
-          Q:
+        <div>
+          <p>
+            Doloremque laborum dolor iste. Aut voluptate expedita sit doloribus ut sequi distinctio maxime dolorem sed. Ullam cupiditate quaerat aliquam aut placeat debitis. Consequuntur et est atque incidunt aliquam tenetur quam rem dolorem eligendi id consectetur
+          </p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          sunt est dolor est
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
         </span>
-        et distinctio quod in aperiam illum rerum
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Eos quisquam ut rerum non eos. Distinctio accusamus veniam doloremque est nemo voluptatem eum mollitia alias sed. Et tenetur sit recusandae delectus nihil eveniet qui qui soluta repellendus sed explicabo. Modi ut velit eius explicabo eos nostrum asperiores eligendi sed voluptatem consequatur officia sunt
-      </p>
-    </li>
-    <li>
-      <h3>
-        <span>
-          Q:
+        <div>
+          <p>
+            Eveniet est ab voluptatem consequatur quidem esse impedit expedita sunt laudantium consequuntur et vel. Molestiae ut voluptatem iste et totam velit omnis similique. Odio et itaque ab rerum sed sit aut ut molestiae dignissimos saepe dolorem. Dolorem tempore pariatur alias eos
+          </p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          nulla provident ratione
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
         </span>
-        nobis aut officia minima
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Sint et voluptas sed ut quia animi sed repellendus sed dignissimos. Commodi est qui vitae a consequatur deleniti ut quia hic ipsam amet blanditiis molestias. Nesciunt nesciunt molestiae quasi. Et eos in minus qui asperiores tempore voluptatem ea ullam ducimus natus rerum
-      </p>
-    </li>
-    <li>
-      <h3>
-        <span>
-          Q:
+        <div>
+          <p>
+            Beatae impedit vitae voluptas ducimus dolores labore consequatur qui ea est provident qui rerum et. Omnis perferendis voluptatem iusto eum quae earum. Libero qui voluptatibus ut quibusdam eaque vel. Provident vitae officia et quibusdam expedita amet delectus qui quis
+          </p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          voluptatem non molestiae placeat distinctio earum
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
         </span>
-        dolor veritatis quis qui accusantium sint
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Ex nemo qui labore labore id cupiditate ut delectus tenetur perferendis error illum. Quae omnis suscipit animi odit quaerat sint magni est assumenda molestiae illo debitis rerum libero. Inventore at aspernatur numquam sunt perspiciatis sit non ratione labore eos asperiores debitis. Qui et et quaerat maxime molestias exercitationem aut omnis quia
-      </p>
-    </li>
-    <li>
-      <h3>
-        <span>
-          Q:
+        <div>
+          <p>
+            Expedita pariatur et molestias consectetur soluta eum dolor. Saepe qui consectetur ipsa amet quod est cupiditate amet aut rem. In eligendi beatae consectetur vero occaecati id ab aut. Temporibus similique dolores et quia maxime facere illo totam quos eum impedit aliquid
+          </p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class='question'>
+        <h3>
+          <span class='q-a'>
+            Q:
+          </span>
+          recusandae enim recusandae ut vitae praesentium perferendis
+        </h3>
+      </div>
+      <div class='answer'>
+        <span class='q-a'>
+          A:
         </span>
-        sapiente id accusantium accusamus
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Eligendi aut quam omnis vel. Officiis quis dolorum ea facilis. Et numquam possimus expedita non ut qui doloribus dolores laborum ab. Omnis non facere eligendi illo qui quam in qui est earum aliquam officia
-      </p>
-    </li>
-  </ul>
-  <div class='to-top'>
-    <a href='#' title='back to top'>
-      Back to top &uarr;
-    </a>
-  </div>
-</section>
-<section class='category' id='category-3'>
-  <h2>Category 3 Title</h2>
-  <ul>
-    <li>
-      <h3>
-        <span>
-          Q:
-        </span>
-        recusandae amet doloremque quia
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Ipsum dignissimos aut voluptates sit ipsa rerum. Incidunt labore ut autem voluptatem et excepturi nam aut autem voluptas distinctio aut quam provident. Qui dolorum non facilis. Ut assumenda dolorem porro
-      </p>
-    </li>
-    <li>
-      <h3>
-        <span>
-          Q:
-        </span>
-        unde est nisi eum pariatur
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Ad dolorem dolorem aut eveniet omnis est tempore soluta cupiditate dolores voluptas. Quam debitis corrupti est dolorem consequuntur consequatur provident vero explicabo itaque at et veniam. Deserunt fugiat dolorem ut inventore. Voluptatibus sint et molestiae facilis laudantium tenetur nostrum fuga eum repellendus et voluptatem quibusdam
-      </p>
-    </li>
-    <li>
-      <h3>
-        <span>
-          Q:
-        </span>
-        et nobis labore non
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Nesciunt sit sint consequatur ipsa necessitatibus consequuntur et quo nemo. Velit incidunt sit id necessitatibus reprehenderit ipsam ducimus atque ut et nobis. Quas nisi natus dolores ipsum qui quae velit porro reprehenderit molestiae fugit. Beatae doloremque ad vel distinctio architecto consequatur reiciendis
-      </p>
-    </li>
-    <li>
-      <h3>
-        <span>
-          Q:
-        </span>
-        voluptatem rerum suscipit est aut
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Consequatur eum similique natus consequatur quo deserunt eligendi et aut. Aut ipsum commodi veritatis quo consequuntur est cum recusandae voluptatibus voluptates deleniti quia. Quasi at deleniti veniam non possimus in et in. Fugit neque eius odio ad labore eligendi dolorum est et
-      </p>
-    </li>
-    <li>
-      <h3>
-        <span>
-          Q:
-        </span>
-        saepe rem pariatur
-      </h3>
-      <span>
-        A:
-      </span>
-      <p>
-        Voluptas qui consequatur expedita esse sunt. Nesciunt totam fugiat aperiam voluptatem. Neque exercitationem eius tenetur explicabo itaque quo. Et et error labore non et labore sed ut
-      </p>
-    </li>
-  </ul>
-  <div class='to-top'>
-    <a href='#' title='back to top'>
-      Back to top &uarr;
-    </a>
-  </div>
+        <div>
+          <p>
+            Reiciendis sunt odio est. Quia impedit enim ea inventore nulla ut sunt in omnis eum. Officiis mollitia qui vel dolorem quo dicta debitis non dignissimos maxime excepturi minima quidem. Optio aut tempore sapiente voluptates iure et voluptatum at aut dolorem
+          </p>
+        </div>
+      </div>
+    </article>
+    <div class='to-top'>
+      <a href='#' title='back to top'>
+        Back to top
+        <span>&uarr;</span>
+      </a>
+    </div>
+  </section>
 </section>
       </section>
     </div>
@@ -522,6 +677,7 @@
   <script src='/js/sequence/modules/maps/googlemapsapicontroller.js'></script>
   <script src='/js/sequence/modules/maps/googlemap.js'></script>
   <script src='/js/sequence/modules/maps/maplocationscontroller.js'></script>
-  <script src='/js/sequence/modules/flickrgallery/FlickrGallery-packaged.js'></script>
-  <script src='/js/sequence/client/app.js'></script>
+  <script src='/js/sequence/modules/accordion/accordion.js'></script>
+  <script src='/js/sequence/modules/accordion/accordiongroup.js'></script>
+  <script src='/js/sequence/app.js'></script>
 </body>

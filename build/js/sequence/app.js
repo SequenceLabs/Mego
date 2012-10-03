@@ -15,6 +15,7 @@
   CoffeeSlider = modules.CoffeeSlider;
 
   App = (function() {
+    var initContactWidgetMap;
 
     function App() {
       this.initGallery = __bind(this.initGallery, this);
@@ -34,7 +35,7 @@
       this.initMaps();
       this.initFlickrGallery();
       this.initFlickrWidget();
-      this.initSiteNav();
+      this.initFaq();
       return this.initMediaQueries();
     };
 
@@ -84,8 +85,8 @@
       if (document.querySelector('#contact-widget .map') != null) {
         this.loadMapsApi(this.initContactWidgetMap);
       }
-      if (document.querySelector('#projects') != null) {
-        return this.loadMapsApi(this.initMapLocations);
+      if (document.querySelector('#locations') != null) {
+        return loadMapsApi(initMapLocations);
       }
     };
 
@@ -95,7 +96,6 @@
         return callback.call();
       } else {
         return mapsController = new maps.GoogleMapsApiController({
-          sensor: true,
           callback: callback
         });
       }
@@ -103,26 +103,26 @@
 
     App.prototype.initMapLocations = function() {
       return new maps.MapLocationsController({
+        DOMlocations: document.querySelectorAll('#location-listing li'),
+        mapOpts: {
+          mapEl: document.querySelector('#locations #map')
+        }
+      });
+    };
+
+    initContactWidgetMap = function() {
+      return {
         zoom: 12,
         mapEl: document.querySelector('#projects #map'),
         locations: document.querySelectorAll('#project-listing li'),
         mapTypeId: google.maps.MapTypeId.ROADMAP
-      });
+      };
     };
 
     App.prototype.initContactWidgetMap = function() {
       var gmap;
       gmap = new maps.GoogleMap({
-        mapEl: document.querySelector('#contact-widget .map'),
-        zoom: 12,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        mapTypeIds: [],
-        panControl: false,
-        zoomControl: false,
-        mapTypeControl: false,
-        scaleControl: false,
-        streetViewControl: false,
-        overviewMapControl: false
+        mapEl: document.querySelector('#contact-widget .map')
       });
       return gmap.centerOnAddress($("#contact-widget .adr"));
     };
@@ -171,6 +171,16 @@
     App.prototype.initFaceBookFeed = function() {
       var facebookFeed;
       return facebookFeed = new modules.facebook.FacebookAPILoader();
+    };
+
+    App.prototype.initFaq = function() {
+      return this.accordion = new modules.AccordionGroup($(".category"), {
+        selectors: {
+          main: "article",
+          header: ".question",
+          inner: ".answer"
+        }
+      });
     };
 
     App.prototype.initSiteNav = function() {

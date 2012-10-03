@@ -29,7 +29,7 @@
   <!-- %script{:src => "http://localhost:8081/target/target-script-min.js#anonymous"} -->
 </head>
 <body>
-  <div class='container'>
+  <article class='container' id='main-container'>
     <header id='site-header'>
       <div class='row'>
         <section id='branding'>
@@ -51,97 +51,131 @@
         <!-- END mini-search -->
       </div>
       <div class='row'>
-        <nav id='site-nav'>
+        <nav id='primary-nav'>
           <ul>
-            <li>
+            <li class=''>
               <a class='' href='index.html'>
                 Home
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='faq.html'>
                 FAQs
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='contact-us.html'>
                 Contact Us
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='events.html'>
                 Events
               </a>
             </li>
-            <li>
-              <a class='' href='case-studies.html'>
-                Case Studies
-              </a>
-            </li>
-            <li>
-              <a class='' href='gallery.html'>
-                Gallery
-              </a>
-            </li>
-            <li>
+            <li class=''>
               <a class='' href='blog.html'>
                 Blog
               </a>
             </li>
-            <li>
+            <li class='subnav-parent'>
+              <a class='' href='generic-page.html'>
+                Generic Page
+              </a>
+              <ul class='sub-nav'>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 1
+                  </a>
+                </li>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 2
+                  </a>
+                </li>
+                <li>
+                  <a class='' href='generic-page.html'>
+                    Some Inner Page 3
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class=''>
+              <a class='' href='blog-post.html'>
+                Blog Post
+              </a>
+            </li>
+            <li class=''>
               <a class='' href='locations.html'>
                 Locations
               </a>
             </li>
-            <li>
+            <li class=''>
               <a class='' href='news.html'>
                 News
               </a>
             </li>
           </ul>
         </nav>
+        <!-- MM 2 style nav -->
+        <!-- - structure = [{:href=>"index", :title=>"Home"}, -->
+        <!-- {:href=>"about-us", :title=>"About Us"}, -->
+        <!-- {:href=>"projects", :title=>"Projects"}, -->
+        <!-- {:href=>"news", :title=>"News"}, -->
+        <!-- {:href=>"events", :title=>"Events"}, -->
+        <!-- {:href=>"blog", :title=>"Blog"}, -->
+        <!-- {:href=>"gallery", :title=>"Gallery"}, -->
+        <!-- {:href=>"case-studies", :title=>"Case Studies"}, -->
+        <!-- {:href=>"contact-us", :title=>"Contact Us"}] -->
+        <!-- %nav#primary-nav -->
+        <!-- %ul -->
+        <!-- - structure.each do |page| -->
+        <!-- %li -->
+        <!-- %a{:href=>"#{page[:href]}.html", :class=>"#{page[:href]+'.html' == request.path ? 'active' : ''}"} -->
+        <!-- #{page[:title]} -->
       </div>
+      
     </header>
-    <div class='main' id='location'>
+    <section class='main' id='location'>
       <header id='page-header'>
         <h1>Location Title</h1>
       </header>
-      <section id='content'>
+      <article id='content'>
         <p>
-          Dolorum perferendis animi culpa repellat voluptate dicta. ullam ducimus eum nihil ea laudantium quaerat quo error provident adipisci molestiae dolor dolor ut. sunt cupiditate architecto recusandae sit officiis voluptatibus sed ipsa eum in quis aut repudiandae consequuntur. minima hic labore dolores iure quae unde atque quasi ut omnis libero. iusto dolorum aspernatur velit cumque non iure corrupti in adipisci excepturi nisi consectetur. vel officiis qui porro non enim placeat voluptatem quis
-        </p>
-        <p>
-          Velit officiis dolorum ea est et voluptate esse. suscipit alias ea voluptatibus et placeat quam est ducimus aperiam ut et consectetur laudantium quibusdam. animi in reiciendis rerum laudantium. eum aliquid consequatur qui quia ut in sit alias. sit harum ut ut fugiat repudiandae non doloremque placeat excepturi rem dolores quidem quis
-        </p>
-        <p>
-          Assumenda quis illo dolores. ea nihil dolore ducimus ab. in et atque libero sapiente omnis dolor et omnis. quod facilis commodi aut sed error non culpa consequatur ad. voluptate animi nesciunt et quo molestiae consequatur qui sit eos est. nesciunt ab officia consequuntur earum odit est perferendis et occaecati tempore quis reiciendis aut et. cum enim rerum enim magnam id nihil unde porro iste et
-        </p>
-        <a class='button' href='locations.html'>
-          &larr; Back to Projects
-        </a>
-      </section>
+  Ipsa dicta rerum incidunt commodi rem repellat. similique qui eaque quo qui sed. sint et nam voluptatem omnis amet sit voluptate maiores ipsa minus
+</p>
+<p>
+  Suscipit blanditiis dolor rerum. doloremque consequatur excepturi odio et enim et suscipit et quibusdam et dolores. vero consequuntur et saepe cum nulla quam. hic corrupti adipisci sint temporibus voluptate saepe reprehenderit ut est blanditiis provident
+</p>
+<p>
+  Adipisci sunt iusto earum maiores eum. molestiae voluptatem cum ea ea. accusantium delectus corrupti similique non voluptas suscipit tenetur quia rerum rerum. pariatur cumque et ipsum iusto. aut aut autem est aperiam enim perferendis facilis
+</p>
+<a class='button' href='locations.html'>
+  &larr; Back to Projects
+</a>
+      </article>
       <section id='sidebar'>
         <section class='widget' id='location-widget'>
           <h2>Locations</h2>
           <ul>
             <li>
               <a href='location.html'>
-                vel voluptatem
+                dolorum rerum et quas
               </a>
             </li>
             <li>
               <a href='location.html'>
-                est ea
+                quod omnis et temporibus
               </a>
             </li>
             <li>
               <a href='location.html'>
-                doloremque aut corrupti
+                consectetur quia architecto
               </a>
             </li>
             <li>
               <a href='location.html'>
-                ex voluptas
+                neque sed
               </a>
             </li>
           </ul>
@@ -152,14 +186,14 @@
               
             </figure>
             <h3>
-              nam
+              inventore
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </a>
           <!-- END Generic CTA -->
         </section>
       </section>
-    </div>
+    </section>
     <footer id='site-footer'>
       <div class='copyright'>&copy; Sequence 2012</div>
       <nav id='footer-nav'>
@@ -192,7 +226,7 @@
         </ul>
       </nav>
     </footer>
-  </div>
+  </article>
   <!-- / 3rd party libs -->
   <script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js'></script>
   <script src='js/thirdparty/ga.social.js'></script>
@@ -223,6 +257,7 @@
   <script src='/js/sequence/modules/maps/googlemapsapicontroller.js'></script>
   <script src='/js/sequence/modules/maps/googlemap.js'></script>
   <script src='/js/sequence/modules/maps/maplocationscontroller.js'></script>
-  <script src='/js/sequence/modules/flickrgallery/FlickrGallery-packaged.js'></script>
-  <script src='/js/sequence/client/app.js'></script>
+  <script src='/js/sequence/modules/accordion/accordion.js'></script>
+  <script src='/js/sequence/modules/accordion/accordiongroup.js'></script>
+  <script src='/js/sequence/app.js'></script>
 </body>
