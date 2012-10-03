@@ -1,0 +1,61 @@
+@mixin col(){
+  margin-right: 1.9%;
+  margin-left: 1.9%;
+  float: left;
+  min-height: 1px;
+
+}
+
+@mixin column($cols: 1, $first-child: false, $last-child: false) {
+  @include col();
+  @if $cols == 1 {
+    width: 4.85%;
+  } @else if $cols == 2 {
+    width: 13.45%;
+  } @else if $cols == 3 {
+    width: 22.05%; 
+  } @else if $cols == 4 {
+    width: 30.75%;
+  } @else if $cols == 5 {
+    width: 39.45%;
+  } @else if $cols == 6 {
+    width: 48%;
+  } @else if $cols == 7 {
+    width: 56.75%;
+  } @else if $cols == 8 {
+    width: 65.4%;
+  } @else if $cols == 9 {
+    width: 74.05%;
+  } @else if $cols == 10 {
+    width: 82.7%;
+  } @else if $cols == 11 {
+    width: 91.35%
+  } @else if $cols == 12 {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  @if $first-child {
+    margin-left: 0;
+  }
+  @if $last-child {
+    margin-right: 0;
+  }
+  &:first-child {
+    margin-left: 0;
+  }
+  &.first-child {
+    margin-left: 0;
+  }
+  &.last-child {
+    margin-right: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@mixin row() {
+  @extend .row;
+}
