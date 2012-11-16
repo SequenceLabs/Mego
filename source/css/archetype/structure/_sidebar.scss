@@ -45,17 +45,17 @@
     }
     .rss {
       position: absolute;
-      text-indent: -9999em;
       top: 0;
       right: 0;
       display: block;
       width: 24px;
       height: 24px;
       overflow: hidden;
-      background: transparent url('../images/icons/icon-rss.png') no-repeat 0 0;
-      @include opacity(0.5);
+      &:before{
+        @include icon($icon-family: "IconMoon", $pos: "middle", $font-size: 16, $color: "#000", $icon: "\e000" );
+      }
       &:hover {
-        @include opacity(1);
+        color: $red;
       }
     }
   }

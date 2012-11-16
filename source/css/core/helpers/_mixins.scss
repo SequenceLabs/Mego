@@ -13,11 +13,13 @@
   *display: inline;
   *vertical-align: auto;
 }
-@mixin font-face($name, $filename, $src: fonts, $font-weight: normal, $font-style: normal) {
+@mixin font-face($name, $filename, $src: "fonts", $font-weight: normal, $font-style: normal) {
   @font-face {
     font-family: $name;
-    src: url('#{$src/$filename}.eot');
-    src: url('#{$src/$filename}.eot?iefix') format("eot"), url('#{$src/$filename}.woff') format("woff"), url('#{$src/$filename}.ttf') format("truetype"), url('#{$src/$filename}.svg#webfontZam02nTh') format("svg");
+    src:  url($src + "/" + $filename + ".eot");
+    src:  url($src + "/" + $filename + ".eot?iefix") format("eot"),
+          url($src + "/" + $filename + ".woff") format("woff"),
+          url($src + "/" + $filename + ".ttf") format("truetype");
     font-weight: $font-weight;
     font-style: $font-style;
     }
@@ -142,3 +144,20 @@
   }
 }
 
+// mixin for icons still a work in progress
+
+@mixin icon($icon-family: "arial", $pos: "middle", $font-size: 16, $color: "#fff", $icon: "test" ) {
+  font-family: $icon-family;
+  font-weight: normal;
+  font-style: normal;
+  display: block;
+  text-decoration: inherit;
+  vertical-align: $pos;
+  @include font-size($font-size/10);
+  content: $icon;
+  color: $color;
+}
+// Example include 
+// pay-no-attention-to-this-div-its-semantic{
+//   @include icon($icon-family: "fontAwsome", $pos: "middle", $font-size: 32, $color: "#000", $icon: "\f0a2" );
+// }
