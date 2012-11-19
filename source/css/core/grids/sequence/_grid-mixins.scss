@@ -4,7 +4,6 @@
 
 @function col-width($span:1, $fluid: $global-fluid, $parent-cols: $grid-cols) {
   @if ($fluid == true) {
-
     @return ($span * perc($grid-column-width, total-width($parent-cols))) + (($span - 1) * perc($grid-gutter-width, total-width($parent-cols)));
   } @else {
     @return ($span * $grid-column-width) + (($span - 1) * $grid-gutter-width);
@@ -57,13 +56,14 @@
   > * {
     @include column($span, $parent-cols: $parent-cols);
     @for $i from 1 through $cols {
-      &:nth-child(#{$i}n) {
+      &:nth-child(#{$cols}n+#{$i}) {
         @include offset(($i - 1) * $span, $parent-cols);
         clear: none;
       }
     }
     &:nth-child(#{$cols}n+#{$cols+1}) {
       clear: left;
+      margin-left: 0;
     }
   }
 }

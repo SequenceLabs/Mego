@@ -2,6 +2,18 @@
   @include grid(3, 3);
 }
 
+@media only screen and (max-width: 480px) {
+  .cta-list {
+    @include grid(10, 1);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .cta-list {
+    @include grid(5, 2);
+  }
+}
+
 .cta {
   @include unlinkify();
   overflow: hidden;

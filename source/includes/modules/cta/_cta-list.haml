@@ -5,5 +5,5 @@
   - else
     - num = 3
   - num.times do |i|
-    = partial('includes/modules/cta/generic-cta')
+    = partial('includes/modules/cta/generic-cta', :locals=>{:i=>i})
 /END CTA list
