@@ -12,11 +12,12 @@
     }
   }
   .social-links {
-    @include column(4, $last-child: true);
+    @extend .span-4;
+    @extend .offset-8;
     ul {
       float: right;
     }
-    li {
+  li {
       display: inline-block;
       margin: 0 10px 0 0;
       .twitter {
@@ -40,7 +41,8 @@
   }
 }
 #footer-nav {
-  @include column(8, $first-child: true);
+  @extend .span-8;
+  @extend .offset-0;
   ul {
     li {
       display: inline-block;

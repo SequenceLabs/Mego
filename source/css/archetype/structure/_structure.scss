@@ -13,7 +13,7 @@
 
 html {
   background: #ffffff;
-  margin: $gridGutterWidth;
+  margin: $grid-gutter-width;
   text-rendering: optimizelegibility;
   .fade {
     background: red;
@@ -22,16 +22,12 @@ html {
 }
 
 #content {
-  @include column(9, $first-child: true);
+  @extend .span-9;
+  @extend .offset-0;
 }
-
-#generic-page {
-  #content {
-    @include column(9, $last-child: true);
-  }
-  #sidebar {
-    @include column(3, $first-child: true);
-  }
+#sidebar {
+  @extend .span-3;
+  @extend .offset-9;
 }
 
 #page-header {

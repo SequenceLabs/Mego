@@ -1,5 +1,5 @@
 // Fixed (940px)
-@include grid-core($gridColumnWidth, $gridGutterWidth);
+@include grid-core($grid-column-width, $grid-gutter-width);
 
 // Fluid (940px)
-@include grid-fluid($fluidGridColumnWidth, $fluidGridGutterWidth);
+@include grid-fluid($fluid-grid-column-width, $fluid-grid-gutter-width);

@@ -15,7 +15,8 @@
 @import "core/helpers/debug";
 
 // grid mixins
-@import "core/grids/bootstrap/grid-mixins";
+@import "core/grids/sequence/grid-mixins";
+@import "core/grids/sequence/grid";
 
 // Typography
 @import "archetype/elements/components";
@@ -62,9 +63,6 @@
 @import "archetype/modules/gallery";
 @import "archetype/modules/locations";
 @import "archetype/modules/video";
-
-// Grid
-@import "core/grids/bootstrap/fixed";
 
 // media queries
 @import "archetype/media-queries";

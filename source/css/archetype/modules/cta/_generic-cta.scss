@@ -1,19 +1,18 @@
 .cta-list {
-  @include row();
+  @include grid(3, 3);
 }
 
 .cta {
-  @include column(3);
   @include unlinkify();
-  &:nth-child(3n) {
-    margin-right: 0;
-  }
-  &:nth-child(4n) {
-    margin-left: 0;
-  }
+  overflow: hidden;
   margin-bottom: $baseline * 2;
+  display: block;
   figure {
     margin-bottom: $baseline * 2;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
   p {
     color: $text-color;

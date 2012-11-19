@@ -12,7 +12,7 @@
   // Input grid
   @include grid-input(42px, 20px);
 
-  // No need to reset .thumbnails here since it's the same @gridGutterWidth
+  // No need to reset .thumbnails here since it's the same @grid-gutter-width
 
   @include site-header-medium-screen();
 }

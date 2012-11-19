@@ -6,7 +6,7 @@
 
 #main_faq {
   #content {
-    @include column(9, $first-child: true);
+    @include column(9);
   }
   #navigate {
     @include clearfix();

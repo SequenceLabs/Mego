@@ -97,6 +97,11 @@ figure {
   }
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 figcaption, time {
   display: block;
   color: $black;

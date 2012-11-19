@@ -11,6 +11,8 @@
     @include opacity(0);
     img {
       margin-bottom: 0;
+      width: 100%;
+      height: auto;
     }
     figcaption {
       background: rgba(0,0,0,.7);

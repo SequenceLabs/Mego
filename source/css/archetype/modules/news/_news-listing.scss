@@ -17,11 +17,12 @@
     }
   }
   figure {
-    @include column(4);
+    @extend .span-4;
   }
   .copy {
     margin-left: 0;
-    @include column(5);
+    @extend .span-5;
+    @extend .offset-4;
   }
   &.featured {
     figure,
