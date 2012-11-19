@@ -59,6 +59,7 @@
     @for $i from 1 through $cols {
       &:nth-child(#{$i}n) {
         @include offset(($i - 1) * $span, $parent-cols);
+        clear: none;
       }
     }
     &:nth-child(#{$cols}n+#{$cols+1}) {
