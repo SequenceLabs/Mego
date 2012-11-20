@@ -1,0 +1,16 @@
+---
+  page_title: Visual language
+  tag_id: visual-language 
+---
+
+- content_for :content do
+  
+  = partial('includes/modules/cta/cta-list', :locals=>{:count=>6})
+  = partial('includes/modules/widgets/contact-widget')
+  = partial('includes/modules/cta/generic-cta')
+  = partial('includes/modules/blog/blog-subscribe-widget')
+  = partial('includes/modules/search/mini-search', :locals=>{:name=>"search_posts", :title=>"Search Posts", :widget=>true})
+  = partial('includes/modules/blog/blog-categories-widget')
+  = partial('includes/modules/blog/blog-archives-widget')
+  = partial('includes/modules/social/flickr-photostream-widget')
+  = partial('includes/modules/case-study')
