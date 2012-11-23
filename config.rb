@@ -36,7 +36,7 @@ configure :build do
   # set :http_path, "/Content/images/"
 
   # Partials - create individual/separate files  
-  page "/source/includes/modues/*", :layout => false
+  # page "/source/includes/modues/*", :layout => false
 
 end
 compass_config do |compass|
