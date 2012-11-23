@@ -35,6 +35,9 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 
+  # Partials - create individual/separate files  
+  # page "includes/modues/*", :layout => false
+
 end
 compass_config do |compass|
   compass.sass_options = {:debug_info => true}
