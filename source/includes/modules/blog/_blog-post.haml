@@ -1,0 +1,56 @@
+%article.post
+  %header
+    %h1
+      = lorem.words (3 + rand(5))
+    %section.meta
+      .vcard
+        - if defined? author
+          by
+          %address.author
+            %a{:title=>"Posts by John Doe", :href=>"#"}
+              John Doe
+        %time{:datetime=>"2009-11-04", :class=>"published updated"}
+          November 4th, 2009
+    %section.tags
+      %h4
+        Tagged:
+      %ul
+        - (2 + rand(2)).times do
+          %li
+            %a{:title=>"Tag",:href=>"#"}
+              = lorem.words (1)
+  %figure
+    - img_placehold 726, (726/16)*9
+    <!-- optional figcaption -->
+    %figcaption
+      fig.1
+
+  %article.content
+    %h2
+      = lorem.words (1 + rand(3))
+    %p
+      = lorem.sentences (2 + rand(8))
+    %blockquote
+      = lorem.sentences 2
+    - (3 + rand(3)).times do
+      %p
+        = lorem.sentences (2 + rand(8))
+
+  %footer
+
+    %section.categories
+      %h4
+        Featured in:
+      %ul
+        - num = (2 + rand(2))
+        - num.times do |i|
+          %li
+            %a{:title=>"Category",:href=>"#"}
+              = lorem.words 1+(rand(1))
+            - if i <= num -1
+              - |
+
+    = partial('includes/modules/social/social-share')
+
+
+    = partial('includes/modules/blog/relevant-posts')

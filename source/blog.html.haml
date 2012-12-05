@@ -1,17 +1,25 @@
 ---
   page_title: Blog
   tag_id: blog
+  hide_from_nav: false
+  has_page_header: false
+  layout: two-col-sidebar-right
 ---
+
 
 - content_for :page_header do
   %h1
-    Blog
-
+    Hippo Blog
 - content_for :content do
-  = partial('includes/modules/blog/blog-article-snippet')
+
+  %section#featured-post
+    = partial('includes/modules/blog/blog-article-snippet', :locals=>{:featured=>true})
+
+  %section#previous-posts
+    %header
+      %h2 Previous posts
+    - 3.times do
+      = partial('includes/modules/blog/blog-article-snippet', :locals=>{:featured=>false})
 
 - content_for :sidebar do
-  = partial('includes/modules/blog/blog-subscribe-widget')
-  = partial('includes/modules/search/mini-search', :locals=>{:name=>"search_posts", :title=>"Search Posts", :widget=>true})
-  = partial('includes/modules/blog/blog-categories-widget')
-  = partial('includes/modules/blog/blog-archives-widget')
+  = partial('includes/modules/blog/blog-sidebar')

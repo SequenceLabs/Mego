@@ -1,13 +1,8 @@
 %article.blog-post-CTA
-  - img_placehold 220, (220/16)*9
+  %figure
+    - img_placehold 726, (726/16)*9
   %header
-    %h3
-      = lorem.words (3 + rand(5))
     %time{:datetime=>"2009-11-04", :class=>"published updated"}
       November 4th, 2009
-  %p
-    = lorem.sentences (1)
-  .social
-  
-  %a.read-more
-    Read more &rarr;
+    %a{:href=>"blog-post.html", :title=>"title of blog post"}
+      = lorem.words (3 + rand(5))

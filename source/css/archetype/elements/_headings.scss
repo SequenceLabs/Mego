@@ -1,45 +1,58 @@
-.h {
-  font-weight: bold;
-  font-style: normal;
-  color: $text-color;
-  margin-bottom: $baseline * 2;
-}
-
-.h1 {
-  @include font-size(3, 4);
-}
-.h2 {
-  @include font-size(2.4, 3);
+@mixin h {
   margin-bottom: $baseline;
 }
-.h3 {
-  @include font-size(2, 2);
+
+@mixin h1 {
+  @include font-size(3.6, 4);
 }
-.h4 {
-  @include font-size(1.6, 2);
+@mixin h2 {
+  @include font-size(3, 3);
 }
-.h5 {
+@mixin h3 {
+  @include font-size(2.6, 3);
+}
+@mixin h4 {
+  @include font-size(1.8, 2);
+}
+@mixin h5 {
   @include font-size(1.2, 2);
 }
-.h6 {
+@mixin h6 {
   @include font-size(1, 2);
 }
 
-h1,h2,h3,h4,h5,h6 {
-  @extend .h;
-}
-h1{
-  @extend .h1;
+
+h1 {
+  @include h();
+  @include h1();
 }
 h2 {
-  @extend .h2;
+  @include h();
+  @include h2();
 }
 h3 {
-  @extend .h3;
+  @include h();
+  @include h3();
 }
 h4 {
-  @extend .h4;
+  @include h();
+  @include h4();
 }
 h5 {
-  @extend .h5;
+  @include h();
+  @include h5();
 }
+
+header {
+
+}
+
+@include mobile() {
+  h1,h2,h3,h4,h5,h6 {
+    margin-bottom: 5px;
+  }
+  header {
+    margin-bottom: 10px;
+  }
+}
+

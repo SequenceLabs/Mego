@@ -14,7 +14,6 @@ configure :build do
 
   # Set directories to relative
   activate :relative_assets
-
   # Change the output style for deployment
   # activate :minify_css
 
@@ -36,9 +35,9 @@ configure :build do
   # set :http_path, "/Content/images/"
 
 end
-compass_config do |compass|
-  compass.sass_options = {:debug_info => true}
-end
+# compass_config do |compass|
+#   compass.sass_options = {:debug_info => true}
+# end
 # ----------------------------
 # Helpers
 helpers do
