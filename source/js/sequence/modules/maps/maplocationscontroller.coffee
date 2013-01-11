@@ -31,6 +31,7 @@ class gmaps.MapLocationsController
         enableEventPropagation: false
         closeBoxMargin: "2px"
         closeBoxURL: "http://#{window.location.host}/images/icons/close-btn.png"
+        linksToLocationPage: false
 
     this.settings = $.extend true, defaults, options
     this._init()
@@ -122,8 +123,9 @@ class gmaps.MapLocationsController
     this.currInfoBox.open(this.map.map, marker)
 
     $(this.currInfoBox.getContent()).find(".more").on("click", (e) =>
-      this._onInfoboxLinkClick(this._getLocationFromMarker(marker))
-      return false
+      unless this.settings.infoBoxOpts.linksToLocationPage
+        this._onInfoboxLinkClick(this._getLocationFromMarker(marker))
+        return false
     )
 
   _findMarkerFromLatLng:(latLng) =>
