@@ -1,0 +1,35 @@
+/********************************************
+*
+* Main Structure
+*
+********************************************/
+
+::selection {
+  background: $highlight-color; /* Safari */
+}
+::-moz-selection {
+  background: $highlight-color; /* Firefox */
+}
+
+html {
+  background: $black;
+  margin: $grid-gutter-width;
+  .fade {
+    background: red;
+    @include transition(background-color, 5s)
+  }
+}
+
+#content {
+  @extend .span-9;
+  @extend .offset-0;
+}
+#sidebar {
+  @extend .span-3;
+  @extend .offset-9;
+}
+
+#page-header {
+  padding-bottom: $baseline * 1;
+  margin-bottom: $baseline * 1;
+}

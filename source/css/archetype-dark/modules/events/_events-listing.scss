@@ -1,0 +1,56 @@
+.event-item {
+  overflow: hidden;
+  display: block;
+  margin-bottom: $baseline * 2;
+  padding-bottom: $baseline * 2;
+  border-bottom: 1px solid $borders;
+  &:last-child {
+    border-bottom: none;
+  }
+  h2 {
+    margin-bottom: $baseline * 2;
+  }
+  header {
+    margin-bottom: $baseline * 2;
+    h3 {
+      margin-bottom: $baseline;
+    }
+    img {
+      margin-bottom: $baseline;
+    }
+    .read-more {
+
+    }
+    time {
+      &:before {
+        content:"\A";
+        white-space:pre;
+        display: block;
+      }
+    }
+    time,
+    .location {
+      @include font-size(1.4);
+      display: inline;
+    }
+  }
+  figure {
+    @include column(5, 9);
+  }
+  .copy {
+    // margin-left: 0;
+    @include column(5, 9);
+    @include offset(4, 9);
+  }
+  &.featured {
+    figure,
+    .copy {
+      width: auto;
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+

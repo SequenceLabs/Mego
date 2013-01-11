@@ -1,0 +1,39 @@
+table {
+  margin-bottom: $baseline * 4;
+  width: 100%;
+  @include font-size(1.6, 2)
+}
+
+thead {
+  background: $highlight-color;
+  color: $white;
+}
+
+th {
+  font-weight: bold;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+
+}
+
+th {
+  padding: 10px 10px 6px 10px;
+}
+
+tr:nth-child(even) {
+}
+
+tfoot {
+  font-weight: bold;
+  border-top: 1px dotted $mid-grey;
+  border-bottom: 1px dotted $mid-grey;
+}
+
+caption {
+  background: $really-light-grey;
+  padding: 20px;
+  @include font-size(1.6, 2);
+}

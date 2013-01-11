@@ -1,0 +1,36 @@
+.news-item {
+  overflow: hidden;
+  display: block;
+  margin-bottom: $baseline * 2;
+  padding-bottom: $baseline * 2;
+  border-bottom: 1px solid $borders;
+  &:last-child {
+    border-bottom: none;
+  }
+  h2 {
+    margin-bottom: $baseline;
+  }
+  header {
+    margin-bottom: $baseline * 2;
+    img {
+      margin-bottom: $baseline;
+    }
+  }
+  figure {
+    @extend .span-4;
+  }
+  .copy {
+    margin-left: 0;
+    @extend .span-5;
+    @extend .offset-4;
+  }
+  &.featured {
+    figure,
+    .copy {
+      width: auto;
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
