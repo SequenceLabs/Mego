@@ -6,11 +6,13 @@
 ---
 
 - content_for :page_header do
-  = partial('includes/modules/carousel')
+  / = partial('includes/modules/carousel')
 
 - content_for :content do
-  = partial('includes/modules/cta/cta-list', :locals=>{:count=>18})
+  / %h2 Events
+  / = partial('includes/modules/events/events-listing', :locals=>{:include_featured=>true})
+  = partial('includes/modules/cta/cta-list', :locals=>{:count=>6})
 
 - content_for :sidebar do
-  = partial('includes/modules/news/news-widget')
-  = partial('includes/modules/events/events-widget')
+  / = partial('includes/modules/news/news-widget')
+  / = partial('includes/modules/events/events-widget')

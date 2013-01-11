@@ -35,11 +35,12 @@
     }
   }
   figure {
-    @include column(4);
+    @include column(5, 9);
   }
   .copy {
-    margin-left: 0;
-    @include column(5);
+    // margin-left: 0;
+    @include column(5, 9);
+    @include offset(4, 9);
   }
   &.featured {
     figure,

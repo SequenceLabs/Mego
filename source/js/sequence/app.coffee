@@ -81,8 +81,8 @@ class App
     if document.querySelector('#contact-widget .map')?
       @loadMapsApi @initContactWidgetMap
 
-    if document.querySelector('#locations')?
-      loadMapsApi initMapLocations
+    if document.querySelector('#main.locations')?
+      @loadMapsApi @initMapLocations
 
   loadMapsApi: (callback)->
     if google? and google.maps?
@@ -92,21 +92,28 @@ class App
         callback: callback
 
   initMapLocations: ->
-    new maps.MapLocationsController
+    @mapLocationsController = new maps.MapLocationsController
       DOMlocations: document.querySelectorAll('#location-listing li')
       mapOpts:
-        mapEl: document.querySelector('#locations #map')
+        mapEl: document.querySelector('#main.locations #map')
+        zoom: 12
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      markerOpts:
+        iconFolder: "/images/icons/"
 
-  initContactWidgetMap = ->
-      zoom: 12
-      mapEl: document.querySelector('#projects #map')
-      locations: document.querySelectorAll('#project-listing li')
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+    # @mapLocationsController.map.map
+    # reference to the actual Google Map object
 
   initContactWidgetMap: ->
     gmap = new maps.GoogleMap
       mapEl: document.querySelector('#contact-widget .map')
-    gmap.centerOnAddress($("#contact-widget .adr"))
+      zoom: 12
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+
+    gmap.addAddressMarker($("#contact-widget .adr"), gmap.centerOnMarker)
+
+    # gmap.map
+    # reference to the actual Google Map object
 
   initFlickrGallery: ->
     if document.querySelector('#flickr-gallery')?

@@ -7,7 +7,7 @@
 %body
   %article#main-container.container
     = partial('includes/structure/site-header')
-    %section.main{:id=>data.page.tag_id, :class=>data.page.tag_class}
+    %section{:id=>data.page.tag_id, :class=>data.page.tag_class}
       %header#page-header
         = yield_content :page_header
       %article#content

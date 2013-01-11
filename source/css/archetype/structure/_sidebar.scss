@@ -51,6 +51,7 @@
       width: 24px;
       height: 24px;
       overflow: hidden;
+      display: none;
       &:before{
         @include icon($icon-family: "IconMoon", $pos: "middle", $font-size: 16, $color: "#000", $icon: "\e000" );
       }

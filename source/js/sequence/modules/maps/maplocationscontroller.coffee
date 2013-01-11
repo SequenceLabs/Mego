@@ -1,11 +1,10 @@
 "use strict"
 # namespace
-maps = Namespace('SEQ.gmaps')
+gmaps = Namespace('SEQ.gmaps')
 
-class maps.MapLocationsController
+class gmaps.MapLocationsController
 
   constructor: (options) ->
-
     # default options
 
     defaults =
@@ -19,6 +18,7 @@ class maps.MapLocationsController
         flat: false
         visible: true
         clickable: true
+        iconFolder: "/images/icons/markers/"
       infoBoxOpts:
         boxClass: "info-box"
         disableAutoPan: false
@@ -41,12 +41,14 @@ class maps.MapLocationsController
 
   _init: =>
     this._createMap()
+
     if this.settings.infoBoxJsUrl != false
       this._loadInfoBoxJs this._addMarkers
     else
       this._addMarkers()
+
   _createMap: () =>
-    this.map = new maps.GoogleMap this.settings.mapOpts
+    this.map = new gmaps.GoogleMap this.settings.mapOpts
 
   _loadInfoBoxJs: (callback) =>
     script = document.createElement("script")
@@ -57,6 +59,7 @@ class maps.MapLocationsController
     script.onreadystatechange = callback
     script.onload = callback
     document.body.appendChild(script)
+
   _addInfoBox: (marker) =>
     boxText = document.createElement("div")
     boxText.innerHTML = marker.locationDOMElement.html()
@@ -116,10 +119,11 @@ class maps.MapLocationsController
       this.currInfoBox.close()
 
     this.currInfoBox = marker.infoBox
-    this.currInfoBox.open(this.map.gmap, marker)
+    this.currInfoBox.open(this.map.map, marker)
 
     $(this.currInfoBox.getContent()).find(".more").on("click", (e) =>
       this._onInfoboxLinkClick(this._getLocationFromMarker(marker))
+      return false
     )
 
   _findMarkerFromLatLng:(latLng) =>
@@ -128,11 +132,12 @@ class maps.MapLocationsController
         return marker
 
   _addMarkers: =>
-    for location, i in this.settings.DOMlocations
+    for location in this.settings.DOMlocations
       $location = $(location)
       latLng = $location.attr("data-latLng")
       latLngSplit = latLng.split(",")
-      marker = this.addMarker(new google.maps.LatLng(latLngSplit[0], latLngSplit[1]), i)
+      icon = $location.attr("data-markericon")
+      marker = this.addMarker(new google.maps.LatLng(latLngSplit[0], latLngSplit[1]), icon)
 
     this.map.fitMarkerBounds()
 
@@ -140,17 +145,13 @@ class maps.MapLocationsController
   # Public Methods
   # _____________________________________________________________________________________
 
-  addMarker: (pos, i) =>
+  addMarker: (pos, icon) =>
     # cache this reference
     opts = this.settings.markerOpts
-    # mix in some new settings
-
-    if i?
-      opts.zIndex = i
-
+    if icon?
+      opts.icon = opts.iconFolder + icon + ".png"
     #create marker
     marker = this.map.addMarker pos, opts
-
     marker.locationDOMElement = this._getInfoBoxContentFromDOM(marker)
     marker.infoBox = this._addInfoBox(marker)
 

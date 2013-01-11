@@ -6,6 +6,9 @@ class gmaps.GoogleMapsApiController
 
   constructor: (options) ->
 
+    if google? and google.maps?
+      return options.callback.call()
+
     defaults =
       sensor: true
       onLoad: "window.SEQ.gmaps.MapInstance._onApiLoaded"
