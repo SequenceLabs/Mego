@@ -100,6 +100,8 @@ class App
         mapTypeId: google.maps.MapTypeId.ROADMAP
       markerOpts:
         iconFolder: "/images/icons/"
+      infoBoxOpts
+        linksToLocationPage: true
 
     # @mapLocationsController.map.map
     # reference to the actual Google Map object
