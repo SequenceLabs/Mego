@@ -1,7 +1,6 @@
 // Grid System
 // -----------
-$width: 1000px;
-$gridRowWidth: ($grid-columns * $grid-column-width) + ($grid-gutter-width * ($grid-columns - 1)) !default;
+$gridRowWidth: ($grid-cols * $grid-column-width) + ($grid-gutter-width * ($grid-cols - 1)) !default;
 
 // Centered container element
 @mixin container-fixed() {
@@ -80,17 +79,17 @@ $gridRowWidth: ($grid-columns * $grid-column-width) + ($grid-gutter-width * ($gr
   .container,
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
-    @include core-span($grid-columns, $grid-column-width, $grid-gutter-width);
+    @include core-span($grid-cols, $grid-column-width, $grid-gutter-width);
   }
 
   // generate .spanX and .offsetX
-  $i: $grid-columns;
+  $i: $grid-cols;
   @while $i > 0 {
     .span#{$i} { @include core-span($i, $grid-column-width, $grid-gutter-width); }
     $i: $i - 1;
   }
 
-  $i: $grid-columns;
+  $i: $grid-cols;
   @while $i > 0 {
     .offset#{$i} { @include core-offset($i, $grid-column-width, $grid-gutter-width); }
     $i: $i - 1;
@@ -119,7 +118,7 @@ $gridRowWidth: ($grid-columns * $grid-column-width) + ($grid-gutter-width * ($gr
     }
 
     // generate .spanX
-    $i: $grid-columns;
+    $i: $grid-cols;
     @while $i > 0 {
       .span#{$i} {
         @include fluid-span($i, $fluid-grid-column-width, $fluid-grid-gutter-width);
@@ -147,7 +146,7 @@ $gridRowWidth: ($grid-columns * $grid-column-width) + ($grid-gutter-width * ($gr
   }
 
   // generate .spanX
-  $i: $grid-columns;
+  $i: $grid-cols;
   @while $i > 0 {
     input.span#{$i},
     textarea.span#{$i},
