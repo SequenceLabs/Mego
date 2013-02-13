@@ -3,13 +3,13 @@
   %span.required
     *indicates required field
 
-  - form_textbox "forename", "First Name", "e.g. Rhodri", true, "text", "Enter name", 9
+  - form_textbox "forename", "First Name", "e.g. Rhodri", true, "Enter name", 9
   - form_textbox "surname", "Surname", "e.g. Jones", true
   - form_textbox "email", "Email", "you@yourdomain.com", true, "email"
 
   - form_selectbox "selectbox_1", "What are you contacting us about?"
 
-  - form_textbox "text_1", "Message", "Enter Comments", true, "textarea"
+  - form_textarea "text_1", "Message", "Enter Comments", true
 
   %input{:type=>"submit", :value=>"Send message"}
 / END #contact-form

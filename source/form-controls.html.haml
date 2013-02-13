@@ -1,0 +1,42 @@
+---
+  page_title: Form Controls
+  tag_id: form-controls
+---
+  
+%header#page-header
+  %h1
+    Form Controls
+    
+#content.col-9  
+  %p Showing common form controls
+
+  .form
+    %h2
+      Checkbox List
+
+    - form_checkboxlist 4, "Please select one or more option", true
+
+    %h2
+      Radio List
+
+    - form_radiolist 4, "Please select an option"
+
+    %h2
+      Simple Text box
+
+    - form_textbox 
+
+    %h2
+      Text area
+
+    - form_textarea 
+
+    %h2
+      Select box
+
+    - form_selectbox
+   
+
+#sidebar.col-3.last
+  = partial('includes/modules/widgets/contact-widget')
+    
