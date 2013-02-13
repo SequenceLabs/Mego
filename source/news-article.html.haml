@@ -1,29 +1,26 @@
 ---
   page_title: News Item
   body_id: news-item
+  hide_from_nav: true
 ---
-
 
 %header#page-header
   %h1
     = lorem.words (3 + rand(5))
   %time{:datetime=>"2012-04-13"}
     13th April 2012
-    
-#content.col-9
-  %figure
-    - img_placehold 726, (726/16)*9
-    %figcaption
-      = lorem.sentence
-  = partial("includes/modules/random-content")
-  
-  %a.button{:href=>"/news.html"}
-    &larr; Back
-  %footer#news-footer
-    = partial("includes/modules/social/social-share")
-    %hr
-    = partial("includes/modules/social/facebook-stats")
-
-#sidebar.col-3.last
-  = partial('includes/modules/events/events-widget')
-  = partial('includes/modules/news/news-widget')
+.row
+  #content.span9
+    %figure
+      - img_placehold 726, (726/16)*9
+      %figcaption
+        = lorem.sentence
+    = partial("includes/modules/random-content")
+    %a.button{:href=>"/news.html"}
+      &larr; Back
+    %footer#news-footer
+      = partial("includes/modules/social/social-share")
+      / = partial("includes/modules/social/facebook-stats")
+  #sidebar.span3.last
+    = partial('includes/modules/events/events-widget')
+    = partial('includes/modules/news/news-widget')

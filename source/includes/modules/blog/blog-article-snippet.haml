@@ -1,0 +1,43 @@
+%article.post
+  %header
+    - if defined? featured and featured
+      %h2
+        %a{:href=>"blog-post.html", :title=>"title of blog post"}
+          = lorem.words (3 + rand(5))
+    - else
+      %h3
+        %a{:href=>"blog-post.html", :title=>"title of blog post"}
+          = lorem.words (3 + rand(5))
+    %section.meta
+      .vcard
+        - if defined? author
+          by
+          %address.author
+            %a{:title=>"Posts by John Doe", :href=>"#"}
+              John Doe
+        %time{:datetime=>"2009-11-04", :class=>"published updated"}
+          November 4th, 2009
+    - if defined? featured and featured
+      %section.tags
+        %h4
+          Tagged:
+        %ul
+          - (2 + rand(2)).times do
+            %li
+              %a{:title=>"Tag",:href=>"#"}
+                = lorem.words (1)
+
+  - if rand(3) >= 1 || (defined? featured and featured)
+
+    %figure
+      - img_placehold 726, (726/16)*9
+      <!-- optional figcaption -->
+      %figcaption
+        fig.1
+
+  %article.content
+    - (1 + rand(1)).times do
+      %p
+        = lorem.sentences (2 + rand(8))
+    - if defined? featured and featured
+      %a.read-more{:href=>"blog-post.html", :title=>"title of blog post"} read more

@@ -1,0 +1,58 @@
+@mixin h {
+  margin-bottom: $baseline;
+}
+
+@mixin h1 {
+  @include font-size(3.6, 4);
+}
+@mixin h2 {
+  @include font-size(3, 3);
+}
+@mixin h3 {
+  @include font-size(2.6, 3);
+}
+@mixin h4 {
+  @include font-size(1.8, 2);
+}
+@mixin h5 {
+  @include font-size(1.2, 2);
+}
+@mixin h6 {
+  @include font-size(1, 2);
+}
+
+
+h1 {
+  @include h();
+  @include h1();
+}
+h2 {
+  @include h();
+  @include h2();
+}
+h3 {
+  @include h();
+  @include h3();
+}
+h4 {
+  @include h();
+  @include h4();
+}
+h5 {
+  @include h();
+  @include h5();
+}
+
+header {
+
+}
+
+@include mobile() {
+  h1,h2,h3,h4,h5,h6 {
+    margin-bottom: 5px;
+  }
+  header {
+    margin-bottom: 10px;
+  }
+}
+

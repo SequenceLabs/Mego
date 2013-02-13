@@ -1,0 +1,21 @@
+/ START #events-widget
+
+%section#events-widget.widget
+  %header
+    %h3
+      Upcoming Events
+    %a.rss{:href=>''} RSS
+  %ul
+    - (2 + rand(2)).times do
+      %li
+        %a.event-item{:href=>"#",:title=>"Brief summary of article"}
+          %h4
+            Event title
+          %time{:datetime=>"2012-04-13"}
+            = lorem.date
+          %h5 Event Location
+  %footer
+    %a.button{:href=>"#",:title=>"View all events"}
+      All events &rarr;
+
+/ END #events-widget

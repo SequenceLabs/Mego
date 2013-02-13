@@ -1,0 +1,24 @@
+
+//Font Awsome
+//@include font-face($name: "FontsAwesomeRegular", $filename: "fontawesome-webfont", $src: "../fonts/fontawesome", $font-weight: normal, $font-style: normal)
+
+@font-face {
+  font-family: 'FontsAwesomeRegular';
+  src: url('../fonts/fontawesome/fontawesome-webfont.eot');
+  src: url('../fonts/fontawesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/fontawesome/fontawesome-webfont.woff') format('woff'),
+     url('../fonts/fontawesome/fontawesome-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//icoMoon
+@font-face {
+  font-family: 'IconMoon';
+  src: url('../fonts/icomoon/icomoon.eot');
+  src: url('../fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/icomoon/icomoon.woff') format('woff'),
+     url('../fonts/icomoon/icomoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

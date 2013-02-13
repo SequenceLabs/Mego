@@ -1,0 +1,9 @@
+/ START .event-listing
+%section.events-listing
+  - if defined? include_featured
+    = partial('includes/modules/events/event-item', :locals=>{:featured=>true})
+  %section.latest-event
+    %h2 Latest Events
+    - (6 + rand(6)).times do
+      = partial('includes/modules/events/event-item', :locals=>{:featured=>false})
+/ END .event-listing

@@ -1,15 +1,18 @@
 ---
   page_title: Mego — Rapid Prototyping Framework
+  nav_title: Home
   tag_id: home
+  nav_pos: 1
 ---
 
-%header#page-header
-  = partial('includes/modules/carousel')
+- content_for :page_header do
+  / = partial('includes/modules/carousel')
 
-#content.col-9
+- content_for :content do
+  / %h2 Events
+  / = partial('includes/modules/events/events-listing', :locals=>{:include_featured=>true})
   = partial('includes/modules/cta/cta-list', :locals=>{:count=>6})
-    
-#sidebar.col-3.last
-  = partial('includes/modules/news/news-widget')
-  = partial('includes/modules/events/events-widget')
-  
+
+- content_for :sidebar do
+  / = partial('includes/modules/news/news-widget')
+  / = partial('includes/modules/events/events-widget')

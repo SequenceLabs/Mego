@@ -1,0 +1,14 @@
+---
+  page_title: Blog Post
+  tag_id: blog-post
+  hide_from_nav: true
+  has_page_header: false
+  layout: two-col-sidebar-right
+---
+
+- content_for :content do
+  = partial('includes/modules/blog/blog-post')
+
+- content_for :sidebar do
+  = partial('includes/modules/blog/blog-sidebar')
+

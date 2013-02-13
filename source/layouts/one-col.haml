@@ -1,0 +1,19 @@
+!!! 5
+
+- custom_html_tag 'en-GB'
+
+= partial('includes/structure/html-header')
+
+%body
+  .container
+    = partial('includes/structure/site-header')
+    #main{:id=>data.page.tag_id, :class=>data.page.tag_class}
+
+      %header#page-header
+        = yield_content :page_header
+
+      %section#content
+        = yield_content :content
+
+    = partial('includes/structure/site-footer')
+  = partial('includes/structure/javascripts')

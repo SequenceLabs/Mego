@@ -1,0 +1,23 @@
+/ START .event-item
+%article{:class=>"#{featured ? 'event-item featured' : 'event-item'}"}
+  %header
+    %a.read-more{:href=>"event.html", :title=>"Summary of event article"}
+      %h3
+        = lorem.words (3 + rand(5))
+    %time{:datetime=>"2009-11-13T20:00Z"}
+      3 hours ago
+    .location at Location
+  .row
+    %figure{:class=>"#{featured ? '' : ''}"}
+      %a{:href=>"event.html", :title=>"Summary of event article"}
+        - img_width = featured ? 726 : 306
+        - img_placehold img_width, (img_width/16)*9
+      %figcaption
+        = lorem.sentence
+    %section.copy
+      %p
+        = lorem.sentences (8 + rand(5))
+      %footer
+        %a.read-more{:href=>"event.html", :title=>"Summary of event article"}
+          Read more &rarr;
+/ END .event-item

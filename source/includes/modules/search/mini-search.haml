@@ -1,0 +1,13 @@
+/START mini-search
+%section{:class=>"mini-search #{'widget' unless !defined? widget}"}
+  - if defined? title
+    %h3
+      = title
+  %label{:for=>"#{name}"} Search
+  %input.field-search{:type=>"text",
+    :placeholder=>"Enter keyword",
+    :id=>"#{name}"}
+  %button.btn-search{:type=>"submit"}
+    Search
+/END mini-search
+

@@ -1,0 +1,37 @@
+$column_width: 71px;
+$column_num: 12;
+$gutter_width: 10px;
+
+@mixin grid($n) {
+  display: inline;
+  float: left;
+  position: relative;
+  margin-left: $gutter_width / 2;
+  margin-right: $gutter_width / 2;
+  width: ($column_width + $gutter_width) * $n - $gutter_width;
+}
+
+@mixin push($n) {
+  position: relative;
+  left: ($column_width + $gutter_width) * $n;
+}
+
+@mixin pull($n) {
+  left: -($column_width + $gutter_width) * $n;
+}
+
+@mixin prefix($n) {
+  padding-left: ($column_width + $gutter_width) * $n;
+}
+
+@mixin suffix($n) {
+  padding-right: ($column_width + $gutter_width) * $n;
+}
+
+@mixin first {
+  margin-left: 0;
+}
+
+@mixin last {
+  margin-right: 0;
+}

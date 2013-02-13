@@ -1,0 +1,25 @@
+---
+  layout: one-col
+  page_title: Locations
+  tag_class: locations
+---
+
+- content_for :page_header do
+  %h1 Locations
+- content_for :content do
+  #map
+    -img_placehold 978, 500
+
+  #location-listing
+    %ul
+      - ['51.583, -3.018', '51.481, -3.175', '51.604, -3.341', '51.722, -3.161', '51.703, -3.374', '51.658, -3.595'].each do |latLng|
+        %li{:data=>{:latLng=>"#{latLng}", :markerIcon=>"marker_green"}}
+          %a{:href => "location.html", :title => "Title"}
+            %figure
+              - img_placehold 306, 200
+            %h3
+              = lorem.words 1 + rand(2)
+            .info
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            %span.button{:href=>"location.html"}
+              View location &rarr;

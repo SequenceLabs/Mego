@@ -1,0 +1,66 @@
+#sidebar {
+  @include column(3);
+  section.widget {
+    position: relative;
+    margin-bottom: $baseline * 2;
+    border-bottom: 1px solid $borders;
+    h4, h5 {
+      margin-bottom: 0;
+    }
+    ul {
+      @include unlistify();
+    }
+    li {
+      margin-bottom: $baseline;
+      border-bottom: 1px solid $really-light-grey;
+      padding-bottom: $baseline;
+      position: relative;
+      a {
+        @include unlinkify();
+        margin: 0;
+        padding: 0;
+      }
+      &:after {
+        content: url(../images/icons/icon-chevron.png);
+        display: block;
+        width: 22px;
+        height: 35px;
+        position: absolute;
+        right: 0;
+        top: 30%;
+        @include opacity(0);
+      }
+      &:hover {
+        &:after {
+          @include opacity(0.3);
+          right: -5px;
+        }
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    .rss {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 24px;
+      height: 24px;
+      overflow: hidden;
+      display: none;
+      &:before{
+        @include icon($icon-family: "IconMoon", $pos: "middle", $font-size: 16, $color: "#000", $icon: "\e000" );
+      }
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+  .cta {
+    margin-left: 0;
+  }
+}

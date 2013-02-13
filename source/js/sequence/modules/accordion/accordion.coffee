@@ -1,89 +1,66 @@
 "use strict"
 
 modules = Namespace('SEQ.modules')
-animate = Namespace('SEQ.effects.Animate')
+animate = Namespace('SEQ.effects.Transition')
 
-class modules.AccordionGroup
-  
-   # initial settings
-  @settings = {}
-  
-  constructor: (@container, options) ->
-    
-    @applySettings(options)
-    @sections = []
-    
-    for section in @container.find(@settings.selectors.main)
-      @sections.push(new modules.Accordion(section, @settings))     
-        
-  applySettings: (options) =>
-    
-    # merge defaults with options
-    @settings =
-      openDuration: 300
-      closeDuration: 300
-      selectors:
-        main: ".section"
-        header: "header"
-        inner: ".inner"
-        
-    $.extend true, @settings, options
-   
-   open: (index, openDuration) =>    
-     @sections[index||=0].open(openDuration||=@settings.openDuration)
-   
 class modules.Accordion
-  
-  constructor: (container, @settings) ->
-    
-    @isOpen = false
-    
-    @container = $(container)
-    
-    @inner = @container.find(@settings.selectors.inner)
-    @inner.css
+
+  constructor: (container, settings) ->
+    this.isOpen = false
+    this.settings = settings
+    this.container = $(container)
+
+    this.inner = this.container.find(this.settings.selectors.inner)
+    this.inner.css
       overflow: "hidden"
-    @openHeight = @inner.outerHeight()
-      
-    @header = @container.find(@settings.selectors.header)
-    @header.css
-        cursor: "pointer"
-    @header.on("click", =>
-      if @isOpen 
-        @close(@settings.openDuration)
-      else 
-        @open(@settings.closeDuration)
+    this.openHeight = this.inner.outerHeight()
+    this.header = this.container.find(this.settings.selectors.header)
+    this.header.css
+      cursor: "pointer"
+    this.header.on("click", this.onHeaderClick)
+    #prevent selection
+    this.header.on("mousedown", (e) =>
+      e.preventDefault();
     )
-    
-    @close 0
-    
+
+    this.close 0
+
+  onHeaderClick: (e) =>
+    e.preventDefault()
+    if this.isOpen
+      this.close(this.settings.openDuration)
+    else
+      this.open(this.settings.closeDuration)
+
+  #
+  # Public Methods
+  # _____________________________________________________________________________________
+
   close:(duration) =>
-    @container.addClass("closed").removeClass("open")
-    @isOpen = false;
-    @inner.css
-      height: @inner.outerHeight()       
+    this.container.addClass("closed").removeClass("open")
+    this.isOpen = false;
+    # this.inner.css
+    #   height: this.inner.outerHeight()
+
     setTimeout =>
       animate.To
-       target: @inner,
+       target: this.inner,
        duration: duration,
        props:
          height: "0px",
          opacity: 0
-    , 1
- 
+    , 100
+
   open: (duration) =>
-    @container.addClass("open").removeClass("closed")    
-    @isOpen = true
- 
+    this.container.addClass("open").removeClass("closed")
+    this.isOpen = true
+
     animate.To
-     target: @inner,
+     target: this.inner,
      duration: duration,
      props:
-       height: "#{@openHeight}px",
-       opacity: 1    
+       height: "#{this.openHeight}px",
+       opacity: 1
      complete: =>
-       @inner.css
+       this.inner.css
         height: "auto"
-        
-        
-  

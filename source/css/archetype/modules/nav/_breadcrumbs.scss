@@ -1,0 +1,20 @@
+.breadcrumbs {
+  margin: 0 0 20px;
+  padding: $baseline 0 $baseline 0;
+  border-bottom: 1px solid $borders;
+  ul {
+    @include unlistify();
+  }
+  li {
+    display: inline-block;
+    @include font-size(1.2);
+  }
+  a {
+    @include font-size(1.2);
+    color: $text-color;
+    text-decoration:underline;
+    &.active {
+      text-decoration:none;
+    }
+  }
+}

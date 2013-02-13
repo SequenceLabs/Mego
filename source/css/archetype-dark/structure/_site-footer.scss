@@ -1,0 +1,65 @@
+#site-footer {
+  clear: both;
+  padding: $baseline * 3 0;
+  margin: $baseline * 3 0;
+  border-top: 1px solid $borders;
+  @include font-size(1.4);
+  a {
+    color: $text-color;
+    @include font-size(1.4);
+    &:hover {
+      color: $highlight-color;
+    }
+  }
+  .social-links {
+    @extend .span-4;
+    @extend .offset-8;
+    ul {
+      float: right;
+    }
+  li {
+      display: inline-block;
+      margin: 0 10px 0 0;
+      .twitter {
+        background-image: url('../images/icons/icon-twitter.png');
+      }
+      .facebook {
+        background-image: url('../images/icons/icon-facebook.png');
+      }
+      a {
+        width: 24px;
+        height: 24px;
+        display: block;
+        text-indent: -9999px;
+        overflow: hidden;
+      }
+    }
+
+  }
+  .copyright {
+    margin-bottom: 10px;
+  }
+}
+#footer-nav {
+  @extend .span-8;
+  @extend .offset-0;
+  ul {
+    li {
+      display: inline-block;
+      margin: 0 5px 0 0;
+      a {
+        @include font-size(1.2);
+      }
+      &:after {
+        content: "|";
+        color: $mid-grey;
+        margin-left: 5px;
+      }
+      &:last-child {
+        &:after {
+          content: "";
+        }
+      }
+    }
+  }
+}

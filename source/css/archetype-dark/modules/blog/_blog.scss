@@ -1,0 +1,41 @@
+.post {
+  .meta {
+    margin-bottom: $baseline * 2;
+  }
+  .vcard {
+    @include font-size(1.3);
+    address,
+    time {
+      display: inline-block;
+      font-family: $serif;
+      a {
+        @include font-size(1.3);
+        font-family: $serif;
+      }
+    }
+  }
+  footer {
+    border-top: 1px solid $borders;
+    border-bottom: 1px solid $borders;
+    padding: $baseline 0;
+    margin-bottom: $baseline;
+    overflow: hidden;
+    .categories,
+    .tags {
+      margin-bottom: $baseline;
+      ul {
+        @include unlistify();
+      }
+      li {
+        display: inline;
+      }
+    }
+  }
+}
+
+.blog-post-CTA {
+  margin-bottom: 20px;
+  img {
+    margin-bottom: $baseline;
+  }
+}

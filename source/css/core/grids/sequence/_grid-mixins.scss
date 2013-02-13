@@ -1,0 +1,84 @@
+@function perc($width, $container-width) {
+  @return percentage($width / $container-width);
+}
+
+@function col-width($span:1, $fluid: $global-fluid, $parent-cols: $grid-cols) {
+  @if ($fluid == true) {
+    @return ($span * perc($grid-column-width, total-width($parent-cols))) + (($span - 1) * perc($grid-gutter-width, total-width($parent-cols)));
+  } @else {
+    @return ($span * $grid-column-width) + (($span - 1) * $grid-gutter-width);
+  }
+}
+
+@function total-width($cols: $grid-cols) {
+  @return ($cols * $grid-column-width) + (($cols - 1) * $grid-gutter-width);
+}
+
+@function offset($pos, $fluid: $global-fluid, $parent-cols: $grid-cols) {
+  @if ($fluid == true) {
+    @return ($pos * perc($grid-column-width, total-width($parent-cols))) + ($pos * perc($grid-gutter-width, total-width($parent-cols)));
+  } @else {
+    @return ($pos * $grid-column-width) + ($pos * $grid-gutter-width);
+  }
+}
+
+@mixin column-width($span, $fluid: $global-fluid, $parent-cols: $grid-cols) {
+  width: col-width($span, $global-fluid, $parent-cols);
+}
+
+@mixin container() {
+  margin-right: auto;
+  margin-left: auto;
+  @include clearfix();
+  width: 95%;
+  max-width: total-width();
+}
+
+@mixin row() {
+  @include clearfix();
+}
+
+@mixin column($span:1, $fluid: $global-fluid, $parent-cols: $grid-cols) {
+  float: left;
+  display: block;
+  margin-right: -100%;
+  @include column-width($span, $fluid, $parent-cols);
+}
+
+@mixin offset($offset, $parent-cols: $grid-cols) {
+  margin-left: offset($offset, $parent-cols: $parent-cols);
+}
+
+@mixin grid($span: 4, $cols: 3) {
+  $parent-cols: $span * $cols;
+
+  @include row();
+  > * {
+    @include column($span, $parent-cols: $parent-cols);
+    @for $i from 1 through $cols {
+      &:nth-child(#{$cols}n+#{$i}) {
+        @include offset(($i - 1) * $span, $parent-cols);
+        clear: none;
+      }
+    }
+    &:nth-child(#{$cols}n+#{$cols+1}) {
+      clear: left;
+      margin-left: 0;
+    }
+  }
+}
+
+// Creates span classes for each column in the grid
+// $span: the number of cols to span
+
+@for $span from 1 through $grid-cols {
+  .span-#{$span} {
+    @include column($span);
+  }
+}
+
+@for $i from 0 through $grid-cols {
+  .offset-#{$i} {
+    @include offset($i);
+  }
+}

@@ -1,0 +1,17 @@
+/START news-widget
+%section#news-widget.widget
+  %header
+    %h3 Latest News
+    %a.rss{:href=>''} RSS
+  %ul
+    - (2 + rand(2)).times do
+      %li
+        %a.news-item{:href=>"#",:title=>"Brief summary of article"}
+          %h4
+            = lorem.words 1+rand(5)
+          %time{:datetime=>"2012-04-13"}
+            = lorem.date
+  %footer
+    %a.button{:href=>"#",:title=>"View all events"}
+      All news &rarr;
+/END news-widget

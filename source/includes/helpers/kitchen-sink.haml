@@ -1,0 +1,171 @@
+%h1 The Kitchen Sink
+// Basic Typography
+
+%section.typography
+
+  %h2 Basic Typography
+
+  %p
+    This page demonstrates the styleguide implementation, covering all typographical elements that a typical website will contain. 
+
+  %blockquote
+    %p “Ooh - a blockquote! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.”
+
+  %h1 This is a H1
+  %h2 This is a H2
+  %h3 This is a H3
+  %h4 This is a H4
+  %h5 This is a H5
+  %h6 This is a H6
+
+  %p
+    A small paragraph to
+    %em emphasis
+    and show
+    %strong important
+    bits.
+%hr
+
+%section.lists
+  %hgroup
+    %h2 Some List Type Stuff
+    %h3 With a sub-title, in a hgroup
+
+  %h4 This is an unordered list
+
+  %ul
+    %li This is a list item
+    %li So is this - there could be more
+    %li
+      Make sure to style list items to:
+      %ul
+        %li Not forgetting child list items
+        %li Not forgetting child list items
+        %li Not forgetting child list items
+        %li Not forgetting child list items
+    %li A couple more
+    %li top level list items
+
+  %h4 This is an ordered list
+
+  %ol
+    %li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    %li
+      Aliquam tincidunt mauris eu risus.
+      %ol
+        %li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        %li Aliquam tincidunt mauris eu risus.
+    %li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    %li
+      Aliquam tincidunt mauris eu risus.
+
+  %h4
+    This is a Definition List
+
+  %dl
+    %dt Definition list
+    %dd
+      Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+      aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    %dt Lorem ipsum dolor sit amet
+    %dd
+      Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+      aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+
+%hr
+
+%section.tables
+  %header
+    %h2 This bit is all about tables!
+  %p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+  %table
+    %caption
+      Table caption goes here, if required.
+    %thead
+      %tr
+        %td
+        %th{:scope=>"col"} Heading 1
+        %th{:scope=>"col"} Heading 2
+        %th{:scope=>"col"} Heading 3
+    %tbody
+      %tr
+        %td{:scope=>"row"} table data
+        %td table data
+        %td table data
+        %td table data
+      %tr
+        %td{:scope=>"row"} table data
+        %td table data
+        %td table data
+        %td table data
+    %tfoot
+      %tr
+        %td{:scope=>"row"} table data
+        %td table data
+        %td table data
+        %td table data
+
+  %p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+
+  %hr
+
+%section.forms
+
+  %h2
+    Here's some form elements
+
+  %form{:action => "#", :method => "post"}
+    %div
+      .field.text-input
+        %label{:for => "name"} Text Input:
+        %input#name{:name => "name", :type => "text", :value => ""}/
+    %div
+      %h3 Radio Buttons
+      .field.radio-button
+        %input#radio-choice-1{:name => "radio-choice-1", :type => "radio", :value => "choice-1"}/
+        %label{:for => "radio-choice-1"} Choice 1
+      .field.radio-button
+        %input#radio-choice-2{:name => "radio-choice-1", :type => "radio", :value => "choice-2"}/
+        %label{:for => "radio-choice-2"} Choice 2
+    %div
+      %h3
+        Dropdown Menu
+      .field.select-option
+        %label{:for => "select-choice"} Select Dropdown Choice:
+        %select#select-choice{:name => "select-choice"}
+          %option{:value => "Choice 1"} Choice 1
+          %option{:value => "Choice 2"} Choice 2
+          %option{:value => "Choice 3"} Choice 3
+    %div
+      %h3 Textarea
+      .field.textarea
+        %label{:for => "textarea"} Textarea:
+        %textarea{:cols => "40", :name => "textarea", :rows => "8"}
+    %div
+      %h3 Checkbox
+      .field.checkbox
+        %input#checkbox{:name => "checkbox", :type => "checkbox"}/
+        %label{:for => "checkbox"} Checkbox:
+
+      %input.button{:type => "submit", :value => "Submit"}/
+
+
+  %a.button A Button For Clicking
+  %br
+  %a.button-small A Small Button
+
+  %hr
+
+%section.misc
+  %h2 Some random and miscellaneous stuff
+
+  %pre
+    %code
+      :preserve
+
+        #header h1 a
+            display: block;
+            width: 300px;
+            height: 80px;

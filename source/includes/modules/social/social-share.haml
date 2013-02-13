@@ -1,0 +1,22 @@
+/START social share/bookmarking
+%section.social-share
+  %h3 Share this page
+  %ul
+    /START fb-like
+    %li
+      #fb-root
+      .fb-like{'data-send'=>'false', 'data-layout'=>'button_count', 'data-width'=>'100', 'data-show-faces'=>'false', 'data-href'=>'http://www.sequence.co.uk'}
+    /END fb.like
+
+    /START twitter
+    / https://dev.twitter.com/docs/tweet-button
+    %li
+      %a.twitter-share-button{:href=>'http://twitter.com/share', 'data-url'=>'http://www.sequence.co.uk', 'data-via'=>'your_screen_name', 'data-size'=>'2'}
+        Tweet!
+      /END twitter
+
+    /START Google+
+    %li
+      .g-plus{'data-action'=>'share', 'data-href'=>'http://www.sequence.co.uk', 'data-annotation'=>'bubble'}
+    /END Google+
+

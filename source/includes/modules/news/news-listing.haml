@@ -1,0 +1,7 @@
+/ START .news-listing
+%section.news-listing
+  - if defined? include_featured
+    = partial('includes/modules/news/news-item', :locals=>{:featured=>true})
+  - (6 + rand(6)).times do
+    = partial('includes/modules/news/news-item', :locals=>{:featured=>false})
+/ END .news-listing

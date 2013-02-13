@@ -1,42 +1,44 @@
 ---
+  layout: one-col
   page_title: Frequently Asked Questions
+  nav_title: FAQs
   tag_id: faq
 ---
 
-%header#page-header
-  %h1
-    Frequently Asked Questions
-
-#content.col-9
-  .search
-    %h3
-      Search by keyword
-    = partial('includes/modules/search/mini-search', :locals=>{:name=>"search"})
-  
-  %nav.category-quicklinks
-    %h3 Category quick links
-    %ul
-    - 4.times do |i|
-      %li
-        %a{:href=>"#category-#{i}", :title=>"Category #{i} Title"} Category #{i} Title
-      
-  - 4.times do |i|
-    %section.category{:id=>"category-#{i}"}
-      %h2 Category #{i} Title
+- content_for :page_header do
+  %h1 Frequently Asked Questions
+  %section#navigate
+    .search
+      %h3
+        Search by keyword
+      = partial('includes/modules/search/mini-search', :locals=>{:name=>"search"})
+    %nav.category-quicklinks
+      %h3 Category quick links
       %ul
-        - 5.times do
+        - 4.times do |i|
           %li
-            %h3
-              %span
-                Q:
-              = lorem.words (3+rand(6))
-            %span
-              A:
-            %p
-              = lorem.sentences 4
-      .to-top
-        %a{:href=>"#", :title=>"back to top"}
-          Back to top &uarr;
-            
-              
-  
+            %a{:href=>"#category-#{i}", :title=>"Category #{i} Title"} Category #{i} Title
+
+- content_for :content do
+
+  %section#categories.row
+    - 4.times do |i|
+      %section.category{:id=>"category-#{i}"}
+        %h2 Category #{i+1} Title
+        - 5.times do
+          %article
+            .question
+              %h3
+                %span.q-a
+                  Q:
+                = lorem.words (3+rand(6))
+            .answer
+              %span.q-a
+                A:
+              %div
+                %p
+                  = lorem.sentences 4
+        .to-top
+          %a{:href=>"#", :title=>"back to top"}
+            Back to top
+            %span &uarr;

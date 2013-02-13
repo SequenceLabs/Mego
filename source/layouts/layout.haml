@@ -5,10 +5,14 @@
 = partial('includes/structure/html-header')
 
 %body
-  %form{:id => "mainform", :action => "/", :method => "post"}
-    .wrapper
-      = partial('includes/structure/header')
-      .container{:id=>data.page.tag_id}
-        = yield
-      = partial('includes/structure/footer')
-      = partial('includes/structure/javascripts')
+  %article#main-container.container
+    = partial('includes/structure/site-header')
+    %section{:id=>data.page.tag_id, :class=>data.page.tag_class}
+      %header#page-header
+        = yield_content :page_header
+      %article#content
+        = yield_content :content
+      %section#sidebar
+        = yield_content :sidebar
+    = partial('includes/structure/site-footer')
+  = partial('includes/structure/javascripts')

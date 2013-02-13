@@ -1,0 +1,14 @@
+/START Pagination
+.pagination
+  %ul
+    %li
+      %a.prev{:href=>"#"}
+        &larr; older
+    - 4.times do |i|
+      %li
+        %a{:class=>"#{i==0 ? 'selected' : ''}"}
+          = "#{i}"
+    %li
+      %a.next{:href=>"#"}
+        newer &rarr;
+/END Pagination

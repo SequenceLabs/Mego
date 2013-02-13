@@ -1,0 +1,34 @@
+---
+  page_title: Location
+  tag_id: location
+  hide_from_nav: true
+  parent: locations
+  dynamic_pages:
+    - newyork
+    - paris
+    - london
+    - gothenburg
+---
+
+- content_for :page_header do
+  %h1 Location Title
+
+- content_for :content do
+  - 3.times do
+    %p
+      = lorem.paragraph
+  %a.button{:href=>"locations.html"}
+    &larr; Back to Projects
+
+- content_for :sidebar do
+  %section#location-widget.widget
+    %h2 Locations
+    %ul
+      - 4.times do |i|
+        %li
+          %a{:href=>"location.html"}
+            = lorem.words 2+rand(3)
+
+    = partial('includes/modules/cta/generic-cta')
+
+

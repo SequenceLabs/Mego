@@ -1,0 +1,96 @@
+#site-header {
+  margin: $baseline * 2 0;
+  position: relative;
+  #branding {
+    float: left;
+    clear:both;
+    overflow:hidden;
+    a {
+      @include font-size(4.5, 6);
+      font-weight: bold;
+      color: $white!important;
+      &:hover {
+        // color: $black;
+        text-decoration: none;
+      }
+    }
+  }
+  .mini-search {
+    float: right;
+    margin-top: 46px;
+    margin-bottom: 20px;
+  }
+}
+
+@mixin site-header-small-screen {
+  #site-header {
+    margin: 0 0 10px 0;
+    #branding {
+      float: none;
+      a {
+        @include font-size(2.5, 5);
+      }
+      p {
+        display: none;
+      }
+    }
+    .mini-search {
+      float: none;
+      margin-top: 0;
+      display: none;
+    }
+  }
+
+  #primary-nav {
+    #menu-btn {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 20px;
+      @include font-size(1.4);
+      color: $black;
+      cursor: Pointer;
+    }
+    ul {
+      overflow: hidden;
+      min-height: 0px;
+      &.closed {
+        height: 0;
+      }
+      li {
+        display: block;
+        float: none;
+        margin: 0;
+        a {
+          text-decoration: none;
+          border-bottom: none;
+          padding: 7px 0;
+          border-top: 1px solid $light-grey;
+          &:hover {
+            border-bottom: none;
+            padding-bottom: 7px;
+          }
+          &.active {
+            border-bottom: none;
+            padding-bottom: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin site-header-medium-screen {
+  #site-header {
+    #primary-nav {
+     ul {
+        li {
+          a {
+            @include font-size(1.4);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+nav.nav-bar {
+  background: $really-light-grey;
+  @include vertical-gradient($really-light-grey, darken($really-light-grey, 5%));
+  @include border-radius($border-radius);
+  border: 1px solid $light-grey;
+  padding: 0!important;
+  ul {
+    li {
+      margin-right: 0!important;
+      border-right: 1px solid $light-grey;
+      a {
+        display: block;
+        padding: 10px 15px;
+        text-align: center;
+        @include font-size(1.3);
+        color: $dark-grey;
+        @include text-shadow(0 1px 1px white);
+        @include box-shadow(inset 1px 1px 0 rgba(255,255,255,.5));
+        &:hover {
+          @include vertical-gradient(darken($really-light-grey, 2%), darken($really-light-grey, 7%));
+          color: darken($black, 5%)
+        }
+        &:active {
+          @include vertical-gradient(darken($really-light-grey, 5%), darken($really-light-grey, 1%));
+        }
+      }
+    }
+  }
+}
+
+.read-more {
+  display: inline-block;
+  font-weight: bold;
+}
+
+@mixin button($background-color){
+  @include border-radius(4px);
+  @include vertical-gradient($background-color, darken($background-color, 10%));
+  @include text-shadow(0 -1px 1px rgba(0, 0, 0, 0.35));
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.5));
+  border: 1px solid darken($background-color, 15%);
+  padding: 7px 20px 7px 20px;
+  color: $white;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  @include font-size(1.2, 2);
+  text-align: center;
+  margin: 0 0 $baseline * 2 0;
+  &:visited {
+    color: $white;
+  }
+  &:hover {
+    @include vertical-gradient($background-color, darken($background-color, 15%));
+    text-decoration:none;
+  }
+  &:active {
+    @include vertical-gradient(darken($background-color, 15%), darken($background-color, 10%));
+  }
+}
+
+.button {
+  @include button($highlight-color);
+}

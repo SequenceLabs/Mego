@@ -1,0 +1,11 @@
+%nav
+  %ul
+    - 3.times do
+      %li
+        %h4
+          = lorem.words (1 + rand(2))
+        %ul
+          - 5.times do
+            %li
+              %a{:href=>"content-page.html", :title=>"Content Page"}
+                = lorem.words (1 + rand(5))

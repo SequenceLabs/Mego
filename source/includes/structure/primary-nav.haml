@@ -1,0 +1,38 @@
+- pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/)}
+- pages = pages.find_all{|p| !p.data.hide_from_nav}
+- pages = pages.sort_by{|p| p.data.nav_pos || 100}
+
+%nav#primary-nav
+  %ul
+    - pages.each do |page|
+    - subnav_parent = page.data.page_title == "Generic Page" ? true : false
+
+      %li{:class=>"#{subnav_parent ? 'subnav-parent' : ''}"}
+        - path = page.destination_path.gsub('/index.html','')
+        %a{:href=>"#{path}", :class=>"#{path == request.path ? 'active' : ''}"}
+          #{page.data.nav_title? ? page.data.nav_title : page.data.page_title}
+        - if subnav_parent
+          %ul.sub-nav
+            - 3.times do |i|
+              %li
+                %a{:href=>"#{path}", :class=>"#{'/'+page.destination_path == request.path ? 'active' : ''}"}
+                  Some Inner Page #{i+1}
+
+/  MM 2 style nav
+/ - structure = [{:href=>"index", :title=>"Home"},
+/   {:href=>"about-us", :title=>"About Us"},
+/   {:href=>"projects", :title=>"Projects"},
+/   {:href=>"news", :title=>"News"},
+/   {:href=>"events", :title=>"Events"},
+/   {:href=>"blog", :title=>"Blog"},
+/   {:href=>"gallery", :title=>"Gallery"},
+/   {:href=>"case-studies", :title=>"Case Studies"},
+/   {:href=>"contact-us", :title=>"Contact Us"}]
+
+/ %nav#primary-nav
+
+/   %ul
+/     - structure.each do |page|
+/       %li
+/         %a{:href=>"#{page[:href]}.html", :class=>"#{page[:href]+'.html' == request.path ? 'active' : ''}"}
+/           #{page[:title]}

@@ -1,106 +1,84 @@
-"use strict" 
+"use strict"
 
-SEQ.utils.namespace('SEQ.modules')
+modules = Namespace('SEQ.modules')
 
-class SEQ.modules.CoffeeModal
-	
-	constructor: (@container) ->
-		@el = {}
-		@overlay = {}
-		@outer = {}
-		@inner = {}
-		@closeBtn = {}
+class modules.CoffeeModal
 
-	render: (html) ->	
-		@container.append(
-			@el = $("<div />").addClass("modal_window").append(
-				@overlay = $("<div />").addClass("overlay").append(
-				  @outer = $("<div />").addClass("outer").append(
-				    @closeBtn = $("<div />").addClass("close_btn"),
-						@inner = $("<div />").addClass("inner").html(html)
+	constructor: (this.options) ->
+		this._runOnce: false;
+		this._container = this.options.container
+		this._el = {}
+		this._overlay = {}
+		this._outer = {}
+		this._inner = {}
+		this._closeBtn = {}
+
+	#
+  # Private Methods
+  # _____________________________________________________________________________________
+
+	_onIframeLoaded: =>
+		dimensions =
+			width:this.iframe.contents().find("object").attr("width")
+			height:this.iframe.contents().find("object").attr("height")
+
+		this.iframe.attr
+			"width": dimensions.width
+			"height": dimensions.height
+		this.setDimensions dimensions
+
+		if this.callback?
+			this.callback()
+
+	#
+  # Public Methods
+  # _____________________________________________________________________________________
+
+	render: (html) ->
+		if !this.html?
+			this.html = html
+		this._container.append(
+			this._el = $("<div />").addClass("modal-window").append(
+				this._overlay = $("<div />").addClass("overlay").append(
+				  this._outer = $("<div />").addClass("outer").append(
+				    this._closeBtn = $("<div />").addClass("close-btn"),
+						this._inner = $("<div />").addClass("inner").html(this.html)
 				  )
 				)
 			)
 		)
-		@outer.fadeOut(0)
-		@overlay.fadeOut(0)
-		
+
+		if !this._runOnce
+			this._overlay.fadeOut(0)
+			this._outer.fadeOut(0)
+			this._runOnce = true
+
+		this._closeBtn.click =>
+			this.remove()
+
 	add: () ->
-		@overlay.fadeIn(300, =>			
-			@outer.fadeIn(500)
-		)		
-		@closeBtn.click =>
-			@remove()				
+		this._overlay.fadeIn(300, =>
+			this._outer.fadeIn(500)
+		)
 
 	remove: () ->
-		@outer.fadeOut(200)
-		@overlay.fadeOut(300, =>
-			@el.remove()
+		this._outer.fadeOut(200)
+		this._overlay.fadeOut(300, =>
+			this._el.remove()
 		)
 
 	setDimensions: (dimensions) ->
-		@outer.css dimensions
-		@inner.css dimensions
+		this._outer.css dimensions
+		this._inner.css dimensions
 
-	renderIframe: (url, width, height, callback) ->
-		$iframe = $("<iframe />").attr
+	renderIframe: (url, width, height, this.callback) ->
+		this.iframe = $("<iframe />").attr
 			"id": "frame"
 			"src": url
 			"width": width
 			"height": height
 			"scrolling": "no"
 			"frameBorder": "0"
-		
-		$iframe.bind "load", (e) =>
-			$frame = $iframe
-			dimensions =
-				width:$iframe.contents().find("object").attr("width")
-				height:$iframe.contents().find("object").attr("height")
-			
-			$iframe.attr
-				"width": dimensions.width
-				"height": dimensions.height
-			@setDimensions dimensions
-			callback()
 
-		@render $iframe
-
-class SEQ.FlashModalController
-	constructor: () ->
-		$("a[rel='flash_modal']").bind "click", (e) =>
-			e.preventDefault()			
-			url = $(e.target).attr("href")
-			modal = new App.Modal $("body")
-			
-			modal.renderIframe url, 757, 700, ->	
-				modal.el.addClass "flash"			
-				modal.add()					
-			
-			return false
-
-class SEQ.LeavingModalController
-
-	constructor: () ->
-		modal = {}
-		$("a[rel='external']").bind "click", @onExternalLinkClick		
-			
-	onExternalLinkClick: (e) =>
-		e.preventDefault()
-		url = $(e.target).attr("href")
-		modal = new App.Modal $("body")
-		modal.renderIframe(url, 620, 300)
-		modal.add()
-		modal.el.addClass "leaving"
-		
-		$("#go_back").bind "click", @onGoBackBtnClick
-		$("#continue").bind "click", @onContinueBtnClick
-
-		return false
-	
-	onGoBackBtnClick: (e) =>
-		e.preventDefault()
-		modal.remove()
-		return false
-
-	onContinueBtnClick: (e) =>
-		modal.remove()
+		this.iframe.bind "load", this._onIframeLoaded
+		this.render this.iframe

@@ -1,0 +1,18 @@
+/START Search-Item
+%section.search-item.document{:href=>"#",:title=>"Brief summary of result"}
+  - if rand(4) >= 1
+    %figure
+      - img_placehold 235, 140
+  %header
+    %a
+      %h2
+        Result Title
+    - if rand(4) >= 1
+      %time{:datetime=>"2012-04-13"}
+        13th April 2012
+  %p
+    = lorem.words (6 + rand(10))
+  %a.read-more
+    Read more >
+
+/END Search-Item

@@ -1,81 +1,77 @@
 "use strict"
 # namespace
-maps = Namespace('SEQ.gmaps')
+gmaps = Namespace('SEQ.gmaps')
 
+class gmaps.MapLocationsController
 
-class maps.MapLocationsController extends maps.GoogleMap
-  
-  constructor: (@options) -> 
-    @INFO_BOX_CLASS = "infoBox"
-   
-    super(@options)
-        
-  init: =>
-    super()
-    @loadInfoBoxJs @addMarkers
-  
-  loadInfoBoxJs: (callback) =>
+  constructor: (options) ->
+    # default options
+
+    defaults =
+      infoBoxJsUrl: "/js/thirdparty/infobox_packed.js"
+      mapOpts:
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+        zoom: 12
+        mapEl: document.querySelector('#map')
+      markerOpts:
+        animation: google.maps.Animation.DROP
+        flat: false
+        visible: true
+        clickable: true
+        iconFolder: "/images/icons/markers/"
+      infoBoxOpts:
+        boxClass: "info-box"
+        disableAutoPan: false
+        maxWidth: 0
+        pixelOffset: new google.maps.Size(-155, 10)
+        zIndex: null
+        infoBoxClearance: new google.maps.Size(100, 100)
+        isHidden: false
+        pane: "floatPane"
+        enableEventPropagation: false
+        closeBoxMargin: "2px"
+        closeBoxURL: "http://#{window.location.host}/images/icons/close-btn.png"
+        linksToLocationPage: false
+
+    this.settings = $.extend true, defaults, options
+    this._init()
+
+  #
+  # Private Methods
+  # _____________________________________________________________________________________
+
+  _init: =>
+    this._createMap()
+
+    if this.settings.infoBoxJsUrl != false
+      this._loadInfoBoxJs this._addMarkers
+    else
+      this._addMarkers()
+
+  _createMap: () =>
+    this.map = new gmaps.GoogleMap this.settings.mapOpts
+
+  _loadInfoBoxJs: (callback) =>
     script = document.createElement("script")
     script.async = true
     script.type = "text/javascript"
-    script.src = "/js/thirdparty/infobox_packed.js"
+    script.src = this.settings.infoBoxJsUrl
     #load it by adding to DOM
+    script.onreadystatechange = callback
     script.onload = callback
-    
     document.body.appendChild(script)
-    
-  addMarkers: =>
-    
-    @markers = []
-    for location, i in @options.locations                           
-      $location = $(location)
-      latLng = $location.attr("data-latLng")
-      latLngSplit = latLng.split(",")   
-           
-      @markers.push(@addMarker(new google.maps.LatLng(latLngSplit[0], latLngSplit[1]), i))
-      
-    @fitMarkerBounds()
-             
-  addMarker: (pos, i) =>
-    marker = new google.maps.Marker
-      position: pos
-      map: @gmap
-      flat: false
-      visible: true
-      zIndex: i
-      clickable: true
-      id: "location-#{i}"
-      animation: google.maps.Animation.DROP
-    marker.locationDOMElement = @getInfoBoxContentFromDOM(marker)
 
-    google.maps.event.addListener(marker, 'click', @onMarkerClick)
-    marker.infoBox = @addInfoBox(marker)
-    
-    return marker
-    
-  addInfoBox: (marker) =>
+  _addInfoBox: (marker) =>
     boxText = document.createElement("div")
     boxText.innerHTML = marker.locationDOMElement.html()
 
-    opts =
-      boxClass: @INFO_BOX_CLASS
-      content: boxText
-      disableAutoPan: false
-      maxWidth: 0
-      pixelOffset: new google.maps.Size(-155, 10)
-      zIndex: null
-      infoBoxClearance: new google.maps.Size(100, 100)
-      isHidden: false
-      pane: "floatPane"
-      enableEventPropagation: false
-      closeBoxMargin: "2px"
-      closeBoxURL: "http://#{window.location.host}/images/icons/close-btn.png"
-      
+    opts = this.settings.infoBoxOpts
+    opts.content = boxText
     infoBox = new InfoBox(opts)
 
     return infoBox
 
-  getLocationFromMarker: (marker) =>
+  _getLocationFromMarker: (marker) =>
     # fixed decimal point to normalise both sets of LatLng
     DECIMAL_POINT = 3
     # get lat and lng of marker
@@ -84,7 +80,7 @@ class maps.MapLocationsController extends maps.GoogleMap
     # store as String
     markerLatLngStr = "#{markerLat}, #{markerLng}"
     # iterate over location DOM elements, retrieving their latLng
-    for location in @options.locations
+    for location in this.settings.DOMlocations
       locationLatLng = $(location).attr("data-latLng")
       locationLat = parseFloat(locationLatLng.split(",")[0]).toFixed(DECIMAL_POINT)
       locationLng = parseFloat(locationLatLng.split(",")[1]).toFixed(DECIMAL_POINT)
@@ -93,44 +89,74 @@ class maps.MapLocationsController extends maps.GoogleMap
       if markerLatLngStr is locationLatLngStr
         return location
 
-  getInfoBoxContentFromDOM: (marker) =>
-    $location = $(@getLocationFromMarker(marker))
+  _getInfoBoxContentFromDOM: (marker) =>
+    $location = $(this._getLocationFromMarker(marker))
     $content = $("<div />").addClass("infobox-content")
 
     # location title
     $content
       .append($location.find("h3").clone())
       .append($location.find(".info").clone())
-  
+
     $button = $location.find(".button")
     $link = $("<a />")
       .addClass("more")
       .attr("href", $button.attr("href"))
       .html($button.html())
-    
+
     $content.append($link)
+
     return $content
 
-  onInfoboxLinkClick: (location) =>
+  _onInfoboxLinkClick: (location) =>
     $("html,body").animate
       scrollTop: $(location).offset().top - 10
     , 500
-    
-  
-  onMarkerClick: (e) =>
-    marker = @findMarkerFromLatLng(e.latLng)
 
-    if @currInfoBox?
-      @currInfoBox.close()
+  _onMarkerClick: (e) =>
+    marker = this._findMarkerFromLatLng(e.latLng)
 
-    @currInfoBox = marker.infoBox
-    @currInfoBox.open(@gmap, marker)
+    if this.currInfoBox?
+      this.currInfoBox.close()
 
-    $(@currInfoBox.getContent()).find(".more").on("click", (e) => 
-      @onInfoboxLinkClick(@getLocationFromMarker(marker))
+    this.currInfoBox = marker.infoBox
+    this.currInfoBox.open(this.map.map, marker)
+
+    $(this.currInfoBox.getContent()).find(".more").on("click", (e) =>
+      unless this.settings.infoBoxOpts.linksToLocationPage
+        this._onInfoboxLinkClick(this._getLocationFromMarker(marker))
+        return false
     )
 
-  findMarkerFromLatLng:(latLng) =>
-    for marker in @markers
+  _findMarkerFromLatLng:(latLng) =>
+    for marker in this.map.markers
       if marker.position.lat() is latLng.lat() and marker.position.lng() is latLng.lng()
         return marker
+
+  _addMarkers: =>
+    for location in this.settings.DOMlocations
+      $location = $(location)
+      latLng = $location.attr("data-latLng")
+      latLngSplit = latLng.split(",")
+      icon = $location.attr("data-markericon")
+      marker = this.addMarker(new google.maps.LatLng(latLngSplit[0], latLngSplit[1]), icon)
+
+    this.map.fitMarkerBounds()
+
+  #
+  # Public Methods
+  # _____________________________________________________________________________________
+
+  addMarker: (pos, icon) =>
+    # cache this reference
+    opts = this.settings.markerOpts
+    if icon?
+      opts.icon = opts.iconFolder + icon + ".png"
+    #create marker
+    marker = this.map.addMarker pos, opts
+    marker.locationDOMElement = this._getInfoBoxContentFromDOM(marker)
+    marker.infoBox = this._addInfoBox(marker)
+
+    google.maps.event.addListener(marker, 'click', this._onMarkerClick)
+
+    return marker

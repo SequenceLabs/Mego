@@ -3,9 +3,11 @@
   tag_id: contact-us
 ---
 
-#content.col-9
+- content_for :page_header do
+  %h1
+    Contact Us
+- content_for :content do
   = partial('includes/modules/contact-form')
-  
-#sidebar.col-3.last
+- content_for :sidebar do
   = partial('includes/modules/widgets/contact-widget')
   = partial('includes/modules/cta/generic-cta')

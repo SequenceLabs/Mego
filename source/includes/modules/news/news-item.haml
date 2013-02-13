@@ -1,0 +1,22 @@
+/ START .news-item
+%article{:class=>"#{featured ? 'news-item featured' : 'news-item'}"}
+  %header
+    %a.read-more{:href=>"news-article.html", :title=>"Summary of news article"}
+      %h2
+        = lorem.words (3 + rand(5))
+    %time{:datetime=>"2009-11-13T20:00Z"}
+      3 hours ago
+  .row
+    %figure{:class=>"#{featured ? '' : ''}"}
+      %a{:href=>"news-article.html", :title=>"Summary of news article"}
+        - img_width = featured ? 726 : 306
+        - img_placehold img_width, (img_width/16)*9
+      %figcaption
+        = lorem.sentence
+    %section.copy
+      %p
+        = lorem.sentences (8 + rand(5))
+      %footer
+        %a.read-more{:href=>"news-article.html", :title=>"Summary of news article"}
+          Read more &rarr;
+/ END .news-item

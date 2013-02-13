@@ -1,0 +1,19 @@
+/ START #contact-form
+#contact-form
+  %span.required
+    *indicates required field
+
+<<<<<<< HEAD:source/includes/modules/_contact-form.haml
+  - form_textbox "forename", "First Name", "e.g. Rhodri", true, "Enter name", 9
+=======
+  - form_textbox "forename", "First Name", "e.g. Rhodri", true, "text", "Enter name"
+>>>>>>> 3d7b9d4556208b27d05ff1038f8d8cee479bc9bd:source/includes/modules/contact-form.haml
+  - form_textbox "surname", "Surname", "e.g. Jones", true
+  - form_textbox "email", "Email", "you@yourdomain.com", true, "email"
+
+  - form_selectbox "selectbox_1", "What are you contacting us about?"
+
+  - form_textarea "text_1", "Message", "Enter Comments", true
+
+  %input{:type=>"submit", :value=>"Send message"}
+/ END #contact-form

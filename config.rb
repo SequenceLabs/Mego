@@ -6,6 +6,7 @@
 set :css_dir, "css"
 set :images_dir, "images"
 set :js_dir, "js"
+set :nav, @nav
 
 # ----------------------------
 # Build-specific configuration
@@ -13,7 +14,6 @@ configure :build do
 
   # Set directories to relative
   activate :relative_assets
-
   # Change the output style for deployment
   # activate :minify_css
 
@@ -34,10 +34,13 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 
+  # Partials - create individual/separate files  
+  page "/includes/*", :layout => true
+
 end
-compass_config do |compass|
-  compass.sass_options = {:debug_info => true}
-end
+# compass_config do |compass|
+#   compass.sass_options = {:debug_info => true}
+# end
 # ----------------------------
 # Helpers
 helpers do
@@ -298,17 +301,31 @@ helpers do
 
   # ----------------------------
   # Render placeholder image
+<<<<<<< HEAD
   def img_placehold(width="200", height="200")
     placehold_params = "#{width}x#{height}"
     
+=======
+  def img_placehold(width="200", height="200", text="", background="dddddd", forecolour="858585", font="Helvetica", fontsize="24")
+    placehold_params = "#{width}x#{height}/#{background}/#{forecolour}"
+>>>>>>> 3d7b9d4556208b27d05ff1038f8d8cee479bc9bd
     placehold_url = "http://www.imgsrc.me/" + placehold_params
 
     haml_concat <<-"HTML".gsub( /^\s+/, '' )
       <img src="#{placehold_url}" width="#{width}" height="#{height}" />
     HTML
-
   end
-
-
 end # end of helpers
+
+ready do
+  sitemap.resources.find_all{|p| p.source_file.match(/\.html/)}.each do |page|
+    if page.data.dynamic_pages && !page.proxy?
+      page.data.dynamic_pages.each do |dynamic_page|
+        page "/#{page.data.parent}/#{dynamic_page}.html", :proxy => "#{page.url}" do
+
+        end
+      end
+    end
+  end
+end
 

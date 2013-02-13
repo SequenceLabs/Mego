@@ -1,69 +1,81 @@
 /*
- _____             
-|     |___ ___ ___ 
+ _____
+|     |___ ___ ___
 | | | | -_| . | . |
 |_|_|_|___|_  |___|
-          |___|            
+          |___|
 */
 
-// CSS3 mixins
-@import "core/mixins/css3";
-// General mixins
-@import "core/mixins/mixins";
-
-// Base Modules
-@import "settings";
-@import "core/reset";
-
-// Typography
-@import "core/typography/elements";
-@import "core/typography/headings";
-
-// Layout
-@import "core/grids/grid-static"; 
+@import "core/helpers/reset";
+@import "archetype/settings";
 
 // helpers
-@import "core/helpers/buttons";
-@import "core/helpers/forms";
-@import "core/helpers/tables";
-@import "core/helpers/components";
+@import "core/helpers/css3";
+@import "core/helpers/mixins";
+@import "core/helpers/debug";
+
+// grid mixins
+@import "core/grids/bootstrap/grid-mixins";
+@import "core/grids/bootstrap/grid";
+
+// Typography
+@import "archetype/elements/components";
+@import "archetype/elements/elements";
+@import "archetype/elements/headings";
+@import "archetype/elements/forms";
+@import "archetype/elements/tables";
+@import "archetype/elements/typography";
 
 // main structural stuff
-@import "core/structure";
+@import "archetype/structure/structure";
+@import "archetype/structure/primary-nav";
+@import "archetype/structure/sidebar";
+@import "archetype/structure/site-footer";
+@import "archetype/structure/site-header";
 
 // modules
-@import "core/modules/carousel";
-@import "core/modules/gallery";
-@import "core/modules/social-share";
-@import "core/modules/facebook-stats";
-@import "core/modules/generic-cta";
-@import "core/modules/mini-search";
-@import "core/modules/pagination";
-@import "core/modules/twitter";
-@import "core/modules/news-listing";
-@import "core/modules/video";
+@import "archetype/modules/blog/blog";
 
-@import "core/modules/maps";
-@import "core/modules/flickr-photostream";
-@import "core/modules/flickr-widget";
-@import "core/modules/contact-form";
-@import "core/modules/contact-widget";
-@import "core/modules/blog";
-@import "core/modules/events-widget";
-@import "core/modules/case-study";
-@import "core/modules/events-listing";
+@import "archetype/modules/contact/contact-form";
+@import "archetype/modules/contact/contact-widget";
 
-// pages
-@import "project/home";
-@import "project/projects";
+@import "archetype/modules/cta/generic-cta";
+
+@import "archetype/modules/events/events-listing";
+@import "archetype/modules/news/news-listing";
+
+@import "archetype/modules/nav/breadcrumbs";
+@import "archetype/modules/nav/pagination";
+@import "archetype/modules/nav/secondary-nav";
+
+@import "archetype/modules/search/mini-search";
+
+@import "archetype/modules/social/facebook-like";
+@import "archetype/modules/social/facebook-stats";
+@import "archetype/modules/social/flickr-gallery";
+@import "archetype/modules/social/flickr-photostream";
+@import "archetype/modules/social/flickr-widget";
+@import "archetype/modules/social/social-share";
+@import "archetype/modules/social/twitter";
+
+@import "archetype/modules/carousel";
+@import "archetype/modules/case-study";
+@import "archetype/modules/gallery";
+@import "archetype/modules/locations";
+@import "archetype/modules/video";
 
 // media queries
-@import "core/media-queries";
+@import "archetype/media-queries";
 
-// IE conditional stylesheet
-@import "ie6";
-@import "ie7";
-@import "ie8";
-@import "ie9";
 
-@import "core/helpers/debug";
+// page-specific styles
+@import "archetype/pages/search";
+@import "archetype/pages/faqs";
+
+// // IE conditional stylesheet
+@import "archetype/ie/ie6";
+@import "archetype/ie/ie7";
+@import "archetype/ie/ie8";
+@import "archetype/ie/ie9";
+
+
