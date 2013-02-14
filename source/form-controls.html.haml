@@ -3,11 +3,12 @@
   tag_id: form-controls
 ---
   
-%header#page-header
+
+- content_for :page_header do
   %h1
     Form Controls
-    
-#content.col-9  
+
+- content_for :content do
   %p Showing common form controls
 
   .form
@@ -36,7 +37,4 @@
 
     - form_selectbox
    
-
-#sidebar.col-3.last
-  = partial('includes/modules/widgets/contact-widget')
     
