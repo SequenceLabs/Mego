@@ -301,14 +301,9 @@ helpers do
 
   # ----------------------------
   # Render placeholder image
-<<<<<<< HEAD
   def img_placehold(width="200", height="200")
     placehold_params = "#{width}x#{height}"
     
-=======
-  def img_placehold(width="200", height="200", text="", background="dddddd", forecolour="858585", font="Helvetica", fontsize="24")
-    placehold_params = "#{width}x#{height}/#{background}/#{forecolour}"
->>>>>>> 3d7b9d4556208b27d05ff1038f8d8cee479bc9bd
     placehold_url = "http://www.imgsrc.me/" + placehold_params
 
     haml_concat <<-"HTML".gsub( /^\s+/, '' )
